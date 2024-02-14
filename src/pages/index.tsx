@@ -58,7 +58,7 @@ export default function Home() {
             <Heading
               as='h1'
               sx={{
-                fontSize: ['75px', '100px', '109px', '150px'],
+                fontSize: ['48px', '100px', '109px', '150px'],
                 lineHeight: '1.1',
                 fontWeight: 'bold',
                 fontStretch: '125%'
