@@ -5,6 +5,7 @@ import Head from 'next/head';
 import { Box, Container, Flex, Button } from 'krado-react';
 import Heading from '@/components/fixed-krado-components/Heading';
 import Text from '@/components/fixed-krado-components/Text';
+import Image from 'next/image';
 
 export default function Home() {
   return (
@@ -15,10 +16,29 @@ export default function Home() {
         <meta name='viewport' content='width=device-width, initial-scale=1' />
         <link rel='icon' href='/favicon.ico' />
       </Head>
-      <Box as='main' sx={{ height: '100vh', width: '100%' }}>
+      <Flex
+        as='main'
+        sx={{
+          minHeight: '100vh',
+          height: '100%',
+          width: '100%',
+          flexDirection: 'column'
+        }}
+      >
+        <Flex sx={{ width: '100%' }}>
+          <Image
+            src='/logo.svg'
+            alt='Set Theory Logo'
+            sx={{ width: '125px', height: '125px' }}
+            width={100}
+            height={100}
+            priority
+          />
+        </Flex>
         <Container
           as='main'
           sx={{
+            marginY: 'auto',
             display: 'flex',
             flexDirection: 'column',
             justifyContent: 'center',
@@ -60,7 +80,7 @@ export default function Home() {
             <Button>Listen to podcast</Button>
           </a>
         </Container>
-      </Box>
+      </Flex>
     </>
   );
 }
