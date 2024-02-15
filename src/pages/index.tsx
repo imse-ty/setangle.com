@@ -67,8 +67,8 @@ export default function Home() {
               SET THEORY
             </Heading>
             <Text as='p' sx={{ fontFamily: 'Mona Sans' }}>
-              A design and technology agency focusing on inspiring others by
-              unveiling the theory behind the creative process.
+              A company specializing in design and technology that explores the
+              theory behind the creative process to inspire others.
             </Text>
           </Flex>
 
