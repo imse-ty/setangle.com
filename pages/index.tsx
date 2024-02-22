@@ -66,7 +66,7 @@ export default function Home() {
             >
               SET THEORY
             </Heading>
-            <Text as='p' sx={{ fontFamily: 'Mona Sans' }}>
+            <Text as='p' variant='body.summary'>
               A company specializing in design and technology that explores the
               theory behind the creative process to inspire others.
             </Text>
