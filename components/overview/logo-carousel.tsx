@@ -2,8 +2,9 @@
 //@ts-nocheck
 
 import { motion } from 'framer-motion';
-import { Flex } from 'krado-react';
+import { Flex, Container } from 'krado-react';
 import Image from 'next/image';
+import Text from '../fixed-krado-components/Text';
 
 function Logo({ logoName, alt }) {
   return (
@@ -19,39 +20,31 @@ function Logo({ logoName, alt }) {
 }
 
 export default function LogoCarousel() {
-  const logoVariants = {
-    animate: {
-      x: [-100, 100],
-      transition: {
-        x: {
-          repeat: Infinity,
-          repeatType: 'loop',
-          duration: 10, // Adjust the duration for speed control
-          ease: 'linear'
-        }
-      }
-    }
-  };
-
   return (
-    <Flex
-      as={motion.div}
-      sx={{
-        gap: 6,
-        overflowX: 'hidden',
-        width: '100%',
-        backgroundColor: 'red'
-      }}
-      variants={logoVariants}
-      animate='animate'
-    >
-      <Logo logoName='Chick-fil-A' alt='Chick-fil-A logo' />
-      <Logo logoName='Chick-fil-A' alt='Chick-fil-A logo' />
-      <Logo logoName='Chick-fil-A' alt='Chick-fil-A logo' />
-      <Logo logoName='Chick-fil-A' alt='Chick-fil-A logo' />
-      <Logo logoName='Chick-fil-A' alt='Chick-fil-A logo' />
-      <Logo logoName='Chick-fil-A' alt='Chick-fil-A logo' />
-      <Logo logoName='Chick-fil-A' alt='Chick-fil-A logo' />
-    </Flex>
+    <Container sx={{ textAlign: 'center', marginTop: 5 }}>
+      <Text>Collaborating with amazing brands such as...</Text>
+      <Flex
+        as={motion.div}
+        sx={{
+          gap: 6,
+          justifyContent: 'center',
+          alignItems: 'center'
+        }}
+      >
+        <Logo logoName='ford' alt='Ford logo' />
+        <Logo logoName='beloved-benefit' alt='Beloved Benefit logo' />
+        <Logo logoName='keller-williams' alt='Keller Williams logo' />
+        <Logo logoName='fearless-fund' alt='Fearless Fund logo' />
+        <Logo logoName='vmware' alt='VMware logo' />
+        <Logo
+          logoName='national-education-association'
+          alt='National Education Association logo'
+        />
+        <Logo
+          logoName='alabama-state-university'
+          alt='Alabama State University logo'
+        />
+      </Flex>
+    </Container>
   );
 }
