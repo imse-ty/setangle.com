@@ -9,6 +9,8 @@ import VideoSection from '@/components/video-section';
 import React from 'react';
 import { useState } from 'react';
 import { Container } from 'krado-react';
+import ClientLogos from '@/components/overview/logo-carousel';
+import LogoCarousel from '@/components/overview/logo-carousel';
 
 export default function Overview() {
   const [isVideoActive, setIsVideoActive] = useState(false);
@@ -27,6 +29,7 @@ export default function Overview() {
           setIsVideoActive={() => setIsVideoActive(!isVideoActive)}
         />
       </Container>
+      <LogoCarousel />
       {/* <SiteFooter textColor='text.primary' linkColor='primary.regular' /> */}
     </Layout>
   );
