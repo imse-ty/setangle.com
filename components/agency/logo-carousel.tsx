@@ -11,7 +11,7 @@ function Logo({ logoName, alt }) {
   const [colorMode, setColorMode] = useColorMode();
 
   return (
-    <img
+    <Image
       src={`/logos/${logoName}.svg`}
       alt={alt}
       sx={{
