@@ -24,7 +24,7 @@ export default function ContactSection({ useTransparentBackground }) {
         sx={{
           backgroundColor: useTransparentBackground
             ? 'transparent'
-            : 'background'
+            : 'surface.heavy'
         }}
       >
         <motion.div

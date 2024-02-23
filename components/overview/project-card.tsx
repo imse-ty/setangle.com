@@ -23,7 +23,7 @@ export default function ProjectCard({ title, subtitle, src, href, color }) {
         <Flex
           sx={{
             position: 'relative',
-            aspectRatio: '4/3',
+            aspectRatio: '4/2.5',
             overflow: 'hidden',
             flexDirection: 'column',
             borderRadius: 3,

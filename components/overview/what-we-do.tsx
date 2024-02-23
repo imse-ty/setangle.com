@@ -5,7 +5,14 @@ import { Flex, Grid, Box, Container } from 'krado-react';
 import Heading from '../fixed-krado-components/Heading';
 import Text from '../fixed-krado-components/Text';
 import { OverviewCard } from './overview-card';
-import { MdDesignServices } from 'react-icons/md';
+import {
+  MdDashboard,
+  MdDesignServices,
+  MdLanguage,
+  MdLightbulb,
+  MdSchool,
+  MdStadium
+} from 'react-icons/md';
 
 import ProjectCard from './project-card';
 import { motion, useScroll, useSpring, useTransform } from 'framer-motion';
@@ -56,8 +63,8 @@ export default function WhatWeDoSection({ onViewportEnter, onViewportLeave }) {
               >
                 <Heading as='h2'>What we do</Heading>
                 <Text>
-                  Your go-to solution for web and mobile apps, like many
-                  founders, startups, and agencies do.
+                  Your go-to studio for captivating motion design and web
+                  solutions, trusted by brands, creatives, and agencies alike.
                 </Text>
               </Flex>
               <Grid
@@ -70,35 +77,35 @@ export default function WhatWeDoSection({ onViewportEnter, onViewportLeave }) {
                 }}
               >
                 <OverviewCard
-                  icon={<MdDesignServices />}
+                  icon={<MdLightbulb />}
                   heading='Animated explainer videos'
                   text='Concisely communicate complex concepts or services with eye-catching motion.
             '
                   isHeadingSmall={true}
                 />
                 <OverviewCard
-                  icon={<MdDesignServices />}
+                  icon={<MdDashboard />}
                   heading='Custom websites'
                   text='Campaign-specific sites or landing pages designed to promote a product, event, or initiative.
             '
                   isHeadingSmall={true}
                 />
                 <OverviewCard
-                  icon={<MdDesignServices />}
+                  icon={<MdSchool />}
                   heading='Educational content'
                   text='Animated infographics and videos for educational purposes or tutorials.
             '
                   isHeadingSmall={true}
                 />
                 <OverviewCard
-                  icon={<MdDesignServices />}
+                  icon={<MdLanguage />}
                   heading='Social media content'
                   text='Engaging animations or motion graphics for platforms like Instagram, LinkedIn, or Facebook.
             '
                   isHeadingSmall={true}
                 />
                 <OverviewCard
-                  icon={<MdDesignServices />}
+                  icon={<MdStadium />}
                   heading='Event visuals'
                   text='High-impact animations to kick off or wrap up corporate events, conferences, or webinars.
             '

@@ -86,13 +86,7 @@ export default function VideoSection({
   const scale = useSpring(scrollScale, { mass: 0.1 });
 
   return (
-    <div
-      ref={container}
-      sx={{
-        position: 'sticky',
-        top: 0
-      }}
-    >
+    <div ref={container}>
       <Flex
         as={motion.div}
         style={{

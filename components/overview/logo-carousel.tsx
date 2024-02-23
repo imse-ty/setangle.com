@@ -18,13 +18,10 @@ function Logo({ logoName, alt }) {
         width: ['100px', '125px'],
         height: 'auto',
         filter:
-          colorMode === 'light'
-            ? 'brightness(0) saturate(100%) invert(8%) sepia(55%) saturate(3456%) hue-rotate(249deg) brightness(85%) contrast(112%)'
-            : 'brightness(0) saturate(100%) invert(90%) sepia(6%) saturate(1674%) hue-rotate(196deg) brightness(104%) contrast(98%)'
+          'brightness(0) saturate(100%) invert(8%) sepia(55%) saturate(3456%) hue-rotate(249deg) brightness(85%) contrast(112%)'
       }}
       width={100}
       height={100}
-      priority
     />
   );
 }

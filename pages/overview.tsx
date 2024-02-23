@@ -14,6 +14,8 @@ import LogoCarousel from '@/components/overview/logo-carousel';
 import WhatWeDoSection from '@/components/overview/what-we-do';
 import WorkSection from '@/components/overview/work-section';
 import ContactSection from '@/components/overview/contact-section';
+import AboutSection from '@/components/overview/about-section';
+import ReelSection from '@/components/overview/reel-section';
 
 export default function Overview() {
   const [isVideoActive, setIsVideoActive] = useState(false);
@@ -23,18 +25,15 @@ export default function Overview() {
       <SiteHeader />
       <OverviewHero />
       <Container>
-        <VideoSection
-          isPlayButtonHidden={false}
+        <ReelSection
           isVideoActive={isVideoActive}
-          url='https://vimeo.com/910900048?share=copy'
-          previewSrc='walter-preview.webm'
-          poster='walter-thumbnail.jpg'
           setIsVideoActive={() => setIsVideoActive(!isVideoActive)}
         />
       </Container>
       <LogoCarousel />
       <WhatWeDoSection />
       <WorkSection />
+      <AboutSection />
       <ContactSection />
     </Layout>
   );

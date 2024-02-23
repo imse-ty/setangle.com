@@ -26,25 +26,25 @@ function ProjectsSection() {
         src='/work/beloved-benefit.jpg'
       />
       <ProjectCard
-        color='taweret'
+        color='sekmet'
         title='Chick-fil-A'
         subtitle="Innovating at Chick-fil-A's annual meetings NEXT and Spark 2023"
         href='https://imsety.com/work/chick-fil-a'
         src='/work/chick-fil-a.png'
       />
       <ProjectCard
-        color='taweret'
+        color='nsoCool'
         title='Keller Williams'
         subtitle="Transformed Keller Williams' events with engaging 3D motion design and story-driven openers in collaboration with Ravie."
         href='https://imsety.com/work/keller-williams'
         src='/work/keller-williams.png'
       />
       <ProjectCard
-        color='taweret'
+        color='asset'
         title='Fearless Fund'
         subtitle="Animating infographics for the Fearless Fund's annual event, a venture capital firm empowering women of color-led businesses."
         href='https://imsety.com/work/fearless-fund'
-        src='/work/beloved-benefit.jpg'
+        src='/work/fearless-fund.png'
       />
     </Container>
   );

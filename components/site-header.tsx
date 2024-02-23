@@ -4,25 +4,29 @@
 import Image from 'next/image';
 import { Flex } from 'krado-react';
 import Navigation from './navigation';
+import Text from './fixed-krado-components/Text';
 
 export default function SiteHeader() {
   return (
     <Flex
       sx={{
+        position: 'absolute',
         top: 0,
-        position: 'fixed',
         width: '100%',
-        zIndex: 2
+        padding: [4, 5],
+        justifyContent: 'right'
       }}
     >
-      <Image
-        src='/logo.svg'
-        alt='Set Theory Logo'
-        sx={{ width: '125px', height: '125px' }}
-        width={100}
-        height={100}
-        priority
-      />
+      <Text
+        sx={{
+          fontWeight: 'bold',
+          textTransform: 'uppercase',
+          fontStretch: 'expanded',
+          fontSize: [5, 6]
+        }}
+      >
+        Set Theory
+      </Text>
     </Flex>
   );
 }

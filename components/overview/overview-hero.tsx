@@ -8,12 +8,16 @@ export default function OverviewHero() {
     <Container
       sx={{
         marginTop: 7,
-        marginBottom: 6,
+        marginBottom: 4,
         display: 'flex',
+        gap: 4,
         textAlign: 'center',
         flexDirection: 'column'
       }}
     >
+      <Text variant='body.pretext' sx={{ marginBottom: 2 }}>
+        A motion & web design agency
+      </Text>
       <Heading as='h1' variant='display.h1'>
         Transforming the ordinary into the&nbsp;extraordinary
       </Heading>

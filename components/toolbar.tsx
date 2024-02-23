@@ -10,6 +10,7 @@ import RightTriangle from '../public/right-triangle.svg';
 import Text from './fixed-krado-components/Text';
 import Switch from './projects/project-switch';
 import { useState } from 'react';
+import Image from 'next/image';
 
 export default function Toolbar() {
   const { scrollYProgress } = useScroll();
@@ -30,12 +31,25 @@ export default function Toolbar() {
         gap: [3, 4]
       }}
     >
+      <Link href='#'>
+        <Image
+          src='/logo.svg'
+          alt='Set Theory Logo'
+          sx={{ width: '125px', height: '125px' }}
+          width={100}
+          height={100}
+          priority
+        />
+      </Link>
       <Box
         as={motion.div}
         style={{ scaleX: scrollYProgress }}
         sx={{
           width: '100%',
           height: '4px',
+          position: 'fixed',
+          left: 0,
+          top: 0,
           backgroundColor: 'secondary.light',
           transformOrigin: 'left'
         }}
