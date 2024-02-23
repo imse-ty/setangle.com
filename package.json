@@ -9,19 +9,21 @@
     "lint": "next lint"
   },
   "dependencies": {
+    "@theme-ui/color": "^0.16.2",
+    "framer-motion": "^10.16.16",
+    "get-video-id": "^4.1.5",
+    "krado-react": "github:imse-ty/krado-react",
+    "next": "14.1.0",
     "react": "^18",
     "react-dom": "^18",
-    "next": "14.1.0",
-    "krado-react": "github:imse-ty/krado-react",
-    "framer-motion": "^10.16.16",
     "theme-ui": "^0.16.1"
   },
   "devDependencies": {
-    "typescript": "^5",
     "@types/node": "^20",
     "@types/react": "^18",
     "@types/react-dom": "^18",
     "eslint": "^8",
-    "eslint-config-next": "14.1.0"
+    "eslint-config-next": "14.1.0",
+    "typescript": "^5"
   }
 }
