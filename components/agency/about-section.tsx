@@ -36,7 +36,7 @@ export default function AboutSection() {
             minHeight: '100vh',
             paddingTop: 6,
             paddingBottom: 6,
-            backgroundColor: 'surface.heavy',
+            backgroundColor: 'surface.black',
             borderTopLeftRadius: 4,
             borderTopRightRadius: 4,
             boxShadow: 'soft.highNorth'
