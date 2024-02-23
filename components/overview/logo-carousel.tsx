@@ -21,8 +21,8 @@ function Logo({ logoName, alt }) {
 
 export default function LogoCarousel() {
   return (
-    <Container sx={{ textAlign: 'center', marginTop: 5 }}>
-      <Text>Collaborating with amazing brands such as...</Text>
+    <Container sx={{ textAlign: 'center', marginTop: 5, marginBottom: 6 }}>
+      <Text as='p'>Collaborating with amazing brands such as...</Text>
       <Flex
         as={motion.div}
         sx={{
