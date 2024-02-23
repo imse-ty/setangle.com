@@ -4,9 +4,9 @@ import { buildMonochromaticTheme } from './monochromatic-theme';
 const pageTheme = buildMonochromaticTheme('nut');
 
 export const setyTheme = {
-  config: {
-    initialColorModeName: 'light'
-  },
+  // config: {
+  //   initialColorModeName: 'light'
+  // },
   sizes: {
     container: '1920px'
   },

@@ -10,7 +10,7 @@ function Card({ children, ...rest }) {
         padding: 4,
         flex: '1 1 25%',
         borderRadius: 3,
-        backgroundColor: 'secondary.bold',
+        backgroundColor: 'background',
         boxShadow: 'soft.low',
         transition: 'transform 325ms ease, box-shadow 325ms ease',
         '&:hover': {

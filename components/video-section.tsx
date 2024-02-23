@@ -82,7 +82,7 @@ export default function VideoSection({
   });
 
   const scrollScale = useTransform(scrollYProgress, [0, 1], [0.8, 1]);
-  const borderRadius = useTransform(scrollYProgress, [0.5, 1], [64, 0]);
+  const borderRadius = useTransform(scrollYProgress, [0.5, 1], [64, 32]);
   const scale = useSpring(scrollScale, { mass: 0.1 });
 
   return (
@@ -97,14 +97,12 @@ export default function VideoSection({
         as={motion.div}
         style={{
           scale,
-          borderTopLeftRadius: borderRadius,
-          borderTopRightRadius: borderRadius
+          borderRadius: borderRadius
         }}
         sx={{
           flexDirection: 'column',
           justifyContent: 'center',
           aspectRatio: '16/9',
-          backgroundColor: 'surface.heavy',
           overflow: 'hidden'
         }}
         onViewportEnter={onViewportEnter}
@@ -167,7 +165,7 @@ export default function VideoSection({
                     position: 'absolute',
                     width: '100%',
                     height: '100%',
-                    backdropFilter: 'blur(64px)',
+                    backdropFilter: 'blur(32px)',
                     pointerEvents: 'none'
                   }}
                 />

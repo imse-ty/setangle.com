@@ -12,13 +12,15 @@ import { Container } from 'krado-react';
 import ClientLogos from '@/components/overview/logo-carousel';
 import LogoCarousel from '@/components/overview/logo-carousel';
 import WhatWeDoSection from '@/components/overview/what-we-do';
+import WorkSection from '@/components/overview/work-section';
+import ContactSection from '@/components/overview/contact-section';
 
 export default function Overview() {
   const [isVideoActive, setIsVideoActive] = useState(false);
 
   return (
-    <Layout>
-      {/* <SiteHeader /> */}
+    <Layout isHiddenByDefault hideTopNav>
+      <SiteHeader />
       <OverviewHero />
       <Container>
         <VideoSection
@@ -32,7 +34,8 @@ export default function Overview() {
       </Container>
       <LogoCarousel />
       <WhatWeDoSection />
-      {/* <SiteFooter textColor='text.primary' linkColor='primary.regular' /> */}
+      <WorkSection />
+      <ContactSection />
     </Layout>
   );
 }

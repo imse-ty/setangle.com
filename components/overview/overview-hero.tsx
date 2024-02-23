@@ -15,7 +15,7 @@ export default function OverviewHero() {
       }}
     >
       <Heading as='h1' variant='display.h1'>
-        Transforming the ordinary into the extraordinary
+        Transforming the ordinary into the&nbsp;extraordinary
       </Heading>
       <Text as='p' variant='body.summary'>
         Crafting well-executed motion and high-quality websites to deliver

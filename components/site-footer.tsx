@@ -81,66 +81,19 @@ export default function SiteFooter({ textColor, linkColor }) {
     <Footer
       style={{
         backgroundColor: 'transparent',
-        boxShadow: 'none'
+        boxShadow: 'none',
+        justifyContent: 'center'
       }}
     >
       <FooterFootnote
         as='p'
         sx={{
           color: textColor,
-          textAlign: ['center', null, 'left']
+          textAlign: 'center'
         }}
       >
         Copyright © 2024 Imsety LLC. All rights reserved.
       </FooterFootnote>
-      <FooterContent
-        sx={{
-          paddingY: [0, 2],
-          display: 'flex',
-          gap: [3, null, null, 5],
-          marginTop: [3, null, 0],
-          flexWrap: 'wrap',
-          justifyContent: 'center',
-          color: linkColor
-        }}
-      >
-        <Flex
-          as='ul'
-          sx={{
-            gap: [3, null, null, 4],
-            flexWrap: 'wrap',
-            justifyContent: 'center',
-            alignItems: 'center',
-            listStyleType: 'none'
-          }}
-        >
-          <SocialMediaLinks />
-        </Flex>
-
-        <Flex
-          as={motion.button}
-          onClick={(e) => {
-            if (typeof umami !== 'undefined' && colorMode === 'light') {
-              umami.track('switch-to-dark-mode');
-            }
-            if (typeof umami !== 'undefined' && colorMode === 'dark') {
-              umami.track('switch-to-light-mode');
-            }
-            const next = colorMode === 'dark' ? 'light' : 'dark';
-            setColorMode(next);
-          }}
-          whileHover={{ scale: 1.2 }}
-          transition={{ type: 'spring', duration: 0.8 }}
-          sx={{
-            fontSize: 5,
-            color: 'inherit',
-            border: 'none',
-            backgroundColor: 'transparent'
-          }}
-        >
-          {colorMode === 'dark' ? <MdLightMode /> : <MdDarkMode />}
-        </Flex>
-      </FooterContent>
     </Footer>
   );
 }
