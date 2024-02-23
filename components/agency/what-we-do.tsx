@@ -63,7 +63,7 @@ export default function WhatWeDoSection({ onViewportEnter, onViewportLeave }) {
               >
                 <Heading as='h2'>What we do</Heading>
                 <Text>
-                  Your go-to studio for captivating motion design and web
+                  Your go-to vender for captivating motion design and web
                   solutions, trusted by brands, creatives, and agencies alike.
                 </Text>
               </Flex>
