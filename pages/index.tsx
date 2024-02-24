@@ -64,7 +64,7 @@ export default function Home() {
                 fontStretch: '125%'
               }}
             >
-              SET THEORY
+              SET ANGLE
             </Heading>
             <Text as='p' variant='body.summary'>
               A company specializing in design and technology that explores the

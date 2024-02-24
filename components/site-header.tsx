@@ -25,7 +25,7 @@ export default function SiteHeader() {
           fontSize: [5, 6]
         }}
       >
-        Set Theory
+        Set Angle
       </Text>
     </Flex>
   );

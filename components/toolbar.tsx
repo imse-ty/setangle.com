@@ -34,10 +34,15 @@ export default function Toolbar() {
       <Link href='#'>
         <Image
           src='/logo.svg'
-          alt='Set Theory Logo'
-          sx={{ width: '125px', height: '125px' }}
-          width={100}
-          height={100}
+          alt='Set Angle Logo'
+          sx={{
+            margin: 4,
+            width: '48px',
+            height: '48px',
+            mixBlendMode: 'exclusion'
+          }}
+          width={48}
+          height={48}
           priority
         />
       </Link>
