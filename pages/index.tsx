@@ -55,20 +55,24 @@ export default function Home() {
               gap: 3
             }}
           >
+            <Text variant='body.pretext' sx={{ marginBottom: 2 }}>
+              A motion & web design agency
+            </Text>
             <Heading
               as='h1'
               sx={{
                 fontSize: ['48px', '100px', '109px', '150px'],
                 lineHeight: '1.1',
                 fontWeight: 'bold',
-                fontStretch: '125%'
+                fontStretch: '125%',
+                letterSpacing: '0em'
               }}
             >
               SET ANGLE
             </Heading>
             <Text as='p' variant='body.summary'>
-              A company specializing in design and technology that explores the
-              theory behind the creative process to inspire others.
+              Crafting well-executed motion and high-quality websites to deliver
+              soulful experiences that captivate and inspire.
             </Text>
           </Flex>
         </Container>

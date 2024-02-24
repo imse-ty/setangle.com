@@ -41,7 +41,7 @@ export default function ContactSection({ useTransparentBackground }) {
           <Flex sx={{ flexDirection: 'column', minHeight: '100vh' }}>
             <Container sx={{ marginTop: 'auto', textAlign: 'center' }}>
               <a
-                href='mailto:greetings@settheory.co'
+                href='mailto:greetings@setangle.com'
                 sx={{ textDecoration: 'none' }}
                 data-umami-event='contact-email-link'
               >
@@ -54,7 +54,7 @@ export default function ContactSection({ useTransparentBackground }) {
                     fontSize: [7, 9, 10]
                   }}
                 >
-                  greetings@settheory.co
+                  greetings@setangle.com
                 </Heading>
               </a>
               <Text
