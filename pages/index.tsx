@@ -29,7 +29,7 @@ export default function Home() {
           <Image
             src='/logo.svg'
             alt='Set Theory Logo'
-            sx={{ width: '125px', height: '125px' }}
+            sx={{ margin: 4, width: '48px', height: '48px' }}
             width={100}
             height={100}
             priority
@@ -71,14 +71,6 @@ export default function Home() {
               theory behind the creative process to inspire others.
             </Text>
           </Flex>
-
-          <a
-            href='https://podcast.imsety.com/'
-            target='_blank'
-            rel='noindex nofollow'
-          >
-            <Button>Listen to podcast</Button>
-          </a>
         </Container>
       </Flex>
     </>
