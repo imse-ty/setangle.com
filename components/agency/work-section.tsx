@@ -97,8 +97,9 @@ export default function WorkSection({ onViewportEnter, onViewportLeave }) {
             </Heading>
 
             <Text as='p'>
-              Whether it&apos;s a vibrant website or a minimal mobile app you
-              seek. We deliver exceptional quality for all.
+              Helping big brands and agencies with groundbreaking work that
+              highlight our commitment to creativity, innovation, and
+              excellence.
             </Text>
           </Container>
           <ProjectsSection />
