@@ -97,9 +97,8 @@ export default function WorkSection({ onViewportEnter, onViewportLeave }) {
             </Heading>
 
             <Text as='p'>
-              Helping big brands and agencies with groundbreaking work that
-              highlight our commitment to creativity, innovation, and
-              excellence.
+              Selected ranging from event openers, tech product ads, social
+              media graphics, and non-profit organizations.
             </Text>
           </Container>
           <ProjectsSection />
