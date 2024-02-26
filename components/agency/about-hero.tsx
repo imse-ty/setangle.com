@@ -54,7 +54,7 @@ export default function AboutHero() {
             variant='body.summary'
             sx={{ color: 'surface.extralight' }}
           >
-            Imsety is motion designer and developer, and founder of Set Angle.
+            Imsety is motion designer, developer, and founder at Set Angle.
             Based in Atlanta, he blends his knowledge of design and technology
             to tell good stories.
           </Text>
