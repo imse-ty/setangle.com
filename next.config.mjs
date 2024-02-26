@@ -9,6 +9,15 @@ const nextConfig = {
     });
 
     return config;
+  },
+  async redirects() {
+    return [
+      {
+        source: '/chat',
+        destination: 'https://cal.com/imsety/chat/',
+        permanent: false
+      }
+    ];
   }
 };
 
