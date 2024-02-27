@@ -107,6 +107,7 @@ export default function WorkSection({ onViewportEnter, onViewportLeave }) {
             target="_blank"
             rel="noindex nofollow"
             sx={{ textDecoration: 'none' }}
+            data-umami-event="view-more-work-button"
           >
             <Button leftIcon={<MdNorthEast />} sx={{ marginTop: 5 }}>
               View more work

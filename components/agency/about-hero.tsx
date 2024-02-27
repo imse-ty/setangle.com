@@ -23,10 +23,16 @@ export default function AboutHero() {
         <VideoSection
           isPlayButtonHidden={false}
           isVideoActive={isVideoActive}
-          url='https://vimeo.com/910900048?share=copy'
-          previewSrc='walter-preview.webm'
-          poster='walter-thumbnail.jpg'
-          setIsVideoActive={() => setIsVideoActive(!isVideoActive)}
+          url="https://vimeo.com/910900048?share=copy"
+          previewSrc="walter-preview.webm"
+          poster="walter-thumbnail.jpg"
+          setIsVideoActive={() => {
+            if (typeof umami !== 'undefined' && !isVideoActive) {
+              umami.track('about-video-play');
+            }
+
+            setIsVideoActive(!isVideoActive);
+          }}
         />
       </Box>
       <Container
@@ -42,16 +48,16 @@ export default function AboutHero() {
       >
         <Flex sx={{ flexDirection: 'column', gap: 4, textAlign: 'center' }}>
           <Heading
-            as='h2'
-            variant='display.h1'
+            as="h2"
+            variant="display.h1"
             sx={{ marginBottom: 3, color: 'surface.thin' }}
           >
             Meet the founder
           </Heading>
 
           <Text
-            as='p'
-            variant='body.summary'
+            as="p"
+            variant="body.summary"
             sx={{ color: 'surface.extralight' }}
           >
             Imsety is motion designer, developer, and founder at Set Angle.
@@ -59,8 +65,8 @@ export default function AboutHero() {
             to tell good stories.
           </Text>
           <Text
-            as='p'
-            variant='body.summary'
+            as="p"
+            variant="body.summary"
             sx={{ color: 'surface.extralight' }}
           >
             Since he was six years old, he fell in love with creativity and has
@@ -69,8 +75,8 @@ export default function AboutHero() {
             a blend of animation, tech, and sound.
           </Text>
           <Text
-            as='p'
-            variant='body.summary'
+            as="p"
+            variant="body.summary"
             sx={{ color: 'surface.extralight' }}
           >
             He partners with creative individuals to create meaningful
@@ -79,8 +85,8 @@ export default function AboutHero() {
             visuals, advertisements, music videos, to websites.
           </Text>
           <Text
-            as='p'
-            variant='body.summary'
+            as="p"
+            variant="body.summary"
             sx={{ color: 'surface.extralight' }}
           >
             Let&apos;s connect and make something amazing.
