@@ -19,32 +19,32 @@ function ProjectsSection() {
       }}
     >
       <ProjectCard
-        color='taweret'
-        title='Beloved Benefit'
-        subtitle='Helping bring Beloved Benefit to life, an annual charity fundraiser event in Atlanta founded by The Same House.'
-        href='https://imsety.com/work/beloved-benefit-2023'
-        src='/work/beloved-benefit.jpg'
+        color="taweret"
+        title="Beloved Benefit"
+        subtitle="Helping bring Beloved Benefit to life, an annual charity fundraiser event in Atlanta founded by The Same House."
+        href="https://imsety.com/work/beloved-benefit-2023"
+        src="/work/beloved-benefit.jpg"
       />
       <ProjectCard
-        color='sekmet'
-        title='Chick-fil-A'
+        color="sekmet"
+        title="Chick-fil-A"
         subtitle="Innovating at Chick-fil-A's annual meetings NEXT and Spark 2023"
-        href='https://imsety.com/work/chick-fil-a'
-        src='/work/chick-fil-a.png'
+        href="https://imsety.com/work/chick-fil-a"
+        src="/work/chick-fil-a.png"
       />
       <ProjectCard
-        color='nsoCool'
-        title='Keller Williams'
-        subtitle="Transformed Keller Williams' events with engaging 3D motion design and story-driven openers in collaboration with Ravie."
-        href='https://imsety.com/work/keller-williams'
-        src='/work/keller-williams.png'
+        color="taweret"
+        title="Space and Time"
+        subtitle="Leading creation direction for Space and Time's AI tool Houston and creating a stunning 3D galaxy scene."
+        href="https://imsety.com/work/space-and-time"
+        src="/work/space-and-time.png"
       />
       <ProjectCard
-        color='asset'
-        title='Fearless Fund'
+        color="asset"
+        title="Fearless Fund"
         subtitle="Animating infographics for the Fearless Fund's annual event, a venture capital firm empowering women of color-led businesses."
-        href='https://imsety.com/work/fearless-fund'
-        src='/work/fearless-fund.png'
+        href="https://imsety.com/work/fearless-fund"
+        src="/work/fearless-fund.png"
       />
     </Container>
   );
@@ -63,7 +63,7 @@ export default function WorkSection({ onViewportEnter, onViewportLeave }) {
 
   return (
     <section ref={container}>
-      <Box id='work' sx={{ backgroundColor: 'surface.thin' }}>
+      <Box id="work" sx={{ backgroundColor: 'surface.thin' }}>
         <motion.div
           style={{ scale }}
           sx={{
@@ -96,16 +96,16 @@ export default function WorkSection({ onViewportEnter, onViewportLeave }) {
               Selected work
             </Heading>
 
-            <Text as='p'>
+            <Text as="p">
               Selected ranging from event openers, tech product ads, social
               media graphics, and non-profit organizations.
             </Text>
           </Container>
           <ProjectsSection />
           <a
-            href='https://imsety.com/#work'
-            target='_blank'
-            rel='noindex nofollow'
+            href="https://imsety.com/#work"
+            target="_blank"
+            rel="noindex nofollow"
             sx={{ textDecoration: 'none' }}
           >
             <Button leftIcon={<MdNorthEast />} sx={{ marginTop: 5 }}>
