@@ -21,7 +21,12 @@ const nextConfig = {
         source: '/agency',
         destination: '/',
         permanent: false
-      }
+      },
+      {
+        source: '/zoom',
+        destination: 'https://cal.com/imsety/zoom/',
+        permanent: false
+      },
     ];
   }
 };
