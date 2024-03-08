@@ -27,6 +27,11 @@ const nextConfig = {
         destination: 'https://cal.com/imsety/zoom/',
         permanent: false
       },
+      {
+        source: '/motiontalent',
+        destination: 'https://tally.so/r/nW5b0J',
+        permanent: false
+      },
     ];
   }
 };
