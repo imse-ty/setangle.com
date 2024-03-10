@@ -6,6 +6,7 @@ import { OverviewCard } from '@/components/agency/overview-card';
 import Heading from '@/components/fixed-krado-components/Heading';
 import Text from '@/components/fixed-krado-components/Text';
 import Layout from '@/components/layout';
+import MotionDesignStrategySection from '@/components/motion-design-strategy-section';
 import Section from '@/components/section';
 import { Flex, Container } from 'krado-react';
 import {
@@ -37,12 +38,13 @@ export default function Faq() {
     <Layout>
       <Container sx={{ display: 'flex', justifyContent: 'center' }}>
         <Heading
-          variant='display.display'
+          variant="display.display"
           sx={{ marginBottom: 7, marginTop: 7 }}
         >
           Frequently asked questions
         </Heading>
       </Container>
+      <MotionDesignStrategySection />
       <Section>
         <SectionWrapper>
           <Heading>Ideal clients</Heading>
@@ -69,19 +71,19 @@ export default function Faq() {
           <Flex sx={{ gap: 3, marginTop: 4 }}>
             <OverviewCard
               icon={<MdLightbulb />}
-              heading='Class C projects'
+              heading="Class C projects"
               text={process.env.NEXT_PUBLIC_CLASS_C}
               isHeadingSmall={true}
             />
             <OverviewCard
               icon={<MdExtension />}
-              heading='Class B projects'
+              heading="Class B projects"
               text={process.env.NEXT_PUBLIC_CLASS_B}
               isHeadingSmall={true}
             />
             <OverviewCard
               icon={<MdRocketLaunch />}
-              heading='Class A projects'
+              heading="Class A projects"
               text={process.env.NEXT_PUBLIC_CLASS_A}
               isHeadingSmall={true}
             />
