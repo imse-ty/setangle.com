@@ -6,7 +6,7 @@ import { Box, Container } from 'krado-react';
 import { motion, useScroll, useSpring, useTransform } from 'framer-motion';
 import { useRef } from 'react';
 
-export default function Section({
+export default function ScaleInEffect({
   children,
   backgroundColor,
   foregroundColor
@@ -22,7 +22,7 @@ export default function Section({
   const scale = useSpring(scrollScale, { mass: 0.1 });
 
   return (
-    <section ref={container}>
+    <div ref={container}>
       <Box
         sx={{
           backgroundColor: foregroundColor
@@ -31,33 +31,12 @@ export default function Section({
         <motion.div
           style={{ scale }}
           sx={{
-            display: 'flex',
-            flexDirection: 'column',
-            alignItems: 'center',
-            textAlign: 'center',
-            paddingTop: 6,
-            paddingBottom: 6,
-            backgroundColor: backgroundColor,
-            borderRadius: 4,
-            justifyContent: 'center',
-            minHeight: '70vh',
-            boxShadow: 'soft.highNorth'
+            backgroundColor: backgroundColor
           }}
         >
-          <Container
-            sx={{
-              display: 'flex',
-              alignItems: 'center',
-              flexDirection: 'column',
-              marginY: 'auto',
-              gap: 5,
-              width: '100%'
-            }}
-          >
-            {children}
-          </Container>
+          {children}
         </motion.div>
       </Box>
-    </section>
+    </div>
   );
 }

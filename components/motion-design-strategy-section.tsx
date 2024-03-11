@@ -16,13 +16,13 @@ import SimpleHeadingAndText from './simple-heading-and-text';
 import { OverviewCard } from './agency/overview-card';
 import Heading from './fixed-krado-components/Heading';
 import Text from './fixed-krado-components/Text';
-import Section from './section';
+import ScaleInEffect from './scale-in-effect';
 
 export default function MotionDesignStrategySection() {
   return (
-    <Section>
+    <ScaleInEffect>
       <Flex sx={{ flexDirection: 'column', alignItems: 'center', gap: 5 }}>
-        <Heading as="h2">Motion design strategy</Heading>
+        <Heading as='h2'>Motion design strategy</Heading>
         <Grid
           sx={{
             display: 'flex',
@@ -34,22 +34,22 @@ export default function MotionDesignStrategySection() {
         >
           <OverviewCard
             icon={<MdSearch />}
-            heading="Class A motion"
-            text="High-energy, abstract visuals for an engaging, fast-paced experience where motion takes center stage over information, ideal for captivating content and capturing the attention of the viewer"
+            heading='Class A motion'
+            text='High-energy, abstract visuals for an engaging, fast-paced experience where motion takes center stage over information, ideal for captivating content and capturing the attention of the viewer'
           />
           <OverviewCard
             icon={<MdFlag />}
-            heading="Class B motion"
-            text="Mixes informative content with eye-catching visuals at a slower pace than Type A, emphasizing detailed storytelling suited for projects needing both information delivery and visual appeal. "
+            heading='Class B motion'
+            text='Mixes informative content with eye-catching visuals at a slower pace than Type A, emphasizing detailed storytelling suited for projects needing both information delivery and visual appeal. '
           />
           <OverviewCard
             icon={<MdLightbulb />}
-            heading="Class C motion"
-            text="Simplified and clear storytelling to support information delivery with straightforward, well-executed motion and type."
+            heading='Class C motion'
+            text='Simplified and clear storytelling to support information delivery with straightforward, well-executed motion and type.'
           />
         </Grid>
         <SimpleHeadingAndText>
-          <Text as="p" variant="body.summary">
+          <Text as='p' variant='body.summary'>
             Given the project&apos;s scope and needs, a blend of{' '}
             <strong>Class B</strong> and <strong>Class B</strong> motion would
             best suit our objectives, with moments of <strong>Class A</strong>{' '}
@@ -58,6 +58,6 @@ export default function MotionDesignStrategySection() {
           </Text>
         </SimpleHeadingAndText>
       </Flex>
-    </Section>
+    </ScaleInEffect>
   );
 }

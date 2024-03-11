@@ -1,7 +1,7 @@
 /** @jsxImportSource theme-ui */
 // @ts-nocheck
 
-import { Flex } from 'krado-react';
+import { Flex, Button } from 'krado-react';
 import Text from './fixed-krado-components/Text';
 import Link from 'next/link';
 import { motion } from 'framer-motion';
@@ -16,7 +16,7 @@ function MenuItem({ children, active, href }) {
         justifyContent: 'center',
         alignItems: 'center',
         marginLeft: 0,
-        backgroundColor: 'background',
+
         color: active ? 'action.active' : 'text.primary',
         padding: 2,
         fontWeight: 600,
@@ -62,14 +62,8 @@ export default function Navigation({ isHidden }) {
       exit='hidden'
       key='navigation'
       sx={{
-        position: 'fixed',
-        left: '50%',
-        bottom: [4],
-        transform: 'translateX(-50%)',
         zIndex: 3,
         color: 'text.primary',
-        backgroundColor: 'background',
-        boxShadow: 'hard.high',
         padding: 2,
         borderRadius: 2
       }}
@@ -79,7 +73,7 @@ export default function Navigation({ isHidden }) {
         sx={{
           justifyContent: 'space-between',
           width: '100%',
-          gap: 2,
+          gap: 3,
           listStyle: 'none',
           paddingLeft: 0
         }}
@@ -90,6 +84,7 @@ export default function Navigation({ isHidden }) {
         <MenuItem href='#work'>Work</MenuItem>
         <MenuItem href='#about'>About</MenuItem>
         <MenuItem href='#contact'>Contact</MenuItem>
+        <Button size='small'>Book a Call</Button>
       </Flex>
     </Flex>
   );

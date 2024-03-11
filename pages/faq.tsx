@@ -7,7 +7,7 @@ import Heading from '@/components/fixed-krado-components/Heading';
 import Text from '@/components/fixed-krado-components/Text';
 import Layout from '@/components/layout';
 import MotionDesignStrategySection from '@/components/motion-design-strategy-section';
-import Section from '@/components/section';
+import ScaleInEffect from '@/components/scale-in-effect';
 import { Flex, Container } from 'krado-react';
 import {
   MdBook,
@@ -38,14 +38,14 @@ export default function Faq() {
     <Layout>
       <Container sx={{ display: 'flex', justifyContent: 'center' }}>
         <Heading
-          variant="display.display"
+          variant='display.display'
           sx={{ marginBottom: 7, marginTop: 7 }}
         >
           Frequently asked questions
         </Heading>
       </Container>
       <MotionDesignStrategySection />
-      <Section>
+      <ScaleInEffect>
         <SectionWrapper>
           <Heading>Ideal clients</Heading>
           <Text>
@@ -59,8 +59,8 @@ export default function Faq() {
             passionate about their vision as we are about bringing it to life.
           </Text>
         </SectionWrapper>
-      </Section>
-      <Section>
+      </ScaleInEffect>
+      <ScaleInEffect>
         <SectionWrapper>
           <Heading>Pricing overview</Heading>
           <Text>
@@ -71,26 +71,26 @@ export default function Faq() {
           <Flex sx={{ gap: 3, marginTop: 4 }}>
             <OverviewCard
               icon={<MdLightbulb />}
-              heading="Class C projects"
+              heading='Class C projects'
               text={process.env.NEXT_PUBLIC_CLASS_C}
               isHeadingSmall={true}
             />
             <OverviewCard
               icon={<MdExtension />}
-              heading="Class B projects"
+              heading='Class B projects'
               text={process.env.NEXT_PUBLIC_CLASS_B}
               isHeadingSmall={true}
             />
             <OverviewCard
               icon={<MdRocketLaunch />}
-              heading="Class A projects"
+              heading='Class A projects'
               text={process.env.NEXT_PUBLIC_CLASS_A}
               isHeadingSmall={true}
             />
           </Flex>
         </SectionWrapper>
-      </Section>
-      <Section>
+      </ScaleInEffect>
+      <ScaleInEffect>
         <SectionWrapper>
           <Heading>Our work</Heading>
           <Text>
@@ -101,7 +101,7 @@ export default function Faq() {
             versatility and commitment to quality in every piece we create.
           </Text>
         </SectionWrapper>
-      </Section>
+      </ScaleInEffect>
       <ContactSection useTransparentBackground />
     </Layout>
   );
