@@ -3,7 +3,7 @@ import Heading from '../fixed-krado-components/Heading';
 import Text from '../fixed-krado-components/Text';
 import VideoPlayer from '../video-player';
 
-export default function FaqHero() {
+export default function FaqHero({ name }) {
   return (
     <Container
       sx={{
@@ -20,7 +20,7 @@ export default function FaqHero() {
         Frequently asked questions
       </Text>
       <Heading as='h1' variant='display.h1'>
-        Hello Calvin, welcome to a space where creativity meets strategy
+        Hello{name}, welcome to a space where creativity meets strategy
       </Heading>
       <Text as='p' variant='body.summary' sx={{ maxWidth: '1000px' }}>
         We blend animation, technology, and sound to transform ordinary stories

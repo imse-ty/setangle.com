@@ -29,7 +29,7 @@ import FaqNewsletter from '@/components/faq/faq-newsletter-signup';
 import FaqBookCall from '@/components/faq/faq-book-call';
 import FaqOurClients from '@/components/faq/faq-our-clients';
 
-export default function Overview() {
+export default function CalvinCrawfordFaq() {
   const [isVideoActive, setIsVideoActive] = useState(false);
   const [colorMode, setColorMode] = useColorMode();
   setColorMode('dark');
@@ -42,7 +42,7 @@ export default function Overview() {
         <meta name='viewport' content='width=device-width, initial-scale=1' />
         <link rel='icon' href='/favicon.ico' />
       </Head>
-      <FaqHero />
+      <FaqHero name=' Calvin' />
       <Container sx={{ marginBottom: 6 }}>
         <ReelSection
           isVideoActive={isVideoActive}
