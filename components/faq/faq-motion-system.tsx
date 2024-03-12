@@ -80,6 +80,7 @@ export default function FaqMotionSystem() {
               text='High-energy, abstract visuals for an engaging, fast-paced experience where motion takes center stage over information, ideal for captivating content and capturing the attention of the viewer'
               buttonLabel='Watch example'
               buttonOnClick={() => setIsClassAVideoOpen(true)}
+              isHeadingSmall
             />
             <OverviewCard
               icon={<MdMovie />}
@@ -87,6 +88,7 @@ export default function FaqMotionSystem() {
               text='Mixes informative content with eye-catching visuals at a slower pace than Type A, emphasizing detailed storytelling suited for projects needing both information delivery and visual appeal. '
               buttonLabel='Watch example'
               buttonOnClick={() => setIsClassBVideoOpen(true)}
+              isHeadingSmall
             />
             <OverviewCard
               icon={<MdLightbulb />}
@@ -94,6 +96,7 @@ export default function FaqMotionSystem() {
               text='Simplified and clear storytelling to support information delivery with straightforward, well-executed motion and type.'
               buttonLabel='Watch example'
               buttonOnClick={() => setIsClassCVideoOpen(true)}
+              isHeadingSmall
             />
           </Flex>
         </Container>
