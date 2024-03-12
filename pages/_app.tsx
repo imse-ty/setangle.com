@@ -8,12 +8,13 @@ import Script from 'next/script';
 export default function App({ Component, pageProps }: AppProps) {
   return (
     <ThemeUIProvider theme={{ ...theme, ...setyTheme }}>
+      <Script src='https://f.convertkit.com/ckjs/ck.5.js' />
       {process.env.NEXT_PUBLIC_UMAMI_SCRIPT_URL &&
         process.env.NEXT_PUBLIC_UMAMI_WEBSITE_ID && (
           <Script
             src={process.env.NEXT_PUBLIC_UMAMI_SCRIPT_URL}
             data-website-id={process.env.NEXT_PUBLIC_UMAMI_WEBSITE_ID}
-            strategy="lazyOnload"
+            strategy='lazyOnload'
           />
         )}
       <Component {...pageProps} />

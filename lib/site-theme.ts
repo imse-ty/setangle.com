@@ -4,9 +4,9 @@ import { buildMonochromaticTheme } from './monochromatic-theme';
 const pageTheme = buildMonochromaticTheme('nut');
 
 export const setyTheme = {
-  // config: {
-  //   initialColorModeName: 'light'
-  // },
+  config: {
+    initialColorModeName: 'light'
+  },
   sizes: {
     container: '1920px'
   },
@@ -23,6 +23,21 @@ export const setyTheme = {
   radii: [4, 8, 16, 32, 64, 99999],
   colors: {
     ...pageTheme
+  },
+  forms: {
+    input: {
+      border: 0,
+      paddingX: 3,
+      borderRadius: 1,
+      color: 'text.primary',
+      fontSize: 3,
+      backgroundColor: 'secondary.bold',
+      '&:focus': {
+        borderColor: 'primary',
+        boxShadow: (t) => `0 0 0 2px ${t.colors.primary}`,
+        outline: 'none'
+      }
+    }
   },
   buttons: {
     ...theme.buttons,

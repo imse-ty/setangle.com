@@ -7,7 +7,7 @@ import Image from 'next/image';
 import Text from '../fixed-krado-components/Text';
 import { useColorMode } from 'theme-ui';
 
-function Logo({ logoName, alt }) {
+function Logo({ logoName, alt, isLight }) {
   const [colorMode, setColorMode] = useColorMode();
 
   return (
@@ -17,8 +17,11 @@ function Logo({ logoName, alt }) {
       sx={{
         width: ['100px', '125px'],
         height: 'auto',
-        filter:
-          'brightness(0) saturate(100%) invert(8%) sepia(55%) saturate(3456%) hue-rotate(249deg) brightness(85%) contrast(112%)'
+        filter: [
+          isLight
+            ? 'brightness(0) saturate(100%) invert(8%) sepia(55%) saturate(3456%) hue-rotate(249deg) brightness(85%) contrast(112%)'
+            : 'brightness(0) saturate(100%) invert(84%) sepia(97%) saturate(2024%) hue-rotate(180deg) brightness(108%) contrast(97%)'
+        ]
       }}
       width={100}
       height={100}
@@ -26,7 +29,7 @@ function Logo({ logoName, alt }) {
   );
 }
 
-export default function LogoCarousel() {
+export default function LogoCarousel({ isLight }) {
   return (
     <Container
       sx={{
@@ -52,12 +55,24 @@ export default function LogoCarousel() {
           flexWrap: ['none', 'wrap']
         }}
       >
-        <Logo logoName='ford' alt='Ford logo' />
-        <Logo logoName='beloved-benefit' alt='Beloved Benefit logo' />
-        <Logo logoName='chick-fil-a' alt='Chick-fil-A logo' />
-        <Logo logoName='keller-williams' alt='Keller Williams logo' />
-        <Logo logoName='fearless-fund' alt='Fearless Fund logo' />
-        <Logo logoName='vmware' alt='VMware logo' />
+        <Logo logoName='ford' alt='Ford logo' isLight={isLight} />
+        <Logo
+          logoName='beloved-benefit'
+          alt='Beloved Benefit logo'
+          isLight={isLight}
+        />
+        <Logo logoName='chick-fil-a' alt='Chick-fil-A logo' isLight={isLight} />
+        <Logo
+          logoName='keller-williams'
+          alt='Keller Williams logo'
+          isLight={isLight}
+        />
+        <Logo
+          logoName='fearless-fund'
+          alt='Fearless Fund logo'
+          isLight={isLight}
+        />
+        <Logo logoName='vmware' alt='VMware logo' isLight={isLight} />
       </Flex>
     </Container>
   );

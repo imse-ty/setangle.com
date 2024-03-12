@@ -1,6 +1,7 @@
 /** @jsxImportSource theme-ui */
+//@ts-nocheck
 
-import { Flex, Box } from 'krado-react';
+import { Flex, Box, Button } from 'krado-react';
 import Link from 'next/link';
 import { motion } from 'framer-motion';
 import Text from '../fixed-krado-components/Text';
@@ -8,8 +9,45 @@ import { getColor } from '@theme-ui/color';
 import { ThemeUIProvider } from 'theme-ui';
 import { buildMonochromaticTheme } from '@/lib/monochromatic-theme';
 import Image from 'next/image';
+import { MdStar } from 'react-icons/md';
 
-export default function ProjectCard({ title, subtitle, src, href, color }) {
+function SectionTag({ icon, href, ...rest }) {
+  return (
+    <Button
+      size='small'
+      href={href}
+      leftIcon={icon}
+      sx={{
+        height: '38px',
+        marginBottom: 'auto',
+        display: 'flex',
+        paddingX: '12px',
+        paddingY: 2,
+        alignItems: 'center',
+        fontSize: '13px',
+        fontWeight: 700,
+        color: 'primary.contrast',
+        backgroundColor: 'secondary.light',
+        '&:hover': {
+          backgroundColor: 'action.active',
+          color: 'action.contrast'
+        }
+      }}
+      {...rest}
+    />
+  );
+}
+
+export default function ProjectCard({
+  tags,
+  title,
+  subtitle,
+  src,
+  href,
+  color,
+  motionType,
+  motionTypeIcon
+}) {
   const pageColor = buildMonochromaticTheme(color);
 
   return (
@@ -27,6 +65,7 @@ export default function ProjectCard({ title, subtitle, src, href, color }) {
             overflow: 'hidden',
             flexDirection: 'column',
             borderRadius: 3,
+            textAlign: 'center',
             transition: 'transform 325ms ease, box-shadow 325ms ease',
             '&:hover': {
               transform: 'scale(1.02)',
@@ -34,6 +73,22 @@ export default function ProjectCard({ title, subtitle, src, href, color }) {
             }
           }}
         >
+          <Flex
+            sx={{
+              position: 'absolute',
+              right: 4,
+              top: 4,
+              gap: 2
+            }}
+          >
+            {motionType && (
+              <SectionTag icon={motionTypeIcon}>{motionType}</SectionTag>
+            )}
+            {tags &&
+              tags.map((tag, index) => (
+                <SectionTag key={index}>{tag}</SectionTag>
+              ))}
+          </Flex>
           <Flex
             as={motion.div}
             sx={{
@@ -44,7 +99,8 @@ export default function ProjectCard({ title, subtitle, src, href, color }) {
               left: 0,
               bottom: 0,
               zIndex: 1,
-              width: '100%'
+              width: '100%',
+              alignItems: 'center'
             }}
           >
             <Text

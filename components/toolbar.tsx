@@ -9,43 +9,21 @@ import Navigation from './navigation';
 import RightTriangle from '../public/right-triangle.svg';
 import Text from './fixed-krado-components/Text';
 import Switch from './projects/project-switch';
-import { useState } from 'react';
+
 import Image from 'next/image';
+import { useState } from 'react';
+import Modal from './modal';
+import CalEmbed from './cal-embed';
 
 export default function Toolbar() {
   const { scrollYProgress } = useScroll();
+  const [isCalModalOpen, setIsCalModalOpen] = useState(false);
 
   return (
-    <Flex
-      as={motion.div}
-      initial={{ opacity: 1 }}
-      animate={{ opacity: 1 }}
-      exit={{ opacity: 0 }}
-      key='toolbar'
-      sx={{
-        alignItems: 'center',
-        position: 'fixed',
-        top: 0,
-        width: '100%',
-        zIndex: 3,
-        gap: [3, 4]
-      }}
-    >
-      <Link href='#'>
-        <Image
-          src='/logo.svg'
-          alt='Set Angle Logo'
-          sx={{
-            margin: 4,
-            width: '48px',
-            height: '48px',
-            mixBlendMode: 'exclusion'
-          }}
-          width={48}
-          height={48}
-          priority
-        />
-      </Link>
+    <>
+      <Modal isOpen={isCalModalOpen} onClose={() => setIsCalModalOpen(false)}>
+        <CalEmbed />
+      </Modal>
       <Box
         as={motion.div}
         style={{ scaleX: scrollYProgress }}
@@ -55,10 +33,55 @@ export default function Toolbar() {
           position: 'fixed',
           left: 0,
           top: 0,
+          zIndex: 4,
           backgroundColor: 'secondary.light',
           transformOrigin: 'left'
         }}
       />
-    </Flex>
+      <Flex
+        as={motion.div}
+        initial={{ opacity: 1 }}
+        animate={{ opacity: 1 }}
+        exit={{ opacity: 0 }}
+        key='toolbar'
+        sx={{
+          position: 'fixed',
+          top: 0,
+          backgroundColor: 'rgba(9, 3, 30,0.5)',
+          backdropFilter: 'blur(32px)',
+          width: '100%',
+          zIndex: 3
+        }}
+      >
+        <Container
+          paddingX='none'
+          sx={{
+            paddingX: 4,
+            paddingY: 3,
+
+            alignItems: 'center',
+            display: 'flex',
+            width: '100%',
+            justifyContent: 'space-between'
+          }}
+        >
+          <Link href='#'>
+            <Image
+              src='/logo.svg'
+              alt='Set Angle Logo'
+              sx={{
+                width: '48px',
+                height: '48px'
+              }}
+              width={48}
+              height={48}
+              priority
+            />
+          </Link>
+
+          <Navigation buttonOnClick={() => setIsCalModalOpen(true)} />
+        </Container>
+      </Flex>
+    </>
   );
 }

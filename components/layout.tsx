@@ -30,11 +30,9 @@ export default function Layout({
   });
 
   return (
-    <Box as='main' sx={{ position: 'relative', overflowX: 'hidden' }}>
+    <Box as='main' sx={{ position: 'relative' }}>
       <Toolbar />
-      <AnimatePresence>
-        {!forceHideNav && <Navigation isHidden={isNavigationHidden} />}
-      </AnimatePresence>
+
       {children}
     </Box>
   );
