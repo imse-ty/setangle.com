@@ -101,7 +101,7 @@ export default function WorkSection({ onViewportEnter, onViewportLeave }) {
           media graphics, and non-profit organizations.
         </Text>
         <ProjectsSection />
-        <a
+        {/* <a
           href='https://imsety.com/#work'
           target='_blank'
           rel='noindex nofollow'
@@ -111,7 +111,7 @@ export default function WorkSection({ onViewportEnter, onViewportLeave }) {
           <Button leftIcon={<MdNorthEast />} sx={{ marginTop: 5 }}>
             View more work
           </Button>
-        </a>
+        </a> */}
       </Container>
     </ScaleInEffect>
   );

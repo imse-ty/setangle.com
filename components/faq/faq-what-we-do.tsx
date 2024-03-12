@@ -1,3 +1,6 @@
+/** @jsxImportSource theme-ui */
+//@ts-nocheck
+
 import { Container, Flex, Button, Grid } from 'krado-react';
 import Text from '../fixed-krado-components/Text';
 import Heading from '../fixed-krado-components/Heading';
