@@ -1,10 +1,18 @@
-import { Container, Flex, Button } from 'krado-react';
+/** @jsxImportSource theme-ui */
+//@ts-nocheck
+
+import { Container, Flex, Button, Box } from 'krado-react';
 import Text from '../fixed-krado-components/Text';
 import Heading from '../fixed-krado-components/Heading';
 import ScaleInEffect from '../scale-in-effect';
 import { Field, Input } from 'theme-ui';
+import Modal from '../modal';
+import { useState } from 'react';
+import NewsletterEmbed from '../newsletter-embed';
 
 export default function NewsletterSignup() {
+  const [isNewsletterSignupOpen, setIsNewsletterSignupOpen] = useState(false);
+
   return (
     <ScaleInEffect>
       <Container
@@ -32,10 +40,10 @@ export default function NewsletterSignup() {
             offerings, and behind-the-scenes access on what Set Angle is up too.
           </Text>
         </Flex>
-        <Flex sx={{ gap: 3 }}>
-          <Input placeholder='Email address' sx={{ flex: 1 }} />
-          <Button>Sign-up</Button>
-        </Flex>
+
+        <Box sx={{ width: [null, null, '700px'] }}>
+          <NewsletterEmbed />
+        </Box>
       </Container>
     </ScaleInEffect>
   );
