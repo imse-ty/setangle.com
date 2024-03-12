@@ -55,6 +55,7 @@ export default function CalvinCrawfordFaq() {
           }}
         />
       </Container>
+      <LogoCarousel isLight={false} />
       <NewsletterSignup />
       <FaqMotionSystem />
       <WorkSection />

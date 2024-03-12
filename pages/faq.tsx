@@ -55,6 +55,7 @@ export default function Faq() {
           }}
         />
       </Container>
+      <LogoCarousel isLight={false} />
       <NewsletterSignup />
       <FaqMotionSystem />
       <WorkSection />

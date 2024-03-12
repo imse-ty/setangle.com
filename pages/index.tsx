@@ -48,7 +48,7 @@ export default function Overview() {
           }}
         />
       </Container>
-      <LogoCarousel />
+      <LogoCarousel isLight />
       <WhatWeDoSection />
       <HomeWorkSection />
       <AboutSection />
