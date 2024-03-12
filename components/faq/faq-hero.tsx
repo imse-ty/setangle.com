@@ -12,18 +12,20 @@ export default function FaqHero() {
         display: 'flex',
         gap: 4,
         textAlign: 'center',
-        flexDirection: 'column'
+        flexDirection: 'column',
+        alignItems: 'center'
       }}
     >
       <Text variant='body.pretext' sx={{ marginBottom: 2 }}>
-        A motion & web design agency
+        Frequently asked questions
       </Text>
       <Heading as='h1' variant='display.h1'>
-        Transforming the ordinary into the&nbsp;extraordinary
+        Hello Calvin, welcome to a space where creativity meets strategy
       </Heading>
-      <Text as='p' variant='body.summary'>
-        Crafting well-executed motion and high-quality websites to deliver
-        soulful experiences that captivate and inspire.
+      <Text as='p' variant='body.summary' sx={{ maxWidth: '1000px' }}>
+        We blend animation, technology, and sound to transform ordinary stories
+        into soulful brand experiences that inspire the culture we live in
+        today.
       </Text>
     </Container>
   );

@@ -2,7 +2,7 @@
 
 import Heading from '../fixed-krado-components/Heading';
 import Text from '../fixed-krado-components/Text';
-import { Container, Box, Flex } from 'krado-react';
+import { Container, Box, Flex, Button } from 'krado-react';
 import SiteFooter from '../site-footer';
 import { motion, useScroll, useSpring, useTransform } from 'framer-motion';
 import { useRef } from 'react';
@@ -40,31 +40,35 @@ export default function ContactSection({ useTransparentBackground }) {
         >
           <Flex sx={{ flexDirection: 'column', minHeight: '100vh' }}>
             <Container sx={{ marginTop: 'auto', textAlign: 'center' }}>
-              <a
-                href='mailto:greetings@setangle.com'
-                sx={{ textDecoration: 'none' }}
-                data-umami-event='contact-email-link'
-              >
-                <Heading
-                  as='h2'
-                  variant='display.h2'
-                  sx={{
-                    color: 'surface.thin',
-                    marginBottom: [3, 4],
-                    fontSize: [7, 9, 10]
-                  }}
+              <Flex sx={{ flexDirection: 'column', gap: [3, 4] }}>
+                <a
+                  href='mailto:greetings@setangle.com'
+                  sx={{ textDecoration: 'none' }}
+                  data-umami-event='contact-email-link'
                 >
-                  greetings@setangle.com
-                </Heading>
-              </a>
-              <Text
-                as='p'
-                variant='body.summary'
-                sx={{ color: 'surface.extralight' }}
-              >
-                Thinking of collaborating? We&apos;re here to listen! Let&apos;s
-                connect.
-              </Text>
+                  <Text variant='body.pretext'>Get in touch</Text>
+                  <Heading
+                    as='h2'
+                    variant='display.h2'
+                    sx={{
+                      color: 'surface.thin',
+                      marginTop: 3,
+                      fontSize: [7, 9, 10]
+                    }}
+                  >
+                    greetings@setangle.com
+                  </Heading>
+                </a>
+                <Text
+                  as='p'
+                  variant='body.summary'
+                  sx={{ color: 'surface.extralight' }}
+                >
+                  Thinking of collaborating? We&apos;re here to listen!
+                  Let&apos;s connect.
+                </Text>
+              </Flex>
+              <Button sx={{ marginTop: 5 }}>Book a call</Button>
             </Container>
             <SiteFooter
               textColor='surface.extralight'

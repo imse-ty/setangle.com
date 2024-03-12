@@ -10,13 +10,12 @@ function MenuItem({ children, active, href }) {
   return (
     <Text
       as='li'
-      variant='body.smallParagraph'
+      variant='body.footnote'
       sx={{
-        display: 'flex',
+        display: ['none', 'flex'],
         justifyContent: 'center',
         alignItems: 'center',
         marginLeft: 0,
-
         color: active ? 'action.active' : 'text.primary',
         padding: 2,
         fontWeight: 600,
@@ -25,8 +24,7 @@ function MenuItem({ children, active, href }) {
         transition: 'color 400ms ease, box-shadow 400ms ease',
         boxShadow: active ? 'hard.high' : 'none',
         '&:hover': {
-          color: 'action.active',
-          boxShadow: 'hard.high'
+          color: 'secondary.regular'
         }
       }}
     >
@@ -73,18 +71,23 @@ export default function Navigation({ isHidden }) {
         sx={{
           justifyContent: 'space-between',
           width: '100%',
-          gap: 3,
+          gap: 1,
           listStyle: 'none',
           paddingLeft: 0
         }}
       >
-        <MenuItem href='#'>Home</MenuItem>
-        <MenuItem href='#reel'>Reel</MenuItem>
-        <MenuItem href='#services'>Services</MenuItem>
+        {/* <MenuItem href='#'>Home</MenuItem> */}
+        <MenuItem href='#summary'>Summary</MenuItem>
+        <MenuItem href='#approach'>Approach</MenuItem>
         <MenuItem href='#work'>Work</MenuItem>
-        <MenuItem href='#about'>About</MenuItem>
-        <MenuItem href='#contact'>Contact</MenuItem>
-        <Button size='small'>Book a Call</Button>
+        <MenuItem href='#services'>Services</MenuItem>
+        <MenuItem href='#clientele'>Clientele</MenuItem>
+        <MenuItem href='#process'>Process</MenuItem>
+        <MenuItem href='#pricing'>Pricing</MenuItem>
+        <MenuItem href='#newsletter'>Newsletter</MenuItem>
+        <a href='#contact' sx={{ marginLeft: 3 }}>
+          <Button size='small'>Book a call</Button>
+        </a>
       </Flex>
     </Flex>
   );

@@ -56,11 +56,11 @@ export default function Overview() {
         />
       </Container>
       <NewsletterSignup />
-      <FaqAbout />
-      <FaqProcess />
       <FaqMotionSystem />
-      <FaqOurClients />
+      <WorkSection />
       <FaqWhatWeDo />
+      <FaqOurClients />
+      <FaqProcess />
       <FaqPricing />
       <FaqNewsletter />
       {/* <FaqBookCall /> */}

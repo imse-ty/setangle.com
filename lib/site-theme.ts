@@ -24,6 +24,21 @@ export const setyTheme = {
   colors: {
     ...pageTheme
   },
+  forms: {
+    input: {
+      border: 0,
+      paddingX: 3,
+      borderRadius: 1,
+      color: 'text.primary',
+      fontSize: 3,
+      backgroundColor: 'secondary.bold',
+      '&:focus': {
+        borderColor: 'primary',
+        boxShadow: (t) => `0 0 0 2px ${t.colors.primary}`,
+        outline: 'none'
+      }
+    }
+  },
   buttons: {
     ...theme.buttons,
     ghost: {

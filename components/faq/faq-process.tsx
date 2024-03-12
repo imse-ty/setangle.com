@@ -6,42 +6,74 @@ import Text from '../fixed-krado-components/Text';
 import Heading from '../fixed-krado-components/Heading';
 import { OverviewCard } from '../agency/overview-card';
 import ScaleInEffect from '../scale-in-effect';
+import {
+  MdArrowRight,
+  MdArrowRightAlt,
+  MdDescription,
+  MdEast,
+  MdExpandMore,
+  MdGrass,
+  MdLightbulb,
+  MdLocalFlorist,
+  MdPalette,
+  MdRocket,
+  MdRocketLaunch,
+  MdSearch,
+  MdSouth,
+  MdSquare,
+  MdSquareFoot
+} from 'react-icons/md';
+import { motion } from 'framer-motion';
 
 export default function FaqProcess() {
   return (
     <ScaleInEffect>
       <Container
+        id='process'
         sx={{
           display: 'flex',
           gap: 5,
           flexDirection: 'column',
           justifyContent: 'center',
           alignItems: 'center',
-
+          textAlign: 'center',
           marginBottom: 6,
-          height: '150vh',
+
           borderRadius: 4,
           backgroundColor: 'surface.black'
         }}
       >
-        <Flex sx={{ gap: 4, height: '100%', paddingY: 6 }}>
+        <Flex
+          sx={{
+            flexDirection: ['column', 'row'],
+            gap: 4,
+            height: '100%',
+            paddingY: 6
+          }}
+        >
           <Flex
             sx={{
-              position: 'sticky',
+              position: ['block', 'sticky'],
               height: '25%',
-              top: 8,
+              marginBottom: 4,
+              top: '38%',
               flexDirection: 'column',
               flex: 4
             }}
           >
             <ScaleInEffect>
-              <Heading as='h2'>
-                Transforming the ordinary into the&nbsp;extraordinary
-              </Heading>
-              <Text as='p' variant='body.summary'>
-                Crafting well-executed motion and high-quality websites to
-                deliver soulful experiences that captivate and inspire.
-              </Text>
+              <Flex sx={{ flexDirection: 'column', gap: 3 }}>
+                <Text variant='body.pretext'>Process</Text>
+
+                <Heading as='h2'>
+                  Our creative process is akin to the art of shaping clay into
+                  form
+                </Heading>
+                <Text as='p' variant='body.summary'>
+                  Rather than chipping away at stone, we shape each project with
+                  the simplicity and focus of&nbsp;a&nbsp;sculptor.
+                </Text>
+              </Flex>
             </ScaleInEffect>
           </Flex>
           <Flex
@@ -53,29 +85,41 @@ export default function FaqProcess() {
             }}
           >
             <OverviewCard
-              heading='Animated explainer videos'
-              text='Concisely communicate complex concepts or services with eye-catching motion.'
-              isHeadingSmall={true}
+              icon={<MdSearch />}
+              heading='Discovery'
+              text="We start by listening to your story and understanding your goals. It's about laying the groundwork for a project that perfectly aligns with your vision."
+              showArrow
             />
             <OverviewCard
-              heading='Animated explainer videos'
-              text='Concisely communicate complex concepts or services with eye-catching motion.'
-              isHeadingSmall={true}
+              icon={<MdDescription />}
+              heading='Proposal'
+              text='Next, we outline a tailored strategy and plan. This is where we propose how we can bring your ideas to life, complete with timelines and budgets.'
             />
             <OverviewCard
-              heading='Animated explainer videos'
-              text='Concisely communicate complex concepts or services with eye-catching motion.'
-              isHeadingSmall={true}
+              icon={<MdLightbulb />}
+              heading='Concept'
+              text='Upon engagement, our creative process kicks off with broad strokes—sketching out the big ideas. This is the brainstorming phase where possibilities are endless.'
             />
             <OverviewCard
-              heading='Animated explainer videos'
-              text='Concisely communicate complex concepts or services with eye-catching motion.'
-              isHeadingSmall={true}
+              icon={<MdPalette />}
+              heading='Creation'
+              text='Then, we bring the concept into reality. Like shaping clay, we mold our initial designs and animations, setting the stage for refinement.'
             />
             <OverviewCard
-              heading='Animated explainer videos'
-              text='Concisely communicate complex concepts or services with eye-catching motion.'
-              isHeadingSmall={true}
+              icon={<MdSquareFoot />}
+              heading='Refinement'
+              text="The refinement stage is crucial. It's where we get into the details, ensuring every element aligns with the overarching vision, iterating until it's just right."
+            />
+            <OverviewCard
+              icon={<MdRocketLaunch />}
+              heading='Launch'
+              text='With everything polished, we launch your project into the world. This is the moment where your vision becomes a tangible, impactful reality.'
+            />
+
+            <OverviewCard
+              icon={<MdLocalFlorist />}
+              heading='Growth'
+              text="Post-launch, we focus on growth and optimization. It's about supporting your project's journey forward, ensuring it continues to resonate and achieve its goals."
             />
           </Flex>
         </Flex>

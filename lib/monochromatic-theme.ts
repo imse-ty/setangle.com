@@ -64,7 +64,7 @@ export function buildMonochromaticTheme(colorName) {
         },
         text: {
           primary: getColors(colorName, '100'),
-          secondary: getColors(colorName, '300'),
+          secondary: getColors(colorName, '200'),
           placeholder: getColors(colorName, '300'),
           disabled: getColors(colorName, '100')
         },
