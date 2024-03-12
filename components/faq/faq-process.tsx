@@ -29,7 +29,7 @@ export default function FaqProcess() {
   return (
     <ScaleInEffect>
       <Container
-        id='process'
+        id="process"
         sx={{
           display: 'flex',
           gap: 5,
@@ -63,13 +63,13 @@ export default function FaqProcess() {
           >
             <ScaleInEffect>
               <Flex sx={{ flexDirection: 'column', gap: 3 }}>
-                <Text variant='body.pretext'>Process</Text>
+                <Text variant="body.pretext">Process</Text>
 
-                <Heading as='h2'>
+                <Heading as="h2">
                   Our creative process is akin to the art of shaping clay into
                   form
                 </Heading>
-                <Text as='p' variant='body.summary'>
+                <Text as="p" variant="body.summary">
                   Rather than chipping away at stone, we shape each project with
                   the simplicity and focus of&nbsp;a&nbsp;sculptor.
                 </Text>
@@ -86,40 +86,47 @@ export default function FaqProcess() {
           >
             <OverviewCard
               icon={<MdSearch />}
-              heading='Discovery'
+              heading="Discovery"
               text="We start by listening to your story and understanding your goals. It's about laying the groundwork for a project that perfectly aligns with your vision."
               showArrow
+              isHeadingSmall
             />
             <OverviewCard
               icon={<MdDescription />}
-              heading='Proposal'
-              text='Next, we outline a tailored strategy and plan. This is where we propose how we can bring your ideas to life, complete with timelines and budgets.'
+              heading="Proposal"
+              text="Next, we outline a tailored strategy and plan. This is where we propose how we can bring your ideas to life, complete with timelines and budgets."
+              isHeadingSmall
             />
             <OverviewCard
               icon={<MdLightbulb />}
-              heading='Concept'
-              text='Upon engagement, our creative process kicks off with broad strokes—sketching out the big ideas. This is the brainstorming phase where possibilities are endless.'
+              heading="Concept"
+              text="Upon engagement, our creative process kicks off with broad strokes—sketching out the big ideas. This is the brainstorming phase where possibilities are endless."
+              isHeadingSmall
             />
             <OverviewCard
               icon={<MdPalette />}
-              heading='Creation'
-              text='Then, we bring the concept into reality. Like shaping clay, we mold our initial designs and animations, setting the stage for refinement.'
+              heading="Creation"
+              text="Then, we bring the concept into reality. Like shaping clay, we mold our initial designs and animations, setting the stage for refinement."
+              isHeadingSmall
             />
             <OverviewCard
               icon={<MdSquareFoot />}
-              heading='Refinement'
+              heading="Refinement"
               text="The refinement stage is crucial. It's where we get into the details, ensuring every element aligns with the overarching vision, iterating until it's just right."
+              isHeadingSmall
             />
             <OverviewCard
               icon={<MdRocketLaunch />}
-              heading='Launch'
-              text='With everything polished, we launch your project into the world. This is the moment where your vision becomes a tangible, impactful reality.'
+              heading="Launch"
+              text="With everything polished, we launch your project into the world. This is the moment where your vision becomes a tangible, impactful reality."
+              isHeadingSmall
             />
 
             <OverviewCard
               icon={<MdLocalFlorist />}
-              heading='Growth'
+              heading="Growth"
               text="Post-launch, we focus on growth and optimization. It's about supporting your project's journey forward, ensuring it continues to resonate and achieve its goals."
+              isHeadingSmall
             />
           </Flex>
         </Flex>
