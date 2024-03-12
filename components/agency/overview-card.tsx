@@ -21,6 +21,7 @@ function Card({ children, ...rest }) {
       sx={{
         padding: 4,
         flex: '1 1 25%',
+        textAlign: 'center',
         borderRadius: 3,
         backgroundColor: 'background',
         flexDirection: 'column',
@@ -50,7 +51,13 @@ export function OverviewCard({
 }) {
   return (
     <Card>
-      <Box sx={{ color: 'surface.light', fontSize: 7, marginBottom: 3 }}>
+      <Box
+        sx={{
+          color: 'surface.light',
+          fontSize: 7,
+          marginBottom: 3
+        }}
+      >
         {icon}
       </Box>
 

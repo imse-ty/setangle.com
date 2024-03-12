@@ -54,7 +54,12 @@ export default function ContactSection({ useTransparentBackground }) {
                     sx={{ textDecoration: 'none' }}
                     data-umami-event='contact-email-link'
                   >
-                    <Text variant='body.pretext'>Get in touch</Text>
+                    <Text
+                      variant='body.pretext'
+                      sx={{ color: 'surface.extralight' }}
+                    >
+                      Get in touch
+                    </Text>
                     <Heading
                       as='h2'
                       variant='display.h2'

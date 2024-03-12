@@ -118,7 +118,7 @@ export default function ReelSection({
       }}
     >
       <Flex
-        id='summary'
+        id='reel'
         as={motion.div}
         style={{
           scale,

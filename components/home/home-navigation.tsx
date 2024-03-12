@@ -1,21 +1,22 @@
 /** @jsxImportSource theme-ui */
 // @ts-nocheck
 
-import { Flex, Button } from 'krado-react';
+import { Flex } from 'krado-react';
+import Text from '../fixed-krado-components/Text';
 import Link from 'next/link';
 import { motion } from 'framer-motion';
-import Text from './fixed-krado-components/Text';
 
 function MenuItem({ children, active, href }) {
   return (
     <Text
       as='li'
-      variant='body.footnote'
+      variant='body.smallParagraph'
       sx={{
-        display: ['none', null, 'flex'],
+        display: 'flex',
         justifyContent: 'center',
         alignItems: 'center',
         marginLeft: 0,
+        backgroundColor: 'background',
         color: active ? 'action.active' : 'text.primary',
         padding: 2,
         fontWeight: 600,
@@ -24,7 +25,8 @@ function MenuItem({ children, active, href }) {
         transition: 'color 400ms ease, box-shadow 400ms ease',
         boxShadow: active ? 'hard.high' : 'none',
         '&:hover': {
-          color: 'secondary.regular'
+          color: 'action.active',
+          boxShadow: 'hard.high'
         }
       }}
     >
@@ -35,7 +37,7 @@ function MenuItem({ children, active, href }) {
   );
 }
 
-export default function Navigation({ isHidden, buttonOnClick }) {
+export default function HomeNavigation({ isHidden }) {
   const variants = {
     hidden: {
       opacity: 0,
@@ -60,8 +62,14 @@ export default function Navigation({ isHidden, buttonOnClick }) {
       exit='hidden'
       key='navigation'
       sx={{
+        position: 'fixed',
+        left: '50%',
+        bottom: [4],
+        transform: 'translateX(-50%)',
         zIndex: 3,
         color: 'text.primary',
+        backgroundColor: 'background',
+        boxShadow: 'hard.high',
         padding: 2,
         borderRadius: 2
       }}
@@ -71,24 +79,17 @@ export default function Navigation({ isHidden, buttonOnClick }) {
         sx={{
           justifyContent: 'space-between',
           width: '100%',
-          gap: 1,
+          gap: 2,
           listStyle: 'none',
           paddingLeft: 0
         }}
       >
-        {/* <MenuItem href='#'>Home</MenuItem> */}
-        <MenuItem href='#reel'>Summary</MenuItem>
-        <MenuItem href='#approach'>Approach</MenuItem>
-        <MenuItem href='#work'>Work</MenuItem>
+        <MenuItem href='#'>Home</MenuItem>
+        <MenuItem href='#reel'>Reel</MenuItem>
         <MenuItem href='#services'>Services</MenuItem>
-        <MenuItem href='#clientele'>Clientele</MenuItem>
-        <MenuItem href='#process'>Process</MenuItem>
-        <MenuItem href='#pricing'>Pricing</MenuItem>
-        <MenuItem href='#newsletter'>Newsletter</MenuItem>
-
-        <Button size='small' onClick={buttonOnClick} sx={{ marginLeft: 3 }}>
-          Book a call
-        </Button>
+        <MenuItem href='#work'>Work</MenuItem>
+        <MenuItem href='#about'>About</MenuItem>
+        <MenuItem href='#contact'>Contact</MenuItem>
       </Flex>
     </Flex>
   );

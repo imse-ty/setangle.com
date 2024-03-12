@@ -14,7 +14,6 @@ export default function SiteHeader() {
         top: 0,
         width: '100%',
         padding: [4, 5],
-        backgroundColor: 'red',
         justifyContent: 'right'
       }}
     >

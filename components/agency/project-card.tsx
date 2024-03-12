@@ -65,6 +65,7 @@ export default function ProjectCard({
             overflow: 'hidden',
             flexDirection: 'column',
             borderRadius: 3,
+            textAlign: 'center',
             transition: 'transform 325ms ease, box-shadow 325ms ease',
             '&:hover': {
               transform: 'scale(1.02)',
@@ -80,7 +81,9 @@ export default function ProjectCard({
               gap: 2
             }}
           >
-            <SectionTag icon={motionTypeIcon}>{motionType}</SectionTag>
+            {motionType && (
+              <SectionTag icon={motionTypeIcon}>{motionType}</SectionTag>
+            )}
             {tags &&
               tags.map((tag, index) => (
                 <SectionTag key={index}>{tag}</SectionTag>
