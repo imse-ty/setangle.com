@@ -32,6 +32,11 @@ const nextConfig = {
         destination: 'https://tally.so/r/nW5b0J',
         permanent: false
       },
+      {
+        source: '/consultation',
+        destination: 'https://cal.com/imsety/consultation/',
+        permanent: false
+      }
     ];
   }
 };
