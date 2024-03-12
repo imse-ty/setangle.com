@@ -13,7 +13,7 @@ import ClientLogos from '@/components/agency/logo-carousel';
 import LogoCarousel from '@/components/agency/logo-carousel';
 import WhatWeDoSection from '@/components/agency/what-we-do';
 import WorkSection from '@/components/agency/work-section';
-import ContactSection from '@/components/agency/contact-section';
+import ContactSection from '@/components/contact/contact-section';
 import AboutSection from '@/components/agency/about-section';
 import ReelSection from '@/components/agency/reel-section';
 import Head from 'next/head';

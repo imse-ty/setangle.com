@@ -58,20 +58,22 @@ export function ProjectYoutube({ url }) {
   );
 }
 
-export function ProjectVimeo({ url, ...rest }) {
+export function ProjectVimeo({ autoplay, breakContainer, url, ...rest }) {
   const getVimeoId = () => {
     if (url) {
       return getVideoId(url).id;
     }
   };
   const vimeoId = getVimeoId();
-  const vimeoUrl = `https://player.vimeo.com/video/${vimeoId}?playsinline=0&transparent=0`;
+  const vimeoUrl = `https://player.vimeo.com/video/${vimeoId}?playsinline=0&transparent=0&autoplay=${
+    autoplay ? '1' : '0'
+  }`;
 
   return (
     <figure
       sx={{
-        marginY: 4,
-        marginX: [0, null, null, '-25%', '-50%'],
+        marginY: breakContainer ? 4 : 'none',
+        marginX: breakContainer ? [0, null, null, '-25%', '-50%'] : 'none',
         aspectRatio: '16/9',
         position: 'relative',
         overflow: 'hidden',

@@ -1,7 +1,7 @@
 /** @jsxImportSource theme-ui */
 //@ts-nocheck
 
-import ContactSection from '@/components/agency/contact-section';
+import ContactSection from '@/components/contact/contact-section';
 import { OverviewCard } from '@/components/agency/overview-card';
 import Heading from '@/components/fixed-krado-components/Heading';
 import Text from '@/components/fixed-krado-components/Text';

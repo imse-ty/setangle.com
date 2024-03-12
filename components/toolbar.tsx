@@ -40,6 +40,8 @@ export default function Toolbar() {
         sx={{
           position: 'fixed',
           top: 0,
+          backgroundColor: 'rgba(9, 3, 30,0.5)',
+          backdropFilter: 'blur(32px)',
           width: '100%',
           zIndex: 3
         }}
@@ -49,8 +51,6 @@ export default function Toolbar() {
           sx={{
             paddingX: 4,
             paddingY: 3,
-            backgroundColor: 'rgba(9, 3, 30,0.5)',
-            backdropFilter: 'blur(32px)',
 
             alignItems: 'center',
             display: 'flex',

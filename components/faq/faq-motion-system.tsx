@@ -12,60 +12,90 @@ import {
   MdMovie,
   MdSentimentVerySatisfied
 } from 'react-icons/md';
+import Modal from '../modal';
+import { useState } from 'react';
+import { ProjectVimeo } from '../projects/project-embed';
 
 export default function FaqMotionSystem() {
+  const [isClassAVideoOpen, setIsClassAVideoOpen] = useState(false);
+  const [isClassBVideoOpen, setIsClassBVideoOpen] = useState(false);
+  const [isClassCVideoOpen, setIsClassCVideoOpen] = useState(false);
+
   return (
-    <ScaleInEffect>
-      <Container
-        id='approach'
-        sx={{
-          display: 'flex',
-          gap: 5,
-          flexDirection: 'column',
-          justifyContent: 'center',
-          alignItems: 'center',
-          textAlign: 'center',
-          marginBottom: 6,
-          paddingY: 5,
-          minHeight: '100vh',
-          borderRadius: 4,
-          backgroundColor: 'surface.black'
-        }}
+    <>
+      <Modal
+        isOpen={isClassAVideoOpen}
+        onClose={() => setIsClassAVideoOpen(false)}
       >
-        <Flex
+        <ProjectVimeo url='https://vimeo.com/389512514' autoplay />
+      </Modal>
+      <Modal
+        isOpen={isClassBVideoOpen}
+        onClose={() => setIsClassBVideoOpen(false)}
+      >
+        <ProjectVimeo url='' autoplay />
+      </Modal>
+      <Modal
+        isOpen={isClassCVideoOpen}
+        onClose={() => setIsClassCVideoOpen(false)}
+      >
+        <ProjectVimeo url='' autoplay />
+      </Modal>
+      <ScaleInEffect>
+        <Container
+          id='approach'
           sx={{
+            display: 'flex',
+            gap: 5,
             flexDirection: 'column',
-            gap: 3
+            justifyContent: 'center',
+            alignItems: 'center',
+            textAlign: 'center',
+            marginBottom: 6,
+            paddingY: 5,
+            minHeight: '100vh',
+            borderRadius: 4,
+            backgroundColor: 'surface.black'
           }}
         >
-          <Text variant='body.pretext'>Motion design approach</Text>
-          <Heading as='h2'>From subtle to striking</Heading>
-          <Text as='p' variant='body.summary'>
-            Our Class A, B, and C services are tailored to match your narrative
-            needs and budget.
-          </Text>
-        </Flex>
-        <Flex sx={{ gap: 3, flexDirection: ['column', 'row'] }}>
-          <OverviewCard
-            icon={<MdSentimentVerySatisfied />}
-            heading='Class A motion'
-            text='High-energy, abstract visuals for an engaging, fast-paced experience where motion takes center stage over information, ideal for captivating content and capturing the attention of the viewer'
-            buttonLabel='Watch example'
-          />
-          <OverviewCard
-            icon={<MdMovie />}
-            heading='Class B motion'
-            text='Mixes informative content with eye-catching visuals at a slower pace than Type A, emphasizing detailed storytelling suited for projects needing both information delivery and visual appeal. '
-            buttonLabel='Watch example'
-          />
-          <OverviewCard
-            icon={<MdLightbulb />}
-            heading='Class C motion'
-            text='Simplified and clear storytelling to support information delivery with straightforward, well-executed motion and type.'
-            buttonLabel='Watch example'
-          />
-        </Flex>
-      </Container>
-    </ScaleInEffect>
+          <Flex
+            sx={{
+              flexDirection: 'column',
+              gap: 3
+            }}
+          >
+            <Text variant='body.pretext'>Motion design approach</Text>
+            <Heading as='h2'>From subtle to striking</Heading>
+            <Text as='p' variant='body.summary'>
+              Our Class A, B, and C services are tailored to match your
+              narrative needs and budget.
+            </Text>
+          </Flex>
+          <Flex sx={{ gap: 3, flexDirection: ['column', 'row'] }}>
+            <OverviewCard
+              icon={<MdSentimentVerySatisfied />}
+              heading='Class A motion'
+              text='High-energy, abstract visuals for an engaging, fast-paced experience where motion takes center stage over information, ideal for captivating content and capturing the attention of the viewer'
+              buttonLabel='Watch example'
+              buttonOnClick={() => setIsClassAVideoOpen(true)}
+            />
+            <OverviewCard
+              icon={<MdMovie />}
+              heading='Class B motion'
+              text='Mixes informative content with eye-catching visuals at a slower pace than Type A, emphasizing detailed storytelling suited for projects needing both information delivery and visual appeal. '
+              buttonLabel='Watch example'
+              buttonOnClick={() => setIsClassBVideoOpen(true)}
+            />
+            <OverviewCard
+              icon={<MdLightbulb />}
+              heading='Class C motion'
+              text='Simplified and clear storytelling to support information delivery with straightforward, well-executed motion and type.'
+              buttonLabel='Watch example'
+              buttonOnClick={() => setIsClassCVideoOpen(true)}
+            />
+          </Flex>
+        </Container>
+      </ScaleInEffect>
+    </>
   );
 }

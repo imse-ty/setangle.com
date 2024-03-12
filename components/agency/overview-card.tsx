@@ -1,3 +1,6 @@
+/** @jsxImportSource theme-ui */
+//@ts-nocheck
+
 import { Box, Button } from 'krado-react';
 import Heading from '../fixed-krado-components/Heading';
 import { Flex } from 'theme-ui';
@@ -39,6 +42,7 @@ function Card({ children, ...rest }) {
 export function OverviewCard({
   showArrow,
   buttonLabel,
+  buttonOnClick,
   icon,
   heading,
   text,
@@ -123,7 +127,7 @@ export function OverviewCard({
         )}
       </Flex>
       {buttonLabel && (
-        <Button size='small' marginTop='auto'>
+        <Button size='small' marginTop='auto' onClick={buttonOnClick}>
           {buttonLabel}
         </Button>
       )}

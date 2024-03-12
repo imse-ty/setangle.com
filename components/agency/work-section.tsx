@@ -27,7 +27,7 @@ function ProjectsSection() {
         color='taweret'
         title='Beloved Benefit'
         subtitle='Helping bring Beloved Benefit to life, an annual charity fundraiser event in Atlanta founded by The Same House.'
-        href='https://work.setangle.com/work/beloved-benefit-2023'
+        href='/work/beloved-benefit-2023'
         src='/work/beloved-benefit.jpg'
       />
       <ProjectCard
@@ -37,7 +37,7 @@ function ProjectsSection() {
         color='sekmet'
         title='Chick-fil-A'
         subtitle="Innovating at Chick-fil-A's annual meetings NEXT and Spark 2023"
-        href='https://work.setangle.com/work/chick-fil-a'
+        href='/work/chick-fil-a'
         src='/work/chick-fil-a.png'
       />
       <ProjectCard
@@ -47,7 +47,7 @@ function ProjectsSection() {
         color='taweret'
         title='Space and Time'
         subtitle="Leading creation direction for Space and Time's AI tool Houston and creating a stunning 3D galaxy scene."
-        href='https://work.setangle.com/work/space-and-time'
+        href='/work/space-and-time'
         src='/work/space-and-time.png'
       />
       <ProjectCard
@@ -57,7 +57,7 @@ function ProjectsSection() {
         color='asset'
         title='Fearless Fund'
         subtitle="Animating infographics for the Fearless Fund's annual event, a venture capital firm empowering women of color-led businesses."
-        href='https://work.setangle.com/work/fearless-fund'
+        href='/work/fearless-fund'
         src='/work/fearless-fund.png'
       />
     </Container>

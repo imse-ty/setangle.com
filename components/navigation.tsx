@@ -12,7 +12,7 @@ function MenuItem({ children, active, href }) {
       as='li'
       variant='body.footnote'
       sx={{
-        display: ['none', 'flex'],
+        display: ['none', null, 'flex'],
         justifyContent: 'center',
         alignItems: 'center',
         marginLeft: 0,

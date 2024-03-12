@@ -13,14 +13,14 @@ import { Link } from 'krado-react';
 
 export const components = {
   p: (props) => (
-    <Text variant="body.summary" sx={{ marginTop: 2, marginBottom: 3 }}>
+    <Text variant='body.summary' sx={{ marginTop: 2, marginBottom: 3 }}>
       {props.children}
     </Text>
   ),
   h1: (props) => (
     <Heading
-      as="h1"
-      variant="display.h1"
+      as='h1'
+      variant='display.h1'
       sx={{ fontWeight: 600, marginTop: 4, marginBottom: 3 }}
     >
       {props.children}
@@ -28,8 +28,8 @@ export const components = {
   ),
   h2: (props) => (
     <Heading
-      as="h2"
-      variant="display.h2"
+      as='h2'
+      variant='display.h2'
       sx={{ fontWeight: 600, marginTop: 4, marginBottom: 3 }}
     >
       {props.children}
@@ -37,8 +37,8 @@ export const components = {
   ),
   h3: (props) => (
     <Heading
-      as="h3"
-      variant="display.h3"
+      as='h3'
+      variant='display.h3'
       sx={{ fontWeight: 600, marginTop: 4, marginBottom: 3 }}
     >
       {props.children}
@@ -46,8 +46,8 @@ export const components = {
   ),
   h4: (props) => (
     <Heading
-      as="h4"
-      variant="display.h4"
+      as='h4'
+      variant='display.h4'
       sx={{ fontWeight: 600, marginTop: 4, marginBottom: 3 }}
     >
       {props.children}
@@ -75,8 +75,8 @@ export const components = {
   li: ({ children }) => {
     return (
       <Text
-        as="li"
-        variant="body.summary"
+        as='li'
+        variant='body.summary'
         sx={{ fontSize: 'inherit', color: 'inherit' }}
       >
         {children}
@@ -96,7 +96,7 @@ export const components = {
     return <ProjectYoutube url={url} />;
   },
   ProjectVimeo: ({ url }) => {
-    return <ProjectVimeo url={url} />;
+    return <ProjectVimeo url={url} autoplay={false} breakContainer />;
   },
   ProjectCredits: ({ names, text }) => {
     return <ProjectCredits text={text} names={names} />;
