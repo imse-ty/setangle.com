@@ -71,7 +71,7 @@ export default function FaqMotionSystem() {
           <OfferCard
             title='30-second Class A video'
             text='High-energy, abstract visuals for an engaging, fast-paced experience where motion takes center stage over information, ideal for captivating content and capturing the attention of the viewer.'
-            price={process.env.NEXT_PUBLIC_CLASS_A}
+            price={process.env.NEXT_PUBLIC_CALVIN_CLASS_A}
             bulletPoints={classADeliverables}
           />
           <OfferCard
