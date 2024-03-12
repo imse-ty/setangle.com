@@ -63,7 +63,6 @@ export default function Overview() {
       <FaqProcess />
       <FaqPricing />
       <FaqNewsletter />
-      {/* <FaqBookCall /> */}
       <ContactSection useTransparentBackground />
     </Layout>
   );

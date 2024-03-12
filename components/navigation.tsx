@@ -35,7 +35,7 @@ function MenuItem({ children, active, href }) {
   );
 }
 
-export default function Navigation({ isHidden }) {
+export default function Navigation({ isHidden, buttonOnClick }) {
   const variants = {
     hidden: {
       opacity: 0,
@@ -85,9 +85,10 @@ export default function Navigation({ isHidden }) {
         <MenuItem href='#process'>Process</MenuItem>
         <MenuItem href='#pricing'>Pricing</MenuItem>
         <MenuItem href='#newsletter'>Newsletter</MenuItem>
-        <a href='#contact' sx={{ marginLeft: 3 }}>
-          <Button size='small'>Book a call</Button>
-        </a>
+
+        <Button size='small' onClick={buttonOnClick} sx={{ marginLeft: 3 }}>
+          Book a call
+        </Button>
       </Flex>
     </Flex>
   );

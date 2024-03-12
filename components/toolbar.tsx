@@ -9,14 +9,21 @@ import Navigation from './navigation';
 import RightTriangle from '../public/right-triangle.svg';
 import Text from './fixed-krado-components/Text';
 import Switch from './projects/project-switch';
-import { useState } from 'react';
+
 import Image from 'next/image';
+import { useState } from 'react';
+import Modal from './modal';
+import CalEmbed from './cal-embed';
 
 export default function Toolbar() {
   const { scrollYProgress } = useScroll();
+  const [isCalModalOpen, setIsCalModalOpen] = useState(false);
 
   return (
     <>
+      <Modal isOpen={isCalModalOpen} onClose={() => setIsCalModalOpen(false)}>
+        <CalEmbed />
+      </Modal>
       <Box
         as={motion.div}
         style={{ scaleX: scrollYProgress }}
@@ -72,7 +79,7 @@ export default function Toolbar() {
             />
           </Link>
 
-          <Navigation />
+          <Navigation buttonOnClick={() => setIsCalModalOpen(true)} />
         </Container>
       </Flex>
     </>
