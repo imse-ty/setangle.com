@@ -77,7 +77,7 @@ export default function Navigation({ isHidden, buttonOnClick }) {
         }}
       >
         {/* <MenuItem href='#'>Home</MenuItem> */}
-        <MenuItem href='#reel'>Summary</MenuItem>
+        <MenuItem href='#reel'>Reel</MenuItem>
         <MenuItem href='#approach'>Approach</MenuItem>
         <MenuItem href='#work'>Work</MenuItem>
         <MenuItem href='#services'>Services</MenuItem>

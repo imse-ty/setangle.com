@@ -23,9 +23,10 @@ import { ThemeUIProvider } from 'theme-ui';
 import { buildMonochromaticTheme } from '@/lib/monochromatic-theme';
 import { getColor } from '@theme-ui/color';
 import { NextSeo } from 'next-seo';
+import HomeLayout from '@/components/home/home-layout';
 
 function BodyContainer({ ...rest }) {
-  return <Container as="article" sx={{ maxWidth: '900px' }} {...rest} />;
+  return <Container as='article' sx={{ maxWidth: '900px' }} {...rest} />;
 }
 
 export default function Project(props) {
@@ -58,7 +59,7 @@ export default function Project(props) {
         title={`${data.project.title} - Imsety`}
         description={data.project.subtitle}
       />
-      <Layout
+      <HomeLayout
         typeOfCaseStudy={data.project.typeOfCaseStudy}
         showToolbarBack={true}
         isHiddenByDefault={true}
@@ -70,7 +71,7 @@ export default function Project(props) {
           videoUrl={data.project.videoUrl}
           coverVideo={data.project.coverVideo}
           coverImage={data.project.coverImage}
-          href="/work"
+          href='/work'
           themeColor={getColor({ colors: { ...pageColor } }, 'secondary.bold')}
         />
 
@@ -116,7 +117,7 @@ export default function Project(props) {
             </motion.div>
           </Box>
         </div>
-      </Layout>
+      </HomeLayout>
     </ThemeUIProvider>
   );
 }
