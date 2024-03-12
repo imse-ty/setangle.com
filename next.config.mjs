@@ -1,6 +1,11 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
-  reactStrictMode: true,
+  images: {
+    domains: ['assets.tina.io']
+  },
+  experimental: {
+    scrollRestoration: true
+  },
   webpack(config) {
     config.module.rules.push({
       test: /\.svg$/i,
