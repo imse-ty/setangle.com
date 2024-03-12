@@ -27,19 +27,19 @@ export default function FaqMotionSystem() {
         isOpen={isClassAVideoOpen}
         onClose={() => setIsClassAVideoOpen(false)}
       >
-        <ProjectVimeo url='https://vimeo.com/389512514' autoplay />
+        <ProjectVimeo url='https://vimeo.com/918370231?share=copy' autoplay />
       </Modal>
       <Modal
         isOpen={isClassBVideoOpen}
         onClose={() => setIsClassBVideoOpen(false)}
       >
-        <ProjectVimeo url='' autoplay />
+        <ProjectVimeo url='https://vimeo.com/918370247?share=copy' autoplay />
       </Modal>
       <Modal
         isOpen={isClassCVideoOpen}
         onClose={() => setIsClassCVideoOpen(false)}
       >
-        <ProjectVimeo url='' autoplay />
+        <ProjectVimeo url='https://vimeo.com/918370257?share=copy' autoplay />
       </Modal>
       <ScaleInEffect>
         <Container
