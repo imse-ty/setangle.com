@@ -14,7 +14,7 @@ export default function CalEmbed() {
   }, []);
   return (
     <Cal
-      calLink='imsety/chat'
+      calLink='imsety/setangle'
       style={{ width: '100%', height: '100%', overflow: 'scroll' }}
       config={{ layout: 'month_view' }}
     />
