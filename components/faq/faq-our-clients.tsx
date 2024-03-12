@@ -44,7 +44,9 @@ export default function FaqOurClients() {
           <Text variant='body.pretext'>Our clientele</Text>
           <Heading>Who we serve</Heading>
           <Text variant='body.summary'>
-            Crafting dynamic digital experiences for brands and visionaries.
+            Creating holistic digital experiences for brands and visionaries
+            looking to blend creativity and logic in a single partnership that
+            balances left-brain and right-brain strengths.
           </Text>
         </Flex>
         <Grid
@@ -57,25 +59,25 @@ export default function FaqOurClients() {
           <OverviewCard
             icon={<MdTerminal />}
             heading='Emerging startups'
-            text='Innovative companies exploring new technologies who value cutting-edge design to showcase their new product or service.'
+            text='Startups pushing the boundaries of technology and design, seeking a partner who understands both their creative vision and technical needs to bring their innovative products or services to life.'
             isHeadingSmall
           />
           <OverviewCard
             icon={<MdVolunteerActivism />}
             heading='Non-profit and social impact ventures'
-            text='Groups focused on social causes, seeking to communicate their mission and impact effectively to a wider audience.'
+            text='Groups focused on social causes, in need of a partner who can blend compelling storytelling with strategic insights to amplify  their mission.'
             isHeadingSmall
           />
           <OverviewCard
             icon={<MdLocationCity />}
             heading='Innovative enterprises and brands'
-            text='Industry leaders aiming to refresh their image or launch new campaigns that stand out and captivate their target audience.'
+            text='Industry leaders aiming to refresh their image or launch new campaigns, looking for a collaborator who excels in blending artistic flair with technological expertise.'
             isHeadingSmall
           />
           <OverviewCard
             icon={<MdMood />}
             heading='Entertainment and music industry'
-            text='Artists, labels, and producers looking for visually engaging content that enhances their online or stage presence and connects with fans.'
+            text='Entertainment and music visionaries looking for visually engaging content that enhances their digital or live presence through animation, tech, and sound design.'
             isHeadingSmall
           />
         </Grid>

@@ -20,7 +20,7 @@ export default function FaqHero({ name }) {
         Frequently asked questions
       </Text>
       <Heading as='h1' variant='display.h1'>
-        Hello{name}, welcome to a space where creativity meets strategy
+        Hello{name}, welcome to a space where creativity meets logic
       </Heading>
       <Text as='p' variant='body.summary' sx={{ maxWidth: '1000px' }}>
         We blend animation, technology, and sound to transform ordinary stories

@@ -66,9 +66,11 @@ export default function FaqMotionSystem() {
           >
             <Text variant='body.pretext'>Motion design approach</Text>
             <Heading as='h2'>From subtle to striking</Heading>
-            <Text as='p' variant='body.summary'>
-              Our Class A, B, and C services are tailored to match your
-              narrative needs and budget.
+            <Text as='p' variant='body.summary' sx={{ maxWidth: '1000px' }}>
+              Watch this series of examples for a{' '}
+              <strong>fictional healthcare company</strong> called &quot;Set
+              Care&quot; that showcases our Class A, B, and C services. Each
+              class tailored to match your narrative needs and&nbsp;budget.
             </Text>
           </Flex>
           <Flex sx={{ gap: 3, flexDirection: ['column', 'row'] }}>
