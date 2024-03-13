@@ -37,8 +37,8 @@ export default function NewsletterSignup() {
           </Heading>
           <Text variant="body.summary">
             Sign-up to &apos;The Angle&apos; for a behind-the-scenes glimpse of
-            what Set Angle is doing, updates on upcoming services, and to read
-            insightful whitepapers about our projects.
+            what Set Angle is up to, learn about new services on the horizon,
+            and read insightful whitepapers about our projects.
           </Text>
         </Flex>
 
