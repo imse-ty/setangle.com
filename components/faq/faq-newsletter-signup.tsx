@@ -11,7 +11,7 @@ export default function FaqNewsletter() {
   return (
     <ScaleInEffect>
       <Container
-        id='newsletter'
+        id="newsletter"
         sx={{
           display: 'flex',
           gap: 5,
@@ -27,11 +27,12 @@ export default function FaqNewsletter() {
         }}
       >
         <Flex sx={{ gap: 3, flexDirection: 'column' }}>
-          <Text variant='body.pretext'>Exclusive newsletter</Text>
-          <Heading>Get exclusive agency updates</Heading>
+          <Text variant="body.pretext">Private newsletter</Text>
+          <Heading>Get insider agency updates</Heading>
           <Text>
-            Join &apos;The Angle&apos; for curated insights, updates, future
-            offerings, and behind-the-scenes access on what Set Angle is up too.
+            Sign-up to &apos;The Angle&apos; for a behind-the-scenes glimpse of
+            what Set Angle is doing, updates on upcoming services, and to read
+            insightful whitepapers about our projects.
           </Text>
         </Flex>
         <Box sx={{ width: [null, null, '700px'] }}>

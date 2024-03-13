@@ -31,13 +31,14 @@ export default function NewsletterSignup() {
         }}
       >
         <Flex sx={{ gap: 3, flexDirection: 'column', maxWidth: '1000px' }}>
-          <Text variant='body.pretext'>Exclusive newsletter</Text>
-          <Heading variant='display.h3'>
+          <Text variant="body.pretext">Private newsletter</Text>
+          <Heading variant="display.h3">
             You&apos;re invited to a world of exclusive agency updates
           </Heading>
-          <Text variant='body.summary'>
-            Join &apos;The Angle&apos; for curated insights, updates, future
-            offerings, and behind-the-scenes access on what Set Angle is up too.
+          <Text variant="body.summary">
+            Sign-up to &apos;The Angle&apos; for a behind-the-scenes glimpse of
+            what Set Angle is doing, updates on upcoming services, and to read
+            insightful whitepapers about our projects.
           </Text>
         </Flex>
 
