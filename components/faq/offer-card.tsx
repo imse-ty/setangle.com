@@ -31,7 +31,7 @@ function Card({ children, ...rest }) {
 
 function BulletPoint({ children }) {
   return (
-    <Text as='li' variant='body.paragraph' sx={{ textAlign: 'left' }}>
+    <Text as="li" variant="body.paragraph" sx={{ textAlign: 'left' }}>
       {children}
     </Text>
   );
@@ -40,7 +40,7 @@ function BulletPoint({ children }) {
 function SectionTag({ href, ...rest }) {
   return (
     <Button
-      size='small'
+      size="small"
       href={href}
       leftIcon={<MdStar sx={{ fontSize: 5 }} />}
       sx={{
@@ -92,21 +92,21 @@ export function OfferCard({
             flexDirection: 'column',
             gap: 3,
             marginBottom: [3, null, 0],
-            height: ['initial', null, null, null, '230px']
+            height: ['initial', null, null, '230px']
           }}
         >
           <Flex sx={{ flexDirection: 'column' }}>
             <Heading
-              as='h3'
-              variant='display.h5'
+              as="h3"
+              variant="display.h5"
               sx={{ color: 'text.primary' }}
             >
               {title}
             </Heading>
             {subtitle && (
               <Text
-                as='p'
-                variant='body.smallParagraph'
+                as="p"
+                variant="body.smallParagraph"
                 sx={{
                   color: 'secondary.dark'
                 }}
@@ -116,8 +116,8 @@ export function OfferCard({
             )}
           </Flex>
           <Text
-            as='p'
-            variant='body.paragraph'
+            as="p"
+            variant="body.paragraph"
             sx={{ color: 'text.secondary', maxWidth: '800px' }}
           >
             {text}
@@ -130,10 +130,10 @@ export function OfferCard({
           }}
         >
           {price && (
-            <Text as='p' variant='display.h4'>
+            <Text as="p" variant="display.h4">
               {price}{' '}
               {recurring && (
-                <Text as='span' sx={{ color: colors.nso400 }}>
+                <Text as="span" sx={{ color: colors.nso400 }}>
                   {recurring}
                 </Text>
               )}
@@ -141,8 +141,8 @@ export function OfferCard({
           )}
           {priceSubtitle && (
             <Text
-              as='p'
-              variant='body.footnote'
+              as="p"
+              variant="body.footnote"
               sx={{ color: 'secondary.dark' }}
             >
               {priceSubtitle}
