@@ -58,14 +58,15 @@ function Modal({ isOpen, onClose, children }) {
             justifyContent: 'center',
             backgroundColor: 'rgba(0, 0, 0, 0.5)',
             backdropFilter: 'blur(8px)',
-            cursor: 'pointer'
+            cursor: 'pointer',
+            overflow: 'scroll'
           }}
           onClick={onClose}
         >
           <ToggleIcon
             sx={{
-              top: 5,
-              right: 5,
+              top: [4, 5],
+              right: [4, 5],
               position: 'fixed',
               borderRadius: 2,
               width: '48px',

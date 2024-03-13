@@ -1,5 +1,10 @@
+/** @jsxImportSource theme-ui */
+//@ts-nocheck
+
 import Cal, { getCalApi } from '@calcom/embed-react';
 import { useEffect } from 'react';
+import { Box } from 'krado-react';
+
 export default function CalEmbed() {
   useEffect(() => {
     (async function () {
@@ -13,10 +18,12 @@ export default function CalEmbed() {
     })();
   }, []);
   return (
-    <Cal
-      calLink='imsety/consultation'
-      style={{ width: '100%', height: '100%', overflow: 'scroll' }}
-      config={{ layout: 'month_view' }}
-    />
+    <Box sx={{ marginTop: [8, null, 0] }}>
+      <Cal
+        calLink="imsety/consultation"
+        style={{ width: '100%', height: '100%', overflow: 'scroll' }}
+        config={{ layout: 'month_view' }}
+      />
+    </Box>
   );
 }
