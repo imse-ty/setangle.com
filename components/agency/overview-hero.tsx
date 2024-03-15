@@ -22,8 +22,9 @@ export default function OverviewHero() {
         Transforming the ordinary into the&nbsp;extraordinary
       </Heading>
       <Text as='p' variant='body.summary'>
-        Crafting well-executed motion and high-quality websites to deliver
-        soulful experiences that captivate and inspire.
+        We blend animation, technology, and sound to transform ordinary stories
+        into soulful brand experiences that inspire the culture we live in
+        today.
       </Text>
     </Container>
   );
