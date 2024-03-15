@@ -7,6 +7,8 @@ import Toolbar from './toolbar';
 export default function Layout({
   children,
   hideTopNav,
+  showFaqMenu,
+  showPricing,
   isHiddenByDefault,
   forceHideNav = false
 }) {
@@ -31,7 +33,7 @@ export default function Layout({
 
   return (
     <Box as='main' sx={{ position: 'relative' }}>
-      <Toolbar />
+      <Toolbar showFaqMenu={showFaqMenu} showPricing={showPricing} />
 
       {children}
     </Box>

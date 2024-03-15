@@ -59,7 +59,7 @@ export default function Project(props) {
         title={`${data.project.title} - Imsety`}
         description={data.project.subtitle}
       />
-      <HomeLayout
+      <Layout
         typeOfCaseStudy={data.project.typeOfCaseStudy}
         showToolbarBack={false}
         isHiddenByDefault={true}
@@ -117,7 +117,7 @@ export default function Project(props) {
             </motion.div>
           </Box>
         </div>
-      </HomeLayout>
+      </Layout>
     </ThemeUIProvider>
   );
 }

@@ -9,6 +9,8 @@ import { useRef } from 'react';
 import { MdNorthEast } from 'react-icons/md';
 import ProjectCard from '../agency/project-card';
 import Link from 'next/link';
+import ScaleInEffect from '../scale-in-effect';
+import Wrapper from '../wrapper';
 
 function ProjectsSection() {
   return (
@@ -68,56 +70,33 @@ export default function HomeWorkSection({ onViewportEnter, onViewportLeave }) {
   const scale = useSpring(scrollScale, { mass: 0.1 });
 
   return (
-    <section ref={container}>
-      <Box id='work' sx={{ backgroundColor: 'surface.thin' }}>
-        <motion.div
-          style={{ scale }}
-          sx={{
-            display: 'flex',
-            flexDirection: 'column',
-            alignItems: 'center',
-            paddingTop: 6,
-            paddingBottom: 6,
-            backgroundColor: 'background',
-            borderTopLeftRadius: 4,
-            borderTopRightRadius: 4,
-            boxShadow: 'soft.highNorth'
-          }}
-        >
-          <motion.div
-            onViewportLeave={onViewportLeave}
-            sx={{
-              top: 0,
-              position: 'absolute',
-              height: '700vh'
-            }}
-          />
-          <Container sx={{ textAlign: 'center' }}>
-            <Heading
-              as={motion.h2}
-              sx={{ marginBottom: 2 }}
-              onViewportEnter={onViewportEnter}
-            >
-              Selected work
-            </Heading>
-
-            <Text as='p'>
-              Selected ranging from event openers, tech product ads, social
-              media graphics, and non-profit organizations.
-            </Text>
-          </Container>
-          <ProjectsSection />
-          <Link
-            href='/work'
-            sx={{ textDecoration: 'none' }}
-            data-umami-event='view-more-work-button'
+    <ScaleInEffect>
+      <Wrapper sx={{ backgroundColor: 'surface.black' }}>
+        <Container sx={{ textAlign: 'center' }}>
+          <Heading
+            as={motion.h2}
+            sx={{ marginBottom: 2 }}
+            onViewportEnter={onViewportEnter}
           >
-            <Button leftIcon={<MdNorthEast />} sx={{ marginTop: 5 }}>
-              View more work
-            </Button>
-          </Link>
-        </motion.div>
-      </Box>
-    </section>
+            Selected work
+          </Heading>
+
+          <Text as='p'>
+            Selected ranging from event openers, tech product ads, social media
+            graphics, and non-profit organizations.
+          </Text>
+        </Container>
+        <ProjectsSection />
+        <Link
+          href='/work'
+          sx={{ textDecoration: 'none' }}
+          data-umami-event='view-more-work-button'
+        >
+          <Button leftIcon={<MdNorthEast />} sx={{ marginTop: 5 }}>
+            View more work
+          </Button>
+        </Link>
+      </Wrapper>
+    </ScaleInEffect>
   );
 }

@@ -15,7 +15,7 @@ import { useState } from 'react';
 import Modal from './modal';
 import CalEmbed from './cal-embed';
 
-export default function Toolbar() {
+export default function Toolbar({ showFaqMenu, showPricing }) {
   const { scrollYProgress } = useScroll();
   const [isCalModalOpen, setIsCalModalOpen] = useState(false);
 
@@ -65,7 +65,7 @@ export default function Toolbar() {
             justifyContent: 'space-between'
           }}
         >
-          <Link href='#'>
+          <Link href='/'>
             <Image
               src='/logo.svg'
               alt='Set Angle Logo'
@@ -79,7 +79,11 @@ export default function Toolbar() {
             />
           </Link>
 
-          <Navigation buttonOnClick={() => setIsCalModalOpen(true)} />
+          <Navigation
+            showPricing={showPricing}
+            showFaqMenu={showFaqMenu}
+            buttonOnClick={() => setIsCalModalOpen(true)}
+          />
         </Container>
       </Flex>
     </>

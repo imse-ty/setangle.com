@@ -35,7 +35,12 @@ function MenuItem({ children, active, href }) {
   );
 }
 
-export default function Navigation({ isHidden, buttonOnClick }) {
+export default function Navigation({
+  isHidden,
+  buttonOnClick,
+  showFaqMenu,
+  showPricing
+}) {
   const variants = {
     hidden: {
       opacity: 0,
@@ -77,14 +82,29 @@ export default function Navigation({ isHidden, buttonOnClick }) {
         }}
       >
         {/* <MenuItem href='#'>Home</MenuItem> */}
-        <MenuItem href='#reel'>Reel</MenuItem>
-        <MenuItem href='#approach'>Approach</MenuItem>
-        <MenuItem href='#work'>Work</MenuItem>
-        <MenuItem href='#services'>Services</MenuItem>
-        <MenuItem href='#clientele'>Clientele</MenuItem>
-        <MenuItem href='#process'>Process</MenuItem>
-        <MenuItem href='#pricing'>Pricing</MenuItem>
-        <MenuItem href='#newsletter'>Newsletter</MenuItem>
+
+        {showFaqMenu ? (
+          <>
+            <MenuItem href='#reel'>Reel</MenuItem>
+            <MenuItem href='#approach'>Approach</MenuItem>
+            <MenuItem href='#work'>Work</MenuItem>
+            <MenuItem href='#services'>Services</MenuItem>
+            <MenuItem href='#clientele'>Clientele</MenuItem>
+            <MenuItem href='#process'>Process</MenuItem>
+            {showPricing && <MenuItem href='#pricing'>Pricing</MenuItem>}
+            <MenuItem href='#newsletter'>Newsletter</MenuItem>
+          </>
+        ) : (
+          <>
+            <MenuItem href='/'>Home</MenuItem>
+            <MenuItem href='/#reel'>Reel</MenuItem>
+            <MenuItem href='/#work'>Work</MenuItem>
+            <MenuItem href='/#services'>Services</MenuItem>
+            <MenuItem href='/#clientele'>Clientele</MenuItem>
+            <MenuItem href='/#process'>Process</MenuItem>
+            <MenuItem href='/#contact'>Contact</MenuItem>
+          </>
+        )}
 
         <Button size='small' onClick={buttonOnClick} sx={{ marginLeft: 3 }}>
           Book a call
