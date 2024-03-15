@@ -31,14 +31,6 @@ function ProjectsSection() {
         src='/work/beloved-benefit.jpg'
       />
       <ProjectCard
-        color='sekmet'
-        title='Chick-fil-A'
-        tags={['Corporate', 'Event']}
-        subtitle="Innovating at Chick-fil-A's annual meetings NEXT and Spark 2023"
-        href='/work/chick-fil-a'
-        src='/work/chick-fil-a.png'
-      />
-      <ProjectCard
         color='taweret'
         title='Space and Time'
         tags={['Startup', 'Product ad']}
@@ -53,6 +45,14 @@ function ProjectsSection() {
         subtitle="Animating infographics for the Fearless Fund's annual event, a venture capital firm empowering women of color-led businesses."
         href='/work/splice'
         src='/projects/splice/splice-cover.png'
+      />
+      <ProjectCard
+        color='sekmet'
+        title='Chick-fil-A'
+        tags={['Corporate', 'Event']}
+        subtitle="Innovating at Chick-fil-A's annual meetings NEXT and Spark 2023"
+        href='/work/chick-fil-a'
+        src='/work/chick-fil-a.png'
       />
     </Container>
   );

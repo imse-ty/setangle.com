@@ -61,9 +61,9 @@ export default function Project(props) {
       />
       <Layout
         typeOfCaseStudy={data.project.typeOfCaseStudy}
-        showToolbarBack={false}
         isHiddenByDefault={true}
         hideTopNav
+        showToolbarBack
       >
         <ProjectMasthead
           title={data.project.title}

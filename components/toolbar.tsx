@@ -15,7 +15,7 @@ import { useState } from 'react';
 import Modal from './modal';
 import CalEmbed from './cal-embed';
 
-export default function Toolbar({ showFaqMenu, showPricing }) {
+export default function Toolbar({ showFaqMenu, showPricing, showBack }) {
   const { scrollYProgress } = useScroll();
   const [isCalModalOpen, setIsCalModalOpen] = useState(false);
 
@@ -58,26 +58,43 @@ export default function Toolbar({ showFaqMenu, showPricing }) {
           sx={{
             paddingX: 4,
             paddingY: 3,
-
             alignItems: 'center',
             display: 'flex',
             width: '100%',
             justifyContent: 'space-between'
           }}
         >
-          <Link href='/'>
-            <Image
-              src='/logo.svg'
-              alt='Set Angle Logo'
-              sx={{
-                width: '48px',
-                height: '48px'
-              }}
-              width={48}
-              height={48}
-              priority
-            />
-          </Link>
+          {showBack ? (
+            <Link href='/#work'>
+              <ToggleIcon
+                sx={{
+                  borderRadius: 2,
+                  width: '48px',
+                  height: '48px',
+                  boxShadow: 'hard.high',
+                  backgroundColor: 'primary.regular',
+                  color: 'primary.contrast'
+                }}
+              >
+                <MdChevronLeft />
+              </ToggleIcon>
+            </Link>
+          ) : (
+            <Link href='/'>
+              <Image
+                src='/logo.svg'
+                alt='Set Angle Logo'
+                sx={{
+                  width: '48px',
+                  height: '48px',
+                  mixBlendMode: 'exclusion'
+                }}
+                width={48}
+                height={48}
+                priority
+              />
+            </Link>
+          )}
 
           <Navigation
             showPricing={showPricing}

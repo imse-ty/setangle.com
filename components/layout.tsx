@@ -9,6 +9,7 @@ export default function Layout({
   hideTopNav,
   showFaqMenu,
   showPricing,
+  showToolbarBack,
   isHiddenByDefault,
   forceHideNav = false
 }) {
@@ -33,7 +34,11 @@ export default function Layout({
 
   return (
     <Box as='main' sx={{ position: 'relative' }}>
-      <Toolbar showFaqMenu={showFaqMenu} showPricing={showPricing} />
+      <Toolbar
+        showFaqMenu={showFaqMenu}
+        showPricing={showPricing}
+        showBack={showToolbarBack}
+      />
 
       {children}
     </Box>
