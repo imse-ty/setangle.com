@@ -16,7 +16,7 @@ export default function OverviewHero() {
       }}
     >
       <Text variant='body.pretext' sx={{ marginBottom: 2 }}>
-        A motion & web design agency
+        A multidisciplinary digital creative agency
       </Text>
       <Heading as='h1' variant='display.h1'>
         Transforming the ordinary into the&nbsp;extraordinary
