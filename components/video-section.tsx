@@ -155,7 +155,7 @@ export default function VideoSection({
                   animate={{ opacity: 1 }}
                   exit={{ opacity: 0 }}
                   sx={{
-                    zIndex: 4,
+                    zIndex: 1,
                     position: 'absolute',
                     width: '100%',
                     height: '100%',

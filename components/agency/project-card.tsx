@@ -51,12 +51,7 @@ export default function ProjectCard({
   const pageColor = buildMonochromaticTheme(color);
 
   return (
-    <a
-      href={href}
-      target='_blank'
-      rel='noindex nofollow'
-      sx={{ textDecoration: 'none' }}
-    >
+    <Link href={href} sx={{ textDecoration: 'none' }}>
       <ThemeUIProvider theme={{ colors: { ...pageColor } }}>
         <Flex
           sx={{
@@ -156,6 +151,6 @@ export default function ProjectCard({
           />
         </Flex>
       </ThemeUIProvider>
-    </a>
+    </Link>
   );
 }

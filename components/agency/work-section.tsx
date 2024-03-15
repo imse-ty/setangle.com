@@ -9,6 +9,7 @@ import { motion, useScroll, useSpring, useTransform } from 'framer-motion';
 import { useRef } from 'react';
 import { MdLightbulb, MdMood, MdMovie, MdNorthEast } from 'react-icons/md';
 import ScaleInEffect from '../scale-in-effect';
+import Link from 'next/link';
 
 function ProjectsSection() {
   return (
@@ -101,17 +102,15 @@ export default function WorkSection({ onViewportEnter, onViewportLeave }) {
           media graphics, and non-profit organizations.
         </Text>
         <ProjectsSection />
-        {/* <a
-          href='https://imsety.com/#work'
-          target='_blank'
-          rel='noindex nofollow'
+        <Link
+          href='/work'
           sx={{ textDecoration: 'none' }}
           data-umami-event='view-more-work-button'
         >
           <Button leftIcon={<MdNorthEast />} sx={{ marginTop: 5 }}>
             View more work
           </Button>
-        </a> */}
+        </Link>
       </Container>
     </ScaleInEffect>
   );

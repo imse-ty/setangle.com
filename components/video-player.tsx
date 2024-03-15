@@ -77,7 +77,6 @@ function IdleVideo({ src, poster }) {
       layoutId='video'
       sx={{
         position: 'absolute',
-
         width: '100%',
         minHeight: '100%',
         objectFit: 'cover'

@@ -7,8 +7,11 @@ import HomeToolbar from './home-toolbar';
 
 export default function HomeLayout({
   children,
+  showToolbarBack,
   hideTopNav,
   isHiddenByDefault,
+  isToolbarHidden,
+  typeOfCaseStudy,
   forceHideNav = false
 }) {
   const { scrollYProgress } = useScroll();
@@ -32,8 +35,11 @@ export default function HomeLayout({
 
   return (
     <Box as='main' sx={{ position: 'relative', overflowX: 'hidden' }}>
-      <HomeToolbar />
       <AnimatePresence>
+        <HomeToolbar
+          showBack={showToolbarBack}
+          typeOfCaseStudy={typeOfCaseStudy}
+        />
         {!forceHideNav && <HomeNavigation isHidden={isNavigationHidden} />}
       </AnimatePresence>
       {children}

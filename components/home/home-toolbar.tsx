@@ -8,12 +8,22 @@ import { MdChevronLeft } from 'react-icons/md';
 import Navigation from './navigation';
 import RightTriangle from '../public/right-triangle.svg';
 import Text from './fixed-krado-components/Text';
-import Switch from './projects/project-switch';
+import Switch from '../projects/project-switch';
 import { useState } from 'react';
 import Image from 'next/image';
 
-export default function HomeToolbar() {
+export default function HomeToolbar({ showBack, typeOfCaseStudy }) {
   const { scrollYProgress } = useScroll();
+
+  const [isDetailed, setIsDetailed] = useState(getTypeOfCaseStudy());
+
+  function getTypeOfCaseStudy() {
+    if (typeOfCaseStudy === 'full') {
+      return true;
+    } else {
+      return false;
+    }
+  }
 
   return (
     <Flex
@@ -28,37 +38,59 @@ export default function HomeToolbar() {
         top: 0,
         width: '100%',
         zIndex: 3,
-        gap: [3, 4]
+        gap: [3, 4],
+        padding: 4
       }}
     >
-      <Link href='#'>
-        <Image
-          src='/logo.svg'
-          alt='Set Angle Logo'
-          sx={{
-            margin: 4,
-            width: '48px',
-            height: '48px',
-            mixBlendMode: 'exclusion'
-          }}
-          width={48}
-          height={48}
-          priority
-        />
-      </Link>
+      {showBack ? (
+        <Link href='/#work'>
+          <ToggleIcon
+            sx={{
+              borderRadius: 2,
+              width: '48px',
+              height: '48px',
+              boxShadow: 'hard.high',
+              backgroundColor: 'primary.regular',
+              color: 'primary.contrast'
+            }}
+          >
+            <MdChevronLeft />
+          </ToggleIcon>
+        </Link>
+      ) : (
+        <Link href='#'>
+          <Image
+            src='/logo.svg'
+            alt='Set Angle Logo'
+            sx={{
+              width: '48px',
+              height: '48px',
+              mixBlendMode: 'exclusion'
+            }}
+            width={48}
+            height={48}
+            priority
+          />
+        </Link>
+      )}
+
       <Box
         as={motion.div}
         style={{ scaleX: scrollYProgress }}
         sx={{
           width: '100%',
           height: '4px',
-          position: 'fixed',
-          left: 0,
-          top: 0,
           backgroundColor: 'secondary.light',
           transformOrigin: 'left'
         }}
       />
+      {typeOfCaseStudy && (
+        <Switch
+          isOn={isDetailed}
+          firstLabelOnClick={() => setIsDetailed(true)}
+          secondLabelOnClick={() => setIsDetailed(false)}
+        />
+      )}
     </Flex>
   );
 }
