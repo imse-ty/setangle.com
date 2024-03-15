@@ -22,6 +22,7 @@ const nextConfig = {
         destination: 'https://cal.com/imsety/chat/',
         permanent: false
       },
+
       {
         source: '/agency',
         destination: '/',
