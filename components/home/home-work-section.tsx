@@ -71,7 +71,7 @@ export default function HomeWorkSection({ onViewportEnter, onViewportLeave }) {
 
   return (
     <ScaleInEffect>
-      <Wrapper sx={{ backgroundColor: 'surface.black' }}>
+      <Wrapper id='work' sx={{ backgroundColor: 'surface.black' }}>
         <Container sx={{ textAlign: 'center' }}>
           <Heading
             as={motion.h2}
