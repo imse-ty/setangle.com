@@ -60,7 +60,7 @@ function Card({ children, ...rest }) {
   );
 }
 
-export default function RoleCard({ title, rate, frequency, tags }) {
+export default function RoleCard({ title, rate, rateSubtitle, tags, onClick }) {
   return (
     <Card>
       {title && (
@@ -71,12 +71,12 @@ export default function RoleCard({ title, rate, frequency, tags }) {
           </Text>
         </Flex>
       )}
-      {rate && (
+      {rateSubtitle && (
         <Flex sx={{ flexDirection: 'column', alignItems: 'center', gap: 1 }}>
           <Text variant='display.h4'>{rate}</Text>
 
           <Text variant='body.footnote' sx={{ color: 'text.secondary' }}>
-            per {frequency}
+            {rateSubtitle}
           </Text>
         </Flex>
       )}
@@ -104,7 +104,7 @@ export default function RoleCard({ title, rate, frequency, tags }) {
           })}
         </Flex>
       )}
-      <Button>Apply now</Button>
+      <Button onClick={onClick}>Apply now</Button>
     </Card>
   );
 }

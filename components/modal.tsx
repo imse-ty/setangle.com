@@ -15,6 +15,8 @@ function Card({ children, ...rest }) {
         backgroundColor: 'background',
         boxShadow: 'soft.low',
         transition: 'transform 325ms ease, box-shadow 325ms ease',
+        maxHeight: '100vh',
+        overflowY: 'scroll',
         '&:hover': {
           transform: 'scale(1.02)',
           boxShadow: 'soft.highMiddle'
@@ -58,8 +60,7 @@ function Modal({ isOpen, onClose, children }) {
             justifyContent: 'center',
             backgroundColor: 'rgba(0, 0, 0, 0.5)',
             backdropFilter: 'blur(8px)',
-            cursor: 'pointer',
-            overflow: 'scroll'
+            cursor: 'pointer'
           }}
           onClick={onClose}
         >
