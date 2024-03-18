@@ -53,6 +53,15 @@ export const components = {
       {props.children}
     </Heading>
   ),
+  h5: (props) => (
+    <Heading
+      as='h5'
+      variant='display.h5'
+      sx={{ fontWeight: 600, marginTop: 4, marginBottom: 3 }}
+    >
+      {props.children}
+    </Heading>
+  ),
   a: ({ children, url }) => {
     const target = (url || '').startsWith('http') ? '_blank' : undefined;
 

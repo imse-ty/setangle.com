@@ -19,10 +19,10 @@ function SectionTag({ icon, href, ...rest }) {
         alignItems: 'center',
         fontSize: '13px',
         fontWeight: 500,
-        color: 'secondary.bold',
-        backgroundColor: 'secondary.light',
+        color: 'secondary.light',
+        backgroundColor: 'secondary.bold',
         '&:hover': {
-          color: 'action.light'
+          color: 'secondary.bold'
         },
         '&:active': {
           backgroundColor: 'secondary.light'
@@ -37,14 +37,13 @@ function Card({ children, ...rest }) {
   return (
     <Flex
       sx={{
-        textAlign: 'center',
+        textAlign: 'left',
         gap: 4,
         padding: [3, null, null, 4],
         borderRadius: 3,
         justifyContent: 'center',
-        alignItems: 'center',
+        alignItems: 'left',
         backgroundColor: 'background',
-
         boxShadow: 'soft.low',
         flexDirection: 'column',
         transition: 'transform 325ms ease, box-shadow 325ms ease',
@@ -64,8 +63,8 @@ export default function RoleCard({ title, rate, rateSubtitle, tags, onClick }) {
   return (
     <Card>
       {title && (
-        <Flex sx={{ alignItems: 'center', gap: 1 }}>
-          <MdStar sx={{ color: 'primary.regular', fontSize: 6 }} />
+        <Flex sx={{ flexDirection: 'column', alignItems: 'left', gap: 1 }}>
+          {/* <MdStar sx={{ color: 'primary.regular', fontSize: 6 }} /> */}
           <Text variant='display.h5' sx={{ marginTop: 1 }}>
             {title}
           </Text>
@@ -80,27 +79,17 @@ export default function RoleCard({ title, rate, rateSubtitle, tags, onClick }) {
           </Text>
         </Flex>
       )}
-      <Divider
-        sx={{
-          width: '25%',
-          height: '1px',
-          backgroundColor: 'divider'
-        }}
-      />
+
       {tags && (
         <Flex
           sx={{
-            alignItems: 'center',
+            alignItems: 'flex-start',
             gap: 2,
             flexDirection: 'column'
           }}
         >
           {tags.map((tag, index) => {
-            return (
-              <SectionTag key='index' icon={<MdStar sx={{ fontSize: 5 }} />}>
-                {tag}
-              </SectionTag>
-            );
+            return <SectionTag key='index'>{tag}</SectionTag>;
           })}
         </Flex>
       )}

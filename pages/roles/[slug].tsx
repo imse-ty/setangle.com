@@ -25,6 +25,7 @@ import ContactSection from '@/components/contact/contact-section';
 import Modal from '@/components/modal';
 import FormEmbed from '@/components/roles/form-embed';
 import { useState } from 'react';
+import RoleSummarySection from '@/components/people/role-summary-section';
 
 interface Query {
   [key: string]: string;
@@ -94,37 +95,7 @@ export default function ProjectSlugRoute(
           </Text>
           <Button sx={{ marginBottom: 5 }}>Apply now</Button>
         </Container>
-        <ScaleInEffect>
-          <Wrapper
-            sx={{
-              backgroundColor: 'surface.black'
-            }}
-          >
-            <Flex sx={{ width: '100%', height: '100%', gap: 6 }}>
-              <Box
-                sx={{
-                  position: 'sticky',
-                  width: '20%',
-                  top: 7,
-                  height: '25%'
-                }}
-              >
-                <ScaleInEffect>
-                  <RoleCard
-                    title={role.title}
-                    rate={role.rate}
-                    rateSubtitle={role.rateSubtitle}
-                    tags={role.tags}
-                    onClick={() => setIsFormOpen(true)}
-                  />
-                </ScaleInEffect>
-              </Box>
-              <Box sx={{ textAlign: 'left', maxWidth: '1000px' }}>
-                <PortableText value={role.body} components={sanityComponents} />
-              </Box>
-            </Flex>
-          </Wrapper>
-        </ScaleInEffect>
+        <RoleSummarySection role={role} />
         <ContactSection useTransparentBackground />
       </Layout>
     </>
@@ -136,7 +107,7 @@ export const getStaticPaths = async () => {
   const slugs = await client.fetch(roleSlugsQuery);
 
   return {
-    paths: slugs?.map(({ slug }) => `/people/${slug}`) || [],
+    paths: slugs?.map(({ slug }) => `/roles/${slug}`) || [],
     fallback: 'blocking'
   };
 };

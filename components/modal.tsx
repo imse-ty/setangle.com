@@ -6,17 +6,17 @@ import { motion, AnimatePresence } from 'framer-motion';
 import { MdClose } from 'react-icons/md';
 import { useEffect } from 'react';
 
-function Card({ children, ...rest }) {
+function Card({ hasPadding, children, ...rest }) {
   return (
     <Box
       sx={{
-        padding: [0, null, null, 4],
+        padding: hasPadding ? [0, null, null, 4] : 0,
         borderRadius: 3,
         backgroundColor: 'background',
         boxShadow: 'soft.low',
         transition: 'transform 325ms ease, box-shadow 325ms ease',
         maxHeight: '100vh',
-        overflowY: 'scroll',
+        // overflowY: 'scroll',
         '&:hover': {
           transform: 'scale(1.02)',
           boxShadow: 'soft.highMiddle'
@@ -29,7 +29,7 @@ function Card({ children, ...rest }) {
   );
 }
 
-function Modal({ isOpen, onClose, children }) {
+function Modal({ hasPadding = true, isOpen, onClose, children }) {
   useEffect(() => {
     if (isOpen) {
       // Prevent scrolling on mount
@@ -81,12 +81,13 @@ function Modal({ isOpen, onClose, children }) {
             <MdClose />
           </ToggleIcon>
           <Card
+            hasPadding={hasPadding}
             as={motion.div}
             initial={{ y: 50, opacity: 0 }}
             animate={{ y: 0, opacity: 1 }}
             exit={{ y: 50, opacity: 0 }}
             sx={{
-              width: ['90%', '75%']
+              width: hasPadding ? ['90%', '75%'] : 'initial'
             }}
           >
             {children}

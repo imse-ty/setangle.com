@@ -16,11 +16,15 @@ export default function PeopleHero() {
         alignItems: 'center'
       }}
     >
-      <Text variant='body.pretext'>We are looking for</Text>
+      <Text variant='body.pretext'>We are always looking for</Text>
       <Heading as='h1' variant='display.display' sx={{ marginBottom: 3 }}>
         Good people
       </Heading>
-      <Text as='p' variant='body.summary' sx={{ maxWidth: '1000px' }}>
+      <Text
+        as='p'
+        variant='body.summary'
+        sx={{ maxWidth: '1000px', color: 'secondary.light' }}
+      >
         We blend animation, technology, and sound to transform ordinary stories
         into soulful brand experiences that inspire the culture we live in
         today.

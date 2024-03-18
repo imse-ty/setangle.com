@@ -2,7 +2,7 @@ import { setyTheme } from '@/lib/site-theme';
 import '@/styles/globals.css';
 import type { AppProps } from 'next/app';
 import { theme } from 'krado-react';
-import { ThemeUIProvider } from 'theme-ui';
+import { ThemeUIProvider, useColorMode } from 'theme-ui';
 import Script from 'next/script';
 import { Suspense, lazy } from 'react';
 import { VisualEditing } from 'next-sanity';

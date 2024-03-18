@@ -7,7 +7,7 @@ export default function Wrapper({ children, ...rest }) {
       sx={{
         display: 'flex',
         gap: 5,
-        paddingY: [5, 7],
+        paddingY: [5, 6],
         flexDirection: 'column',
         justifyContent: 'center',
         alignItems: 'center',

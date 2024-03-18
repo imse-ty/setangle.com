@@ -9,11 +9,30 @@ import { Link } from 'krado-react';
 const sanityComponents = {
   block: {
     normal: ({ children }) => (
+      <Text as='p' sx={{ marginTop: 4, marginBottom: 3 }}>
+        {children}
+      </Text>
+    ),
+    summary: ({ children }) => (
       <Text
         as='p'
         variant='body.summary'
-        sx={{ marginTop: 2, marginBottom: 3 }}
+        sx={{ marginTop: 4, marginBottom: 3 }}
       >
+        {children}
+      </Text>
+    ),
+    smallParagraph: ({ children }) => (
+      <Text
+        as='p'
+        variant='body.smallParagraph'
+        sx={{ marginTop: 4, marginBottom: 3 }}
+      >
+        {children}
+      </Text>
+    ),
+    pretext: ({ children }) => (
+      <Text variant='body.pretext' sx={{ marginTop: 2, marginBottom: 3 }}>
         {children}
       </Text>
     ),
@@ -21,7 +40,7 @@ const sanityComponents = {
       <Heading
         as='h1'
         variant='display.h1'
-        sx={{ marginTop: 4, marginBottom: 3 }}
+        sx={{ marginTop: 5, marginBottom: 4 }}
       >
         {children}
       </Heading>
@@ -30,7 +49,7 @@ const sanityComponents = {
       <Heading
         as='h2'
         variant='display.h2'
-        sx={{ marginTop: 4, marginBottom: 3 }}
+        sx={{ marginTop: 5, marginBottom: 4 }}
       >
         {children}
       </Heading>
@@ -39,7 +58,7 @@ const sanityComponents = {
       <Heading
         as='h3'
         variant='display.h3'
-        sx={{ marginTop: 4, marginBottom: 3 }}
+        sx={{ marginTop: 5, marginBottom: 4 }}
       >
         {children}
       </Heading>
@@ -48,9 +67,18 @@ const sanityComponents = {
       <Heading
         as='h4'
         variant='display.h4'
-        sx={{ marginTop: 4, marginBottom: 3 }}
+        sx={{ marginTop: 5, marginBottom: 4 }}
       >
         {children}
+      </Heading>
+    ),
+    h5: (props) => (
+      <Heading
+        as='h5'
+        variant='display.h5'
+        sx={{ marginTop: 5, marginBottom: 3 }}
+      >
+        {props.children}
       </Heading>
     ),
     blockquote: ({ children }) => (
@@ -82,12 +110,12 @@ const sanityComponents = {
   },
   listItem: {
     bullet: ({ children }) => (
-      <Text as='li' variant='body.summary'>
+      <Text as='li' variant='body.smallParagraph'>
         {children}
       </Text>
     ),
     number: ({ children }) => (
-      <Text as='li' variant='body.summary'>
+      <Text as='li' variant='body.smallParagraph'>
         {children}
       </Text>
     )
