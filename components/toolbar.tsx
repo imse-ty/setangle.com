@@ -20,7 +20,8 @@ export default function Toolbar({
   showPricing,
   showBack,
   formLink,
-  showPeopleContactButton
+  showPeopleContactButton,
+  backLink
 }) {
   const { scrollYProgress } = useScroll();
   const [isCalModalOpen, setIsCalModalOpen] = useState(false);
@@ -70,8 +71,8 @@ export default function Toolbar({
             justifyContent: 'space-between'
           }}
         >
-          {showBack ? (
-            <Link href='/#work'>
+          {backLink ? (
+            <Link href={backLink}>
               <ToggleIcon
                 sx={{
                   borderRadius: 2,

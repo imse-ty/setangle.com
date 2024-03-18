@@ -8,6 +8,7 @@ import { MdArrowRight, MdArrowRightAlt, MdEast, MdStar } from 'react-icons/md';
 import Link from 'next/link';
 import Modal from '../modal';
 import RoleSummarySection from './role-summary-section';
+import AvailabilityIndicator from '../status-indicator';
 
 function SectionTag({ icon, href, ...rest }) {
   return (
@@ -25,7 +26,7 @@ function SectionTag({ icon, href, ...rest }) {
         color: 'text.secondary',
         backgroundColor: 'secondary.bold',
         '&:hover': {
-          color: 'action.light'
+          color: 'secondary.bold'
         },
         '&:active': {
           backgroundColor: 'secondary.light'
@@ -55,6 +56,7 @@ function Card({ children, ...rest }) {
         '&:hover': {
           transform: 'scale(1.02)',
           boxShadow: 'soft.highMiddle',
+
           backgroundColor: 'secondary.bold'
         }
       }}
@@ -68,6 +70,7 @@ function Card({ children, ...rest }) {
 export default function PeopleCard({
   title,
   subtitle,
+  isActive,
   tags,
   href,
   onClick,
@@ -99,19 +102,28 @@ export default function PeopleCard({
             {description}
           </Text>
         )}
-        {/*
-        {tags && (
-          <Flex
-            sx={{
-              alignItems: 'center',
-              gap: 2
-            }}
-          >
-            {tags.map((tag, index) => {
-              return <SectionTag key='index'>{tag}</SectionTag>;
+
+        <Flex
+          sx={{
+            flexWrap: 'wrap',
+            gap: 2
+          }}
+        >
+          {isActive ? (
+            <SectionTag
+              leftIcon={<AvailabilityIndicator sx={{ marginX: 1 }} />}
+            >
+              Actively seeking
+            </SectionTag>
+          ) : (
+            <SectionTag>Passively seeking</SectionTag>
+          )}
+          {tags &&
+            tags.map((tag, index) => {
+              return <SectionTag key={index}>{tag}</SectionTag>;
             })}
-          </Flex>
-        )} */}
+        </Flex>
+
         <MdEast
           sx={{ alignSelf: 'flex-end', color: 'primary.regular', fontSize: 6 }}
         />

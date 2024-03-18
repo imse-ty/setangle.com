@@ -5,6 +5,7 @@ import { Flex, Button } from 'krado-react';
 import Link from 'next/link';
 import { motion } from 'framer-motion';
 import Text from './fixed-krado-components/Text';
+import AvailabilityIndicator from './status-indicator';
 
 function MenuItem({ children, active, href }) {
   return (
@@ -77,6 +78,7 @@ export default function Navigation({
         as='ul'
         sx={{
           justifyContent: 'space-between',
+
           width: '100%',
           gap: 1,
           listStyle: 'none',
@@ -104,7 +106,10 @@ export default function Navigation({
             <MenuItem href='/#services'>Services</MenuItem>
             <MenuItem href='/#clientele'>Clientele</MenuItem>
             <MenuItem href='/#process'>Process</MenuItem>
-            <MenuItem href='/work-with-us'>Work with us</MenuItem>
+            <Flex sx={{ marginLeft: 2, gap: 1, alignItems: 'center' }}>
+              <AvailabilityIndicator />
+              <MenuItem href='/talent'>Work with us</MenuItem>
+            </Flex>
           </>
         )}
 
@@ -116,7 +121,7 @@ export default function Navigation({
               </Button>
             </a>
           ) : (
-            <a href='mailto:people@setangle.com'>
+            <a href='mailto:talent@setangle.com'>
               <Button size='small' sx={{ marginLeft: 3 }}>
                 Contact us
               </Button>

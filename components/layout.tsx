@@ -12,6 +12,7 @@ export default function Layout({
   showToolbarBack,
   isHiddenByDefault,
   formLink,
+  backLink,
   showPeopleContactButton = false,
   forceHideNav = false
 }) {
@@ -42,6 +43,7 @@ export default function Layout({
         showBack={showToolbarBack}
         formLink={formLink}
         showPeopleContactButton={showPeopleContactButton}
+        backLink={backLink}
       />
 
       {children}

@@ -33,7 +33,7 @@ export const getStaticProps: GetStaticProps<
   };
 };
 
-export default function IndexPage(
+export default function TalentPage(
   props: InferGetStaticPropsType<typeof getStaticProps>
 ) {
   const [roles] = useLiveQuery<Role[]>(props.roles, rolesQuery);

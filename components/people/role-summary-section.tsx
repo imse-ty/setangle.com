@@ -44,6 +44,7 @@ export default function RoleSummarySection({ role }) {
                 rateSubtitle={role.rateSubtitle}
                 tags={role.tags}
                 formLink={role.formLink}
+                isActive={role.isActivelyLooking}
               />
             </ScaleInEffect>
           </Box>

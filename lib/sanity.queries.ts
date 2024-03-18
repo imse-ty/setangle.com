@@ -3,13 +3,26 @@ import type { ImageAsset, Slug } from '@sanity/types';
 import groq from 'groq';
 import { type SanityClient } from 'next-sanity';
 
-export const rolesQuery = groq`*[_type == "role" && defined(slug.current)] | order(_createdAt desc)`;
+export const rolesQuery = groq`*[_type == "role" && defined(slug.current)] | order(orderRank)`;
 
 export async function getRoles(client: SanityClient): Promise<Role[]> {
   return await client.fetch(rolesQuery);
 }
 
-export const roleBySlugQuery = groq`*[_type == "role" && slug.current == $slug][0]`;
+export const roleBySlugQuery = groq`
+*[_type == "role" && slug.current == $slug][0] {
+  ...,
+  "otherRoles": *[_type == "role" && slug.current != $slug]|order(orderRank) {
+    slug,
+    title,
+    rate,
+    rateSubtitle,
+    description,
+    isActivelyLooking,
+    tags
+  }
+}
+`;
 
 export async function getRole(
   client: SanityClient,

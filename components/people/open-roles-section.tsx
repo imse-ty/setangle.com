@@ -33,7 +33,7 @@ export default function OpenRolesSection({ roles }) {
             gridTemplateColumns: ['1fr', null, '1fr 1fr', '1fr 1fr 1fr']
           }}
         >
-          {roles.map((role, index) => {
+          {roles.map((role) => {
             return (
               <PeopleCard
                 key={role._id}
@@ -41,10 +41,11 @@ export default function OpenRolesSection({ roles }) {
                 subtitle={role.rate && `${role.rate} • ${role.rateSubtitle}`}
                 description={role.description}
                 tags={role.tags}
+                isActive={role.isActivelyLooking}
                 // href={`/people?role=${index}`}
                 // as={`/people/${role.slug.current}`}
 
-                href={`/roles/${role.slug.current}`}
+                href={`/talent/${role.slug.current}`}
               />
             );
           })}

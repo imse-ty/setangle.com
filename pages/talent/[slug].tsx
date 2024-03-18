@@ -27,6 +27,7 @@ import FormEmbed from '@/components/roles/form-embed';
 import { useState } from 'react';
 import RoleSummarySection from '@/components/people/role-summary-section';
 import RolesContactSection from '@/components/roles/roles-contact-section';
+import OpenRolesSection from '@/components/people/open-roles-section';
 
 interface Query {
   [key: string]: string;
@@ -70,7 +71,12 @@ export default function ProjectSlugRoute(
       <Modal isOpen={isFormOpen} onClose={() => setIsFormOpen(false)}>
         <FormEmbed />
       </Modal>
-      <Layout formLink={role.formLink} showPeopleContactButton>
+      <Layout
+        backLink='/work-with-us'
+        formLink={role.formLink}
+        showPeopleContactButton
+        showToolbarBack
+      >
         <Container
           sx={{
             marginTop: 7,
@@ -99,12 +105,13 @@ export default function ProjectSlugRoute(
               <Button sx={{ marginTop: 4 }}>Apply now</Button>
             </a>
           ) : (
-            <a href='mailto:people@setangle.com'>
+            <a href='mailto:talent@setangle.com'>
               <Button sx={{ marginTop: 4 }}>Contact us</Button>
             </a>
           )}
         </Container>
         <RoleSummarySection role={role} />
+        <OpenRolesSection roles={role.otherRoles} />
         <RolesContactSection
           formLink={role.formLink}
           useTransparentBackground
@@ -119,7 +126,7 @@ export const getStaticPaths = async () => {
   const slugs = await client.fetch(roleSlugsQuery);
 
   return {
-    paths: slugs?.map(({ slug }) => `/roles/${slug}`) || [],
+    paths: slugs?.map(({ slug }) => `/talent/${slug}`) || [],
     fallback: 'blocking'
   };
 };

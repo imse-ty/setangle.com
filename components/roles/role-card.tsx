@@ -5,6 +5,7 @@ import React from 'react';
 import { Flex, Divider, Button } from 'krado-react';
 import Text from '../fixed-krado-components/Text';
 import { MdStar } from 'react-icons/md';
+import AvailabilityIndicator from '../status-indicator';
 
 function SectionTag({ icon, href, ...rest }) {
   return (
@@ -65,7 +66,8 @@ export default function RoleCard({
   rate,
   rateSubtitle,
   tags,
-  formLink
+  formLink,
+  isActive
 }) {
   return (
     <Card>
@@ -87,26 +89,30 @@ export default function RoleCard({
         </Flex>
       )}
 
-      {tags && (
-        <Flex
-          sx={{
-            alignItems: 'flex-start',
-            gap: 2,
-            flexDirection: 'column'
-          }}
-        >
-          {tags.map((tag, index) => {
-            return <SectionTag key='index'>{tag}</SectionTag>;
+      <Flex
+        sx={{
+          flexWrap: 'wrap',
+          gap: 2
+        }}
+      >
+        {isActive ? (
+          <SectionTag leftIcon={<AvailabilityIndicator sx={{ marginX: 1 }} />}>
+            Actively seeking
+          </SectionTag>
+        ) : (
+          <SectionTag>Passively seeking</SectionTag>
+        )}
+        {tags &&
+          tags.map((tag, index) => {
+            return <SectionTag key={index}>{tag}</SectionTag>;
           })}
-        </Flex>
-      )}
-
+      </Flex>
       {formLink ? (
         <a href={formLink} target='_blank' rel='noindex nofollow'>
           <Button sx={{ width: '100%' }}>Apply now</Button>
         </a>
       ) : (
-        <a href='mailto:people@setangle.com'>
+        <a href='mailto:talent@setangle.com'>
           <Button sx={{ width: '100%' }}>Contact us</Button>
         </a>
       )}

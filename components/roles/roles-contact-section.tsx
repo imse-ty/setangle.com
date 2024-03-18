@@ -49,7 +49,7 @@ export default function RolesContactSection({
             <Container sx={{ marginTop: 'auto', textAlign: 'center' }}>
               <Flex sx={{ flexDirection: 'column', gap: [3, 4] }}>
                 <a
-                  href='mailto:people@setangle.com'
+                  href='mailto:talent@setangle.com'
                   sx={{ textDecoration: 'none' }}
                   data-umami-event='people-email-link'
                 >
@@ -68,7 +68,7 @@ export default function RolesContactSection({
                       fontSize: [7, 9, 10]
                     }}
                   >
-                    people@setangle.com
+                    talent@setangle.com
                   </Heading>
                 </a>
                 <Text
@@ -85,7 +85,7 @@ export default function RolesContactSection({
                   <Button sx={{ marginTop: 5 }}>Apply now</Button>
                 </a>
               ) : (
-                <a href='mailto:people@setangle.com'>
+                <a href='mailto:talent@setangle.com'>
                   <Button sx={{ marginTop: 5 }}>Contact us</Button>
                 </a>
               )}
