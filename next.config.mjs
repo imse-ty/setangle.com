@@ -1,7 +1,7 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
   images: {
-    domains: ['assets.tina.io']
+    domains: ['assets.tina.io', 'cdn.sanity.io']
   },
   experimental: {
     scrollRestoration: true
