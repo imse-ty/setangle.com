@@ -43,7 +43,7 @@ function Card({ children, ...rest }) {
         textAlign: 'left',
         gap: 3,
         height: '100%',
-        padding: 5,
+        padding: [4, null, 5],
         borderRadius: 3,
         justifyContent: 'center',
         alignItems: 'left',
