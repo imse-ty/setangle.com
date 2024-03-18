@@ -16,7 +16,7 @@ function Card({ hasPadding, children, ...rest }) {
         boxShadow: 'soft.low',
         transition: 'transform 325ms ease, box-shadow 325ms ease',
         maxHeight: '100vh',
-        // overflowY: 'scroll',
+        overflowY: 'scroll',
         '&:hover': {
           transform: 'scale(1.02)',
           boxShadow: 'soft.highMiddle'
