@@ -53,7 +53,7 @@ export default function WorkWorkSection({
         <motion.div
           style={{ scale }}
           sx={{
-            marginTop: 6,
+            marginTop: 4,
             paddingTop: 6,
             paddingBottom: 6,
             backgroundColor: 'background'
