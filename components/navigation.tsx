@@ -106,7 +106,14 @@ export default function Navigation({
             <MenuItem href='/#services'>Services</MenuItem>
             <MenuItem href='/#clientele'>Clientele</MenuItem>
             <MenuItem href='/#process'>Process</MenuItem>
-            <Flex sx={{ marginLeft: 2, gap: 1, alignItems: 'center' }}>
+            <Flex
+              sx={{
+                display: ['none', null, 'flex'],
+                marginLeft: 2,
+                gap: 1,
+                alignItems: 'center'
+              }}
+            >
               <AvailabilityIndicator />
               <MenuItem href='/talent'>Work with us</MenuItem>
             </Flex>
