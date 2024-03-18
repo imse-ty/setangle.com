@@ -28,6 +28,7 @@ import { useState } from 'react';
 import RoleSummarySection from '@/components/people/role-summary-section';
 import RolesContactSection from '@/components/roles/roles-contact-section';
 import OpenRolesSection from '@/components/people/open-roles-section';
+import { useColorMode } from 'theme-ui';
 
 interface Query {
   [key: string]: string;
@@ -63,6 +64,8 @@ export default function ProjectSlugRoute(
   const [role] = useLiveQuery(props.role, roleBySlugQuery, {
     slug: props.role.slug.current
   });
+  const [colorMode, setColorMode] = useColorMode();
+  setColorMode('dark');
 
   const [isFormOpen, setIsFormOpen] = useState(false);
 
