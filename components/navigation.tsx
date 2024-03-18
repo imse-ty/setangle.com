@@ -110,11 +110,11 @@ export default function Navigation({
               sx={{
                 display: ['none', null, 'flex'],
                 marginLeft: 2,
-                gap: 1,
+                gap: '2px',
                 alignItems: 'center'
               }}
             >
-              <AvailabilityIndicator />
+              <AvailabilityIndicator sx={{ marginBottom: '3px' }} />
               <MenuItem href='/talent'>Work with us</MenuItem>
             </Flex>
           </>

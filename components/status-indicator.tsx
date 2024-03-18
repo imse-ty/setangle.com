@@ -23,8 +23,7 @@ const AvailabilityIndicator = ({ ...rest }) => (
     sx={{
       position: 'relative',
       justifyContent: 'center',
-      alignItems: 'center',
-      marginTop: -1
+      alignItems: 'center'
     }}
     {...rest}
   >
@@ -36,7 +35,7 @@ const AvailabilityIndicator = ({ ...rest }) => (
         borderRadius: 5,
         height: '6px',
         width: '6px',
-        backgroundColor: colors.usir500
+        backgroundColor: colors.sobek400
       }}
     />
     <motion.div
@@ -47,7 +46,7 @@ const AvailabilityIndicator = ({ ...rest }) => (
         borderRadius: 5,
         height: '12px',
         width: '12px',
-        backgroundColor: colors.usir400
+        backgroundColor: colors.sobek400
       }}
     />
   </Flex>
