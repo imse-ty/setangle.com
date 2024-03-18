@@ -15,6 +15,7 @@ import Modal from '@/components/modal';
 import RoleSummarySection from '@/components/people/role-summary-section';
 import { useState } from 'react';
 import { useRouter } from 'next/router';
+import { useColorMode } from 'theme-ui';
 
 export const getStaticProps: GetStaticProps<
   SharedPageProps & {
@@ -39,6 +40,8 @@ export default function TalentPage(
   const [roles] = useLiveQuery<Role[]>(props.roles, rolesQuery);
   const [isRoleOpen, setIsRoleOpen] = useState(true);
   let router = useRouter();
+  const [colorMode, setColorMode] = useColorMode();
+  setColorMode('dark');
 
   return (
     <>

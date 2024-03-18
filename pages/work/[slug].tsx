@@ -19,7 +19,7 @@ import {
   useTransform
 } from 'framer-motion';
 import { useRef, useState } from 'react';
-import { ThemeUIProvider } from 'theme-ui';
+import { ThemeUIProvider, useColorMode } from 'theme-ui';
 import { buildMonochromaticTheme } from '@/lib/monochromatic-theme';
 import { getColor } from '@theme-ui/color';
 import { NextSeo } from 'next-seo';
@@ -52,6 +52,9 @@ export default function Project(props) {
   }
 
   const pageColor = buildMonochromaticTheme(data.project.pageColor);
+
+  const [colorMode, setColorMode] = useColorMode();
+  setColorMode('dark');
 
   return (
     <ThemeUIProvider theme={{ colors: { ...pageColor } }}>

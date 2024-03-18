@@ -16,9 +16,9 @@ export default function PeopleHero() {
         alignItems: 'center'
       }}
     >
-      <Text variant='body.pretext'>We are always looking for</Text>
+      <Text variant='body.pretext'>Looking for good people</Text>
       <Heading as='h1' variant='display.display' sx={{ marginBottom: 3 }}>
-        Good people
+        Work with us
       </Heading>
       <Text
         as='p'
