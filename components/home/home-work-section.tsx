@@ -42,7 +42,7 @@ function ProjectsSection() {
         color='asset'
         title='Splice'
         tags={['Tech', 'Social campaign']}
-        subtitle="Animating infographics for the Fearless Fund's annual event, a venture capital firm empowering women of color-led businesses."
+        subtitle="Developing Splice's social campaign for 'Create a Stack,' an AI tool for generating genre-specific music sample tracks."
         href='/work/splice'
         src='/projects/splice/splice-cover.png'
       />
