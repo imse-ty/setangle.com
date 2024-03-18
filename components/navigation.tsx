@@ -128,9 +128,13 @@ export default function Navigation({
               </Button>
             </a>
           ) : (
-            <a href='mailto:talent@setangle.com'>
+            <a
+              href='https://tally.so/r/w8KKKO'
+              target='_blank'
+              rel='noindex nofollow'
+            >
               <Button size='small' sx={{ marginLeft: 3 }}>
-                Contact us
+                Apply now
               </Button>
             </a>
           ))}

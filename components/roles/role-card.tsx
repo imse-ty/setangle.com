@@ -112,8 +112,12 @@ export default function RoleCard({
           <Button sx={{ width: '100%' }}>Apply now</Button>
         </a>
       ) : (
-        <a href='mailto:talent@setangle.com'>
-          <Button sx={{ width: '100%' }}>Contact us</Button>
+        <a
+          href='https://tally.so/r/w8KKKO'
+          target='_blank'
+          rel='noindex nofollow'
+        >
+          <Button sx={{ width: '100%' }}>Apply now</Button>
         </a>
       )}
     </Card>
