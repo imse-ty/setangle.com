@@ -115,7 +115,7 @@ export default function Navigation({
               }}
             >
               <AvailabilityIndicator sx={{ marginBottom: '3px' }} />
-              <MenuItem href='/talent'>Work with us</MenuItem>
+              <MenuItem href='/work-with-us'>Work with us</MenuItem>
             </Flex>
           </>
         )}

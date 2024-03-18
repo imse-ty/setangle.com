@@ -126,7 +126,7 @@ export const getStaticPaths = async () => {
   const slugs = await client.fetch(roleSlugsQuery);
 
   return {
-    paths: slugs?.map(({ slug }) => `/talent/${slug}`) || [],
+    paths: slugs?.map(({ slug }) => `/work-with-us/${slug}`) || [],
     fallback: 'blocking'
   };
 };

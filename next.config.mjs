@@ -42,6 +42,16 @@ const nextConfig = {
         source: '/consultation',
         destination: 'https://cal.com/imsety/consultation/',
         permanent: false
+      },
+      {
+        source: '/talent',
+        destination: '/work-with-us',
+        permanent: false
+      },
+      {
+        source: '/goodpeople',
+        destination: '/work-with-us',
+        permanent: false
       }
     ];
   }

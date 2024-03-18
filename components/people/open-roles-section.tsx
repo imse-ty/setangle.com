@@ -45,7 +45,7 @@ export default function OpenRolesSection({ roles }) {
                 // href={`/people?role=${index}`}
                 // as={`/people/${role.slug.current}`}
 
-                href={`/talent/${role.slug.current}`}
+                href={`/work-with-us/${role.slug.current}`}
               />
             );
           })}
