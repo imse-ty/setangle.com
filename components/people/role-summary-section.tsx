@@ -20,6 +20,7 @@ export default function RoleSummarySection({ role }) {
         <Flex
           sx={{
             justifyContent: 'center',
+            flexDirection: ['column', 'row'],
             width: '100%',
             height: '100%',
             gap: 6

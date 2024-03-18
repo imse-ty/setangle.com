@@ -39,7 +39,7 @@ function Card({ children, ...rest }) {
       sx={{
         textAlign: 'left',
         gap: 4,
-        padding: [3, null, null, 4],
+        padding: [5, null, null, 4],
         borderRadius: 3,
         justifyContent: 'center',
         alignItems: 'left',
@@ -71,7 +71,7 @@ export default function RoleCard({ title, rate, rateSubtitle, tags, onClick }) {
         </Flex>
       )}
       {rateSubtitle && (
-        <Flex sx={{ flexDirection: 'column', alignItems: 'center', gap: 1 }}>
+        <Flex sx={{ flexDirection: 'column', alignItems: 'left', gap: 1 }}>
           <Text variant='display.h4'>{rate}</Text>
 
           <Text variant='body.footnote' sx={{ color: 'text.secondary' }}>
