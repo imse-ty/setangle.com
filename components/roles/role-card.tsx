@@ -37,6 +37,7 @@ function Card({ children, ...rest }) {
   return (
     <Flex
       sx={{
+        maxWidth: ['none', null, null, '300px'],
         textAlign: 'left',
         gap: 4,
         padding: [5, null, null, 4],
@@ -59,7 +60,13 @@ function Card({ children, ...rest }) {
   );
 }
 
-export default function RoleCard({ title, rate, rateSubtitle, tags, onClick }) {
+export default function RoleCard({
+  title,
+  rate,
+  rateSubtitle,
+  tags,
+  formLink
+}) {
   return (
     <Card>
       {title && (
@@ -93,7 +100,16 @@ export default function RoleCard({ title, rate, rateSubtitle, tags, onClick }) {
           })}
         </Flex>
       )}
-      <Button onClick={onClick}>Apply now</Button>
+
+      {formLink ? (
+        <a href={formLink} target='_blank' rel='noindex nofollow'>
+          <Button sx={{ width: '100%' }}>Apply now</Button>
+        </a>
+      ) : (
+        <a href='mailto:people@setangle.com'>
+          <Button sx={{ width: '100%' }}>Contact us</Button>
+        </a>
+      )}
     </Card>
   );
 }

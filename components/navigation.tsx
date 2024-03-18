@@ -39,7 +39,9 @@ export default function Navigation({
   isHidden,
   buttonOnClick,
   showFaqMenu,
-  showPricing
+  showPricing,
+  showPeopleContactButton,
+  formLink
 }) {
   const variants = {
     hidden: {
@@ -106,9 +108,26 @@ export default function Navigation({
           </>
         )}
 
-        <Button size='small' onClick={buttonOnClick} sx={{ marginLeft: 3 }}>
-          Book a call
-        </Button>
+        {showPeopleContactButton &&
+          (formLink ? (
+            <a href={formLink} target='_blank' rel='noindex nofollow'>
+              <Button size='small' sx={{ marginLeft: 3 }}>
+                Apply now
+              </Button>
+            </a>
+          ) : (
+            <a href='mailto:people@setangle.com'>
+              <Button size='small' sx={{ marginLeft: 3 }}>
+                Contact us
+              </Button>
+            </a>
+          ))}
+
+        {!showPeopleContactButton && (
+          <Button size='small' onClick={buttonOnClick} sx={{ marginLeft: 3 }}>
+            Book a call
+          </Button>
+        )}
       </Flex>
     </Flex>
   );

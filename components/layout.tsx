@@ -11,6 +11,8 @@ export default function Layout({
   showPricing,
   showToolbarBack,
   isHiddenByDefault,
+  formLink,
+  showPeopleContactButton = false,
   forceHideNav = false
 }) {
   const { scrollYProgress } = useScroll();
@@ -38,6 +40,8 @@ export default function Layout({
         showFaqMenu={showFaqMenu}
         showPricing={showPricing}
         showBack={showToolbarBack}
+        formLink={formLink}
+        showPeopleContactButton={showPeopleContactButton}
       />
 
       {children}

@@ -54,7 +54,7 @@ export default function IndexPage(
         </Modal>
       )}
 
-      <Layout>
+      <Layout showPeopleContactButton>
         <PeopleHero />
         <OpenRolesSection roles={roles} />
       </Layout>

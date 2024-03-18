@@ -15,7 +15,13 @@ import { useState } from 'react';
 import Modal from './modal';
 import CalEmbed from './cal-embed';
 
-export default function Toolbar({ showFaqMenu, showPricing, showBack }) {
+export default function Toolbar({
+  showFaqMenu,
+  showPricing,
+  showBack,
+  formLink,
+  showPeopleContactButton
+}) {
   const { scrollYProgress } = useScroll();
   const [isCalModalOpen, setIsCalModalOpen] = useState(false);
 
@@ -100,6 +106,8 @@ export default function Toolbar({ showFaqMenu, showPricing, showBack }) {
             showPricing={showPricing}
             showFaqMenu={showFaqMenu}
             buttonOnClick={() => setIsCalModalOpen(true)}
+            formLink={formLink}
+            showPeopleContactButton={showPeopleContactButton}
           />
         </Container>
       </Flex>

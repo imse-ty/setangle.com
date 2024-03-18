@@ -26,6 +26,7 @@ import Modal from '@/components/modal';
 import FormEmbed from '@/components/roles/form-embed';
 import { useState } from 'react';
 import RoleSummarySection from '@/components/people/role-summary-section';
+import RolesContactSection from '@/components/roles/roles-contact-section';
 
 interface Query {
   [key: string]: string;
@@ -69,7 +70,7 @@ export default function ProjectSlugRoute(
       <Modal isOpen={isFormOpen} onClose={() => setIsFormOpen(false)}>
         <FormEmbed />
       </Modal>
-      <Layout>
+      <Layout formLink={role.formLink} showPeopleContactButton>
         <Container
           sx={{
             marginTop: 7,
@@ -93,10 +94,21 @@ export default function ProjectSlugRoute(
           >
             {role.description}
           </Text>
-          <Button sx={{ marginBottom: 5 }}>Apply now</Button>
+          {role.formLink ? (
+            <a href={role.formLink} target='_blank' rel='noindex nofollow'>
+              <Button sx={{ marginTop: 4 }}>Apply now</Button>
+            </a>
+          ) : (
+            <a href='mailto:people@setangle.com'>
+              <Button sx={{ marginTop: 4 }}>Contact us</Button>
+            </a>
+          )}
         </Container>
         <RoleSummarySection role={role} />
-        <ContactSection useTransparentBackground />
+        <RolesContactSection
+          formLink={role.formLink}
+          useTransparentBackground
+        />
       </Layout>
     </>
   );

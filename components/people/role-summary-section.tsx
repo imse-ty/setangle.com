@@ -20,7 +20,7 @@ export default function RoleSummarySection({ role }) {
         <Flex
           sx={{
             justifyContent: 'center',
-            flexDirection: ['column', 'row'],
+            flexDirection: ['column', null, null, 'row'],
             width: '100%',
             height: '100%',
             gap: 6
@@ -43,7 +43,7 @@ export default function RoleSummarySection({ role }) {
                 rate={role.rate}
                 rateSubtitle={role.rateSubtitle}
                 tags={role.tags}
-                onClick={() => setIsFormOpen(true)}
+                formLink={role.formLink}
               />
             </ScaleInEffect>
           </Box>
