@@ -9,7 +9,7 @@ import { Link } from 'krado-react';
 const sanityComponents = {
   block: {
     normal: ({ children }) => (
-      <Text as='p' sx={{ marginTop: 4, marginBottom: 3 }}>
+      <Text as='p' sx={{ marginTop: 3, marginBottom: 3 }}>
         {children}
       </Text>
     ),
