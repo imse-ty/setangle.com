@@ -25,9 +25,10 @@ export default function PeopleHero() {
         variant='body.summary'
         sx={{ maxWidth: '1000px', color: 'secondary.light' }}
       >
-        We blend animation, technology, and sound to transform ordinary stories
-        into soulful brand experiences that inspire the culture we live in
-        today.
+        We’re always looking to expand our talent network with skilled
+        freelancers ready to tackle exciting projects. Join us, and we&apos;ll
+        link you with opportunities that align with your skills
+        and&nbsp;passions.
       </Text>
     </Container>
   );
