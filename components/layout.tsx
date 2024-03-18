@@ -7,7 +7,13 @@ import Toolbar from './toolbar';
 export default function Layout({
   children,
   hideTopNav,
+  showFaqMenu,
+  showPricing,
+  showToolbarBack,
   isHiddenByDefault,
+  formLink,
+  backLink,
+  showPeopleContactButton = false,
   forceHideNav = false
 }) {
   const { scrollYProgress } = useScroll();
@@ -31,7 +37,14 @@ export default function Layout({
 
   return (
     <Box as='main' sx={{ position: 'relative' }}>
-      <Toolbar />
+      <Toolbar
+        showFaqMenu={showFaqMenu}
+        showPricing={showPricing}
+        showBack={showToolbarBack}
+        formLink={formLink}
+        showPeopleContactButton={showPeopleContactButton}
+        backLink={backLink}
+      />
 
       {children}
     </Box>

@@ -59,10 +59,10 @@ export default function Project(props) {
         title={`${data.project.title} - Imsety`}
         description={data.project.subtitle}
       />
-      <HomeLayout
+      <Layout
         typeOfCaseStudy={data.project.typeOfCaseStudy}
-        showToolbarBack={false}
         isHiddenByDefault={true}
+        backLink='/#work'
         hideTopNav
       >
         <ProjectMasthead
@@ -117,7 +117,7 @@ export default function Project(props) {
             </motion.div>
           </Box>
         </div>
-      </HomeLayout>
+      </Layout>
     </ThemeUIProvider>
   );
 }

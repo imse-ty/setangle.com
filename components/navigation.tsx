@@ -5,6 +5,7 @@ import { Flex, Button } from 'krado-react';
 import Link from 'next/link';
 import { motion } from 'framer-motion';
 import Text from './fixed-krado-components/Text';
+import AvailabilityIndicator from './status-indicator';
 
 function MenuItem({ children, active, href }) {
   return (
@@ -35,7 +36,14 @@ function MenuItem({ children, active, href }) {
   );
 }
 
-export default function Navigation({ isHidden, buttonOnClick }) {
+export default function Navigation({
+  isHidden,
+  buttonOnClick,
+  showFaqMenu,
+  showPricing,
+  showPeopleContactButton,
+  formLink
+}) {
   const variants = {
     hidden: {
       opacity: 0,
@@ -70,6 +78,7 @@ export default function Navigation({ isHidden, buttonOnClick }) {
         as='ul'
         sx={{
           justifyContent: 'space-between',
+
           width: '100%',
           gap: 1,
           listStyle: 'none',
@@ -77,18 +86,53 @@ export default function Navigation({ isHidden, buttonOnClick }) {
         }}
       >
         {/* <MenuItem href='#'>Home</MenuItem> */}
-        <MenuItem href='#reel'>Reel</MenuItem>
-        <MenuItem href='#approach'>Approach</MenuItem>
-        <MenuItem href='#work'>Work</MenuItem>
-        <MenuItem href='#services'>Services</MenuItem>
-        <MenuItem href='#clientele'>Clientele</MenuItem>
-        <MenuItem href='#process'>Process</MenuItem>
-        <MenuItem href='#pricing'>Pricing</MenuItem>
-        <MenuItem href='#newsletter'>Newsletter</MenuItem>
 
-        <Button size='small' onClick={buttonOnClick} sx={{ marginLeft: 3 }}>
-          Book a call
-        </Button>
+        {showFaqMenu ? (
+          <>
+            <MenuItem href='#reel'>Reel</MenuItem>
+            <MenuItem href='#approach'>Approach</MenuItem>
+            <MenuItem href='#work'>Work</MenuItem>
+            <MenuItem href='#services'>Services</MenuItem>
+            <MenuItem href='#clientele'>Clientele</MenuItem>
+            <MenuItem href='#process'>Process</MenuItem>
+            {showPricing && <MenuItem href='#pricing'>Pricing</MenuItem>}
+            <MenuItem href='#newsletter'>Newsletter</MenuItem>
+          </>
+        ) : (
+          <>
+            <MenuItem href='/'>Home</MenuItem>
+            <MenuItem href='/#reel'>Reel</MenuItem>
+            <MenuItem href='/#work'>Work</MenuItem>
+            <MenuItem href='/#services'>Services</MenuItem>
+            <MenuItem href='/#clientele'>Clientele</MenuItem>
+            <MenuItem href='/#process'>Process</MenuItem>
+            <Flex sx={{ marginLeft: 2, gap: 1, alignItems: 'center' }}>
+              <AvailabilityIndicator />
+              <MenuItem href='/talent'>Work with us</MenuItem>
+            </Flex>
+          </>
+        )}
+
+        {showPeopleContactButton &&
+          (formLink ? (
+            <a href={formLink} target='_blank' rel='noindex nofollow'>
+              <Button size='small' sx={{ marginLeft: 3 }}>
+                Apply now
+              </Button>
+            </a>
+          ) : (
+            <a href='mailto:talent@setangle.com'>
+              <Button size='small' sx={{ marginLeft: 3 }}>
+                Contact us
+              </Button>
+            </a>
+          ))}
+
+        {!showPeopleContactButton && (
+          <Button size='small' onClick={buttonOnClick} sx={{ marginLeft: 3 }}>
+            Book a call
+          </Button>
+        )}
       </Flex>
     </Flex>
   );

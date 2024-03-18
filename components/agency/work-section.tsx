@@ -34,22 +34,22 @@ function ProjectsSection() {
       <ProjectCard
         motionTypeIcon={<MdMovie sx={{ fontSize: 5 }} />}
         motionType='Class B'
-        tags={['Corporate', 'Event']}
-        color='sekmet'
-        title='Chick-fil-A'
-        subtitle="Innovating at Chick-fil-A's annual meetings NEXT and Spark 2023"
-        href='/work/chick-fil-a'
-        src='/work/chick-fil-a.png'
-      />
-      <ProjectCard
-        motionTypeIcon={<MdMovie sx={{ fontSize: 5 }} />}
-        motionType='Class B'
         tags={['Startup', 'Product ad']}
         color='taweret'
         title='Space and Time'
         subtitle="Leading creation direction for Space and Time's AI tool Houston and creating a stunning 3D galaxy scene."
         href='/work/space-and-time'
         src='/work/space-and-time.png'
+      />
+      <ProjectCard
+        motionTypeIcon={<MdMovie sx={{ fontSize: 5 }} />}
+        motionType='Class B'
+        tags={['Corporate', 'Event']}
+        color='sekmet'
+        title='Chick-fil-A'
+        subtitle="Innovating at Chick-fil-A's annual meetings NEXT and Spark 2023"
+        href='/work/chick-fil-a'
+        src='/work/chick-fil-a.png'
       />
       <ProjectCard
         motionTypeIcon={<MdLightbulb sx={{ fontSize: 5 }} />}

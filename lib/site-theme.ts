@@ -113,8 +113,8 @@ export const setyTheme = {
         variant: 'text.base',
         fontFamily: 'display',
         fontStyle: 'italic',
-        fontSize: 6,
-        lineHeight: '31px'
+        fontSize: 8,
+        lineHeight: '42px'
       }
     },
     body: {
