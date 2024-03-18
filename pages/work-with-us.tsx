@@ -16,6 +16,8 @@ import RoleSummarySection from '@/components/people/role-summary-section';
 import { useState } from 'react';
 import { useRouter } from 'next/router';
 import { useColorMode } from 'theme-ui';
+import ContactSection from '@/components/contact/contact-section';
+import RolesContactSection from '@/components/roles/roles-contact-section';
 
 export const getStaticProps: GetStaticProps<
   SharedPageProps & {
@@ -60,6 +62,7 @@ export default function TalentPage(
       <Layout showPeopleContactButton>
         <PeopleHero />
         <OpenRolesSection roles={roles} />
+        <RolesContactSection useTransparentBackground />
       </Layout>
     </>
   );
