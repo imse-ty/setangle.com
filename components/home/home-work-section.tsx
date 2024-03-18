@@ -83,7 +83,8 @@ export default function HomeWorkSection({ onViewportEnter, onViewportLeave }) {
 
           <Text as='p'>
             Selected ranging from event openers, tech product ads, social media
-            graphics, and non-profit organizations.
+            graphics, and non-profit organizations collaborating with brand and
+            agencies alike.
           </Text>
         </Container>
         <ProjectsSection />
