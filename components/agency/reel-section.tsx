@@ -83,8 +83,8 @@ export default function ReelSection({
   const scale = useSpring(scrollScale, { mass: 0.1 });
 
   // URLs for your Vimeo videos
-  const desktopVimeoUrl = 'https://vimeo.com/907993556?share=copy';
-  const mobileVimeoUrl = 'https://vimeo.com/912241383?share=copy';
+  const desktopVimeoUrl = 'https://vimeo.com/925194439?share=copy';
+  const mobileVimeoUrl = 'https://vimeo.com/925194554?share=copy';
 
   // State to hold the current Vimeo URL
   const [reelUrl, setReelVimeoUrl] = useState(desktopVimeoUrl);
