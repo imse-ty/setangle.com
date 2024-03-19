@@ -82,7 +82,7 @@ export default function RolesContactSection({
               </Flex>
               {formLink ? (
                 <a href={formLink} target='_blank' rel='noindex nofollow'>
-                  <Button sx={{ width: '100%' }}>Apply now</Button>
+                  <Button sx={{ marginTop: 5 }}>Apply now</Button>
                 </a>
               ) : (
                 <a
@@ -90,7 +90,7 @@ export default function RolesContactSection({
                   target='_blank'
                   rel='noindex nofollow'
                 >
-                  <Button sx={{ width: '100%' }}>Apply now</Button>
+                  <Button sx={{ marginTop: 5 }}>Apply now</Button>
                 </a>
               )}
             </Container>
