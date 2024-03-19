@@ -51,6 +51,11 @@ const nextConfig = {
         source: '/goodpeople',
         destination: '/work-with-us',
         permanent: false
+      },
+      {
+        source: '/interview',
+        destination: 'https://cal.com/team/setangle/interview',
+        permanent: false
       }
     ];
   }
