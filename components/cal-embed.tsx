@@ -20,7 +20,7 @@ export default function CalEmbed() {
   return (
     <Box sx={{ paddingY: [6, null, 0] }}>
       <Cal
-        calLink='imsety/consultation'
+        calLink='team/setangle/consultation'
         style={{ width: '100%', height: '100%', overflow: 'scroll' }}
         config={{ layout: 'month_view' }}
       />
