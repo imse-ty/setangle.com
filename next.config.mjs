@@ -19,10 +19,9 @@ const nextConfig = {
     return [
       {
         source: '/chat',
-        destination: 'https://cal.com/imsety/chat/',
+        destination: 'https://cal.com/team/setangle/chat',
         permanent: false
       },
-
       {
         source: '/agency',
         destination: '/',
@@ -40,7 +39,7 @@ const nextConfig = {
       },
       {
         source: '/consultation',
-        destination: 'https://cal.com/imsety/consultation/',
+        destination: 'https://cal.com/team/setangle/consultation',
         permanent: false
       },
       {
