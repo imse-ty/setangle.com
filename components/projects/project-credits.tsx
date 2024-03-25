@@ -22,7 +22,7 @@ function Card({ children, ...rest }) {
         padding: [4, 6],
         flex: '1 1 25%',
         borderRadius: 3,
-        backgroundColor: 'surface.heavy',
+        backgroundColor: 'surface.black',
         boxShadow: 'soft.low',
         transition: 'transform 325ms ease, box-shadow 325ms ease',
         '&:hover': {
@@ -41,19 +41,19 @@ function Mention({ title, name, url }) {
   return (
     <Flex sx={{ flexDirection: 'column', gap: 2 }}>
       {title && (
-        <Text variant="body.pretext" sx={{ color: 'surface.light' }}>
+        <Text variant='body.pretext' sx={{ color: 'surface.light' }}>
           {title}
         </Text>
       )}
       {name && (
         <a
           href={url}
-          target="_blank"
-          rel="noindex nofollow"
+          target='_blank'
+          rel='noindex nofollow'
           sx={{ textDecoration: 'none' }}
         >
           <Text
-            variant="body.summary"
+            variant='body.summary'
             sx={{
               alignText: 'center',
               color: 'surface.thin',
@@ -100,7 +100,7 @@ export default function ProjectCredits({ text, names }) {
           sx={{
             position: 'absolute'
           }}
-          id="rewardId"
+          id='rewardId'
         />
         <Flex
           sx={{
@@ -110,10 +110,10 @@ export default function ProjectCredits({ text, names }) {
             maxWidth: '900px'
           }}
         >
-          <Heading variant="display.h2" sx={{ color: 'surface.thin' }}>
+          <Heading variant='display.h2' sx={{ color: 'surface.thin' }}>
             Credits
           </Heading>
-          <Text variant="body.summary" sx={{ flex: 1, color: 'surface.thin' }}>
+          <Text variant='body.summary' sx={{ flex: 1, color: 'surface.thin' }}>
             {text}
           </Text>
         </Flex>
@@ -124,16 +124,17 @@ export default function ProjectCredits({ text, names }) {
             flex: 1
           }}
         >
-          {names.map((name, index) => {
-            return (
-              <Mention
-                title={name.title}
-                name={name.name}
-                url={name.url}
-                key={index}
-              />
-            );
-          })}
+          {names &&
+            names.map((name, index) => {
+              return (
+                <Mention
+                  title={name.title}
+                  name={name.name}
+                  url={name.url}
+                  key={index}
+                />
+              );
+            })}
         </Grid>
       </Card>
     </figure>
