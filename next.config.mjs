@@ -49,7 +49,7 @@ const nextConfig = {
       },
       {
         source: '/opencal',
-        destination: '/https://cal.com/team/setangle/opencal',
+        destination: 'https://cal.com/team/setangle/opencal',
         permanent: false
       },
       {
