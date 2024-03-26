@@ -15,9 +15,11 @@ import Modal from '@/components/modal';
 import RoleSummarySection from '@/components/people/role-summary-section';
 import { useState } from 'react';
 import { useRouter } from 'next/router';
+import { Container } from 'krado-react';
 import { useColorMode } from 'theme-ui';
 import ContactSection from '@/components/contact/contact-section';
 import RolesContactSection from '@/components/roles/roles-contact-section';
+import VideoSection from '@/components/video-section';
 
 export const getStaticProps: GetStaticProps<
   SharedPageProps & {
@@ -45,6 +47,8 @@ export default function TalentPage(
   const [colorMode, setColorMode] = useColorMode();
   setColorMode('dark');
 
+  const [isVideoActive, setIsVideoActive] = useState(false);
+
   return (
     <>
       {router.query.role && (
@@ -61,6 +65,21 @@ export default function TalentPage(
 
       <Layout showPeopleContactButton>
         <PeopleHero />
+        <Container>
+          <VideoSection
+            url='https://vimeo.com/927722152?share=copy'
+            poster='/work-with-us-thumbnail.jpg'
+            previewSrc='/work-with-us-preview.webm'
+            isVideoActive={isVideoActive}
+            setIsVideoActive={() => {
+              if (typeof umami !== 'undefined' && !isVideoActive) {
+                umami.track('work-with-us-section-play');
+              }
+
+              setIsVideoActive(!isVideoActive);
+            }}
+          />
+        </Container>
         <OpenRolesSection roles={roles} />
         <RolesContactSection useTransparentBackground />
       </Layout>

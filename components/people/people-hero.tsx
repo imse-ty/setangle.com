@@ -1,4 +1,7 @@
-import { Flex, Container } from 'krado-react';
+/** @jsxImportSource theme-ui */
+//@ts-nocheck
+
+import { Flex, Container, Button } from 'krado-react';
 import Heading from '../fixed-krado-components/Heading';
 import Text from '../fixed-krado-components/Text';
 import VideoPlayer from '../video-player';
@@ -30,6 +33,9 @@ export default function PeopleHero() {
         link you with opportunities that align with your skills
         and&nbsp;passions.
       </Text>
+      <a href='#roles'>
+        <Button sx={{ marginTop: 4 }}>Browse open roles</Button>
+      </a>
     </Container>
   );
 }

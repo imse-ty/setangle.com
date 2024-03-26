@@ -49,7 +49,7 @@ const nextConfig = {
       },
       {
         source: '/assistant',
-        destination: 'https://setangle.com/work-with-us/assistant',
+        destination: '/work-with-us/assistant',
         permanent: false
       },
       {

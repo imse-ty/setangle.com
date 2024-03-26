@@ -4,6 +4,7 @@
 import Heading from '@/components/fixed-krado-components/Heading';
 import Text from '@/components/fixed-krado-components/Text';
 import { OrderedList, UnorderedList } from '@/components/list';
+import { ProjectVimeo } from '@/components/projects/project-embed';
 import { Link } from 'krado-react';
 
 const sanityComponents = {
@@ -119,6 +120,9 @@ const sanityComponents = {
         {children}
       </Text>
     )
+  },
+  types: {
+    vimeo: (props) => <ProjectVimeo url={props.value.url} autoplay={false} />
   }
 };
 

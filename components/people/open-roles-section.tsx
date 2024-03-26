@@ -25,7 +25,7 @@ import { useState } from 'react';
 export default function OpenRolesSection({ roles }) {
   return (
     <ScaleInEffect>
-      <Wrapper sx={{ backgroundColor: 'surface.black' }}>
+      <Wrapper id='roles' sx={{ backgroundColor: 'surface.black' }}>
         <Heading variant='body.pretext'>Browse open roles</Heading>
         <Grid
           sx={{
