@@ -48,6 +48,11 @@ const nextConfig = {
         permanent: false
       },
       {
+        source: '/assistant',
+        destination: 'https://setangle.com/work-with-us/assistant',
+        permanent: false
+      },
+      {
         source: '/opencal',
         destination: 'https://cal.com/team/setangle/opencal',
         permanent: false
