@@ -7,6 +7,7 @@ import Script from 'next/script';
 import { Suspense, lazy } from 'react';
 import { VisualEditing } from 'next-sanity';
 import { DefaultSeo } from 'next-seo';
+import Head from 'next/head';
 
 export interface SharedPageProps {
   draftMode: boolean;
@@ -23,6 +24,9 @@ export default function App({
 
   return (
     <ThemeUIProvider theme={{ ...theme, ...setyTheme }}>
+      <Head>
+        <link rel='icon' href='/favicon.ico' />
+      </Head>
       <Script src='https://f.convertkit.com/ckjs/ck.5.js' />
       {process.env.NEXT_PUBLIC_UMAMI_SCRIPT_URL &&
         process.env.NEXT_PUBLIC_UMAMI_WEBSITE_ID && (
