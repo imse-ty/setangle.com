@@ -29,6 +29,7 @@ import RoleSummarySection from '@/components/people/role-summary-section';
 import RolesContactSection from '@/components/roles/roles-contact-section';
 import OpenRolesSection from '@/components/people/open-roles-section';
 import { useColorMode } from 'theme-ui';
+import { NextSeo } from 'next-seo';
 
 interface Query {
   [key: string]: string;
@@ -80,6 +81,10 @@ export default function ProjectSlugRoute(
         showPeopleContactButton
         showToolbarBack
       >
+        <NextSeo
+          title={`${role.title} - Work with us — Set Angle`}
+          description={role.description}
+        />
         <Container
           sx={{
             marginTop: 7,

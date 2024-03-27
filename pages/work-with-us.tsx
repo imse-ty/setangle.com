@@ -20,6 +20,7 @@ import { useColorMode } from 'theme-ui';
 import ContactSection from '@/components/contact/contact-section';
 import RolesContactSection from '@/components/roles/roles-contact-section';
 import VideoSection from '@/components/video-section';
+import { NextSeo } from 'next-seo';
 
 export const getStaticProps: GetStaticProps<
   SharedPageProps & {
@@ -64,6 +65,13 @@ export default function TalentPage(
       )}
 
       <Layout showPeopleContactButton>
+        <NextSeo
+          title='Work with us — Set Angle'
+          description="We’re always looking to expand our talent network with skilled
+          freelancers ready to tackle exciting projects. Join us, and we'll
+          link you with opportunities that align with your skills
+          and passions."
+        />
         <PeopleHero />
         <Container>
           <VideoSection

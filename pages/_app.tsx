@@ -6,6 +6,7 @@ import { ThemeUIProvider, useColorMode } from 'theme-ui';
 import Script from 'next/script';
 import { Suspense, lazy } from 'react';
 import { VisualEditing } from 'next-sanity';
+import { DefaultSeo } from 'next-seo';
 
 export interface SharedPageProps {
   draftMode: boolean;
@@ -31,6 +32,18 @@ export default function App({
             strategy='lazyOnload'
           />
         )}
+
+      <DefaultSeo
+        title='Set Angle — Digital creative agency'
+        description='We blend animation, technology, and sound to transform ordinary stories into soulful brand experiences that inspire the culture we live in today.'
+        additionalMetaTags={[
+          {
+            name: 'keywords',
+            content:
+              'agency, studio, marketing, motion, design, motion design, art, HTML, CSS, JavaScript, programming, developer, code, media, animation, designer, website'
+          }
+        ]}
+      />
       {draftMode ? (
         <PreviewProvider token={token}>
           <Component {...pageProps} />

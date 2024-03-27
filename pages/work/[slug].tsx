@@ -59,7 +59,7 @@ export default function Project(props) {
   return (
     <ThemeUIProvider theme={{ colors: { ...pageColor } }}>
       <NextSeo
-        title={`${data.project.title} - Imsety`}
+        title={`${data.project.title} - Set Angle`}
         description={data.project.subtitle}
       />
       <Layout
