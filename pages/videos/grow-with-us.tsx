@@ -6,9 +6,12 @@ import { useState } from 'react';
 import { NextSeo } from 'next-seo';
 import Layout from '@/components/layout';
 import { Box } from 'krado-react';
+import { useColorMode } from 'theme-ui';
 
 export default function Reel() {
   const [isVideoActive, setIsVideoActive] = useState(false);
+  const [colorMode, setColorMode] = useColorMode();
+  setColorMode('dark');
 
   return (
     <Layout>
