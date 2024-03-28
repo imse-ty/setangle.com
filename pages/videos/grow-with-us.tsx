@@ -25,7 +25,7 @@ export default function Reel() {
         previewSrc='/work-with-us-preview.webm'
         setIsVideoActive={() => {
           if (typeof umami !== 'undefined' && !isVideoActive) {
-            umami.track('assistant-video-blurb-play');
+            umami.track('grow-with-us-video-play');
           }
 
           setIsVideoActive(!isVideoActive);
