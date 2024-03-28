@@ -60,7 +60,8 @@ export default function VideoSection({
   onViewportLeave,
   poster,
   url,
-  previewSrc
+  previewSrc,
+  fullscreen = false
 }) {
   function getState() {
     if (isVideoActive) {
@@ -96,7 +97,8 @@ export default function VideoSection({
         sx={{
           flexDirection: 'column',
           justifyContent: 'center',
-          aspectRatio: '16/9',
+          aspectRatio: fullscreen ? 'initial' : '16/9',
+          height: fullscreen && '90vh',
           overflow: 'hidden'
         }}
         onViewportEnter={onViewportEnter}
