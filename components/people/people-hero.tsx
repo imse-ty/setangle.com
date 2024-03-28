@@ -33,9 +33,18 @@ export default function PeopleHero() {
         link you with opportunities that align with your skills
         and&nbsp;passions.
       </Text>
-      <a href='#roles'>
-        <Button sx={{ marginTop: 4 }}>Browse open roles</Button>
-      </a>
+      <Flex sx={{ marginTop: 4, gap: 3 }}>
+        <a href='#roles'>
+          <Button>Browse open roles</Button>
+        </a>
+        <a
+          href='https://tally.so/r/w8KKKO'
+          target='_blank'
+          rel='noindex nofollow'
+        >
+          <Button variant='ghost'>Join our network</Button>
+        </a>
+      </Flex>
     </Container>
   );
 }
