@@ -66,6 +66,11 @@ const nextConfig = {
         source: '/interview',
         destination: 'https://cal.com/team/setangle/interview',
         permanent: false
+      },
+      {
+        source: '/call',
+        destination: 'https://cal.com/team/setangle/call',
+        permanent: false
       }
     ];
   }
