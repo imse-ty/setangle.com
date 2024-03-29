@@ -38,7 +38,7 @@ export default function CalvinCrawfordFaq() {
 
   return (
     <Layout isHiddenByDefault hideTopNav showFaqMenu showPricing>
-      <FaqHero name=' Sanshu team' />
+      <FaqHero name=' SANSHU! team' />
       <Container sx={{ marginBottom: 6 }}>
         <ReelSection
           isVideoActive={isVideoActive}
