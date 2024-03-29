@@ -71,6 +71,11 @@ const nextConfig = {
         source: '/call',
         destination: 'https://cal.com/team/setangle/call',
         permanent: false
+      },
+      {
+        source: '/talk',
+        destination: 'https://cal.com/team/setangle/talk',
+        permanent: false
       }
     ];
   }
