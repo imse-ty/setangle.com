@@ -26,7 +26,7 @@ export default function OpenRolesSection({ roles }) {
   return (
     <ScaleInEffect>
       <Wrapper id='roles' sx={{ backgroundColor: 'surface.black' }}>
-        <Heading variant='body.pretext'>Browse open roles</Heading>
+        <Heading variant='body.pretext'>Open opportunities</Heading>
         <Grid
           sx={{
             gap: 3,

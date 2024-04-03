@@ -35,7 +35,7 @@ export default function PeopleHero() {
       </Text>
       <Flex sx={{ marginTop: 4, gap: 3 }}>
         <a href='#roles'>
-          <Button>Browse open roles</Button>
+          <Button>Browse opportunities</Button>
         </a>
         <a
           href='https://tally.so/r/w8KKKO'
