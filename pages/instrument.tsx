@@ -39,7 +39,7 @@ export default function CalvinCrawfordFaq() {
 
   return (
     <Layout isHiddenByDefault hideTopNav showFaqMenu showPricing>
-      <FaqHero name=' Instrument team' />
+      <FaqHero name=' Alayna and Instrument team' />
       <Container sx={{ marginBottom: 6 }}>
         <ReelSection
           isVideoActive={isVideoActive}
