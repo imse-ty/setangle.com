@@ -11,9 +11,10 @@ import Text from './fixed-krado-components/Text';
 import Switch from './projects/project-switch';
 
 import Image from 'next/image';
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 import Modal from './modal';
 import CalEmbed from './cal-embed';
+import { useRouter } from 'next/router';
 
 export default function Toolbar({
   showFaqMenu,
@@ -25,6 +26,18 @@ export default function Toolbar({
 }) {
   const { scrollYProgress } = useScroll();
   const [isCalModalOpen, setIsCalModalOpen] = useState(false);
+
+  const router = useRouter();
+
+  console.log(router.asPath);
+
+  const handleBack = () => {
+    if (router.asPath !== router.basePath) {
+      router.back();
+    } else {
+      router.push(backLink);
+    }
+  };
 
   return (
     <>
@@ -72,20 +85,19 @@ export default function Toolbar({
           }}
         >
           {backLink ? (
-            <Link href={backLink}>
-              <ToggleIcon
-                sx={{
-                  borderRadius: 2,
-                  width: '48px',
-                  height: '48px',
-                  boxShadow: 'hard.high',
-                  backgroundColor: 'primary.regular',
-                  color: 'primary.contrast'
-                }}
-              >
-                <MdChevronLeft />
-              </ToggleIcon>
-            </Link>
+            <ToggleIcon
+              onClick={handleBack}
+              sx={{
+                borderRadius: 2,
+                width: '48px',
+                height: '48px',
+                boxShadow: 'hard.high',
+                backgroundColor: 'primary.regular',
+                color: 'primary.contrast'
+              }}
+            >
+              <MdChevronLeft />
+            </ToggleIcon>
           ) : (
             <Link href='/'>
               <Image
