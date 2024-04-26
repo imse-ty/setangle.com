@@ -63,7 +63,8 @@ export default function Faq250Pricing() {
             Tranparent pricing{' '}
             <strong>based on content length and level of effort</strong> for
             unparalleled quality. Choose your class that best fits your
-            project&apos;s goals.
+            project&apos;s goals. For harder to quantaify projects, we work on a
+            project-based rate, based on $250/hr depending on the scope of work.
           </Text>
         </Flex>
         <Flex sx={{ gap: 3, flexDirection: ['column', 'row'] }}>
