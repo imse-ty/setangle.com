@@ -31,6 +31,7 @@ import FaqOurClients from '@/components/faq/faq-our-clients';
 import FaqTopPricing from '@/components/faq/faq-top-pricing';
 import FaqMidPricing from '@/components/faq/faq-mid-pricing';
 import Faq250Pricing from '@/components/faq/faq-250-pricing';
+import { NextSeo } from 'next-seo';
 
 export default function CalvinCrawfordFaq() {
   const [isVideoActive, setIsVideoActive] = useState(false);
@@ -40,6 +41,10 @@ export default function CalvinCrawfordFaq() {
   return (
     <Layout isHiddenByDefault hideTopNav showFaqMenu showPricing>
       <FaqHero name=' Dodge and Whatnot team' />
+      <NextSeo
+        title={`Hey! Dodge and Whatnot team! Learn more about Angle`}
+        description={role.description}
+      />
       <Container sx={{ marginBottom: 6 }}>
         <ReelSection
           isVideoActive={isVideoActive}
