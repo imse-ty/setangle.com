@@ -41,9 +41,9 @@ export default function FaqWhatWeDo() {
           <Heading>What we do</Heading>
           <Text sx={{}}>
             We&apos;re a micro-agency capable of handling conception,
-            scriptwriting, storyboarding, animation, VO, music, and sound
-            design. However, we&apos;re always open to simple
-            animation/development work or collaborating with teams.
+            scriptwriting, storyboarding, animation, VO, music, sound design,
+            web design, and web development. However, we&apos;re always open to
+            simple animation/development work or collaborating with other teams.
           </Text>
         </Flex>
         <Grid sx={{ gap: 3, gridTemplateColumns: ['1fr', '1fr 1fr 1fr'] }}>
