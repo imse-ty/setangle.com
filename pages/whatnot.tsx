@@ -43,7 +43,7 @@ export default function CalvinCrawfordFaq() {
       <FaqHero name=' Dodge and Whatnot team' />
       <NextSeo
         title={`Hey! Dodge and Whatnot team! Learn more about Angle`}
-        description={role.description}
+        description="We're a micro-agency making soulful brand experiences capable of handling conception, scriptwriting, storyboarding, animation, VO, music, web development, and sound design."
       />
       <Container sx={{ marginBottom: 6 }}>
         <ReelSection
