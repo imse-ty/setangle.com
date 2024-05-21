@@ -32,7 +32,7 @@ export default function SubscriptionHero() {
         design solution.
       </Text>
 
-      <Flex sx={{ marginTop: 4, gap: 3 }}>
+      <Flex sx={{ flexDirection: ['column', 'row'], marginTop: 4, gap: 3 }}>
         <a href='#services'>
           {' '}
           <Button>Learn more</Button>

@@ -33,7 +33,7 @@ export default function PeopleHero() {
         link you with opportunities that align with your skills
         and&nbsp;passions.
       </Text>
-      <Flex sx={{ marginTop: 4, gap: 3 }}>
+      <Flex sx={{ flexDirection: ['column', 'row'], marginTop: 4, gap: 3 }}>
         <a href='#roles'>
           <Button>Browse opportunities</Button>
         </a>
