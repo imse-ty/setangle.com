@@ -19,13 +19,13 @@ function Card({ children, ...rest }) {
   return (
     <Flex
       sx={{
-        padding: 4,
+        padding: [4, 5],
         flex: '1 1 25%',
-        textAlign: 'center',
-        borderRadius: 3,
+        textAlign: 'left',
+        borderRadius: [2, 3],
         backgroundColor: 'background',
         flexDirection: 'column',
-        alignItems: 'center',
+        alignItems: 'left',
         justifyContent: 'center',
         boxShadow: 'soft.low',
         transition: 'transform 325ms ease, box-shadow 325ms ease',
@@ -54,7 +54,7 @@ export function OverviewCard({
       <Box
         sx={{
           color: 'surface.light',
-          fontSize: 7,
+          fontSize: [5, 7],
           marginBottom: 3
         }}
       >
@@ -65,38 +65,20 @@ export function OverviewCard({
         sx={{
           position: 'relative',
           flexDirection: 'column',
-          gap: 2,
-          marginBottom: 4
+          gap: 2
         }}
       >
         {showArrow && (
           <Flex
             sx={{
-              justifyContent: 'center',
+              justifyContent: 'left',
 
               gap: 2,
-              alignItems: 'center',
+              alignItems: 'left',
               marginBottom: 2,
               color: 'text.primary'
             }}
           >
-            <motion.span
-              animate={{ y: 4 }}
-              transition={{
-                type: 'tween',
-                ease: 'easeInOut',
-                repeat: Infinity,
-                repeatType: 'mirror',
-                duration: 1.2
-              }}
-              sx={{
-                display: 'flex',
-                justifyContent: 'center',
-                alignItems: 'center'
-              }}
-            >
-              <MdSouth sx={{ fontSize: 6 }} />
-            </motion.span>
             <Text variant='body.pretext' sx={{ color: 'inherit' }}>
               You&apos;re here!
             </Text>
