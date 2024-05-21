@@ -1,7 +1,7 @@
 /** @jsxImportSource theme-ui */
 //@ts-nocheck
 
-import { Container, Button } from 'krado-react';
+import { Container, Button, Flex } from 'krado-react';
 import Heading from '../fixed-krado-components/Heading';
 import Text from '../fixed-krado-components/Text';
 import VideoPlayer from '../video-player';
@@ -31,7 +31,16 @@ export default function SubscriptionHero() {
         Introducing The Subscription by Set Angle, your reliable pay-as-you-go
         design solution.
       </Text>
-      <Button sx={{ marginTop: 4 }}>Learn more</Button>
+
+      <Flex sx={{ marginTop: 4, gap: 3 }}>
+        <a href='#services'>
+          {' '}
+          <Button>Learn more</Button>
+        </a>
+        <a href='#pricing'>
+          <Button variant='ghost'>View pricing</Button>
+        </a>
+      </Flex>
     </Container>
   );
 }
