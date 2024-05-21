@@ -17,9 +17,8 @@ function Card({ children, ...rest }) {
   return (
     <Box
       sx={{
-        padding: [5, null, null, 5],
-        flex: 2,
-        textAlign: 'left',
+        padding: [5, null, null, 4],
+        flex: '1 1 25%',
         borderRadius: 3,
         backgroundColor: 'background',
         boxShadow: 'soft.low',
@@ -78,7 +77,7 @@ function SectionTag({ href, ...rest }) {
   );
 }
 
-export function OfferCard({
+export function OfferCardNew({
   title,
   text,
   price,
@@ -90,56 +89,56 @@ export function OfferCard({
   valueIcon
 }) {
   return (
-    <Card>
+    <Card sx={{ maxWidth: '400px' }}>
       <Flex
         sx={{
           flexDirection: 'column',
           gap: 3,
-          marginBottom: 4
-        }}
-      >
-        <Flex sx={{ flexDirection: 'column' }}>
-          <Heading
-            as='h3'
-            variant='body.pretext'
-            sx={{ color: 'text.primary' }}
-          >
-            {title}
-          </Heading>
-          {subtitle && (
-            <Text
-              as='p'
-              variant='body.smallParagraph'
-              sx={{
-                color: 'secondary.dark'
-              }}
-            >
-              {subtitle}
-            </Text>
-          )}
-        </Flex>
-        <Text
-          as='p'
-          variant='body.smallParagraph'
-          sx={{ color: 'text.secondary', maxWidth: '800px' }}
-        >
-          {text}
-        </Text>
-      </Flex>
-      <Flex
-        sx={{
-          flexDirection: ['column', 'row'],
-          gap: 5,
 
-          alignItems: 'left'
+          alignItems: 'center'
         }}
       >
-        {/* {value ? (
+        {value ? (
           <SectionTag leftIcon={valueIcon}>{value}</SectionTag>
         ) : (
           <Box sx={{ fontSize: 6 }}>{valueIcon}</Box>
-        )} */}
-
+        )}
+        <Flex
+          sx={{
+            flexDirection: 'column',
+            gap: 4,
+            marginBottom: [3, null, 0],
+            height: ['initial', null, null, null, '150px']
+          }}
+        >
+          <Flex sx={{ flexDirection: 'column' }}>
+            <Heading
+              as='h3'
+              variant='display.h5'
+              sx={{ color: 'text.primary' }}
+            >
+              {title}
+            </Heading>
+            {subtitle && (
+              <Text
+                as='p'
+                variant='body.smallParagraph'
+                sx={{
+                  color: 'secondary.dark'
+                }}
+              >
+                {subtitle}
+              </Text>
+            )}
+          </Flex>
+          <Text
+            as='p'
+            variant='body.smallParagraph'
+            sx={{ color: 'text.secondary', maxWidth: '800px' }}
+          >
+            {text}
+          </Text>
+        </Flex>
         <Flex
           sx={{
             flexDirection: 'column',
@@ -166,17 +165,22 @@ export function OfferCard({
             </Text>
           )}
         </Flex>
-
+        <Divider
+          sx={{
+            width: '25%',
+            height: '1px',
+            backgroundColor: 'divider'
+          }}
+        />
         {bulletPoints && (
           <ul
             sx={{
-              display: 'grid',
-              gridTemplateColumns: ['1fr', '1fr 1fr'],
+              display: 'flex',
               flexDirection: 'column',
               listStyleType: 'none',
               margin: 0,
               gap: 3,
-              paddingLeft: 0
+              paddingLeft: 4
             }}
           >
             {bulletPoints.map((bulletPoint, index) => {

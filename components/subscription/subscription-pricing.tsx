@@ -7,7 +7,9 @@ import Heading from '../fixed-krado-components/Heading';
 import { OverviewCard } from '../agency/overview-card';
 import ScaleInEffect from '../scale-in-effect';
 import { OfferCard } from './subscription-offer-card';
-import { MdStar } from 'react-icons/md';
+import { MdLightbulb, MdStar } from 'react-icons/md';
+import { MiniOfferCard } from './subscription-mini-offer-card';
+import { OfferCardNew } from './subscription-offer-card-new';
 
 export default function SubscriptionPricing() {
   return (
@@ -23,7 +25,7 @@ export default function SubscriptionPricing() {
           textAlign: 'center',
           marginBottom: 6,
           paddingY: 5,
-          minHeight: '100vh',
+          minHeight: '120vh',
           borderRadius: 4,
           backgroundColor: 'surface.thin'
         }}
@@ -42,35 +44,47 @@ export default function SubscriptionPricing() {
             option to scale up as you grow. No surprises, just great design.
           </Text>
         </Flex>
-        <Flex sx={{ gap: 3, flexDirection: ['column', 'row'] }}>
-          <OfferCard
-            valueIcon={
-              <MdStar sx={{ color: 'secondary.light', fontSize: 5 }} />
-            }
-            title='Standard'
-            text='Continuous creative motion design support for each series, ensuring content remains fresh and engaging.'
-            price='$5k'
-            recurring='/mo'
-            bulletPoints={[
-              'Unlimited small requests',
-              'Choose between unlimited small requests',
-              'Pre-made assets for quick turnaround',
-              'Additional work available in 4-hour increments'
-            ]}
-          />
-          <OfferCard
-            value='Best value'
+        <Flex sx={{ gap: 3, flexDirection: 'column' }}>
+          <Flex sx={{ gap: 3, flexDirection: ['column', 'row'] }}>
+            <OfferCard
+              valueIcon={
+                <MdStar sx={{ color: 'secondary.light', fontSize: 5 }} />
+              }
+              title='The Subscription'
+              text='Continuous creative motion design support, ensuring content remains fresh and engaging.'
+              price='$5k'
+              priceSubtitle='500 credits'
+              recurring='/mo'
+              bulletPoints={[
+                { title: 'Small requests', text: '50 credits' },
+                { title: 'Medium requests', text: '100 credits' },
+                { title: 'Large requests', text: '300 credits' },
+                'Pre-made assets for quick turnaround'
+              ]}
+            />
+            {/* <OfferCard
+              value='Best value'
+              valueIcon={<MdStar sx={{ fontSize: 5 }} />}
+              title='Pro'
+              text='Continuous creative motion design support for each series, ensuring content remains fresh and engaging.'
+              price='$7.5k'
+              priceSubtitle='750 credits'
+              recurring='/mo'
+              bulletPoints={[
+                '5 small requests (25 credits each)',
+                '2 medium requests (75 credits each)',
+                '1 large task (250 credits)',
+                'Pre-made assets for quick turnaround'
+              ]}
+            /> */}
+          </Flex>
+          <MiniOfferCard
+            value='Additional work'
             valueIcon={<MdStar sx={{ fontSize: 5 }} />}
-            title='Pro'
-            text='Continuous creative motion design support for each series, ensuring content remains fresh and engaging.'
-            price='$7.5k'
-            recurring='/mo'
-            bulletPoints={[
-              'Unlimited small requests',
-              'One 20sec kinetic type video per month',
-              'Pre-made assets for quick turnaround',
-              'Additional work available in 4-hour increments'
-            ]}
+            title='Additional work'
+            subtitle='If you need more, simply purchase additional work in increments as&nbsp;credits.'
+            price='$2.5k increments'
+            priceSubtitle='250 credits'
           />
         </Flex>
       </Container>

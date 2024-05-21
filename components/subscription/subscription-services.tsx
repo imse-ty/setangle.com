@@ -7,11 +7,15 @@ import Heading from '../fixed-krado-components/Heading';
 import ScaleInEffect from '../scale-in-effect';
 import { OverviewCard } from '../agency/overview-card';
 import {
+  MdCampaign,
   MdLightbulb,
   MdMovie,
   MdPhone,
+  MdRocket,
   MdSchool,
   MdShoppingBag,
+  MdSlideshow,
+  MdSmartScreen,
   MdSmartphone,
   MdStadium
 } from 'react-icons/md';
@@ -52,33 +56,39 @@ export default function SubscriptionBenefits() {
           }}
         >
           <OverviewCard
-            icon={<MdStadium />}
-            heading='Pitch decks'
-            isHeadingSmall
-          />
-          <OverviewCard
-            icon={<MdStadium />}
+            icon={<MdLightbulb />}
             heading='Infographics'
+            text='Simple animated posters that gives an easy-to-understand overview of a topic or data visualization.'
             isHeadingSmall
           />
           <OverviewCard
-            icon={<MdStadium />}
+            icon={<MdRocket />}
             heading='Kinetic type videos'
+            text='Concisely communicate complex concepts or services.'
             isHeadingSmall
           />
           <OverviewCard
-            icon={<MdStadium />}
+            icon={<MdSchool />}
             heading='Educational content'
+            text='Animated infographics and videos for educational purposes or tutorials.'
             isHeadingSmall
           />
           <OverviewCard
-            icon={<MdStadium />}
+            icon={<MdSmartphone />}
             heading='Social media content'
+            text='Engaging animations or motion graphics for platforms like Instagram, LinkedIn, or YouTube.'
+            isHeadingSmall
+          />
+          <OverviewCard
+            icon={<MdSlideshow />}
+            heading='Pitch decks'
+            text='A brief presentation that gives potential investors or clients an overview of your business plan, products, and services.'
             isHeadingSmall
           />
           <OverviewCard
             icon={<MdStadium />}
             heading='Product demos'
+            text='Walkthroughs designed to highlight features and benefits of your app or service.'
             isHeadingSmall
           />
         </Grid>

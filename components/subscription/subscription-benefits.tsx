@@ -78,7 +78,7 @@ export default function SubscriptionBenefits() {
           />
           <OverviewCard
             icon={<MdStadium />}
-            heading='Professional Quality'
+            heading='Professional quality'
             text='Benefit from the expertise of our skilled designers who deliver top-notch work every time.'
             isHeadingSmall
           />

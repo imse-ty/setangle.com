@@ -68,7 +68,8 @@ export default function SubscriptionHowItWorks() {
                 <Heading as='h2'>Simple. Flexible. Powerful.</Heading>
                 <Text as='p' variant='body.summary'>
                   Submit your request, and we handle the rest. Enjoy quick
-                  turnarounds and unlimited revisions. Collaboration made easy.
+                  turnarounds and unlimited revisions for small requests.
+                  Collaboration made easy.
                 </Text>
               </Flex>
             </ScaleInEffect>
@@ -90,19 +91,19 @@ export default function SubscriptionHowItWorks() {
             <OverviewCard
               icon={<MdDescription />}
               heading='We get to work'
-              text='Our talented designers get started right away, ensuring a quick turnaround time. Small requests are typically completed within 3 to 7 business days depending on size of request.'
+              text='Our talented designers get started right away, ensuring a quick turnaround time. Small and medium requests are typically completed within 3 to 7 business days depending on size of request.'
               isHeadingSmall
             />
             <OverviewCard
               icon={<MdLightbulb />}
               heading='Review and revise'
-              text='You’ll receive your completed work for review. Need changes? No problem! We offer unlimited revisions within the scope of the initial request.'
+              text='You’ll receive your completed work for review. Need changes? No problem! We offer unlimited revisions for small requests, and up to two round of revisions for medium and large requests.'
               isHeadingSmall
             />
             <OverviewCard
               icon={<MdPalette />}
               heading='Use credits for more'
-              text='If you need additional work beyond your subscription’s scope, purchase credits in 4-hour increments to get it done.'
+              text='If you need additional work beyond your subscription’s scope, purchase credits to get it done.'
               isHeadingSmall
             />
           </Flex>
