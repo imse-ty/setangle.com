@@ -3,7 +3,7 @@ import { buildColorTheme, getColors } from 'krado-react';
 export function buildMonochromaticTheme(colorName) {
   return {
     primary: {
-      regular: getColors('colorName', '500'),
+      regular: getColors(colorName, '400'),
       contrast: getColors('nso', '000')
     },
     secondary: {
