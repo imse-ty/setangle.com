@@ -35,8 +35,8 @@ export default function SubscriptionHowItWorks() {
           gap: 5,
           flexDirection: 'column',
           justifyContent: 'center',
-          alignItems: 'left',
-          textAlign: 'left',
+          alignItems: ['center', 'left'],
+          textAlign: ['center', 'left'],
           marginBottom: 6,
 
           borderRadius: 4,
@@ -67,8 +67,8 @@ export default function SubscriptionHowItWorks() {
 
                 <Heading as='h2'>Simple. Flexible. Powerful.</Heading>
                 <Text as='p' variant='body.summary'>
-                  Submit your request, and we handle the rest. Enjoy quick
-                  turnarounds and unlimited revisions for small requests.
+                  Submit your task, and we handle the rest. Enjoy quick
+                  turnarounds and unlimited revisions for small tasks.
                   Collaboration made easy.
                 </Text>
               </Flex>
@@ -84,20 +84,20 @@ export default function SubscriptionHowItWorks() {
           >
             <OverviewCard
               icon={<MdSearch />}
-              heading='Submit your request'
-              text='Use our hub and submit a request. Whether it’s a small task or a larger project, our streamlined process makes it easy.'
+              heading='Submit your task'
+              text='Use our hub and submit a task. Whether it’s a small task or a larger project, our streamlined process makes it easy.'
               isHeadingSmall
             />
             <OverviewCard
               icon={<MdDescription />}
               heading='We get to work'
-              text='Our talented designers get started right away, ensuring a quick turnaround time. Small and medium requests are typically completed within 3 to 7 business days depending on size of request.'
+              text='Our talented designers get started right away, ensuring a quick turnaround time. Small and medium tasks are typically completed within 3 to 7 business days depending on size of task.'
               isHeadingSmall
             />
             <OverviewCard
               icon={<MdLightbulb />}
               heading='Review and revise'
-              text='You’ll receive your completed work for review. Need changes? No problem! We offer unlimited revisions for small requests, and up to two round of revisions for medium and large requests.'
+              text='You’ll receive your completed work for review. Need changes? No problem! We offer unlimited revisions for small tasks, and up to two round of revisions for medium and large tasks.'
               isHeadingSmall
             />
             <OverviewCard

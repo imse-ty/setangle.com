@@ -56,10 +56,18 @@ export default function SubscriptionPricing() {
               priceSubtitle='500 credits'
               recurring='/mo'
               bulletPoints={[
-                { title: 'Small requests', text: '50 credits' },
-                { title: 'Medium requests', text: '100 credits' },
-                { title: 'Large requests', text: '300 credits' },
-                'Pre-made assets for quick turnaround'
+                { title: 'Small tasks', text: '50 credits' },
+                { title: 'Medium tasks', text: '100 credits' },
+                { title: 'Large tasks', text: '300 credits' },
+                'Unlimited revisions for small tasks',
+                'Up to two rounds of revisions for small and medium tasks',
+                'Allocate credits as per your project needs',
+                'Pre-made assets for quick turnaround',
+                'Tasks acknowledged within 1 business day',
+                'Average turnaround time of 3-7 business days per tasks',
+                'Average turnaround time of 1-2 weeks for large tasks',
+                'Professional designers allocated to your project',
+                'Consistent quality and communication'
               ]}
             />
             {/* <OfferCard
@@ -71,8 +79,8 @@ export default function SubscriptionPricing() {
               priceSubtitle='750 credits'
               recurring='/mo'
               bulletPoints={[
-                '5 small requests (25 credits each)',
-                '2 medium requests (75 credits each)',
+                '5 small tasks (25 credits each)',
+                '2 medium tasks (75 credits each)',
                 '1 large task (250 credits)',
                 'Pre-made assets for quick turnaround'
               ]}

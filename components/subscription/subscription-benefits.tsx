@@ -55,7 +55,7 @@ export default function SubscriptionBenefits() {
           <OverviewCard
             icon={<MdStadium />}
             heading='Flexibility'
-            text='With unlimited small requests and the ability to tackle larger projects, you get exactly what you need, when you need it.'
+            text='With small and medium tasks and the ability to tackle larger projects, you get exactly what you need, when you need it. No need to define work every month.'
             isHeadingSmall
           />
           <OverviewCard
@@ -67,7 +67,7 @@ export default function SubscriptionBenefits() {
           <OverviewCard
             icon={<MdStadium />}
             heading='Cost-effective'
-            text='Our subscription model provides high-quality motion design at a predictable monthly cost, with no hidden fees.'
+            text='Our subscription model provides high-quality motion design at a predictable monthly cost. Costing less than one freelancer or a large agency, you get three designers on your team for the price of one.'
             isHeadingSmall
           />
           <OverviewCard

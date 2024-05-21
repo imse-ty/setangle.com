@@ -37,7 +37,7 @@ function Card({ children, ...rest }) {
 
 function BulletPoint({ children }) {
   return (
-    <Flex sx={{ gap: 2 }}>
+    <Flex sx={{ gap: 2, width: '100%' }}>
       <MdCheck
         sx={{
           fontSize: 3,
@@ -106,16 +106,15 @@ export function OfferCardNew({
         <Flex
           sx={{
             flexDirection: 'column',
-            gap: 4,
-            marginBottom: [3, null, 0],
-            height: ['initial', null, null, null, '150px']
+            gap: 3,
+            marginBottom: [3, null, 0]
           }}
         >
           <Flex sx={{ flexDirection: 'column' }}>
             <Heading
               as='h3'
-              variant='display.h5'
-              sx={{ color: 'text.primary' }}
+              variant='body.pretext'
+              sx={{ color: 'text.primary', marginBottom: 3 }}
             >
               {title}
             </Heading>
@@ -131,6 +130,32 @@ export function OfferCardNew({
               </Text>
             )}
           </Flex>
+          <Flex
+            sx={{
+              flexDirection: 'column',
+              gap: 2
+            }}
+          >
+            {price && (
+              <Text as='p' variant='display.h4'>
+                {price}{' '}
+                {recurring && (
+                  <Text as='span' sx={{ color: colors.nso400 }}>
+                    {recurring}
+                  </Text>
+                )}
+              </Text>
+            )}
+            {priceSubtitle && (
+              <Text
+                as='p'
+                variant='body.footnote'
+                sx={{ color: 'secondary.dark' }}
+              >
+                {priceSubtitle}
+              </Text>
+            )}
+          </Flex>
           <Text
             as='p'
             variant='body.smallParagraph'
@@ -139,32 +164,7 @@ export function OfferCardNew({
             {text}
           </Text>
         </Flex>
-        <Flex
-          sx={{
-            flexDirection: 'column',
-            gap: 2
-          }}
-        >
-          {price && (
-            <Text as='p' variant='display.h4'>
-              {price}{' '}
-              {recurring && (
-                <Text as='span' sx={{ color: colors.nso400 }}>
-                  {recurring}
-                </Text>
-              )}
-            </Text>
-          )}
-          {priceSubtitle && (
-            <Text
-              as='p'
-              variant='body.footnote'
-              sx={{ color: 'secondary.dark' }}
-            >
-              {priceSubtitle}
-            </Text>
-          )}
-        </Flex>
+
         <Divider
           sx={{
             width: '25%',
@@ -175,12 +175,14 @@ export function OfferCardNew({
         {bulletPoints && (
           <ul
             sx={{
+              width: '100%',
+              maxWidth: '300px',
               display: 'flex',
               flexDirection: 'column',
               listStyleType: 'none',
               margin: 0,
               gap: 3,
-              paddingLeft: 4
+              paddingLeft: 0
             }}
           >
             {bulletPoints.map((bulletPoint, index) => {

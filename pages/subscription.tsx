@@ -18,6 +18,8 @@ import Faq250Pricing from '@/components/faq/faq-250-pricing';
 import SubscriptionPricing from '@/components/subscription/subscription-pricing';
 import SubscriptionHowItWorks from '@/components/subscription/subscription-how-it-works';
 import SubscriptionBenefits from '@/components/subscription/subscription-benefits';
+import SubscriptionExample from '@/components/subscription/subscription-example';
+import SubscriptionTaskSize from '@/components/subscription/subscription-task-size';
 
 export default function Faq() {
   const [isVideoActive, setIsVideoActive] = useState(false);
@@ -40,7 +42,9 @@ export default function Faq() {
         />
       </Container>
       <SubscriptionServices />
+      <SubscriptionTaskSize />
       <SubscriptionHowItWorks />
+      <SubscriptionExample />
       <SubscriptionBenefits />
       <SubscriptionPricing />
       <ContactSection useTransparentBackground />
