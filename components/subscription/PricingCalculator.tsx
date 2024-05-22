@@ -250,7 +250,7 @@ const PricingCalculator = () => {
   return (
     <ScaleInEffect>
       <Container
-        id='pricing'
+        id='calculator'
         paddingX={[0]}
         sx={{
           display: 'flex',
@@ -289,9 +289,12 @@ const PricingCalculator = () => {
             <Text>
               Use our interactive pricing calculator to build the perfect motion
               design subscription tailored to your needs. Select tasks, manage
-              your credits, and see your total cost in real-time. Get started by
-              choosing your desired tasks and adding any additional credits if
-              needed!
+              your credits, and see your total cost in real-time.{' '}
+              <strong>
+                Request unlimited revisions for small tasks anytime!
+              </strong>{' '}
+              Get started by choosing your desired tasks and adding any
+              additional credits if needed.
             </Text>
           </Flex>
           <Tabs

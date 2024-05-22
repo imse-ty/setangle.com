@@ -47,8 +47,8 @@ export default function Faq() {
       <SubscriptionHowItWorks />
       <SubscriptionExample />
       <SubscriptionBenefits />
-      <PricingCalculator />
       <SubscriptionPricing />
+      <PricingCalculator />
       <ContactSection useTransparentBackground />
     </Layout>
   );
