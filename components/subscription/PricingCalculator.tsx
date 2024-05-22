@@ -283,14 +283,15 @@ const PricingCalculator = () => {
               marginBottom: 5
             }}
           >
-            <Text variant='body.pretext'>Use cases and scenarios</Text>
+            <Text variant='body.pretext'>Pricing calculator</Text>
 
-            <Heading>Mix and match</Heading>
+            <Heading>Design your perfect month</Heading>
             <Text>
-              Customize your design experience with our versatile credit-based
-              system. Whether you need a focus on the small details, a balanced
-              selection of tasks, or an extra boost for larger projects, its up
-              to you how you spend your credits.
+              Use our interactive pricing calculator to build the perfect motion
+              design subscription tailored to your needs. Select tasks, manage
+              your credits, and see your total cost in real-time. Get started by
+              choosing your desired tasks and adding any additional credits if
+              needed!
             </Text>
           </Flex>
           <Tabs
@@ -396,7 +397,7 @@ const PricingCalculator = () => {
               <Text variant='body.pretext' sx={{ color: 'text.secondary' }}>
                 Monthly cost
               </Text>
-              <Heading variant='display.h5'>{monthlyCost}</Heading>
+              <Heading variant='display.h5'>${monthlyCost}</Heading>
             </Flex>
 
             <Flex sx={{ flexDirection: 'column', gap: 2 }}>
