@@ -13,21 +13,22 @@ const Tabs = ({ tabs, onChange }) => {
   };
 
   return (
-    <Flex sx={{ borderBottom: '1px solid #ddd', mb: 3 }}>
+    <Flex sx={{ mb: 3 }}>
       {tabs.map((tab, index) => (
         <Button
           key={index}
           onClick={() => handleTabClick(index)}
           sx={{
-            borderBottom:
-              activeTab === index ? '2px solid #33e' : '2px solid transparent',
-            bg: 'transparent',
             borderRadius: 0,
             color: activeTab === index ? 'action.active' : 'text.secondary',
-            mx: 2,
+            backgroundColor:
+              activeTab === index ? 'accent.regular' : 'transparent',
             fontSize: 2,
             fontWeight: activeTab === index ? 'bold' : 'normal',
-            cursor: 'pointer'
+            cursor: 'pointer',
+            '&:hover': {
+              backgroundColor: 'accent.regular'
+            }
           }}
           size='small'
         >

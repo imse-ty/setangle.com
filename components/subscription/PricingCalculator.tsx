@@ -2,27 +2,29 @@
 /** @jsxImportSource theme-ui */
 //@ts-nocheck
 import { useState } from 'react';
-import { Box, Button, Text, Flex, Grid, Container } from 'krado-react';
+import { Box, Button, Flex, Grid, Container } from 'krado-react';
 import { Badge, Checkbox } from 'theme-ui';
 import { motion } from 'framer-motion';
 import Tabs from './tabs';
 import ScaleInEffect from '../scale-in-effect';
+import Text from '../fixed-krado-components/Text';
+import Heading from '../fixed-krado-components/Heading';
 
 function Card({ children, ...rest }) {
   return (
     <Flex
       sx={{
-        padding: [4, 5],
-        flex: '1 1 25%',
+        padding: 4,
         textAlign: 'left',
         borderRadius: [2, 3],
         backgroundColor: 'background',
         flexDirection: 'column',
-        gap: 2,
         alignItems: 'left',
         justifyContent: 'center',
         boxShadow: 'soft.low',
-        transition: 'transform 325ms ease, box-shadow 325ms ease',
+        transition:
+          'background-color 325ms ease, transform 325ms ease, box-shadow 325ms ease',
+
         '&:hover': {
           transform: 'scale(1.02)',
           boxShadow: 'soft.highMiddle'
@@ -49,6 +51,7 @@ function SectionTag({ icon, href, ...rest }) {
         fontSize: '13px',
         fontWeight: 500,
         color: 'text.secondary',
+
         backgroundColor: 'secondary.bold',
         '&:hover': {
           color: 'secondary.bold'
@@ -213,6 +216,7 @@ const PricingCalculator = () => {
     <ScaleInEffect>
       <Container
         id='pricing'
+        paddingX={[0]}
         sx={{
           display: 'flex',
           gap: 5,
@@ -221,85 +225,188 @@ const PricingCalculator = () => {
           alignItems: 'center',
           textAlign: 'center',
           marginBottom: 6,
-          paddingY: 5,
-          minHeight: '20vh',
+          paddingTop: 5,
+
           borderRadius: 4,
           backgroundColor: 'surface.thin'
         }}
       >
-        <Text as='h2' sx={{ mb: 3 }}>
-          Pricing Calculator
-        </Text>
+        <Flex sx={{ maxWidth: '1000px', gap: 3, flexDirection: 'column' }}>
+          <Text variant='body.pretext'>Use cases and scenarios</Text>
 
-        <Tabs
-          tabs={['Small Tasks', 'Medium Tasks', 'Large Tasks']}
-          onChange={(index) =>
-            setCurrentTab(
-              index === 0 ? 'small' : index === 1 ? 'medium' : 'large'
-            )
-          }
-        />
-
-        <Box as={motion.div} layout>
-          <Grid columns={[1, 2, 3]} gap={3} sx={{ mt: 3 }}>
-            {tasks[currentTab].map((task) => (
-              <Card
-                key={task.name}
-                sx={{
-                  p: 3,
-                  cursor: 'pointer',
-                  border: selectedTasks.includes(task)
-                    ? '2px solid #33e'
-                    : '1px solid #ddd',
-                  bg: selectedTasks.includes(task)
-                    ? 'rgba(51, 119, 238, 0.1)'
-                    : 'white'
-                }}
-                onClick={() => toggleTask(task)}
-              >
-                <Flex
-                  sx={{ justifyContent: 'space-between', alignItems: 'center' }}
-                >
-                  <Text as='p'>{task.name}</Text>
-                  <Checkbox
-                    checked={selectedTasks.includes(task)}
-                    onChange={() => toggleTask(task)}
-                  />
-                </Flex>
-                <Text as='p' sx={{ fontSize: 1, color: 'gray' }}>
-                  {task.description}
-                </Text>
-                <Text as='p'>({task.credits} credits)</Text>
-                <SectionTag
-                  sx={{
-                    maxWidth: '80px',
-                    bg:
-                      currentTab === 'small'
-                        ? 'surface.thin'
-                        : currentTab === 'medium'
-                        ? 'surface.extralight'
-                        : 'surface.light'
-                  }}
-                >
-                  {currentTab.charAt(0).toUpperCase() + currentTab.slice(1)}
-                </SectionTag>
-              </Card>
-            ))}
-          </Grid>
-        </Box>
-
-        <Flex sx={{ mt: 4, justifyContent: 'space-between' }}>
-          <Text>Total Credits Used: {totalCreditsUsed}</Text>
-          <Text>Total Cost: ${totalCost}</Text>
-        </Flex>
-        {totalCreditsUsed > baseCredits && (
-          <Text sx={{ mt: 2 }}>
-            Additional Credits Needed: {totalAdditionalCredits * 250}
+          <Heading>Mix and match</Heading>
+          <Text>
+            Customize your design experience with our versatile credit-based
+            system. Whether you need a focus on the small details, a balanced
+            selection of tasks, or an extra boost for larger projects, its up to
+            you how you spend your credits.
           </Text>
-        )}
-        <Button sx={{ mt: 3 }} onClick={() => setSelectedTasks([])}>
-          Reset Selection
-        </Button>
+        </Flex>
+        <Flex sx={{ height: '70vh' }}>
+          <Flex
+            sx={{
+              flex: 6,
+              flexDirection: 'column',
+              paddingX: 5,
+              width: '100%'
+            }}
+          >
+            <Tabs
+              tabs={['Small Tasks', 'Medium Tasks', 'Large Tasks']}
+              onChange={(index) =>
+                setCurrentTab(
+                  index === 0 ? 'small' : index === 1 ? 'medium' : 'large'
+                )
+              }
+            />
+
+            <Box
+              as={motion.div}
+              layout
+              sx={{ height: '100%', overflowY: 'auto', paddingX: 2 }}
+            >
+              <Grid columns={[1, 2, 3]} gap={3} sx={{ mt: 3 }}>
+                {tasks[currentTab].map((task) => (
+                  <Card
+                    key={task.name}
+                    sx={{
+                      cursor: 'pointer',
+                      border: selectedTasks.includes(task) && '1px solid black',
+                      bg: selectedTasks.includes(task)
+                        ? 'accent.light'
+                        : 'background'
+                    }}
+                    onClick={() => toggleTask(task)}
+                  >
+                    <Flex sx={{ flexDirection: 'column', gap: 2 }}>
+                      <Flex
+                        sx={{
+                          flexDirection: 'column',
+                          gap: 1,
+                          marginBottom: 2
+                        }}
+                      >
+                        <Text as='p' sx={{ fontWeight: 'bold' }}>
+                          {task.name}
+                        </Text>
+                        <Text variant='body.footnote'>
+                          {task.credits} credits
+                        </Text>
+                      </Flex>
+
+                      <Text
+                        as='p'
+                        variant='body.smallParagraph'
+                        sx={{ color: 'text.secondary' }}
+                      >
+                        {task.description}
+                      </Text>
+                      <Flex sx={{ gap: 2 }}>
+                        <SectionTag
+                          sx={{
+                            maxWidth: '80px',
+                            bg:
+                              currentTab === 'small'
+                                ? 'surface.extralight'
+                                : currentTab === 'medium'
+                                ? 'surface.extralight'
+                                : 'surface.extralight'
+                          }}
+                        >
+                          {currentTab.charAt(0).toUpperCase() +
+                            currentTab.slice(1)}
+                        </SectionTag>
+                      </Flex>
+                    </Flex>
+                  </Card>
+                ))}
+              </Grid>
+            </Box>
+          </Flex>
+
+          <Flex
+            sx={{
+              padding: 5,
+              flex: 3,
+              gap: 5,
+
+              height: '100%',
+              flexDirection: 'column',
+              backgroundColor: 'secondary.regular',
+              textAlign: 'left',
+              justifyContent: 'space-between',
+              borderRadius: 4
+            }}
+          >
+            <Flex sx={{ flexDirection: 'column', gap: 4 }}>
+              <Flex sx={{ flexDirection: 'column', gap: 2 }}>
+                <Text variant='body.pretext' sx={{ color: 'text.secondary' }}>
+                  Base credits left
+                </Text>
+                <Heading>
+                  {baseCredits - totalCreditsUsed > 0
+                    ? baseCredits - totalCreditsUsed
+                    : 0}
+                </Heading>
+              </Flex>
+
+              <Flex sx={{ flexDirection: 'column', gap: 2 }}>
+                <Text variant='body.pretext' sx={{ color: 'text.secondary' }}>
+                  Monthly cost
+                </Text>
+                <Heading>$5000</Heading>
+              </Flex>
+
+              <Flex sx={{ flexDirection: 'column', gap: 2 }}>
+                <Text variant='body.pretext' sx={{ color: 'text.secondary' }}>
+                  Add-on credits
+                </Text>
+                <Heading variant='display.h5'>
+                  {totalAdditionalCredits * 250}
+                </Heading>
+              </Flex>
+
+              <Flex sx={{ flexDirection: 'column', gap: 2 }}>
+                <Text variant='body.pretext' sx={{ color: 'text.secondary' }}>
+                  Total credits used{' '}
+                </Text>
+                <Heading variant='display.h5'>{totalCreditsUsed}</Heading>
+              </Flex>
+
+              <Flex sx={{ flexDirection: 'column', gap: 2 }}>
+                <Text variant='body.pretext' sx={{ color: 'text.secondary' }}>
+                  Add-on credits cost
+                </Text>
+                <Heading variant='display.h5'>
+                  ${totalAdditionalCredits * 2500}
+                </Heading>
+              </Flex>
+
+              <Flex sx={{ flexDirection: 'column', gap: 2 }}>
+                <Text variant='body.pretext' sx={{ color: 'text.secondary' }}>
+                  Total cost{' '}
+                </Text>
+                <Heading variant='display.h5'>${totalCost}</Heading>
+              </Flex>
+            </Flex>
+
+            <Flex sx={{ gap: 3 }}>
+              <Button
+                sx={{ width: '100%' }}
+                onClick={() => setSelectedTasks([])}
+              >
+                Book call
+              </Button>
+              <Button
+                variant='ghost'
+                sx={{ width: '100%' }}
+                onClick={() => setSelectedTasks([])}
+              >
+                Reset Selection
+              </Button>
+            </Flex>
+          </Flex>
+        </Flex>
       </Container>
     </ScaleInEffect>
   );
