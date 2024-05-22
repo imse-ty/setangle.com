@@ -68,124 +68,148 @@ function SectionTag({ icon, href, ...rest }) {
 const tasks = {
   small: [
     {
-      name: '10-second Infographic',
+      name: 'Simple logo animation',
       credits: 50,
-      description: 'Short, engaging visual summaries.'
+      description: 'Basic animation to bring your logo to life.',
+      revisions: 'Unlimited revsions'
     },
     {
-      name: 'Simple Logo Animation',
+      name: 'Social media templates',
       credits: 50,
-      description: 'Basic animation to bring your logo to life.'
+      description: 'Ready-to-use animated templates.',
+      revisions: 'Unlimited revsions'
     },
     {
-      name: 'Social Media Templates',
+      name: '10-second template infographic',
       credits: 50,
-      description: 'Ready-to-use animated templates.'
+      description: 'Visually appealing infographic layouts.',
+      revisions: 'Unlimited revsions'
     },
     {
-      name: 'Infographic Template',
+      name: '10-second custom infographic',
       credits: 50,
-      description: 'Visually appealing infographic layouts.'
+      description: 'For when a template isn’t enough',
+      revisions: 'Unlimited revsions'
     },
     {
-      name: 'Basic Text Animations',
+      name: 'Basic text animations',
       credits: 50,
-      description: 'Simple, dynamic text effects.'
+      description: 'Simple, dynamic text effects.',
+      revisions: 'Unlimited revsions'
     },
     {
-      name: 'Major Edits to Existing Videos',
+      name: 'Minor edits to existing videos',
       credits: 50,
-      description: 'Significant updates and improvements.'
+      description:
+        'For simple updates and improvements on medium and large tasks, small edits are free',
+      revisions: 'Unlimited revsions'
     },
     {
-      name: 'Captions/Subtitles',
+      name: 'Captions/subtitles',
       credits: 50,
-      description: 'Add text to your videos for better accessibility.'
+      description: 'Add text to your videos for better accessibility.',
+      revisions: 'Unlimited revsions'
     },
     {
-      name: 'Lower Thirds',
+      name: 'Lower-thirds',
       credits: 50,
-      description: 'Professional name tags and titles for videos.'
+      description: 'Professional name tags and titles for videos.',
+      revisions: 'Unlimited revsions'
     },
     {
-      name: 'Social Media Motion Graphics',
+      name: 'Social media motion graphics',
       credits: 50,
-      description: 'Engaging animations for posts.'
+      description: 'Engaging animations for posts.',
+      revisions: 'Unlimited revsions'
     },
     {
-      name: 'Custom Animated GIFs',
+      name: 'Custom animated GIFs',
       credits: 50,
-      description: 'Unique, branded GIFs for social media.'
+      description: 'Unique, branded GIFs for social media.',
+      revisions: 'Unlimited revsions'
     }
   ],
   medium: [
     {
-      name: 'Stream Package',
+      name: 'Stream package',
       credits: 100,
-      description: 'Overlays, alerts, and transitions for live streaming.'
+      description: 'Overlays, alerts, and transitions for live streaming.',
+      revisions: 'Up to 2 rounds'
     },
     {
-      name: 'YouTube Package',
+      name: 'YouTube package',
       credits: 100,
-      description: 'Includes intro, outro, and lower-thirds.'
+      description: 'Includes intro and outro, and lower-thirds',
+      revisions: 'Up to 2 rounds'
     },
     {
-      name: 'Video Podcast Package',
+      name: 'Video podcast package',
       credits: 100,
-      description: 'Overlays, lower-thirds, and transitions.'
+      description: 'Overlays, full-screen graphics, and lower-thirds.',
+      revisions: 'Up to 2 rounds'
     },
     {
-      name: 'Extensive Video Edits',
+      name: 'Major edits to existing videos',
       credits: 100,
-      description: 'Major updates and enhancements.'
+      description: 'Major updates and enhancements.',
+      revisions: 'Up to 2 rounds'
     },
     {
-      name: 'Complex Logo Bumper',
+      name: 'Complex logo bumper',
       credits: 100,
-      description: 'Detailed logo animation for branding.'
+      description: 'Detailed logo animation for branding.',
+      revisions: 'Up to 2 rounds'
     },
     {
-      name: 'Animated Presentations',
+      name: 'Animated presentations',
       credits: 100,
-      description: 'Engaging animated pitch decks.'
+      description: 'Engaging animated pitch decks.',
+      revisions: 'Up to 2 rounds'
     },
     {
-      name: 'Data Visualizations',
+      name: 'Data visualizations',
       credits: 100,
-      description: 'Animated charts and graphs for presentations.'
+      description: 'Animated charts and graphs for presentations.',
+      revisions: 'Up to 2 rounds'
     }
   ],
   large: [
     {
-      name: '20-second Kinetic-Type Explainer Video',
+      name: '20-second kinetic-type explainer video',
       credits: 300,
-      description: 'Dynamic, text-driven animation.'
+      description: 'Dynamic, text-driven animation.',
+      revisions: 'Up to 2 rounds'
     },
     {
-      name: '20-second Kinetic-Type Title Sequence',
+      name: '20-second kinetic-type title sequence',
       credits: 300,
-      description: 'Engaging opening titles.'
+      description: 'Engaging opening titles.',
+      revisions: 'Up to 2 rounds'
     },
     {
-      name: 'Product Animation',
+      name: 'Product animation',
       credits: 300,
-      description: 'Detailed showcase of your product.'
+      description: 'Detailed showcase of your product.',
+      revisions: 'Up to 2 rounds'
     },
     {
-      name: 'Event Graphics Package',
+      name: 'Event graphics package',
       credits: 300,
-      description: 'Lower-thirds, session title slides, countdown timer.'
+      description: 'Lower-thirds, session title slides, countdown timer.',
+      revisions: 'Up to 2 rounds'
     },
     {
-      name: 'Abstract Trailers & Teasers',
+      name: 'Abstract Trailers & Teaser',
       credits: 300,
-      description: 'Engaging promotional videos.'
+      description: 'Engaging promotional videos.',
+      revisions: 'Up to 2 rounds'
     },
     {
-      name: 'Marketing Campaign Package',
+      name: 'Marketing campaign package',
       credits: 300,
       description:
-        'Campaign overview video, social media ad, and one animated post.'
+        'Campaign overview video, social media ad, and one animated post.',
+      revisions: 'Up to 2 rounds'
     }
   ]
 };
@@ -298,11 +322,7 @@ const PricingCalculator = () => {
             </Text>
           </Flex>
           <Tabs
-            tabs={[
-              'Small tasks (unlimited revisions)',
-              'Medium tasks (2 rounds of revisions)',
-              'Large tasks (2 rounds of revisions)'
-            ]}
+            tabs={['Small tasks', 'Medium tasks ', 'Large tasks']}
             onChange={(index) =>
               setCurrentTab(
                 index === 0 ? 'small' : index === 1 ? 'medium' : 'large'
@@ -328,12 +348,17 @@ const PricingCalculator = () => {
                   }}
                   onClick={() => toggleTask(task)}
                 >
-                  <Flex sx={{ flexDirection: 'column', gap: 2 }}>
+                  <Flex
+                    sx={{
+                      flexDirection: 'column',
+
+                      gap: 3
+                    }}
+                  >
                     <Flex
                       sx={{
                         flexDirection: 'column',
-                        gap: 1,
-                        marginBottom: 2
+                        gap: 1
                       }}
                     >
                       <Text as='p' sx={{ fontWeight: 'bold' }}>
@@ -354,7 +379,6 @@ const PricingCalculator = () => {
                     <Flex sx={{ gap: 2 }}>
                       <SectionTag
                         sx={{
-                          maxWidth: '80px',
                           bg:
                             currentTab === 'small'
                               ? 'surface.extralight'
@@ -365,6 +389,18 @@ const PricingCalculator = () => {
                       >
                         {currentTab.charAt(0).toUpperCase() +
                           currentTab.slice(1)}
+                      </SectionTag>
+                      <SectionTag
+                        sx={{
+                          bg:
+                            currentTab === 'small'
+                              ? 'surface.extralight'
+                              : currentTab === 'medium'
+                              ? 'surface.extralight'
+                              : 'surface.extralight'
+                        }}
+                      >
+                        {task.revisions}
                       </SectionTag>
                     </Flex>
                   </Flex>
