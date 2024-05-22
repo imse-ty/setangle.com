@@ -56,11 +56,20 @@ export default function SubscriptionPricing() {
               priceSubtitle='500 credits'
               recurring='/mo'
               bulletPoints={[
-                { title: 'Small tasks', text: '50 credits' },
-                { title: 'Medium tasks', text: '100 credits' },
-                { title: 'Large tasks', text: '300 credits' },
+                {
+                  title: 'Small tasks (unlimited revisions)',
+                  text: '50 credits'
+                },
+                {
+                  title: 'Medium tasks (2 rounds of revisions)',
+                  text: '100 credits'
+                },
+                {
+                  title: 'Large tasks (2 rounds of revisions)',
+                  text: '300 credits'
+                },
                 'Unlimited revisions for small tasks',
-                'Up to two rounds of revisions for small and medium tasks',
+                'Up to two rounds of revisions for medium and large tasks',
                 'Allocate credits as per your project needs',
                 'Pre-made assets for quick turnaround',
                 'Tasks acknowledged within 1 business day',
