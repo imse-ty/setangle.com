@@ -156,7 +156,7 @@ const tasks = {
     },
     {
       name: 'Brand identity bento box',
-      credits: 300,
+      credits: 100,
       description: 'Includes font, color, and brand guidelines',
       revisions: 'Up to 2 rounds'
     },
