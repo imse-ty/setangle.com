@@ -20,9 +20,9 @@ function Card({ children, ...rest }) {
         alignItems: 'center',
         flex: 1,
         textAlign: 'left',
-        padding: 5,
+        padding: [4, 5],
 
-        borderRadius: 3,
+        borderRadius: [2, 3],
         backgroundColor: 'background',
         boxShadow: 'soft.low',
         transition: 'transform 325ms ease, box-shadow 325ms ease',
@@ -49,7 +49,7 @@ function BulletPoint({ children }) {
           maxWidth: '20px'
         }}
       />
-      <Text as='li' variant='body.smallParagraph' sx={{ textAlign: 'left' }}>
+      <Text as="li" variant="body.smallParagraph" sx={{ textAlign: 'left' }}>
         {children}
       </Text>
     </Flex>
@@ -59,7 +59,7 @@ function BulletPoint({ children }) {
 function SectionTag({ href, ...rest }) {
   return (
     <Button
-      size='small'
+      size="small"
       href={href}
       leftIcon={<MdStar sx={{ fontSize: 5 }} />}
       sx={{
@@ -94,13 +94,13 @@ export function MiniOfferCard({
   return (
     <Card>
       <Flex sx={{ flexDirection: 'column', gap: 3, marginBottom: 4 }}>
-        <Heading as='h3' variant='body.pretext' sx={{ color: 'text.primary' }}>
+        <Heading as="h3" variant="body.pretext" sx={{ color: 'text.primary' }}>
           {title}
         </Heading>
 
         <Text
-          as='p'
-          variant='body.smallParagraph'
+          as="p"
+          variant="body.smallParagraph"
           sx={{
             color: 'text.secondary'
           }}
@@ -116,17 +116,17 @@ export function MiniOfferCard({
         }}
       >
         {price && (
-          <Text as='p' variant='display.h4'>
+          <Text as="p" variant="display.h4">
             {price}{' '}
             {recurring && (
-              <Text as='span' sx={{ color: colors.nso400 }}>
+              <Text as="span" sx={{ color: colors.nso400 }}>
                 {recurring}
               </Text>
             )}
           </Text>
         )}
         {priceSubtitle && (
-          <Text as='p' variant='body.footnote' sx={{ color: 'secondary.dark' }}>
+          <Text as="p" variant="body.footnote" sx={{ color: 'secondary.dark' }}>
             {priceSubtitle}
           </Text>
         )}
