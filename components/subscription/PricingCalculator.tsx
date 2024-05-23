@@ -221,7 +221,7 @@ const tasks = {
       revisions: 'Up to 2 rounds'
     },
     {
-      name: 'Abstract trailers/teaser',
+      name: 'Abstract trailer/teaser',
       credits: 300,
       description: 'Engaging promotional videos.',
       revisions: 'Up to 2 rounds'
