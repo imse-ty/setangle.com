@@ -17,9 +17,9 @@ function Card({ children, ...rest }) {
   return (
     <Box
       sx={{
-        padding: 4,
+        padding: [4, 5],
         flex: '1 1 25%',
-        borderRadius: 3,
+        borderRadius: [2, 3],
         backgroundColor: 'background',
         boxShadow: 'soft.low',
         transition: 'transform 325ms ease, box-shadow 325ms ease',
