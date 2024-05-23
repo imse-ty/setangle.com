@@ -155,6 +155,12 @@ const tasks = {
       revisions: 'Up to 2 rounds'
     },
     {
+      name: 'Brand identity bento box',
+      credits: 300,
+      description: 'Includes font, color, and brand guidelines',
+      revisions: 'Up to 2 rounds'
+    },
+    {
       name: 'Complex logo bumper',
       credits: 100,
       description: 'Detailed logo animation for branding.',
@@ -186,6 +192,7 @@ const tasks = {
       description: 'Engaging opening titles.',
       revisions: 'Up to 2 rounds'
     },
+
     {
       name: 'Product animation',
       credits: 300,
