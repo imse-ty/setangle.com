@@ -17,7 +17,7 @@ function Card({ children, ...rest }) {
   return (
     <Box
       sx={{
-        padding: [5, null, null, 4],
+        padding: 4,
         flex: '1 1 25%',
         borderRadius: 3,
         backgroundColor: 'background',
@@ -46,7 +46,7 @@ function BulletPoint({ children }) {
           maxWidth: '20px'
         }}
       />
-      <Text as='li' variant='body.smallParagraph' sx={{ textAlign: 'left' }}>
+      <Text as="li" variant="body.smallParagraph" sx={{ textAlign: 'left' }}>
         {children}
       </Text>
     </Flex>
@@ -56,7 +56,7 @@ function BulletPoint({ children }) {
 function SectionTag({ href, ...rest }) {
   return (
     <Button
-      size='small'
+      size="small"
       href={href}
       leftIcon={<MdStar sx={{ fontSize: 5 }} />}
       sx={{
@@ -112,16 +112,16 @@ export function OfferCardNew({
         >
           <Flex sx={{ flexDirection: 'column' }}>
             <Heading
-              as='h3'
-              variant='body.pretext'
+              as="h3"
+              variant="body.pretext"
               sx={{ color: 'text.primary', marginBottom: 3 }}
             >
               {title}
             </Heading>
             {subtitle && (
               <Text
-                as='p'
-                variant='body.smallParagraph'
+                as="p"
+                variant="body.smallParagraph"
                 sx={{
                   color: 'secondary.dark'
                 }}
@@ -137,10 +137,10 @@ export function OfferCardNew({
             }}
           >
             {price && (
-              <Text as='p' variant='display.h4'>
+              <Text as="p" variant="display.h4">
                 {price}{' '}
                 {recurring && (
-                  <Text as='span' sx={{ color: colors.nso400 }}>
+                  <Text as="span" sx={{ color: colors.nso400 }}>
                     {recurring}
                   </Text>
                 )}
@@ -148,8 +148,8 @@ export function OfferCardNew({
             )}
             {priceSubtitle && (
               <Text
-                as='p'
-                variant='body.footnote'
+                as="p"
+                variant="body.footnote"
                 sx={{ color: 'secondary.dark' }}
               >
                 {priceSubtitle}
@@ -157,8 +157,8 @@ export function OfferCardNew({
             )}
           </Flex>
           <Text
-            as='p'
-            variant='body.smallParagraph'
+            as="p"
+            variant="body.smallParagraph"
             sx={{ color: 'text.secondary', maxWidth: '800px' }}
           >
             {text}

@@ -40,7 +40,7 @@ function Card({ children, ...rest }) {
 function SectionTag({ icon, href, ...rest }) {
   return (
     <Button
-      size='small'
+      size="small"
       href={href}
       leftIcon={icon}
       sx={{
@@ -136,18 +136,33 @@ const tasks = {
       description: 'Overlays, alerts, and transitions for live streaming.',
       revisions: 'Up to 2 rounds'
     },
+
     {
-      name: 'YouTube package',
+      name: 'YouTube intro',
       credits: 100,
-      description: 'Includes intro and outro, and lower-thirds',
+      description: 'Branded opening sequence for YouTube videos.',
       revisions: 'Up to 2 rounds'
     },
     {
-      name: 'Video podcast package',
+      name: 'YouTube outro',
       credits: 100,
-      description: 'Overlays, full-screen graphics, and lower-thirds.',
+      description: 'Branded closing sequence for YouTube videos.',
       revisions: 'Up to 2 rounds'
     },
+    {
+      name: 'Podcast overlays',
+      credits: 100,
+      description: 'Custom-designed graphical overlays for video podcasts.',
+      revisions: 'Up to 2 rounds'
+    },
+    {
+      name: 'Stream/podcast full-screen graphics',
+      credits: 100,
+      description:
+        'Slides or full-screen animations to emphasize particular talking points or transitions.',
+      revisions: 'Up to 2 rounds'
+    },
+
     {
       name: 'Major edits to existing videos',
       credits: 100,
@@ -226,6 +241,8 @@ const PricingCalculator = () => {
   const [currentTab, setCurrentTab] = useState('small');
   const [additionalCredits, setAdditionalCredits] = useState(0);
   const [largeTaskCount, setLargeTaskCount] = useState(0);
+  const [smallTaskCount, setSmallTaskCount] = useState(0);
+  const [mediumTaskCount, setMediumTaskCount] = useState(0);
   const [errorMessage, setErrorMessage] = useState('');
 
   const toggleTask = (task) => {
@@ -238,6 +255,10 @@ const PricingCalculator = () => {
       setSelectedTasks((prev) => prev.filter((t) => t !== task));
       if (task.credits === 300) {
         setLargeTaskCount(largeTaskCount - 1);
+      } else if (task.credits === 100) {
+        setMediumTaskCount(mediumTaskCount - 1);
+      } else if (task.credits === 50) {
+        setSmallTaskCount(smallTaskCount - 1);
       }
       setErrorMessage('');
     } else {
@@ -247,10 +268,26 @@ const PricingCalculator = () => {
         );
         return;
       }
+      if (task.credits === 100 && mediumTaskCount >= 5) {
+        setErrorMessage(
+          'To ensure top-quality work, you can select up to 5 medium tasks per month.'
+        );
+        return;
+      }
+      if (task.credits === 50 && smallTaskCount >= 10) {
+        setErrorMessage(
+          'To ensure top-quality work, you can select up to 10 medium tasks per month.'
+        );
+        return;
+      }
       if (totalCreditsUsed + task.credits <= 500 + additionalCredits) {
         setSelectedTasks((prev) => [...prev, task]);
         if (task.credits === 300) {
           setLargeTaskCount(largeTaskCount + 1);
+        } else if (task.credits === 100) {
+          setMediumTaskCount(mediumTaskCount + 1);
+        } else if (task.credits === 50) {
+          setSmallTaskCount(smallTaskCount + 1);
         }
         setErrorMessage('');
       } else {
@@ -267,21 +304,22 @@ const PricingCalculator = () => {
   );
 
   const baseCredits = 500;
-
   const additionalCreditCost = 2500; // cost for additional 250 credits
   const totalAdditionalCredits = Math.ceil(additionalCredits / 250);
-  const totalCost = 5000 + totalAdditionalCredits * additionalCreditCost;
   const monthlyCost = 5000;
+  const totalCost = monthlyCost + totalAdditionalCredits * additionalCreditCost;
 
   const resetSelection = () => {
     setSelectedTasks([]);
     setLargeTaskCount(0);
+    setMediumTaskCount(0);
+    setSmallTaskCount(0);
     setErrorMessage('');
   };
   return (
     <ScaleInEffect>
       <Container
-        id='calculator'
+        id="calculator"
         paddingX={[0]}
         sx={{
           display: 'flex',
@@ -291,7 +329,7 @@ const PricingCalculator = () => {
           alignItems: 'center',
           textAlign: 'center',
           marginBottom: 6,
-          height: ['none', null, '70vh'],
+          height: ['none', '90vh', null, null, '70vh'],
           borderRadius: 4,
           backgroundColor: 'surface.thin'
         }}
@@ -315,7 +353,7 @@ const PricingCalculator = () => {
               marginBottom: 5
             }}
           >
-            <Text variant='body.pretext'>Pricing calculator</Text>
+            <Text variant="body.pretext">Pricing calculator</Text>
 
             <Heading>Design your perfect month</Heading>
             <Text>
@@ -370,20 +408,20 @@ const PricingCalculator = () => {
                       }}
                     >
                       <Text
-                        as='p'
-                        variant='display.h6'
+                        as="p"
+                        variant="display.h6"
                         sx={{ fontWeight: 'bold' }}
                       >
                         {task.name}
                       </Text>
-                      <Text variant='body.footnote'>
+                      <Text variant="body.footnote">
                         {task.credits} credits
                       </Text>
                     </Flex>
 
                     <Text
-                      as='p'
-                      variant='body.smallParagraph'
+                      as="p"
+                      variant="body.smallParagraph"
                       sx={{
                         color: 'text.secondary',
                         display: ['none', 'block']
@@ -441,40 +479,40 @@ const PricingCalculator = () => {
         >
           <Flex sx={{ flexDirection: 'column', gap: [3, 4] }}>
             <Flex sx={{ flexDirection: 'column', gap: 2 }}>
-              <Text variant='body.pretext' sx={{ color: 'text.secondary' }}>
+              <Text variant="body.pretext" sx={{ color: 'text.secondary' }}>
                 Total cost{' '}
               </Text>
               <Heading>${totalCost}</Heading>
             </Flex>
 
             <Flex sx={{ flexDirection: 'column', gap: 2 }}>
-              <Text variant='body.pretext' sx={{ color: 'text.secondary' }}>
+              <Text variant="body.pretext" sx={{ color: 'text.secondary' }}>
                 Monthly cost
               </Text>
-              <Heading variant='display.h5'>${monthlyCost}</Heading>
+              <Heading variant="display.h5">${monthlyCost}</Heading>
             </Flex>
 
             <Flex sx={{ flexDirection: 'column', gap: 2 }}>
-              <Text variant='body.pretext' sx={{ color: 'text.secondary' }}>
+              <Text variant="body.pretext" sx={{ color: 'text.secondary' }}>
                 Add-on credits cost
               </Text>
-              <Heading variant='display.h5'>
+              <Heading variant="display.h5">
                 ${totalAdditionalCredits * additionalCreditCost}
               </Heading>
             </Flex>
 
             <Flex sx={{ flexDirection: 'column', gap: 2 }}>
-              <Text variant='body.pretext' sx={{ color: 'text.secondary' }}>
+              <Text variant="body.pretext" sx={{ color: 'text.secondary' }}>
                 Total credits used{' '}
               </Text>
-              <Heading variant='display.h5'>{totalCreditsUsed}</Heading>
+              <Heading variant="display.h5">{totalCreditsUsed}</Heading>
             </Flex>
 
             <Flex sx={{ flexDirection: 'column', gap: 2 }}>
-              <Text variant='body.pretext' sx={{ color: 'text.secondary' }}>
+              <Text variant="body.pretext" sx={{ color: 'text.secondary' }}>
                 Base credits left
               </Text>
-              <Heading variant='display.h5'>
+              <Heading variant="display.h5">
                 {baseCredits - totalCreditsUsed > 0
                   ? baseCredits - totalCreditsUsed
                   : 0}
@@ -482,19 +520,19 @@ const PricingCalculator = () => {
             </Flex>
 
             <Flex sx={{ flexDirection: 'column', gap: 2 }}>
-              <Text variant='body.pretext' sx={{ color: 'text.secondary' }}>
+              <Text variant="body.pretext" sx={{ color: 'text.secondary' }}>
                 Add-on credits
               </Text>
               <Slider
-                color='primary.regular'
-                backgroundColor='accent.bold'
+                color="primary.regular"
+                backgroundColor="accent.bold"
                 min={0}
                 max={1000}
                 step={additionalCreditCost / 10}
                 value={additionalCredits}
                 onChange={(e) => setAdditionalCredits(parseInt(e.target.value))}
               />
-              <Heading variant='display.h5'>
+              <Heading variant="display.h5">
                 +{(totalAdditionalCredits * additionalCreditCost) / 10}
               </Heading>
             </Flex>
@@ -516,7 +554,7 @@ const PricingCalculator = () => {
               Book call
             </Button>
             <Button
-              variant='ghost'
+              variant="ghost"
               sx={{ width: '100%' }}
               onClick={resetSelection}
             >

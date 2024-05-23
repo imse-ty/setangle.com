@@ -15,7 +15,7 @@ export default function SubscriptionPricing() {
   return (
     <ScaleInEffect>
       <Container
-        id='pricing'
+        id="pricing"
         sx={{
           display: 'flex',
           gap: 5,
@@ -37,9 +37,9 @@ export default function SubscriptionPricing() {
             maxWidth: '1000px'
           }}
         >
-          <Text variant='body.pretext'>Pricing</Text>
-          <Heading as='h2'>Transparent pricing with exceptional value</Heading>
-          <Text as='p' variant='body.summary'>
+          <Text variant="body.pretext">Pricing</Text>
+          <Heading as="h2">Transparent pricing with exceptional value</Heading>
+          <Text as="p" variant="body.summary">
             Choose the plan that suits you best. Flexible monthly rates with the
             option to scale up as you grow. No surprises, just great design.
           </Text>
@@ -50,11 +50,11 @@ export default function SubscriptionPricing() {
               valueIcon={
                 <MdStar sx={{ color: 'secondary.light', fontSize: 5 }} />
               }
-              title='The Subscription'
-              text='Continuous creative motion design support, ensuring content remains fresh and engaging.'
-              price='$5k'
-              priceSubtitle='500 credits'
-              recurring='/mo'
+              title="The Subscription"
+              text="Continuous creative motion design support, ensuring content remains fresh and engaging."
+              price="$5k"
+              priceSubtitle="500 credits"
+              recurring="/mo"
               bulletPoints={[
                 {
                   title: 'Small tasks (unlimited revisions)',
@@ -76,7 +76,9 @@ export default function SubscriptionPricing() {
                 'Average turnaround time of 3-7 business days per tasks',
                 'Average turnaround time of 1-2 weeks for large tasks',
                 'Professional designers allocated to your project',
-                'Consistent quality and communication'
+                'Consistent quality and communication',
+                'Up to 5 medium tasks per month',
+                'Up to 2 large tasks per month'
               ]}
             />
             {/* <OfferCard
@@ -96,12 +98,12 @@ export default function SubscriptionPricing() {
             /> */}
           </Flex>
           <MiniOfferCard
-            value='Additional work'
+            value="Additional work"
             valueIcon={<MdStar sx={{ fontSize: 5 }} />}
-            title='Additional work'
-            subtitle='If you need more, simply purchase additional work in increments as&nbsp;credits.'
-            price='$2.5k increments'
-            priceSubtitle='250 credits'
+            title="Additional work"
+            subtitle="If you need more, simply purchase additional work in increments as&nbsp;credits."
+            price="$2.5k increments"
+            priceSubtitle="250 credits"
           />
         </Flex>
       </Container>
