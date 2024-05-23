@@ -276,7 +276,7 @@ const PricingCalculator = () => {
       }
       if (task.credits === 50 && smallTaskCount >= 10) {
         setErrorMessage(
-          'To ensure top-quality work, you can select up to 10 medium tasks per month.'
+          'To ensure top-quality work, you can select up to 10 small tasks per month.'
         );
         return;
       }
