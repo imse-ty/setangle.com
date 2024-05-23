@@ -14,7 +14,7 @@ function Card({ children, ...rest }) {
   return (
     <Flex
       sx={{
-        padding: 4,
+        padding: [3, null, 4],
         textAlign: 'left',
         borderRadius: [2, 3],
         backgroundColor: 'background',
@@ -45,8 +45,8 @@ function SectionTag({ icon, href, ...rest }) {
       leftIcon={icon}
       sx={{
         display: 'flex',
-        paddingX: 2,
-        paddingY: 2,
+        paddingX: [1, 2],
+        paddingY: [1, 2],
         alignItems: 'center',
         fontSize: '13px',
         fontWeight: 500,
@@ -105,7 +105,7 @@ const tasks = {
       revisions: 'Unlimited revsions'
     },
     {
-      name: 'Captions/subtitles',
+      name: 'Captions',
       credits: 50,
       description: 'Add text to your videos for better accessibility.',
       revisions: 'Unlimited revsions'
@@ -285,13 +285,13 @@ const PricingCalculator = () => {
         paddingX={[0]}
         sx={{
           display: 'flex',
-          gap: 5,
-          flexDirection: ['column', null, null, 'row'],
+          gap: [4, 5],
+          flexDirection: ['column', null, 'row'],
           justifyContent: 'center',
           alignItems: 'center',
           textAlign: 'center',
           marginBottom: 6,
-          height: ['none', null, null, '70vh'],
+          height: ['none', null, '70vh'],
           borderRadius: 4,
           backgroundColor: 'surface.thin'
         }}
@@ -301,7 +301,8 @@ const PricingCalculator = () => {
             flex: 6,
             flexDirection: 'column',
             paddingTop: 5,
-            paddingX: [3, 4, 5],
+            paddingRight: [3, 4, 0],
+            paddingLeft: [3, 4, 5],
             height: '100%',
             width: '100%'
           }}
@@ -342,7 +343,7 @@ const PricingCalculator = () => {
             layout
             sx={{ height: '100%', overflowY: 'auto', paddingX: 2 }}
           >
-            <Grid columns={[1, 2, null, 3]} gap={3} sx={{ mt: 3 }}>
+            <Grid columns={[1, 2, null, null, 3]} gap={3} sx={{ mt: 3 }}>
               {tasks[currentTab].map((task) => (
                 <Card
                   key={task.name}
@@ -368,7 +369,11 @@ const PricingCalculator = () => {
                         gap: 1
                       }}
                     >
-                      <Text as='p' sx={{ fontWeight: 'bold' }}>
+                      <Text
+                        as='p'
+                        variant='display.h6'
+                        sx={{ fontWeight: 'bold' }}
+                      >
                         {task.name}
                       </Text>
                       <Text variant='body.footnote'>
@@ -379,11 +384,14 @@ const PricingCalculator = () => {
                     <Text
                       as='p'
                       variant='body.smallParagraph'
-                      sx={{ color: 'text.secondary' }}
+                      sx={{
+                        color: 'text.secondary',
+                        display: ['none', 'block']
+                      }}
                     >
                       {task.description}
                     </Text>
-                    <Flex sx={{ gap: 2 }}>
+                    <Flex sx={{ gap: 2, flexWrap: 'wrap' }}>
                       <SectionTag
                         sx={{
                           bg:
