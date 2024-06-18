@@ -23,6 +23,22 @@ function ProjectsSection() {
       }}
     >
       <ProjectCard
+        color='oshun'
+        tags={['Music visuals']}
+        title='ABSTRACT'
+        subtitle='A music video inspired by the beats, the rhythms, and sample artistry of the classic mixtape "The [Abstract] Best" by J.PERIOD.'
+        href='/work/abstract-jperiod-q-tip'
+        src='/work/abstract.jpg'
+      />
+      <ProjectCard
+        color='hetHeru'
+        tags={['Music visuals', 'Event']}
+        title='Beeple Studios'
+        subtitle='A definitive musical piece for Beeple Studios and Gibbes Museum of Art named "The Breakdown." Influenced by turntablism, jazz, hip-hop, and punchy motion.'
+        href='/work/the-breakdown-beeple'
+        src='/work/beeple-studios.jpg'
+      />
+      <ProjectCard
         color='taweret'
         tags={['Non-profit', 'Event']}
         title='Beloved Benefit'
