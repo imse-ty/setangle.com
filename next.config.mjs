@@ -81,6 +81,11 @@ const nextConfig = {
         source: '/brief',
         destination: 'https://cal.com/team/setangle/brief',
         permanent: false
+      },
+      {
+        source: '/abstract',
+        destination: 'https://www.instagram.com/p/C8XBcxbRgON/',
+        permanent: false
       }
     ];
   }
