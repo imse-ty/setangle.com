@@ -91,6 +91,11 @@ const nextConfig = {
         source: '/abstract',
         destination: 'https://www.instagram.com/p/C8XBcxbRgON/',
         permanent: false
+      },
+      {
+        source: '/sanshubehance',
+        destination: 'https://www.behance.net/gallery/202877441/SANSHU?share=1',
+        permanent: false
       }
     ];
   }
