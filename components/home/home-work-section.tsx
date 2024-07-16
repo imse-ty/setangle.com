@@ -40,6 +40,14 @@ function ProjectsSection() {
       />
       <ProjectCard
         color='taweret'
+        tags={['Startup', 'Campaign']}
+        title='SANSHU!'
+        subtitle='SANSHU! is a blockchain-enabled Web3 community focused around community finance. They needed a fresh brand identity and kinetic explainer.'
+        href='/work/sanshu'
+        src='/work/sanshu.png'
+      />
+      <ProjectCard
+        color='taweret'
         tags={['Non-profit', 'Event']}
         title='Beloved Benefit'
         subtitle='Helping bring Beloved Benefit to life, an annual charity fundraiser event in Atlanta founded by The Same House.'
@@ -69,6 +77,14 @@ function ProjectsSection() {
         subtitle="Innovating at Chick-fil-A's annual meetings NEXT and Spark 2023"
         href='/work/chick-fil-a'
         src='/work/chick-fil-a.png'
+      />
+      <ProjectCard
+        color='ptah'
+        title='Rock the Bells X Ford'
+        tags={['Music', 'Campaign']}
+        subtitle="Animated dynamic graphics for the 'Rock The Campus' series, spotlighting 2 Chainz and college culture in a vibrant narrative collaboration."
+        href='/work/rock-the-campus'
+        src='/work/ford.jpg'
       />
     </Container>
   );

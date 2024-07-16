@@ -53,6 +53,11 @@ const nextConfig = {
         permanent: false
       },
       {
+        source: '/sanshu',
+        destination: '/work/sanshu',
+        permanent: false
+      },
+      {
         source: '/opencal',
         destination: 'https://cal.com/team/setangle/opencal',
         permanent: false
