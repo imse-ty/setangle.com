@@ -29,11 +29,21 @@ import FaqNewsletter from '@/components/faq/faq-newsletter-signup';
 import FaqBookCall from '@/components/faq/faq-book-call';
 import FaqOurClients from '@/components/faq/faq-our-clients';
 import HomeWorkSection from '@/components/home/home-work-section';
+import WorkWorkSection from '@/components/work/work-work-section';
+import { useTina } from 'tinacms/dist/react';
+import client from '@/tina/__generated__/client';
 
-export default function Faq() {
+export default function Home(props) {
   const [isVideoActive, setIsVideoActive] = useState(false);
   const [colorMode, setColorMode] = useColorMode();
-  setColorMode('dark');
+
+  const { data } = useTina({
+    query: props.query,
+    variables: props.variables,
+    data: props.data
+  });
+
+  const projectsList = data.featuredWork.projects;
 
   return (
     <Layout isHiddenByDefault hideTopNav>
@@ -50,9 +60,26 @@ export default function Faq() {
           }}
         />
       </Container>
-      <LogoCarousel isLight={false} />
-      <HomeWorkSection />
+      <LogoCarousel />
+      <HomeWorkSection projects={projectsList} />
+      <FaqWhatWeDo />
+      <FaqOurClients />
+      <FaqProcess />
       <ContactSection useTransparentBackground />
     </Layout>
   );
 }
+
+export const getStaticProps = async () => {
+  const { data, query, variables } = await client.queries.featuredWork({
+    relativePath: 'featured-work.json'
+  });
+
+  return {
+    props: {
+      data,
+      query,
+      variables
+    }
+  };
+};

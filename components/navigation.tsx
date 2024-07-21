@@ -104,7 +104,7 @@ export default function Navigation({
             <MenuItem href='/#reel'>Reel</MenuItem>
             <MenuItem href='/#work'>Work</MenuItem>
             <MenuItem href='/#services'>Services</MenuItem>
-            <MenuItem href='/#clientele'>Clientele</MenuItem>
+
             <MenuItem href='/#process'>Process</MenuItem>
             <Flex
               sx={{

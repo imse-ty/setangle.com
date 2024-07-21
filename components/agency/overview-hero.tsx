@@ -16,13 +16,20 @@ export default function OverviewHero() {
         flexDirection: 'column'
       }}
     >
-      <Text variant='body.pretext' sx={{ marginBottom: 2 }}>
+      <Text
+        variant='body.pretext'
+        sx={{ color: 'accent.bold', marginBottom: 2 }}
+      >
         A multidisciplinary digital creative agency
       </Text>
       <Heading as='h1' variant='display.h1' sx={{ marginBottom: 3 }}>
         Transforming the ordinary into the&nbsp;extraordinary
       </Heading>
-      <Text as='p' variant='body.summary' sx={{ maxWidth: '1000px' }}>
+      <Text
+        as='p'
+        variant='body.summary'
+        sx={{ color: 'text.secondary', maxWidth: '1000px' }}
+      >
         We blend animation, technology, and sound to transform ordinary stories
         into soulful brand experiences that inspire the culture we live in
         today.

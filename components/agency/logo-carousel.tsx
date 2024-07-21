@@ -42,7 +42,9 @@ export default function LogoCarousel({ isLight }) {
         marginBottom: 6
       }}
     >
-      <Text as='p'>Collaborating with amazing brands such as...</Text>
+      <Text as='p' sx={{ color: 'text.secondary' }}>
+        Collaborating with amazing brands such as...
+      </Text>
       <Flex
         as={motion.div}
         sx={{
@@ -56,12 +58,13 @@ export default function LogoCarousel({ isLight }) {
         }}
       >
         <Logo logoName='ford' alt='Ford logo' isLight={isLight} />
+        <Logo logoName='vmware' alt='VMware logo' isLight={isLight} />
+        <Logo logoName='chick-fil-a' alt='Chick-fil-A logo' isLight={isLight} />
         <Logo
           logoName='beloved-benefit'
           alt='Beloved Benefit logo'
           isLight={isLight}
         />
-        <Logo logoName='chick-fil-a' alt='Chick-fil-A logo' isLight={isLight} />
         <Logo
           logoName='keller-williams'
           alt='Keller Williams logo'
@@ -71,8 +74,7 @@ export default function LogoCarousel({ isLight }) {
           logoName='fearless-fund'
           alt='Fearless Fund logo'
           isLight={isLight}
-        />
-        <Logo logoName='vmware' alt='VMware logo' isLight={isLight} />
+        />{' '}
       </Flex>
     </Container>
   );

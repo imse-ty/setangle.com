@@ -5,7 +5,7 @@ const pageTheme = buildMonochromaticTheme('nut');
 
 export const setyTheme = {
   config: {
-    initialColorModeName: 'light'
+    initialColorModeName: 'dark'
   },
   sizes: {
     container: '1920px'
