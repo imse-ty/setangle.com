@@ -52,9 +52,6 @@ export default function Faq() {
       </Container>
       <LogoCarousel isLight={false} />
       <HomeWorkSection />
-      <FaqWhatWeDo />
-      <FaqOurClients />
-      <FaqProcess />
       <ContactSection useTransparentBackground />
     </Layout>
   );

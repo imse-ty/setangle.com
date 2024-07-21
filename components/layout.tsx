@@ -37,15 +37,6 @@ export default function Layout({
 
   return (
     <Box as='main' sx={{ position: 'relative' }}>
-      <Toolbar
-        showFaqMenu={showFaqMenu}
-        showPricing={showPricing}
-        showBack={showToolbarBack}
-        formLink={formLink}
-        showPeopleContactButton={showPeopleContactButton}
-        backLink={backLink}
-      />
-
       {children}
     </Box>
   );
