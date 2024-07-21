@@ -2,9 +2,9 @@
 //@ts-nocheck
 
 import { Box, Button } from 'krado-react';
-import Heading from '../fixed-krado-components/Heading';
+import Heading from './fixed-krado-components/Heading';
 import { Flex } from 'theme-ui';
-import Text from '../fixed-krado-components/Text';
+import Text from './fixed-krado-components/Text';
 import {
   MdArrowRight,
   MdArrowRightAlt,

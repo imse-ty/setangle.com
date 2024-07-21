@@ -1,7 +1,7 @@
 import { Flex, Container } from 'krado-react';
-import Heading from '../fixed-krado-components/Heading';
-import Text from '../fixed-krado-components/Text';
-import VideoPlayer from '../video-player';
+import Heading from './fixed-krado-components/Heading';
+import Text from './fixed-krado-components/Text';
+import VideoPlayer from './video-player';
 
 export default function OverviewHero() {
   return (

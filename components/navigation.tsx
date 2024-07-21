@@ -96,7 +96,6 @@ export default function Navigation({
             <MenuItem href='#clientele'>Clientele</MenuItem>
             <MenuItem href='#process'>Process</MenuItem>
             {showPricing && <MenuItem href='#pricing'>Pricing</MenuItem>}
-            <MenuItem href='#newsletter'>Newsletter</MenuItem>
           </>
         ) : (
           <>

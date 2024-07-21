@@ -2,27 +2,12 @@
 //@ts-nocheck
 
 import Layout from '@/components/layout';
-import OverviewHero from '@/components/agency/overview-hero';
-import SiteFooter from '@/components/site-footer';
-import SiteHeader from '@/components/site-header';
-import VideoSection from '@/components/video-section';
-import React from 'react';
 import { useState } from 'react';
-import { Container } from 'krado-react';
-import ClientLogos from '@/components/agency/logo-carousel';
-import LogoCarousel from '@/components/agency/logo-carousel';
-import WhatWeDoSection from '@/components/agency/what-we-do';
-import WorkSection from '@/components/agency/work-section';
 import ContactSection from '@/components/contact/contact-section';
-import AboutSection from '@/components/agency/about-section';
-import ReelSection from '@/components/agency/reel-section';
-import Head from 'next/head';
 import { useColorMode } from 'theme-ui';
-import HomeWorkSection from '@/components/home/home-work-section';
-import HomeLayout from '@/components/home/home-layout';
 import { useTina } from 'tinacms/dist/react';
 import client from '@/tina/__generated__/client';
-import WorkWorkSection from '@/components/work/work-work-section';
+import AllWorkSection from '@/components/work/all-work-section';
 
 export default function Work(props) {
   const [isVideoActive, setIsVideoActive] = useState(false);
@@ -39,7 +24,7 @@ export default function Work(props) {
 
   return (
     <Layout isHiddenByDefault hideTopNav>
-      <WorkWorkSection projects={projectsList} />
+      <AllWorkSection projects={projectsList} />
       <ContactSection useTransparentBackground />
     </Layout>
   );

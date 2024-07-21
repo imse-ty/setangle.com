@@ -4,7 +4,7 @@
 import Heading from '../fixed-krado-components/Heading';
 import Text from '../fixed-krado-components/Text';
 import { Box, Container } from 'krado-react';
-import ProjectCard from '../agency/project-card';
+import ProjectCard from '../project-card';
 import { motion, useScroll, useSpring, useTransform } from 'framer-motion';
 import { useRef } from 'react';
 
@@ -32,7 +32,7 @@ function ProjectsSection({ projects }) {
   );
 }
 
-export default function WorkWorkSection({
+export default function AllWorkSection({
   projects,
   onViewportEnter,
   onViewportLeave

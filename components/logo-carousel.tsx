@@ -4,7 +4,7 @@
 import { motion } from 'framer-motion';
 import { Flex, Container } from 'krado-react';
 import Image from 'next/image';
-import Text from '../fixed-krado-components/Text';
+import Text from './fixed-krado-components/Text';
 import { useColorMode } from 'theme-ui';
 
 function Logo({ logoName, alt, isLight }) {

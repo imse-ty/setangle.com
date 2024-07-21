@@ -2,13 +2,13 @@
 //@ts-nocheck
 
 import { MdNorthEast, MdPlayArrow } from 'react-icons/md';
-import Heading from '../fixed-krado-components/Heading';
-import Text from '../fixed-krado-components/Text';
+import Heading from './fixed-krado-components/Heading';
+import Text from './fixed-krado-components/Text';
 import { Container, Box, Flex, Button, Image } from 'krado-react';
 import Link from 'next/link';
 import { getColor } from '@theme-ui/color';
 import { setyTheme } from '@/lib/site-theme';
-import VideoPlayer from '../video-player';
+import VideoPlayer from './video-player';
 import {
   AnimatePresence,
   motion,

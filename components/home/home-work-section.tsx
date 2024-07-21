@@ -7,7 +7,7 @@ import { Box, Container, Button } from 'krado-react';
 import { motion, useScroll, useSpring, useTransform } from 'framer-motion';
 import { useRef } from 'react';
 import { MdNorthEast } from 'react-icons/md';
-import ProjectCard from '../agency/project-card';
+import ProjectCard from '../project-card';
 import Link from 'next/link';
 import ScaleInEffect from '../scale-in-effect';
 import Wrapper from '../wrapper';

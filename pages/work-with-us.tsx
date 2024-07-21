@@ -17,7 +17,6 @@ import { useState } from 'react';
 import { useRouter } from 'next/router';
 import { Container } from 'krado-react';
 import { useColorMode } from 'theme-ui';
-import ContactSection from '@/components/contact/contact-section';
 import RolesContactSection from '@/components/roles/roles-contact-section';
 import VideoSection from '@/components/video-section';
 import { NextSeo } from 'next-seo';

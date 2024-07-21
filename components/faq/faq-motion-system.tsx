@@ -4,7 +4,7 @@
 import { Container, Flex, Button } from 'krado-react';
 import Text from '../fixed-krado-components/Text';
 import Heading from '../fixed-krado-components/Heading';
-import { OverviewCard } from '../agency/overview-card';
+import { OverviewCard } from '../overview-card';
 import ScaleInEffect from '../scale-in-effect';
 import {
   MdBook,
@@ -64,9 +64,15 @@ export default function FaqMotionSystem() {
               gap: 3
             }}
           >
-            <Text variant='body.pretext'>Motion design approach</Text>
+            <Text variant='body.pretext' sx={{ color: 'accent.bold' }}>
+              Motion design approach
+            </Text>
             <Heading as='h2'>From subtle to striking</Heading>
-            <Text as='p' variant='body.summary' sx={{ maxWidth: '1000px' }}>
+            <Text
+              as='p'
+              variant='body.summary'
+              sx={{ color: 'text.secondary', maxWidth: '1000px' }}
+            >
               Watch this series of examples for a{' '}
               <strong>fictional healthcare company</strong> called &quot;Set
               Care&quot; that showcases our Class A, B, and C services. Each

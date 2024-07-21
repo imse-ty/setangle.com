@@ -9,21 +9,13 @@ import client from '@/tina/__generated__/client';
 import { components } from '@/lib/components';
 import ProjectMasthead from '@/components/projects/project-masthead';
 import ProjectInfo from '@/components/projects/project-info';
-
 import ContactSection from '@/components/contact/contact-section';
-import {
-  motion,
-  useMotionValueEvent,
-  useScroll,
-  useSpring,
-  useTransform
-} from 'framer-motion';
-import { useRef, useState } from 'react';
+import { motion, useScroll, useSpring, useTransform } from 'framer-motion';
+import { useRef } from 'react';
 import { ThemeUIProvider, useColorMode } from 'theme-ui';
 import { buildMonochromaticTheme } from '@/lib/monochromatic-theme';
 import { getColor } from '@theme-ui/color';
 import { NextSeo } from 'next-seo';
-import HomeLayout from '@/components/home/home-layout';
 
 function BodyContainer({ ...rest }) {
   return <Container as='article' sx={{ maxWidth: '900px' }} {...rest} />;

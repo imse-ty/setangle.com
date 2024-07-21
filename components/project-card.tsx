@@ -4,7 +4,7 @@
 import { Flex, Box, Button } from 'krado-react';
 import Link from 'next/link';
 import { motion } from 'framer-motion';
-import Text from '../fixed-krado-components/Text';
+import Text from './fixed-krado-components/Text';
 import { getColor } from '@theme-ui/color';
 import { ThemeUIProvider } from 'theme-ui';
 import { buildMonochromaticTheme } from '@/lib/monochromatic-theme';

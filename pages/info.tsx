@@ -2,35 +2,30 @@
 //@ts-nocheck
 
 import Layout from '@/components/layout';
-import OverviewHero from '@/components/overview-hero';
 import { useState } from 'react';
 import { Container } from 'krado-react';
-import LogoCarousel from '@/components/logo-carousel';
+import LogoCarousel from '@/components/agency/logo-carousel';
+import WorkSection from '@/components/agency/work-section';
 import ContactSection from '@/components/contact/contact-section';
-import ReelSection from '@/components/reel-section';
+import ReelSection from '@/components/agency/reel-section';
+import FaqHero from '@/components/faq/faq-hero';
+import NewsletterSignup from '@/components/faq/newsletter-signup';
 import { useColorMode } from 'theme-ui';
 import FaqProcess from '@/components/faq/faq-process';
+import FaqMotionSystem from '@/components/faq/faq-motion-system';
 import FaqWhatWeDo from '@/components/faq/faq-what-we-do';
+import FaqNewsletter from '@/components/faq/faq-newsletter-signup';
 import FaqOurClients from '@/components/faq/faq-our-clients';
-import HomeWorkSection from '@/components/home/home-work-section';
-import { useTina } from 'tinacms/dist/react';
-import client from '@/tina/__generated__/client';
+import FaqTopPricing from '@/components/faq/faq-top-pricing';
 
-export default function Home(props) {
+export default function Faq() {
   const [isVideoActive, setIsVideoActive] = useState(false);
   const [colorMode, setColorMode] = useColorMode();
-
-  const { data } = useTina({
-    query: props.query,
-    variables: props.variables,
-    data: props.data
-  });
-
-  const projectsList = data.featuredWork.projects;
+  setColorMode('dark');
 
   return (
-    <Layout isHiddenByDefault hideTopNav>
-      <OverviewHero />
+    <Layout isHiddenByDefault hideTopNav showFaqMenu showPricing>
+      <FaqHero />
       <Container sx={{ marginBottom: 6 }}>
         <ReelSection
           isVideoActive={isVideoActive}
@@ -43,26 +38,14 @@ export default function Home(props) {
           }}
         />
       </Container>
-      <LogoCarousel />
-      <HomeWorkSection projects={projectsList} />
+      <LogoCarousel isLight={false} />
+      <FaqMotionSystem />
+      <WorkSection />
       <FaqWhatWeDo />
       <FaqOurClients />
       <FaqProcess />
+      <FaqTopPricing />
       <ContactSection useTransparentBackground />
     </Layout>
   );
 }
-
-export const getStaticProps = async () => {
-  const { data, query, variables } = await client.queries.featuredWork({
-    relativePath: 'featured-work.json'
-  });
-
-  return {
-    props: {
-      data,
-      query,
-      variables
-    }
-  };
-};
