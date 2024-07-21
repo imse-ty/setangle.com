@@ -65,9 +65,8 @@ export default function HomeWorkSection({
           </Heading>
 
           <Text as='p' sx={{ color: 'text.secondary' }}>
-            Selected ranging from event openers, tech product ads, social media
-            graphics, and non-profit organizations collaborating with brand and
-            agencies alike.
+            Selected work ranging from event openers, tech product ads, and
+            social media graphics, collaborating with brands and agencies alike.
           </Text>
         </Container>
         <ProjectsSection projects={projects} />

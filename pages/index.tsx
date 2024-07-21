@@ -19,6 +19,7 @@ import client from '@/tina/__generated__/client';
 export default function Home(props) {
   const [isVideoActive, setIsVideoActive] = useState(false);
   const [colorMode, setColorMode] = useColorMode();
+  setColorMode('dark');
 
   const { data } = useTina({
     query: props.query,

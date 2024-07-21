@@ -11,6 +11,7 @@ import { Container, Flex, Button, Box } from 'krado-react';
 import Link from 'next/link';
 import { useRouter } from 'next/router';
 import { MdHome } from 'react-icons/md';
+import { useColorMode } from 'theme-ui';
 
 export function Custom404Footer() {
   const router = useRouter();
@@ -46,6 +47,9 @@ export function Custom404Footer() {
 }
 
 export default function Custom404() {
+  const [colorMode, setColorMode] = useColorMode();
+  setColorMode('dark');
+
   return (
     <Layout isToolbarHidden forceHideNav>
       <Container

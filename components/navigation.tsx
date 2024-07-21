@@ -5,7 +5,6 @@ import { Flex, Button } from 'krado-react';
 import Link from 'next/link';
 import { motion } from 'framer-motion';
 import Text from './fixed-krado-components/Text';
-import AvailabilityIndicator from './status-indicator';
 
 function MenuItem({ children, active, href }) {
   return (
@@ -103,19 +102,9 @@ export default function Navigation({
             <MenuItem href='/#reel'>Reel</MenuItem>
             <MenuItem href='/#work'>Work</MenuItem>
             <MenuItem href='/#services'>Services</MenuItem>
-
             <MenuItem href='/#process'>Process</MenuItem>
-            <Flex
-              sx={{
-                display: ['none', null, 'flex'],
-                marginLeft: 2,
-                gap: '2px',
-                alignItems: 'center'
-              }}
-            >
-              <AvailabilityIndicator sx={{ marginBottom: '3px' }} />
-              <MenuItem href='/work-with-us'>Work with us</MenuItem>
-            </Flex>
+            <MenuItem href='/#contact'>Contact</MenuItem>{' '}
+            <MenuItem href='/work-with-us'>Work with us</MenuItem>
           </>
         )}
 
