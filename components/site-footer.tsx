@@ -15,6 +15,7 @@ import {
   FaInstagram,
   FaLinkedin,
   FaTwitter,
+  FaXTwitter,
   FaYoutube
 } from 'react-icons/fa6';
 import { MdDarkMode, MdLightMode } from 'react-icons/md';
@@ -50,25 +51,19 @@ export function SocialMediaLinks() {
   return (
     <>
       <FooterLink
-        href='https://www.instagram.com/imse_ty'
+        href='https://www.instagram.com/set_angle'
         icon={<FaInstagram />}
       >
         Instagram
       </FooterLink>
       <FooterLink
-        href='https://www.linkedin.com/in/imsety'
+        href='https://www.linkedin.com/company/setangle'
         icon={<FaLinkedin />}
       >
         LinkedIn
       </FooterLink>
-      <FooterLink href='https://www.youtube.com/imsety' icon={<FaYoutube />}>
-        Youtube
-      </FooterLink>
-      <FooterLink href='https://twitter.com/imse_ty' icon={<FaTwitter />}>
-        Twitter
-      </FooterLink>
-      <FooterLink href='https://github.com/imse-ty' icon={<FaGithub />}>
-        GitHub
+      <FooterLink href='https://twitter.com/set_angle' icon={<FaXTwitter />}>
+        X
       </FooterLink>
     </>
   );
@@ -81,19 +76,42 @@ export default function SiteFooter({ textColor, linkColor }) {
     <Footer
       style={{
         backgroundColor: 'transparent',
-        boxShadow: 'none',
-        justifyContent: 'center'
+        boxShadow: 'none'
       }}
     >
       <FooterFootnote
         as='p'
         sx={{
           color: textColor,
-          textAlign: 'center'
+          textAlign: ['center', null, 'left']
         }}
       >
-        Copyright © 2024 Imsety LLC. All rights reserved.
+        Copyright © 2024 Set Angle. All rights reserved.
       </FooterFootnote>
+      <FooterContent
+        sx={{
+          paddingY: [0, 2],
+          display: 'flex',
+          gap: [3, null, null, 5],
+          marginTop: [3, null, 0],
+          flexWrap: 'wrap',
+          justifyContent: 'center',
+          color: linkColor
+        }}
+      >
+        <Flex
+          as='ul'
+          sx={{
+            gap: [3, null, null, 4],
+            flexWrap: 'wrap',
+            justifyContent: 'center',
+            alignItems: 'center',
+            listStyleType: 'none'
+          }}
+        >
+          <SocialMediaLinks />
+        </Flex>
+      </FooterContent>
     </Footer>
   );
 }

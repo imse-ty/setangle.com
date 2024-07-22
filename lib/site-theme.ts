@@ -5,7 +5,8 @@ const pageTheme = buildMonochromaticTheme('nut');
 
 export const setyTheme = {
   config: {
-    initialColorModeName: 'light'
+    initialColorModeName: 'light',
+    useColorSchemeMediaQuery: false
   },
   sizes: {
     container: '1920px'
@@ -83,25 +84,25 @@ export const setyTheme = {
       h1: {
         variant: 'text.base',
         fontFamily: 'display',
-        fontSize: [8, 11],
+        fontSize: [7, 8, 11],
         fontWeight: 600,
         lineHeight: '1.1',
         letterSpacing: 'display'
       },
       h2: {
         variant: 'text.display.h1',
-        fontSize: [9, 10],
+        fontSize: [8, 9, 10],
         fontWeight: 600,
         lineHeight: '65px'
       },
       h3: {
         variant: 'text.display.h1',
-        fontSize: [8, 9],
+        fontSize: [7, 8, 9],
         lineHeight: '44px'
       },
       h4: {
         variant: 'text.display.h1',
-        fontSize: [7, 8],
+        fontSize: [6, 7, 8],
         lineHeight: '40px'
       },
       h5: {
@@ -120,7 +121,7 @@ export const setyTheme = {
     body: {
       summary: {
         variant: 'text.base',
-        fontSize: [5, 6],
+        fontSize: [4, 5, 6],
         lineHeight: '1.4',
         letterSpacing: '-0.02em'
       },

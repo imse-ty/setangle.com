@@ -113,7 +113,10 @@ export default function ProjectCredits({ text, names }) {
           <Heading variant='display.h2' sx={{ color: 'surface.thin' }}>
             Credits
           </Heading>
-          <Text variant='body.summary' sx={{ flex: 1, color: 'surface.thin' }}>
+          <Text
+            variant='body.summary'
+            sx={{ flex: 1, color: 'surface.extralight' }}
+          >
             {text}
           </Text>
         </Flex>

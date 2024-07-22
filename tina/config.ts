@@ -63,6 +63,40 @@ export default defineConfig({
         ]
       },
       {
+        name: 'featuredWork',
+        label: 'Featured work',
+        path: 'content/featured-work',
+        format: 'json',
+        ui: {
+          global: true,
+          allowedActions: {
+            create: false,
+            delete: false
+          }
+        },
+        fields: [
+          {
+            type: 'object',
+            name: 'projects',
+            label: 'Projects',
+            list: true,
+            ui: {
+              itemProps: (item) => {
+                return { label: item?.project };
+              }
+            },
+            fields: [
+              {
+                name: 'project',
+                label: 'Project',
+                type: 'reference',
+                collections: ['project']
+              }
+            ]
+          }
+        ]
+      },
+      {
         name: 'project',
         label: 'Projects',
         path: 'content/projects',
@@ -79,6 +113,12 @@ export default defineConfig({
             type: 'string',
             name: 'subtitle',
             label: 'Subtitle'
+          },
+          {
+            type: 'string',
+            name: 'tags',
+            label: 'Tags',
+            list: true
           },
           {
             type: 'string',

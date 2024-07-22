@@ -2,36 +2,23 @@
 //@ts-nocheck
 
 import Layout from '@/components/layout';
-import OverviewHero from '@/components/agency/overview-hero';
-import SiteFooter from '@/components/site-footer';
-import SiteHeader from '@/components/site-header';
-import VideoSection from '@/components/video-section';
-import React from 'react';
 import { useState } from 'react';
 import { Container } from 'krado-react';
-import ClientLogos from '@/components/agency/logo-carousel';
-import LogoCarousel from '@/components/agency/logo-carousel';
-import WhatWeDoSection from '@/components/agency/what-we-do';
-import WorkSection from '@/components/agency/work-section';
+import LogoCarousel from '@/components/logo-carousel';
 import ContactSection from '@/components/contact/contact-section';
-import AboutSection from '@/components/agency/about-section';
-import ReelSection from '@/components/agency/reel-section';
-import Head from 'next/head';
+import ReelSection from '@/components/reel-section';
 import FaqHero from '@/components/faq/faq-hero';
 import NewsletterSignup from '@/components/faq/newsletter-signup';
 import { useColorMode } from 'theme-ui';
-import FaqAbout from '@/components/faq/faq-about';
 import FaqProcess from '@/components/faq/faq-process';
 import FaqMotionSystem from '@/components/faq/faq-motion-system';
 import FaqWhatWeDo from '@/components/faq/faq-what-we-do';
-import FaqPricing from '@/components/faq/faq-top-pricing';
 import FaqNewsletter from '@/components/faq/faq-newsletter-signup';
-import FaqBookCall from '@/components/faq/faq-book-call';
 import FaqOurClients from '@/components/faq/faq-our-clients';
-import FaqTopPricing from '@/components/faq/faq-top-pricing';
-import FaqMidPricing from '@/components/faq/faq-mid-pricing';
+import FaqWorkSection from '@/components/faq/faq-work-section';
 import Faq250Pricing from '@/components/faq/faq-250-pricing';
 import { NextSeo } from 'next-seo';
+import DustParticles from '@/components/dust-particles';
 
 export default function CalvinCrawfordFaq() {
   const [isVideoActive, setIsVideoActive] = useState(false);
@@ -40,6 +27,7 @@ export default function CalvinCrawfordFaq() {
 
   return (
     <Layout isHiddenByDefault hideTopNav showFaqMenu showPricing>
+      <DustParticles />
       <FaqHero name=' Lucas and Amber team' />
       <NextSeo
         title={`Hey Lucas and Amber team! Learn more about Angle`}
@@ -59,7 +47,7 @@ export default function CalvinCrawfordFaq() {
       </Container>
       <LogoCarousel isLight={false} />
       <FaqMotionSystem />
-      <WorkSection />
+      <FaqWorkSection />
       <FaqWhatWeDo />
       <FaqOurClients />
       <FaqProcess />

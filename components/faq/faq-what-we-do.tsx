@@ -5,7 +5,7 @@ import { Container, Flex, Button, Grid } from 'krado-react';
 import Text from '../fixed-krado-components/Text';
 import Heading from '../fixed-krado-components/Heading';
 import ScaleInEffect from '../scale-in-effect';
-import { OverviewCard } from '../agency/overview-card';
+import { OverviewCard } from '../overview-card';
 import {
   MdLightbulb,
   MdMovie,
@@ -36,14 +36,14 @@ export default function FaqWhatWeDo() {
         }}
       >
         <Flex sx={{ maxWidth: '1000px', gap: 3, flexDirection: 'column' }}>
-          <Text variant='body.pretext'>Services</Text>
+          <Text variant='body.pretext' sx={{ color: 'accent.bold' }}>
+            Services
+          </Text>
 
           <Heading>What we do</Heading>
-          <Text sx={{}}>
-            We&apos;re a micro-agency capable of handling conception,
-            scriptwriting, storyboarding, animation, VO, music, sound design,
-            web design, and web development. However, we&apos;re always open to
-            simple animation/development work or collaborating with other teams.
+          <Text sx={{ color: 'text.secondary' }}>
+            Crafting interactive visuals for marketing campaigns, advertising,
+            and events.
           </Text>
         </Flex>
         <Grid sx={{ gap: 3, gridTemplateColumns: ['1fr', '1fr 1fr 1fr'] }}>

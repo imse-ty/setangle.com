@@ -4,7 +4,7 @@
 import { Container, Flex, Button } from 'krado-react';
 import Text from '../fixed-krado-components/Text';
 import Heading from '../fixed-krado-components/Heading';
-import { OverviewCard } from '../agency/overview-card';
+import { OverviewCard } from '../overview-card';
 import ScaleInEffect from '../scale-in-effect';
 import { OfferCard } from './subscription-offer-card';
 import { MdLightbulb, MdStar } from 'react-icons/md';
@@ -15,7 +15,7 @@ export default function SubscriptionPricing() {
   return (
     <ScaleInEffect>
       <Container
-        id="pricing"
+        id='pricing'
         sx={{
           display: 'flex',
           gap: 5,
@@ -37,9 +37,9 @@ export default function SubscriptionPricing() {
             maxWidth: '1000px'
           }}
         >
-          <Text variant="body.pretext">Pricing</Text>
-          <Heading as="h2">Transparent pricing with exceptional value</Heading>
-          <Text as="p" variant="body.summary">
+          <Text variant='body.pretext'>Pricing</Text>
+          <Heading as='h2'>Transparent pricing with exceptional value</Heading>
+          <Text as='p' variant='body.summary'>
             Choose the plan that suits you best. Flexible monthly rates with the
             option to scale up as you grow. No surprises, just great design.
           </Text>
@@ -50,11 +50,11 @@ export default function SubscriptionPricing() {
               valueIcon={
                 <MdStar sx={{ color: 'secondary.light', fontSize: 5 }} />
               }
-              title="The Subscription"
-              text="Continuous creative motion design support, ensuring content remains fresh and engaging."
-              price="$5k"
-              priceSubtitle="500 credits"
-              recurring="/mo"
+              title='The Subscription'
+              text='Continuous creative motion design support, ensuring content remains fresh and engaging.'
+              price='$5k'
+              priceSubtitle='500 credits'
+              recurring='/mo'
               bulletPoints={[
                 {
                   title: 'Small tasks (unlimited revisions)',
@@ -98,12 +98,12 @@ export default function SubscriptionPricing() {
             /> */}
           </Flex>
           <MiniOfferCard
-            value="Additional work"
+            value='Additional work'
             valueIcon={<MdStar sx={{ fontSize: 5 }} />}
-            title="Additional work"
-            subtitle="If you need more, simply purchase additional work in increments as&nbsp;credits."
-            price="$2.5k increments"
-            priceSubtitle="250 credits"
+            title='Additional work'
+            subtitle='If you need more, simply purchase additional work in increments as&nbsp;credits.'
+            price='$2.5k increments'
+            priceSubtitle='250 credits'
           />
         </Flex>
       </Container>

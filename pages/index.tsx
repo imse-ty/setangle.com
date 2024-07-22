@@ -2,41 +2,37 @@
 //@ts-nocheck
 
 import Layout from '@/components/layout';
-import OverviewHero from '@/components/agency/overview-hero';
-import SiteFooter from '@/components/site-footer';
-import SiteHeader from '@/components/site-header';
-import VideoSection from '@/components/video-section';
-import React from 'react';
+import OverviewHero from '@/components/overview-hero';
 import { useState } from 'react';
 import { Container } from 'krado-react';
-import ClientLogos from '@/components/agency/logo-carousel';
-import LogoCarousel from '@/components/agency/logo-carousel';
-import WhatWeDoSection from '@/components/agency/what-we-do';
-import WorkSection from '@/components/agency/work-section';
+import LogoCarousel from '@/components/logo-carousel';
 import ContactSection from '@/components/contact/contact-section';
-import AboutSection from '@/components/agency/about-section';
-import ReelSection from '@/components/agency/reel-section';
-import Head from 'next/head';
-import FaqHero from '@/components/faq/faq-hero';
-import NewsletterSignup from '@/components/faq/newsletter-signup';
+import ReelSection from '@/components/reel-section';
 import { useColorMode } from 'theme-ui';
-import FaqAbout from '@/components/faq/faq-about';
 import FaqProcess from '@/components/faq/faq-process';
-import FaqMotionSystem from '@/components/faq/faq-motion-system';
 import FaqWhatWeDo from '@/components/faq/faq-what-we-do';
-import FaqPricing from '@/components/faq/faq-top-pricing';
-import FaqNewsletter from '@/components/faq/faq-newsletter-signup';
-import FaqBookCall from '@/components/faq/faq-book-call';
 import FaqOurClients from '@/components/faq/faq-our-clients';
 import HomeWorkSection from '@/components/home/home-work-section';
+import { useTina } from 'tinacms/dist/react';
+import client from '@/tina/__generated__/client';
+import DustParticles from '../components/dust-particles';
 
-export default function Faq() {
+export default function Home(props) {
   const [isVideoActive, setIsVideoActive] = useState(false);
   const [colorMode, setColorMode] = useColorMode();
   setColorMode('dark');
 
+  const { data } = useTina({
+    query: props.query,
+    variables: props.variables,
+    data: props.data
+  });
+
+  const projectsList = data.featuredWork.projects;
+
   return (
     <Layout isHiddenByDefault hideTopNav>
+      <DustParticles />
       <OverviewHero />
       <Container sx={{ marginBottom: 6 }}>
         <ReelSection
@@ -51,7 +47,7 @@ export default function Faq() {
         />
       </Container>
       <LogoCarousel isLight={false} />
-      <HomeWorkSection />
+      <HomeWorkSection projects={projectsList} />
       <FaqWhatWeDo />
       <FaqOurClients />
       <FaqProcess />
@@ -59,3 +55,17 @@ export default function Faq() {
     </Layout>
   );
 }
+
+export const getStaticProps = async () => {
+  const { data, query, variables } = await client.queries.featuredWork({
+    relativePath: 'featured-work.json'
+  });
+
+  return {
+    props: {
+      data,
+      query,
+      variables
+    }
+  };
+};

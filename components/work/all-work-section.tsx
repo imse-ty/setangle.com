@@ -4,7 +4,7 @@
 import Heading from '../fixed-krado-components/Heading';
 import Text from '../fixed-krado-components/Text';
 import { Box, Container } from 'krado-react';
-import ProjectCard from '../agency/project-card';
+import ProjectCard from '../project-card';
 import { motion, useScroll, useSpring, useTransform } from 'framer-motion';
 import { useRef } from 'react';
 
@@ -21,6 +21,7 @@ function ProjectsSection({ projects }) {
       {projects.map(({ project }) => (
         <ProjectCard
           color={project.pageColor}
+          tags={project.tags}
           title={project.title}
           subtitle={project.subtitle}
           href={`/work/${project._sys.filename}`}
@@ -32,7 +33,7 @@ function ProjectsSection({ projects }) {
   );
 }
 
-export default function WorkWorkSection({
+export default function AllWorkSection({
   projects,
   onViewportEnter,
   onViewportLeave
@@ -68,7 +69,11 @@ export default function WorkWorkSection({
               height: '700vh'
             }}
           />
-          <Container sx={{ textAlign: 'center' }}>
+          <Container
+            sx={{
+              textAlign: 'center'
+            }}
+          >
             <Heading
               as={motion.h2}
               variant='display.h1'

@@ -5,7 +5,6 @@ import { Flex, Button } from 'krado-react';
 import Link from 'next/link';
 import { motion } from 'framer-motion';
 import Text from './fixed-krado-components/Text';
-import AvailabilityIndicator from './status-indicator';
 
 function MenuItem({ children, active, href }) {
   return (
@@ -17,7 +16,7 @@ function MenuItem({ children, active, href }) {
         justifyContent: 'center',
         alignItems: 'center',
         marginLeft: 0,
-        color: active ? 'action.active' : 'text.primary',
+        color: active ? 'action.active' : 'text.secondary',
         padding: 2,
         fontWeight: 600,
         borderRadius: 1,
@@ -96,7 +95,6 @@ export default function Navigation({
             <MenuItem href='#clientele'>Clientele</MenuItem>
             <MenuItem href='#process'>Process</MenuItem>
             {showPricing && <MenuItem href='#pricing'>Pricing</MenuItem>}
-            <MenuItem href='#newsletter'>Newsletter</MenuItem>
           </>
         ) : (
           <>
@@ -104,19 +102,9 @@ export default function Navigation({
             <MenuItem href='/#reel'>Reel</MenuItem>
             <MenuItem href='/#work'>Work</MenuItem>
             <MenuItem href='/#services'>Services</MenuItem>
-            <MenuItem href='/#clientele'>Clientele</MenuItem>
             <MenuItem href='/#process'>Process</MenuItem>
-            <Flex
-              sx={{
-                display: ['none', null, 'flex'],
-                marginLeft: 2,
-                gap: '2px',
-                alignItems: 'center'
-              }}
-            >
-              <AvailabilityIndicator sx={{ marginBottom: '3px' }} />
-              <MenuItem href='/work-with-us'>Work with us</MenuItem>
-            </Flex>
+            <MenuItem href='/#contact'>Contact</MenuItem>{' '}
+            <MenuItem href='/work-with-us'>Join our network</MenuItem>
           </>
         )}
 

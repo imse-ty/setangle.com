@@ -5,7 +5,7 @@ import { Container, Flex, Grid } from 'krado-react';
 import Text from '../fixed-krado-components/Text';
 import Heading from '../fixed-krado-components/Heading';
 import ScaleInEffect from '../scale-in-effect';
-import { OverviewCard } from '../agency/overview-card';
+import { OverviewCard } from '../overview-card';
 import {
   MdCampaign,
   MdLightbulb,

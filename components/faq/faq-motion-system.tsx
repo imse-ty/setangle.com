@@ -4,7 +4,7 @@
 import { Container, Flex, Button } from 'krado-react';
 import Text from '../fixed-krado-components/Text';
 import Heading from '../fixed-krado-components/Heading';
-import { OverviewCard } from '../agency/overview-card';
+import { OverviewCard } from '../overview-card';
 import ScaleInEffect from '../scale-in-effect';
 import {
   MdBook,
@@ -64,20 +64,32 @@ export default function FaqMotionSystem() {
               gap: 3
             }}
           >
-            <Text variant='body.pretext'>Motion design approach</Text>
+            <Text variant='body.pretext' sx={{ color: 'accent.bold' }}>
+              Motion design approach
+            </Text>
             <Heading as='h2'>From subtle to striking</Heading>
-            <Text as='p' variant='body.summary' sx={{ maxWidth: '1000px' }}>
+            <Text
+              as='p'
+              variant='body.summary'
+              sx={{ color: 'text.secondary', maxWidth: '1000px' }}
+            >
               Watch this series of examples for a{' '}
               <strong>fictional healthcare company</strong> called &quot;Set
               Care&quot; that showcases our Class A, B, and C services. Each
               class tailored to match your narrative needs and&nbsp;budget.
             </Text>
           </Flex>
-          <Flex sx={{ gap: 3, flexDirection: ['column', 'row'] }}>
+          <Flex
+            sx={{
+              gap: 3,
+              flexDirection: ['column', null, null, 'row'],
+              minHeight: '400px'
+            }}
+          >
             <OverviewCard
               icon={<MdSentimentVerySatisfied />}
               heading='Class A motion'
-              text='High-energy, abstract visuals for an engaging, fast-paced experience where motion takes center stage over information, ideal for captivating content and capturing the attention of the viewer'
+              text="High-energy, abstract visuals create an engaging, fast-paced experience where motion takes center stage, ideal for captivating content and capturing the viewer's attention."
               buttonLabel='Watch example'
               buttonOnClick={() => setIsClassAVideoOpen(true)}
               isHeadingSmall
@@ -85,7 +97,7 @@ export default function FaqMotionSystem() {
             <OverviewCard
               icon={<MdMovie />}
               heading='Class B motion'
-              text='Mixes informative content with eye-catching visuals at a slower pace than Type A, emphasizing detailed storytelling suited for projects needing both information delivery and visual appeal. '
+              text='Mixes informative content with appealing visuals at a slower pace than Type A, emphasizing detailed storytelling suitable for projects requiring both information delivery and visual appeal.'
               buttonLabel='Watch example'
               buttonOnClick={() => setIsClassBVideoOpen(true)}
               isHeadingSmall

@@ -4,14 +4,14 @@
 import Heading from '../fixed-krado-components/Heading';
 import Text from '../fixed-krado-components/Text';
 import { Box, Container, Button } from 'krado-react';
-import ProjectCard from './project-card';
+import ProjectCard from '../project-card';
 import { motion, useScroll, useSpring, useTransform } from 'framer-motion';
 import { useRef } from 'react';
 import { MdLightbulb, MdMood, MdMovie, MdNorthEast } from 'react-icons/md';
 import ScaleInEffect from '../scale-in-effect';
 import Link from 'next/link';
 
-function ProjectsSection() {
+function FaqWorkSection() {
   return (
     <Container
       sx={{
@@ -88,7 +88,9 @@ export default function WorkSection({ onViewportEnter, onViewportLeave }) {
           marginBottom: 6
         }}
       >
-        <Text variant='body.pretext'>Examples</Text>
+        <Text variant='body.pretext' sx={{ color: 'accent.bold' }}>
+          Examples
+        </Text>
         <Heading
           as={motion.h2}
           sx={{ marginTop: 3, marginBottom: 2 }}
@@ -97,11 +99,11 @@ export default function WorkSection({ onViewportEnter, onViewportLeave }) {
           Selected work
         </Heading>
 
-        <Text as='p'>
+        <Text as='p' sx={{ color: 'text.secondary' }}>
           Example work ranging from event openers, tech product ads, social
           media graphics, and non-profit organizations.
         </Text>
-        <ProjectsSection />
+        <FaqWorkSection />
         <Link
           href='/work'
           sx={{ textDecoration: 'none' }}

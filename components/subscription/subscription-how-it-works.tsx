@@ -4,7 +4,7 @@
 import { Container, Flex, Button } from 'krado-react';
 import Text from '../fixed-krado-components/Text';
 import Heading from '../fixed-krado-components/Heading';
-import { OverviewCard } from '../agency/overview-card';
+import { OverviewCard } from '../overview-card';
 import ScaleInEffect from '../scale-in-effect';
 import {
   MdArrowRight,
