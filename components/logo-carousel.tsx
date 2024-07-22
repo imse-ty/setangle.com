@@ -33,6 +33,8 @@ export default function LogoCarousel({ isLight }) {
   return (
     <Container
       sx={{
+        position: 'relative',
+        zIndex: -1,
         display: 'flex',
         flexDirection: 'column',
         gap: 5,

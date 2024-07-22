@@ -46,7 +46,7 @@ export default function Home(props) {
           }}
         />
       </Container>
-      <LogoCarousel />
+      <LogoCarousel isLight={false} />
       <HomeWorkSection projects={projectsList} />
       <FaqWhatWeDo />
       <FaqOurClients />
