@@ -73,6 +73,7 @@ function IdleVideo({ src, poster }) {
       autoPlay
       loop
       muted
+      playsInline
       poster={poster}
       layoutId='video'
       sx={{

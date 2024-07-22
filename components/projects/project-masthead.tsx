@@ -14,7 +14,7 @@ function ScrollButton() {
   return (
     <Box
       as={motion.a}
-      href="#info"
+      href='#info'
       whileHover={{
         backgroundColor: getColor(setyTheme, 'surface.thin')
       }}
@@ -106,8 +106,8 @@ export default function ProjectMasthead({
                   }}
                 >
                   <Heading
-                    as="h1"
-                    variant="display.h1"
+                    as='h1'
+                    variant='display.h1'
                     sx={{
                       color: 'secondary.contrast',
                       marginBottom: [1, 2]
@@ -116,8 +116,8 @@ export default function ProjectMasthead({
                     {title}
                   </Heading>
                   <Text
-                    as="p"
-                    variant="body.summary"
+                    as='p'
+                    variant='body.summary'
                     sx={{ color: 'secondary.contrast', maxWidth: '900px' }}
                   >
                     {subtitle}
@@ -141,9 +141,9 @@ export default function ProjectMasthead({
                     >
                       Watch video
                     </Button>
-                    <a href="#info">
+                    <a href='#info'>
                       <Button
-                        variant="ghost"
+                        variant='ghost'
                         sx={{
                           color: 'secondary.contrast',
                           borderColor: 'secondary.contrast'
@@ -154,7 +154,7 @@ export default function ProjectMasthead({
                     </a>
                   </Flex>
                 ) : (
-                  <a href="#info">
+                  <a href='#info'>
                     <Button
                       sx={{
                         color: 'secondary.bold',
@@ -176,7 +176,10 @@ export default function ProjectMasthead({
                   position: 'absolute',
                   width: '100%',
                   height: '100%',
-                  background: `linear-gradient(180deg, rgba(217, 217, 217, 0.00) 50%, ${themeColor} 100%)`,
+                  background: [
+                    `linear-gradient(180deg, rgba(217, 217, 217, 0.00) 20%, ${themeColor} 65%)`,
+                    `linear-gradient(180deg, rgba(217, 217, 217, 0.00) 50%, ${themeColor} 100%)`
+                  ],
                   pointerEvents: 'none'
                 }}
               />

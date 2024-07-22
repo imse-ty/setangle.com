@@ -102,7 +102,7 @@ export const setyTheme = {
       },
       h4: {
         variant: 'text.display.h1',
-        fontSize: [7, 8],
+        fontSize: [6, 7, 8],
         lineHeight: '40px'
       },
       h5: {
