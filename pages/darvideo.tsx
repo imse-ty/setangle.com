@@ -26,35 +26,33 @@ export default function CalvinCrawfordFaq() {
   setColorMode('dark');
 
   return (
-    <>
+    <Layout isHiddenByDefault hideTopNav showFaqMenu showPricing>
       <DustParticles />
-      <Layout isHiddenByDefault hideTopNav showFaqMenu showPricing>
-        <FaqHero name=' Borys and Darvideo team' />
-        <NextSeo
-          title={`Hey Borys and Darvideo team! Learn more about Angle`}
-          description="We're a micro-agency making soulful brand experiences capable of handling conception, scriptwriting, storyboarding, animation, VO, music, web development, and sound design."
-        />
-        <Container sx={{ marginBottom: 6 }}>
-          <ReelSection
-            isVideoActive={isVideoActive}
-            setIsVideoActive={() => {
-              if (typeof umami !== 'undefined' && !isVideoActive) {
-                umami.track('reel-section-play');
-              }
+      <FaqHero name=' Borys and Darvideo team' />
+      <NextSeo
+        title={`Hey Borys and Darvideo team! Learn more about Angle`}
+        description="We're a micro-agency making soulful brand experiences capable of handling conception, scriptwriting, storyboarding, animation, VO, music, web development, and sound design."
+      />
+      <Container sx={{ marginBottom: 6 }}>
+        <ReelSection
+          isVideoActive={isVideoActive}
+          setIsVideoActive={() => {
+            if (typeof umami !== 'undefined' && !isVideoActive) {
+              umami.track('reel-section-play');
+            }
 
-              setIsVideoActive(!isVideoActive);
-            }}
-          />
-        </Container>
-        <LogoCarousel isLight={false} />
-        <FaqMotionSystem />
-        <FaqWorkSection />
-        <FaqWhatWeDo />
-        <FaqOurClients />
-        <FaqProcess />
-        <Faq250Pricing />
-        <ContactSection useTransparentBackground />
-      </Layout>
-    </>
+            setIsVideoActive(!isVideoActive);
+          }}
+        />
+      </Container>
+      <LogoCarousel isLight={false} />
+      <FaqMotionSystem />
+      <FaqWorkSection />
+      <FaqWhatWeDo />
+      <FaqOurClients />
+      <FaqProcess />
+      <Faq250Pricing />
+      <ContactSection useTransparentBackground />
+    </Layout>
   );
 }

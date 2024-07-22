@@ -104,7 +104,12 @@ const DustParticles = () => {
   return (
     <div
       ref={mountRef}
-      style={{ position: 'absolute', top: 0, left: 0, zIndex: -1 }}
+      style={{
+        position: 'absolute',
+        top: 0,
+        left: 0,
+        zIndex: -1
+      }}
     />
   );
 };

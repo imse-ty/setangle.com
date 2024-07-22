@@ -24,31 +24,29 @@ export default function Faq() {
   setColorMode('dark');
 
   return (
-    <>
+    <Layout isHiddenByDefault hideTopNav showFaqMenu showPricing>
       <DustParticles />
-      <Layout isHiddenByDefault hideTopNav showFaqMenu showPricing>
-        <FaqHero />
-        <Container sx={{ marginBottom: 6 }}>
-          <ReelSection
-            isVideoActive={isVideoActive}
-            setIsVideoActive={() => {
-              if (typeof umami !== 'undefined' && !isVideoActive) {
-                umami.track('reel-section-play');
-              }
+      <FaqHero />
+      <Container sx={{ marginBottom: 6 }}>
+        <ReelSection
+          isVideoActive={isVideoActive}
+          setIsVideoActive={() => {
+            if (typeof umami !== 'undefined' && !isVideoActive) {
+              umami.track('reel-section-play');
+            }
 
-              setIsVideoActive(!isVideoActive);
-            }}
-          />
-        </Container>
-        <LogoCarousel isLight={false} />
-        <FaqMotionSystem />
-        <FaqWorkSection />
-        <FaqWhatWeDo />
-        <FaqOurClients />
-        <FaqProcess />
-        <Faq250Pricing />
-        <ContactSection useTransparentBackground />
-      </Layout>
-    </>
+            setIsVideoActive(!isVideoActive);
+          }}
+        />
+      </Container>
+      <LogoCarousel isLight={false} />
+      <FaqMotionSystem />
+      <FaqWorkSection />
+      <FaqWhatWeDo />
+      <FaqOurClients />
+      <FaqProcess />
+      <Faq250Pricing />
+      <ContactSection useTransparentBackground />
+    </Layout>
   );
 }

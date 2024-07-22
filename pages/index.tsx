@@ -31,30 +31,28 @@ export default function Home(props) {
   const projectsList = data.featuredWork.projects;
 
   return (
-    <>
+    <Layout isHiddenByDefault hideTopNav>
       <DustParticles />
-      <Layout isHiddenByDefault hideTopNav>
-        <OverviewHero />
-        <Container sx={{ marginBottom: 6 }}>
-          <ReelSection
-            isVideoActive={isVideoActive}
-            setIsVideoActive={() => {
-              if (typeof umami !== 'undefined' && !isVideoActive) {
-                umami.track('reel-section-play');
-              }
+      <OverviewHero />
+      <Container sx={{ marginBottom: 6 }}>
+        <ReelSection
+          isVideoActive={isVideoActive}
+          setIsVideoActive={() => {
+            if (typeof umami !== 'undefined' && !isVideoActive) {
+              umami.track('reel-section-play');
+            }
 
-              setIsVideoActive(!isVideoActive);
-            }}
-          />
-        </Container>
-        <LogoCarousel />
-        <HomeWorkSection projects={projectsList} />
-        <FaqWhatWeDo />
-        <FaqOurClients />
-        <FaqProcess />
-        <ContactSection useTransparentBackground />
-      </Layout>
-    </>
+            setIsVideoActive(!isVideoActive);
+          }}
+        />
+      </Container>
+      <LogoCarousel />
+      <HomeWorkSection projects={projectsList} />
+      <FaqWhatWeDo />
+      <FaqOurClients />
+      <FaqProcess />
+      <ContactSection useTransparentBackground />
+    </Layout>
   );
 }
 

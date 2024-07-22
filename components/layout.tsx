@@ -36,7 +36,7 @@ export default function Layout({
   });
 
   return (
-    <Box as='main' sx={{ position: 'relative' }}>
+    <Box as='main' sx={{ overflow: 'hidden', position: 'relative' }}>
       <Toolbar
         showFaqMenu={showFaqMenu}
         showPricing={showPricing}
