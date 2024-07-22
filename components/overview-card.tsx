@@ -65,6 +65,7 @@ export function OverviewCard({
         sx={{
           position: 'relative',
           flexDirection: 'column',
+
           gap: 2
         }}
       >
@@ -114,12 +115,17 @@ export function OverviewCard({
             {text}
           </Text>
         )}
+        {buttonLabel && (
+          <Button
+            size='small'
+            marginTop={4}
+            sx={{ maxWidth: '40%' }}
+            onClick={buttonOnClick}
+          >
+            {buttonLabel}
+          </Button>
+        )}
       </Flex>
-      {buttonLabel && (
-        <Button size='small' marginTop='auto' onClick={buttonOnClick}>
-          {buttonLabel}
-        </Button>
-      )}
     </Card>
   );
 }

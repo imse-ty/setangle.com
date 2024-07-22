@@ -79,11 +79,17 @@ export default function FaqMotionSystem() {
               class tailored to match your narrative needs and&nbsp;budget.
             </Text>
           </Flex>
-          <Flex sx={{ gap: 3, flexDirection: ['column', 'row'] }}>
+          <Flex
+            sx={{
+              gap: 3,
+              flexDirection: ['column', null, null, 'row'],
+              minHeight: '400px'
+            }}
+          >
             <OverviewCard
               icon={<MdSentimentVerySatisfied />}
               heading='Class A motion'
-              text='High-energy, abstract visuals for an engaging, fast-paced experience where motion takes center stage over information, ideal for captivating content and capturing the attention of the viewer'
+              text="High-energy, abstract visuals create an engaging, fast-paced experience where motion takes center stage, ideal for captivating content and capturing the viewer's attention."
               buttonLabel='Watch example'
               buttonOnClick={() => setIsClassAVideoOpen(true)}
               isHeadingSmall
@@ -91,7 +97,7 @@ export default function FaqMotionSystem() {
             <OverviewCard
               icon={<MdMovie />}
               heading='Class B motion'
-              text='Mixes informative content with eye-catching visuals at a slower pace than Type A, emphasizing detailed storytelling suited for projects needing both information delivery and visual appeal. '
+              text='Mixes informative content with appealing visuals at a slower pace than Type A, emphasizing detailed storytelling suitable for projects requiring both information delivery and visual appeal.'
               buttonLabel='Watch example'
               buttonOnClick={() => setIsClassBVideoOpen(true)}
               isHeadingSmall

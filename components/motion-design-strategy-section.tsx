@@ -35,7 +35,7 @@ export default function MotionDesignStrategySection() {
           <OverviewCard
             icon={<MdSearch />}
             heading='Class A motion'
-            text='High-energy, abstract visuals for an engaging, fast-paced experience where motion takes center stage over information, ideal for captivating content and capturing the attention of the viewer'
+            text="High-energy, abstract visuals create an engaging, fast-paced experience where motion takes center stage, ideal for captivating content and capturing the viewer's attention."
           />
           <OverviewCard
             icon={<MdFlag />}
