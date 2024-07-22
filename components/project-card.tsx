@@ -54,16 +54,18 @@ export default function ProjectCard({
     <Link href={href} sx={{ textDecoration: 'none' }}>
       <ThemeUIProvider theme={{ colors: { ...pageColor } }}>
         <Flex
+          as={motion.div}
+          whileHover='active'
           sx={{
             position: 'relative',
             aspectRatio: '4/2.5',
             overflow: 'hidden',
             flexDirection: 'column',
             borderRadius: 3,
-            textAlign: 'center',
+            textAlign: 'left',
             transition: 'transform 325ms ease, box-shadow 325ms ease',
             '&:hover': {
-              transform: 'scale(1.02)',
+              transform: 'scale(1.03)',
               boxShadow: 'soft.highMiddle'
             }
           }}
@@ -85,7 +87,6 @@ export default function ProjectCard({
               ))}
           </Flex>
           <Flex
-            as={motion.div}
             sx={{
               flexDirection: 'column',
               gap: [2, null, null, 3],
@@ -95,25 +96,29 @@ export default function ProjectCard({
               bottom: 0,
               zIndex: 1,
               width: '100%',
-              alignItems: 'center'
+              alignItems: 'left'
             }}
           >
             <Text
-              as='h3'
+              as={motion.h3}
+              variants={{ active: { scale: 0.95 } }}
+              transition={{ type: 'spring', bounce: 0.5 }}
+              variant='display.h4'
               sx={{
                 fontWeight: 600,
-                fontSize: [6, 7, null, null, 9],
-                color: 'secondary.contrast'
+                color: 'accent.light'
               }}
             >
               {title}
             </Text>
             {subtitle && (
               <Text
-                as='p'
+                as={motion.p}
+                variants={{ active: { scale: 0.95 } }}
+                transition={{ type: 'spring', bounce: 0.4 }}
                 variant='body.smallParagraph'
                 sx={{
-                  color: 'secondary.regular',
+                  color: 'text.secondary',
                   display: ['none', null, null, 'block']
                 }}
               >
@@ -124,8 +129,9 @@ export default function ProjectCard({
           <Box
             as={motion.div}
             initial={{ opacity: 0 }}
-            animate={{ opacity: 1 }}
+            animate={{ opacity: 0.8 }}
             exit={{ opacity: 0 }}
+            variants={{ active: { opacity: 1 } }}
             sx={{
               position: 'absolute',
               width: '100%',
@@ -133,7 +139,7 @@ export default function ProjectCard({
               background: `linear-gradient(180deg, rgba(217, 217, 217, 0.00) 30%, ${getColor(
                 { colors: { ...pageColor } },
                 'secondary.bold'
-              )} 95%)`,
+              )} 90%)`,
               pointerEvents: 'none'
             }}
           />

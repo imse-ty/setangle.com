@@ -21,6 +21,7 @@ function ProjectsSection({ projects }) {
       {projects.map(({ project }) => (
         <ProjectCard
           color={project.pageColor}
+          tags={project.tags}
           title={project.title}
           subtitle={project.subtitle}
           href={`/work/${project._sys.filename}`}

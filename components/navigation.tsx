@@ -104,7 +104,7 @@ export default function Navigation({
             <MenuItem href='/#services'>Services</MenuItem>
             <MenuItem href='/#process'>Process</MenuItem>
             <MenuItem href='/#contact'>Contact</MenuItem>{' '}
-            <MenuItem href='/work-with-us'>Work with us</MenuItem>
+            <MenuItem href='/work-with-us'>Join our network</MenuItem>
           </>
         )}
 
