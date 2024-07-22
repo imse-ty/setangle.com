@@ -5,7 +5,7 @@ import Layout from '@/components/layout';
 import { useState } from 'react';
 import { Container } from 'krado-react';
 import LogoCarousel from '@/components/logo-carousel';
-import WorkSection from '@/components/work-section';
+import FaqWorkSection from '@/components/faq/faq-work-section';
 import ContactSection from '@/components/contact/contact-section';
 import ReelSection from '@/components/reel-section';
 import FaqHero from '@/components/faq/faq-hero';
@@ -16,6 +16,7 @@ import FaqWhatWeDo from '@/components/faq/faq-what-we-do';
 import FaqOurClients from '@/components/faq/faq-our-clients';
 import FaqTopPricing from '@/components/faq/faq-top-pricing';
 import DustParticles from '@/components/dust-particles';
+import Faq250Pricing from '@/components/faq/faq-250-pricing';
 
 export default function Faq() {
   const [isVideoActive, setIsVideoActive] = useState(false);
@@ -41,11 +42,11 @@ export default function Faq() {
         </Container>
         <LogoCarousel isLight={false} />
         <FaqMotionSystem />
-        <WorkSection />
+        <FaqWorkSection />
         <FaqWhatWeDo />
         <FaqOurClients />
         <FaqProcess />
-        <FaqTopPricing />
+        <Faq250Pricing />
         <ContactSection useTransparentBackground />
       </Layout>
     </>
