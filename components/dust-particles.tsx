@@ -46,7 +46,7 @@ const DustParticles = () => {
 
     const particleMaterial = new THREE.PointsMaterial({
       map: glowTexture,
-      size: 0.01,
+      size: 0.02,
       transparent: true,
       blending: THREE.AdditiveBlending,
       depthTest: false
