@@ -33,6 +33,7 @@ export default function Home(props) {
   return (
     <>
       <DustParticles />
+
       <Layout isHiddenByDefault hideTopNav>
         <OverviewHero />
         <Container sx={{ marginBottom: 6 }}>
