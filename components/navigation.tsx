@@ -9,8 +9,8 @@ import Text from './fixed-krado-components/Text';
 function MenuItem({ children, active, href }) {
   return (
     <Text
-      as='li'
-      variant='body.footnote'
+      as="li"
+      variant="body.footnote"
       sx={{
         display: ['none', null, 'flex'],
         justifyContent: 'center',
@@ -62,10 +62,10 @@ export default function Navigation({
     <Flex
       as={motion.nav}
       variants={variants}
-      initial='hidden'
+      initial="hidden"
       animate={isHidden ? 'hidden' : 'show'}
-      exit='hidden'
-      key='navigation'
+      exit="hidden"
+      key="navigation"
       sx={{
         zIndex: 3,
         color: 'text.primary',
@@ -74,7 +74,7 @@ export default function Navigation({
       }}
     >
       <Flex
-        as='ul'
+        as="ul"
         sx={{
           justifyContent: 'space-between',
 
@@ -88,47 +88,47 @@ export default function Navigation({
 
         {showFaqMenu ? (
           <>
-            <MenuItem href='#reel'>Reel</MenuItem>
-            <MenuItem href='#approach'>Approach</MenuItem>
-            <MenuItem href='#work'>Work</MenuItem>
-            <MenuItem href='#services'>Services</MenuItem>
-            <MenuItem href='#clientele'>Clientele</MenuItem>
-            <MenuItem href='#process'>Process</MenuItem>
-            {showPricing && <MenuItem href='#pricing'>Pricing</MenuItem>}
+            <MenuItem href="#reel">Reel</MenuItem>
+            <MenuItem href="#approach">Approach</MenuItem>
+            <MenuItem href="#work">Work</MenuItem>
+            <MenuItem href="#services">Services</MenuItem>
+            <MenuItem href="#clientele">Clientele</MenuItem>
+            <MenuItem href="#process">Process</MenuItem>
+            {showPricing && <MenuItem href="#pricing">Pricing</MenuItem>}
           </>
         ) : (
           <>
-            <MenuItem href='/'>Home</MenuItem>
-            <MenuItem href='/#reel'>Reel</MenuItem>
-            <MenuItem href='/#work'>Work</MenuItem>
-            <MenuItem href='/#services'>Services</MenuItem>
-            <MenuItem href='/#process'>Process</MenuItem>
-            <MenuItem href='/#contact'>Contact</MenuItem>{' '}
-            <MenuItem href='/work-with-us'>Join our network</MenuItem>
+            <MenuItem href="/">Home</MenuItem>
+            <MenuItem href="/#reel">Reel</MenuItem>
+            <MenuItem href="/#work">Work</MenuItem>
+            <MenuItem href="/#services">Services</MenuItem>
+            <MenuItem href="/#process">Process</MenuItem>
+            <MenuItem href="/#contact">Contact</MenuItem>{' '}
+            <MenuItem href="/work-with-us">Jobs</MenuItem>
           </>
         )}
 
         {showPeopleContactButton &&
           (formLink ? (
-            <a href={formLink} target='_blank' rel='noindex nofollow'>
-              <Button size='small' sx={{ marginLeft: 3 }}>
+            <a href={formLink} target="_blank" rel="noindex nofollow">
+              <Button size="small" sx={{ marginLeft: 3 }}>
                 Apply now
               </Button>
             </a>
           ) : (
             <a
-              href='https://tally.so/r/w8KKKO'
-              target='_blank'
-              rel='noindex nofollow'
+              href="https://tally.so/r/w8KKKO"
+              target="_blank"
+              rel="noindex nofollow"
             >
-              <Button size='small' sx={{ marginLeft: 3 }}>
+              <Button size="small" sx={{ marginLeft: 3 }}>
                 Apply now
               </Button>
             </a>
           ))}
 
         {!showPeopleContactButton && (
-          <Button size='small' onClick={buttonOnClick} sx={{ marginLeft: 3 }}>
+          <Button size="small" onClick={buttonOnClick} sx={{ marginLeft: 3 }}>
             Book a call
           </Button>
         )}
