@@ -18,6 +18,7 @@ import FaqOurClients from '@/components/faq/faq-our-clients';
 import FaqWorkSection from '@/components/faq/faq-work-section';
 import Faq250Pricing from '@/components/faq/faq-250-pricing';
 import { NextSeo } from 'next-seo';
+import DustParticles from '@/components/dust-particles';
 
 export default function CalvinCrawfordFaq() {
   const [isVideoActive, setIsVideoActive] = useState(false);
@@ -25,32 +26,35 @@ export default function CalvinCrawfordFaq() {
   setColorMode('dark');
 
   return (
-    <Layout isHiddenByDefault hideTopNav showFaqMenu showPricing>
-      <FaqHero name=' Borys and Darvideo team' />
-      <NextSeo
-        title={`Hey Borys and Darvideo team! Learn more about Angle`}
-        description="We're a micro-agency making soulful brand experiences capable of handling conception, scriptwriting, storyboarding, animation, VO, music, web development, and sound design."
-      />
-      <Container sx={{ marginBottom: 6 }}>
-        <ReelSection
-          isVideoActive={isVideoActive}
-          setIsVideoActive={() => {
-            if (typeof umami !== 'undefined' && !isVideoActive) {
-              umami.track('reel-section-play');
-            }
-
-            setIsVideoActive(!isVideoActive);
-          }}
+    <>
+      <DustParticles />
+      <Layout isHiddenByDefault hideTopNav showFaqMenu showPricing>
+        <FaqHero name=' Borys and Darvideo team' />
+        <NextSeo
+          title={`Hey Borys and Darvideo team! Learn more about Angle`}
+          description="We're a micro-agency making soulful brand experiences capable of handling conception, scriptwriting, storyboarding, animation, VO, music, web development, and sound design."
         />
-      </Container>
-      <LogoCarousel isLight={false} />
-      <FaqMotionSystem />
-      <FaqWorkSection />
-      <FaqWhatWeDo />
-      <FaqOurClients />
-      <FaqProcess />
-      <Faq250Pricing />
-      <ContactSection useTransparentBackground />
-    </Layout>
+        <Container sx={{ marginBottom: 6 }}>
+          <ReelSection
+            isVideoActive={isVideoActive}
+            setIsVideoActive={() => {
+              if (typeof umami !== 'undefined' && !isVideoActive) {
+                umami.track('reel-section-play');
+              }
+
+              setIsVideoActive(!isVideoActive);
+            }}
+          />
+        </Container>
+        <LogoCarousel isLight={false} />
+        <FaqMotionSystem />
+        <FaqWorkSection />
+        <FaqWhatWeDo />
+        <FaqOurClients />
+        <FaqProcess />
+        <Faq250Pricing />
+        <ContactSection useTransparentBackground />
+      </Layout>
+    </>
   );
 }

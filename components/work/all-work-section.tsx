@@ -69,7 +69,11 @@ export default function AllWorkSection({
               height: '700vh'
             }}
           />
-          <Container sx={{ textAlign: 'center' }}>
+          <Container
+            sx={{
+              textAlign: 'center'
+            }}
+          >
             <Heading
               as={motion.h2}
               variant='display.h1'

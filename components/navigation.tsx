@@ -16,7 +16,7 @@ function MenuItem({ children, active, href }) {
         justifyContent: 'center',
         alignItems: 'center',
         marginLeft: 0,
-        color: active ? 'action.active' : 'text.primary',
+        color: active ? 'action.active' : 'text.secondary',
         padding: 2,
         fontWeight: 600,
         borderRadius: 1,

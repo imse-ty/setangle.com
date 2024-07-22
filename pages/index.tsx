@@ -15,6 +15,7 @@ import FaqOurClients from '@/components/faq/faq-our-clients';
 import HomeWorkSection from '@/components/home/home-work-section';
 import { useTina } from 'tinacms/dist/react';
 import client from '@/tina/__generated__/client';
+import DustParticles from '../components/dust-particles';
 
 export default function Home(props) {
   const [isVideoActive, setIsVideoActive] = useState(false);
@@ -30,27 +31,30 @@ export default function Home(props) {
   const projectsList = data.featuredWork.projects;
 
   return (
-    <Layout isHiddenByDefault hideTopNav>
-      <OverviewHero />
-      <Container sx={{ marginBottom: 6 }}>
-        <ReelSection
-          isVideoActive={isVideoActive}
-          setIsVideoActive={() => {
-            if (typeof umami !== 'undefined' && !isVideoActive) {
-              umami.track('reel-section-play');
-            }
+    <>
+      <DustParticles />
+      <Layout isHiddenByDefault hideTopNav>
+        <OverviewHero />
+        <Container sx={{ marginBottom: 6 }}>
+          <ReelSection
+            isVideoActive={isVideoActive}
+            setIsVideoActive={() => {
+              if (typeof umami !== 'undefined' && !isVideoActive) {
+                umami.track('reel-section-play');
+              }
 
-            setIsVideoActive(!isVideoActive);
-          }}
-        />
-      </Container>
-      <LogoCarousel />
-      <HomeWorkSection projects={projectsList} />
-      <FaqWhatWeDo />
-      <FaqOurClients />
-      <FaqProcess />
-      <ContactSection useTransparentBackground />
-    </Layout>
+              setIsVideoActive(!isVideoActive);
+            }}
+          />
+        </Container>
+        <LogoCarousel />
+        <HomeWorkSection projects={projectsList} />
+        <FaqWhatWeDo />
+        <FaqOurClients />
+        <FaqProcess />
+        <ContactSection useTransparentBackground />
+      </Layout>
+    </>
   );
 }
 

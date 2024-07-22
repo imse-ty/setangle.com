@@ -13,7 +13,10 @@ import { Link } from 'krado-react';
 
 export const components = {
   p: (props) => (
-    <Text variant='body.summary' sx={{ marginTop: 2, marginBottom: 3 }}>
+    <Text
+      variant='body.summary'
+      sx={{ color: 'text.secondary', marginTop: 2, marginBottom: 3 }}
+    >
       {props.children}
     </Text>
   ),

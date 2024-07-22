@@ -16,6 +16,7 @@ import FaqWhatWeDo from '@/components/faq/faq-what-we-do';
 import FaqNewsletter from '@/components/faq/faq-newsletter-signup';
 import FaqOurClients from '@/components/faq/faq-our-clients';
 import FaqWorkSection from '@/components/faq/faq-work-section';
+import DustParticles from '@/components/dust-particles';
 
 export default function Faq() {
   const [isVideoActive, setIsVideoActive] = useState(false);
@@ -23,27 +24,30 @@ export default function Faq() {
   setColorMode('dark');
 
   return (
-    <Layout isHiddenByDefault hideTopNav showFaqMenu>
-      <FaqHero />
-      <Container sx={{ marginBottom: 6 }}>
-        <ReelSection
-          isVideoActive={isVideoActive}
-          setIsVideoActive={() => {
-            if (typeof umami !== 'undefined' && !isVideoActive) {
-              umami.track('reel-section-play');
-            }
+    <>
+      <DustParticles />
+      <Layout isHiddenByDefault hideTopNav showFaqMenu>
+        <FaqHero />
+        <Container sx={{ marginBottom: 6 }}>
+          <ReelSection
+            isVideoActive={isVideoActive}
+            setIsVideoActive={() => {
+              if (typeof umami !== 'undefined' && !isVideoActive) {
+                umami.track('reel-section-play');
+              }
 
-            setIsVideoActive(!isVideoActive);
-          }}
-        />
-      </Container>
-      <LogoCarousel isLight={false} />
-      <FaqMotionSystem />
-      <FaqWorkSection />
-      <FaqWhatWeDo />
-      <FaqOurClients />
-      <FaqProcess />
-      <ContactSection useTransparentBackground />
-    </Layout>
+              setIsVideoActive(!isVideoActive);
+            }}
+          />
+        </Container>
+        <LogoCarousel isLight={false} />
+        <FaqMotionSystem />
+        <FaqWorkSection />
+        <FaqWhatWeDo />
+        <FaqOurClients />
+        <FaqProcess />
+        <ContactSection useTransparentBackground />
+      </Layout>
+    </>
   );
 }

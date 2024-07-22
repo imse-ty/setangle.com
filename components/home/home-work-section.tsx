@@ -55,7 +55,18 @@ export default function HomeWorkSection({
   return (
     <ScaleInEffect>
       <Wrapper id='work' sx={{ backgroundColor: 'surface.black' }}>
-        <Container sx={{ maxWidth: '1000px', textAlign: 'center' }}>
+        <Container
+          sx={{
+            display: 'flex',
+            gap: 3,
+            flexDirection: 'column',
+            maxWidth: '1000px',
+            textAlign: 'center'
+          }}
+        >
+          <Text variant='body.pretext' sx={{ color: 'accent.bold' }}>
+            Case studies
+          </Text>
           <Heading
             as={motion.h2}
             sx={{ marginBottom: 2 }}
