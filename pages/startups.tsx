@@ -18,6 +18,8 @@ import client from '@/tina/__generated__/client';
 import DustParticles from '../components/dust-particles';
 import StartupOffer from '@/components/offers/startup-offer';
 import OfferMission from '@/components/offers/offer-mission';
+import { Card } from '@/components/card';
+import TechTestimonials from '@/components/offers/tech-testimonals';
 
 export default function Home(props) {
   const [isVideoActive, setIsVideoActive] = useState(false);
@@ -50,6 +52,7 @@ export default function Home(props) {
           />
         </Container>
         <LogoCarousel isLight={false} />
+        <TechTestimonials />
         <StartupOffer />
         <HomeWorkSection projects={projectsList} />
         <OfferMission />
