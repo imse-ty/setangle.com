@@ -1,13 +1,21 @@
 /** @jsxImportSource theme-ui */
+// @ts-nocheck
 
 import Heading from '../fixed-krado-components/Heading';
 import Text from '../fixed-krado-components/Text';
-import { Container, Box, Flex, Button } from 'krado-react';
+import { Container, Box, Flex, Button, colors } from 'krado-react';
 import SiteFooter from '../site-footer';
-import { motion, useScroll, useSpring, useTransform } from 'framer-motion';
-import { useRef, useState } from 'react';
+import {
+  motion,
+  useInView,
+  useScroll,
+  useSpring,
+  useTransform
+} from 'framer-motion';
+import { useEffect, useRef, useState } from 'react';
 import CalEmbed from '../cal-embed';
 import Modal from '../modal';
+import { useReward } from 'react-rewards';
 
 export default function ContactSection({ useTransparentBackground }) {
   const container = useRef(null);
@@ -22,6 +30,27 @@ export default function ContactSection({ useTransparentBackground }) {
 
   const [isCalModalOpen, setIsCalModalOpen] = useState(false);
 
+  const confetti = useRef(null);
+
+  const isInView = useInView(confetti, { amount: 'all' });
+  const { reward } = useReward('rewardId', 'confetti', {
+    lifetime: 500,
+    spread: 100,
+    colors: [
+      colors.nut400,
+      colors.ptah300,
+      colors.usir300,
+      colors.sekmet300,
+      colors.oshun300
+    ],
+    position: 'absolute',
+    elementSize: 15
+  });
+
+  useEffect(() => {
+    reward();
+  }, [isInView]);
+
   return (
     <>
       <Modal isOpen={isCalModalOpen} onClose={() => setIsCalModalOpen(false)}>
@@ -32,9 +61,12 @@ export default function ContactSection({ useTransparentBackground }) {
           sx={{
             backgroundColor: useTransparentBackground
               ? 'transparent'
-              : 'surface.black'
+              : 'surface.black',
+            overflow: 'hidden',
+            position: 'relative'
           }}
         >
+          <span ref={confetti} sx={{ position: 'absolute' }} />
           <motion.div
             id='contact'
             style={{ scale }}
@@ -77,13 +109,14 @@ export default function ContactSection({ useTransparentBackground }) {
                     variant='body.summary'
                     sx={{ color: 'surface.extralight' }}
                   >
-                    Thinking of collaborating? We&apos;re here to listen!
-                    Let&apos;s connect.
+                    You made it to the end! Ready to get started? Let&apos;s
+                    connect.
                   </Text>
                 </Flex>
                 <Button
                   onClick={() => setIsCalModalOpen(true)}
                   sx={{ marginTop: 5 }}
+                  id='rewardId'
                 >
                   Book a call
                 </Button>

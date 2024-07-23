@@ -97,6 +97,40 @@ export default defineConfig({
         ]
       },
       {
+        name: 'techWork',
+        label: 'Tech work',
+        path: 'content/tech-work',
+        format: 'json',
+        ui: {
+          global: true,
+          allowedActions: {
+            create: false,
+            delete: false
+          }
+        },
+        fields: [
+          {
+            type: 'object',
+            name: 'projects',
+            label: 'Projects',
+            list: true,
+            ui: {
+              itemProps: (item) => {
+                return { label: item?.project };
+              }
+            },
+            fields: [
+              {
+                name: 'project',
+                label: 'Project',
+                type: 'reference',
+                collections: ['project']
+              }
+            ]
+          }
+        ]
+      },
+      {
         name: 'project',
         label: 'Projects',
         path: 'content/projects',

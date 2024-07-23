@@ -45,7 +45,7 @@ export default function LogoCarousel({ isLight }) {
       }}
     >
       <Text as='p' sx={{ color: 'text.secondary' }}>
-        Collaborating with amazing brands such as...
+        Experience spotlighting these neat brands such as...
       </Text>
       <Flex
         as={motion.div}

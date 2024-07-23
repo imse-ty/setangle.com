@@ -1,0 +1,16 @@
+{
+  "projects": [
+    {
+      "project": "content/projects/sanshu.mdx"
+    },
+    {
+      "project": "content/projects/space-and-time.mdx"
+    },
+    {
+      "project": "content/projects/splice.mdx"
+    },
+    {
+      "project": "content/projects/ozone.mdx"
+    }
+  ]
+}

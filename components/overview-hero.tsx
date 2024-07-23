@@ -21,6 +21,7 @@ export default function OverviewHero() {
           marginBottom: 4,
           display: 'flex',
           gap: 3,
+          maxWidth: '1400px',
           alignItems: 'center',
           textAlign: 'center',
           flexDirection: 'column'
@@ -33,35 +34,21 @@ export default function OverviewHero() {
           A digital creative agency
         </Text>
         <Heading as='h1' variant='display.h1' sx={{ marginBottom: 3 }}>
-          Transforming the ordinary into the&nbsp;extraordinary
+          Your starter kit for starter&nbsp;companies
         </Heading>
         <Text
           as='p'
           variant='body.summary'
           sx={{ color: 'text.secondary', maxWidth: '1000px' }}
         >
-          We help tech startups and enterprises grow by creating animated
-          visuals for promotional campaigns and events.
+          We help tech and IT startups like yours comminute complex ideas in a
+          simple way. Ready to make something cool with us?
         </Text>
-        <Flex
-          sx={{
-            display: 'flex',
-            marginLeft: 2,
-            gap: '12px',
-            marginTop: 4,
-            position: 'relative',
-            alignItems: 'center',
-            marginBottom: -1
-          }}
-        >
-          <AvailabilityIndicator />
-          <Text variant='body.footnote' sx={{ color: 'accent.light' }}>
-            Open for work
-          </Text>
-        </Flex>
-        <Flex sx={{ flexDirection: ['column', 'row'], gap: 3 }}>
-          <Button onClick={() => setIsCalModalOpen(true)}>
-            Let&apos;s book a call
+
+        <Flex sx={{ marginTop: 4, flexDirection: ['column', 'row'], gap: 3 }}>
+          <Button onClick={() => setIsCalModalOpen(true)}>Get a quote</Button>
+          <Button variant='ghost' onClick={() => setIsCalModalOpen(true)}>
+            Play reel
           </Button>
         </Flex>
       </Container>
