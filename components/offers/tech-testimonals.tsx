@@ -35,7 +35,7 @@ export default function TechTestimonials() {
           textAlign: 'center',
           marginBottom: 6,
           paddingY: 5,
-          minHeight: '100vh',
+          minHeight: '50vh',
           borderRadius: 4,
           backgroundColor: 'surface.black'
         }}
