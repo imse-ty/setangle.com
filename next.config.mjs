@@ -38,6 +38,11 @@ const nextConfig = {
         permanent: false
       },
       {
+        source: '/talentnetwork',
+        destination: 'https://tally.so/r/w8KKKO',
+        permanent: false
+      },
+      {
         source: '/consultation',
         destination: 'https://cal.com/team/setangle/consultation',
         permanent: false
