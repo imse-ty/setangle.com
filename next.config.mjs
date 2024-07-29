@@ -38,7 +38,7 @@ const nextConfig = {
         permanent: false
       },
       {
-        source: '/talentnetwork',
+        source: '/goodtalent',
         destination: 'https://tally.so/r/w8KKKO',
         permanent: false
       },
