@@ -40,7 +40,7 @@ export default function CalvinCrawfordFaq(props) {
   const name = 'Laura and GridBank team';
 
   return (
-    <Layout isHiddenByDefault hideTopNav showFaqMenu showPricing>
+    <Layout isHiddenByDefault hideTopNav showFaqMenu>
       <DustParticles />
       <FaqHero name={` ${name}`} />
       <NextSeo
@@ -64,7 +64,7 @@ export default function CalvinCrawfordFaq(props) {
       <FaqWhatWeDo />
       <FaqOurClients />
       <FaqProcess />
-      <FaqSecondPricing />
+      {/* <FaqSecondPricing /> */}
       <ContactSection useTransparentBackground />
     </Layout>
   );
