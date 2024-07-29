@@ -59,11 +59,13 @@ export default function FaqSecondPricing() {
             maxWidth: '1000px'
           }}
         >
-          <Text variant='body.pretext'>Pricing</Text>
+          <Text variant='body.pretext' sx={{ color: 'accent.bold' }}>
+            Pricing
+          </Text>
           <Heading as='h2'>
             Estimates for a 15-30 second full-production video
           </Heading>
-          <Text as='p' variant='body.summary'>
+          <Text as='p' variant='body.summary' sx={{ color: 'text.secondary' }}>
             Our projects start at $5,000. This minimum engagement ensures we can
             dedicate the necessary time and resources to deliver high-quality
             motion design that meets your needs.
@@ -131,7 +133,7 @@ export default function FaqSecondPricing() {
             ]}
           />
         </Flex>
-        <Text as='p' variant='body.summary'>
+        <Text as='p' variant='body.summary' sx={{ color: 'text.secondary' }}>
           We&apos;re happy to provide a detailed quote after discussing your
           specific project requirements!
         </Text>
