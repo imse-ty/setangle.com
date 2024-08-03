@@ -44,7 +44,12 @@ const nextConfig = {
       },
       {
         source: '/consultation',
-        destination: 'https://cal.com/team/setangle/consultation',
+        destination: 'https://cal.com/team/setangle/discuss',
+        permanent: false
+      },
+      {
+        source: '/discuss',
+        destination: 'https://cal.com/team/setangle/discuss',
         permanent: false
       },
       {
