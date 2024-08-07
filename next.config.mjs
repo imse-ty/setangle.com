@@ -106,7 +106,12 @@ const nextConfig = {
         source: '/sanshubehance',
         destination: 'https://www.behance.net/gallery/202877441/SANSHU?share=1',
         permanent: false
-      }
+      },
+      {
+        source: '/connect',
+        destination: 'https://cal.com/team/setangle/connect',
+        permanent: false
+      },
     ];
   }
 };
