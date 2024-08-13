@@ -38,8 +38,18 @@ const nextConfig = {
         permanent: false
       },
       {
+        source: '/goodtalent',
+        destination: 'https://tally.so/r/w8KKKO',
+        permanent: false
+      },
+      {
         source: '/consultation',
-        destination: 'https://cal.com/team/setangle/consultation',
+        destination: 'https://cal.com/team/setangle/discuss',
+        permanent: false
+      },
+      {
+        source: '/discuss',
+        destination: 'https://cal.com/team/setangle/discuss',
         permanent: false
       },
       {
@@ -96,7 +106,12 @@ const nextConfig = {
         source: '/sanshubehance',
         destination: 'https://www.behance.net/gallery/202877441/SANSHU?share=1',
         permanent: false
-      }
+      },
+      {
+        source: '/connect',
+        destination: 'https://cal.com/team/setangle/connect',
+        permanent: false
+      },
     ];
   }
 };
