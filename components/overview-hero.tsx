@@ -40,7 +40,7 @@ export default function OverviewHero() {
           variant='body.summary'
           sx={{ color: 'text.secondary', maxWidth: '1000px' }}
         >
-          We help tech startups and enterprises grow by creating animated
+          We help tech startups and enterprises shine by creating animated
           visuals for promotional campaigns and events.
         </Text>
         <Flex
