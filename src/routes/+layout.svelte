@@ -2,4 +2,4 @@
 	import '../app.css';
 </script>
 
-<slot></slot>
+<div class="flex min-h-screen flex-col gap-8"><slot></slot></div>
