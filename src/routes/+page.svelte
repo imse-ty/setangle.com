@@ -12,12 +12,11 @@
 			</Card.Title>
 		</Card.Header>
 
-		<Card.Footer class="flex-col items-start gap-8">
+		<Card.Footer class="mt-24">
 			<Button>Let's book a call</Button>
-			<p>© Founded in 2024</p>
 		</Card.Footer>
 	</Card.Root>
-	<div class="bg-muted col-span-1 rounded-3xl" />
+	<Card.Root class="bg-muted col-span-1 rounded-3xl" />
 </section>
 
 <section class="container">
