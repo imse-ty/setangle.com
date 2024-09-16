@@ -7,13 +7,13 @@
 	import ServiceCard from './service-card.svelte';
 </script>
 
-<section class="container grid grid-cols-3 gap-8">
+<section class="container flex grid-cols-1 flex-col gap-8 xl:grid xl:grid-cols-3">
 	<Card.Root class="col-span-2">
-		<Card.Header class="gap-8">
+		<Card.Header class="gap-2 md:gap-8">
 			<Card.Title tag="h1" class="font-display text-2xl font-semibold md:text-6xl">
 				Angle is a animation and web development studio
 			</Card.Title>
-			<Card.Description class="text-2xl"
+			<Card.Description class="text-1xl md:text-2xl"
 				>We help tech brands and enterprises shine by creating soulful motion graphics and web
 				experiences for marketing campaigns and events.</Card.Description
 			>
@@ -25,7 +25,7 @@
 		</Card.Footer>
 	</Card.Root>
 
-	<Card.Root class="bg-muted col-span-1 rounded-3xl" />
+	<Card.Root class="bg-muted col-span-1 aspect-video rounded-3xl xl:aspect-auto" />
 </section>
 
 <!-- <section class="container">
@@ -33,7 +33,7 @@
 </section> -->
 
 <section class="container" id="work">
-	<div class=" grid grid-cols-2 gap-8">
+	<div class=" grid grid-cols-1 gap-8 lg:grid-cols-2">
 		<WorkCard />
 		<WorkCard />
 		<WorkCard />
@@ -49,7 +49,7 @@
 			</Card.Title>
 		</Card.Header>
 
-		<Card.Content class="grid grid-cols-3 gap-16">
+		<Card.Content class="grid grid-cols-1 gap-16 md:grid-cols-3">
 			<ServiceCard title="Motion design" />
 			<ServiceCard title="3D animation" />
 			<ServiceCard title="Development" />
