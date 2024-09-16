@@ -13,7 +13,7 @@
 			<Card.Title tag="h1" class="font-display text-2xl font-semibold md:text-6xl">
 				Angle is a animation and web development studio
 			</Card.Title>
-			<Card.Description class="text-3xl"
+			<Card.Description class="text-2xl"
 				>We help tech brands and enterprises shine by creating soulful motion graphics and web
 				experiences for marketing campaigns and events.</Card.Description
 			>
@@ -32,7 +32,7 @@
 	<Card.Root class="bg-muted aspect-video rounded-3xl" />
 </section> -->
 
-<section class="container">
+<section class="container" id="work">
 	<div class=" grid grid-cols-2 gap-8">
 		<WorkCard />
 		<WorkCard />
@@ -41,7 +41,7 @@
 	</div>
 </section>
 
-<section class="container">
+<section class="container" id="services">
 	<Card.Root>
 		<Card.Header class="h-64">
 			<Card.Title tag="h2" class="font-display text-2xl font-semibold md:text-6xl">
@@ -57,7 +57,7 @@
 	</Card.Root>
 </section>
 
-<section class="container">
+<section class="container" id="contact">
 	<Card.Root class="text-center ">
 		<Card.Header class="items-center">
 			<MaterialSymbolsArrowOutward class="bg-muted rounded-full p-3 text-4xl" />

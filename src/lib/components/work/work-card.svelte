@@ -12,7 +12,7 @@
 	</Card.Header>
 	<Card.Footer class="absolute bottom-0 z-10 flex-col items-start gap-4 p-8">
 		<Card.Title tag="h3" class="text-3xl text-slate-100">Calculator 15s Spot</Card.Title>
-		<Card.Description class=" font-medium text-slate-400"
+		<Card.Description class="text-md font-medium text-slate-400"
 			>What if the default calculator app had a marketing campaign?</Card.Description
 		>
 	</Card.Footer>
