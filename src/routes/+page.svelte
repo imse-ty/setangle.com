@@ -57,17 +57,23 @@
 	</Card.Root>
 </section>
 
-<section class="container" id="contact">
+<section class="dark container" id="contact">
 	<Card.Root class="text-center ">
-		<Card.Header class="items-center">
+		<Card.Header class="items-center gap-4">
 			<MaterialSymbolsArrowOutward class="bg-muted rounded-full p-3 text-4xl" />
-			<Card.Title tag="h2" class="font-display max-w-3xl text-2xl font-semibold md:text-4xl">
+			<Button
+				variant="link"
+				class="font-display text-foreground max-w-3xl text-2xl font-semibold md:text-4xl"
+			>
+				greetings@setangle.com
+			</Button>
+			<Card.Description class="text-1xl md:text-2xl">
 				Thinking of collaborating? We're here to listen! Let's connect.
-			</Card.Title>
+			</Card.Description>
 		</Card.Header>
 
 		<Card.Footer class="flex-col gap-8">
-			<Button size="lg">Let's book a call</Button>
+			<Button size="lg" href="/contact">Let's book a call</Button>
 		</Card.Footer>
 	</Card.Root>
 </section>

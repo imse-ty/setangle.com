@@ -1,7 +1,7 @@
 <script>
 	import * as Drawer from '$lib/components/ui/drawer';
 	import Navigation from './navigation.svelte';
-	let isDrawerOpen = false;
+	import MaterialSymbolsMenu from '~icons/material-symbols/menu';
 </script>
 
 <header
@@ -20,7 +20,9 @@
 
 	<!-- Drawer Component for Mobile -->
 	<Drawer.Root shouldScaleBackground>
-		<Drawer.Trigger class="md:hidden">Open</Drawer.Trigger>
+		<Drawer.Trigger class="md:hidden"
+			><MaterialSymbolsMenu class="text-primary h-7 w-7" /></Drawer.Trigger
+		>
 		<Drawer.Portal>
 			<Drawer.Content>
 				<div class="flex flex-col space-y-4 p-6">
