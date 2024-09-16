@@ -1,6 +1,7 @@
 <script>
 	import Button from '$lib/components/ui/button/button.svelte';
 	import * as Card from '$lib/components/ui/card';
+	import WorkCard from '$lib/components/work/work-card.svelte';
 	import MaterialSymbolsArrowOutward from 'virtual:icons/material-symbols/arrow-outward';
 </script>
 
@@ -32,4 +33,18 @@
 			<Button>Let's book a call</Button>
 		</Card.Footer>
 	</Card.Root>
+</section>
+
+<section class="container grid grid-cols-2 gap-8">
+	<WorkCard />
+	<WorkCard />
+	<WorkCard />
+	<WorkCard />
+</section>
+
+<section class="container grid grid-cols-2 gap-8">
+	<WorkCard />
+	<WorkCard />
+	<WorkCard />
+	<WorkCard />
 </section>
