@@ -20,8 +20,8 @@
 		</Card.Header>
 
 		<Card.Footer class="gap-4">
-			<Button>Let's book a call</Button>
-			<Button variant="outline">Play reel</Button>
+			<Button size="lg">Get in touch</Button>
+			<Button size="lg" variant="outline">Play reel</Button>
 		</Card.Footer>
 	</Card.Root>
 
@@ -67,7 +67,7 @@
 		</Card.Header>
 
 		<Card.Footer class="flex-col gap-8">
-			<Button>Let's book a call</Button>
+			<Button size="lg">Let's book a call</Button>
 		</Card.Footer>
 	</Card.Root>
 </section>
