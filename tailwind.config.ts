@@ -56,6 +56,9 @@ const config: Config = {
 			fontFamily: {
 				sans: ['"Mona Sans"', 'Arial', 'sans-serif'],
 				display: ['"Hubot Sans"', 'Arial', 'sans-serif']
+			},
+			aspectRatio: {
+				'4/3': '4 / 3'
 			}
 		}
 	}
