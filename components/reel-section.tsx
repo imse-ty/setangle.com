@@ -17,6 +17,7 @@ import {
   useTransform
 } from 'framer-motion';
 import { useEffect, useRef, useState } from 'react';
+import YoutubeVideoPlayer from './youtube-video-player';
 
 function PlayButton() {
   const variants = {
@@ -30,7 +31,7 @@ function PlayButton() {
     <Flex
       as={motion.button}
       variants={variants}
-      whileHover='hover'
+      whileHover="hover"
       transition={{ type: 'spring', duration: 0.5 }}
       sx={{
         border: 'none',
@@ -83,8 +84,8 @@ export default function ReelSection({
   const scale = useSpring(scrollScale, { mass: 0.1 });
 
   // URLs for your Vimeo videos
-  const desktopVimeoUrl = 'https://vimeo.com/925194439?share=copy';
-  const mobileVimeoUrl = 'https://vimeo.com/925194554?share=copy';
+  const desktopVimeoUrl = 'https://youtu.be/JUP8EUPEpkw';
+  const mobileVimeoUrl = 'https://youtu.be/gvuHj4YtgUw';
 
   // State to hold the current Vimeo URL
   const [reelUrl, setReelVimeoUrl] = useState(desktopVimeoUrl);
@@ -118,7 +119,7 @@ export default function ReelSection({
       }}
     >
       <Flex
-        id='reel'
+        id="reel"
         as={motion.div}
         style={{
           scale,
@@ -198,10 +199,10 @@ export default function ReelSection({
             )}
           </AnimatePresence>
 
-          <VideoPlayer
+          <YoutubeVideoPlayer
             url={reelUrl}
-            previewSrc='2023-reel.webm'
-            poster='reel-thumbnail.png'
+            previewSrc="2023-reel.webm"
+            poster="reel-thumbnail.png"
             isActive={isVideoActive}
           />
         </Flex>
