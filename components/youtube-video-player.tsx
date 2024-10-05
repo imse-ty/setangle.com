@@ -11,7 +11,7 @@ export function YoutubeVideo({ url }) {
     }
   };
   const youtubeId = getYoutubeId();
-  const youtubeUrl = `https://www.youtube.com/embed/${youtubeId}?autoplay=1&loop=1`;
+  const youtubeUrl = `https://www.youtube.com/embed/${youtubeId}?autoplay=1&playlist=${youtubeId}&loop=1`;
 
   return (
     <figure
