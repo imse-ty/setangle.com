@@ -36,6 +36,7 @@ export function YoutubeVideo({ url }) {
           border: 0,
           borderRadius: 3
         }}
+        allowFullScreen
       />
     </figure>
   );

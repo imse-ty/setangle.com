@@ -15,7 +15,7 @@ export function ProjectVideo({ src }) {
         borderRadius: [2, null, null, null, 3]
       }}
     >
-      <source src={src} type='video/mp4' />
+      <source src={src} type="video/mp4" />
       Your browser does not support the video tag.
     </video>
   );
@@ -43,9 +43,9 @@ export function ProjectYoutube({ url }) {
     >
       <iframe
         src={youtubeUrl}
-        title='YouTube video player'
-        frameBorder='0'
-        allow='accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture'
+        title="YouTube video player"
+        frameBorder="0"
+        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
         sx={{
           position: 'absolute',
           top: 0,
@@ -53,6 +53,7 @@ export function ProjectYoutube({ url }) {
           width: '100%',
           height: '100%'
         }}
+        allowFullScreen
       />
     </figure>
   );
@@ -82,9 +83,9 @@ export function ProjectVimeo({ autoplay, breakContainer, url, ...rest }) {
     >
       <iframe
         src={vimeoUrl}
-        title='Vimeo video player'
-        frameBorder='0'
-        allow='autoplay; fullscreen; picture-in-picture'
+        title="Vimeo video player"
+        frameBorder="0"
+        allow="autoplay; fullscreen; picture-in-picture"
         sx={{
           position: 'absolute',
           top: 0,
