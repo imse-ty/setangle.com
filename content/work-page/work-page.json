@@ -1,6 +1,9 @@
 {
   "projects": [
     {
+      "project": "content/projects/luna-insurance.mdx"
+    },
+    {
       "project": "content/projects/clock.mdx"
     },
     {
