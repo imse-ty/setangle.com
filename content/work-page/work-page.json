@@ -1,6 +1,9 @@
 {
   "projects": [
     {
+      "project": "content/projects/calculator.mdx"
+    },
+    {
       "project": "content/projects/sanshu.mdx"
     },
     {
