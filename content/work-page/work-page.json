@@ -1,6 +1,9 @@
 {
   "projects": [
     {
+      "project": "content/projects/clock.mdx"
+    },
+    {
       "project": "content/projects/calculator.mdx"
     },
     {
