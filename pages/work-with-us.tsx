@@ -65,14 +65,14 @@ export default function TalentPage(
 
       <Layout showPeopleContactButton>
         <NextSeo
-          title='Work with us — Set Angle'
+          title="Work with us — Set Angle"
           description="We’re always looking to expand our talent network with skilled
           freelancers ready to tackle exciting projects. Join us, and we'll
           link you with opportunities that align with your skills
           and passions."
         />
         <PeopleHero />
-        <Container>
+        {/* <Container>
           <VideoSection
             url='https://vimeo.com/927722152?share=copy'
             poster='/work-with-us-thumbnail.jpg'
@@ -86,7 +86,7 @@ export default function TalentPage(
               setIsVideoActive(!isVideoActive);
             }}
           />
-        </Container>
+        </Container> */}
         <OpenRolesSection roles={roles} />
         <RolesContactSection useTransparentBackground />
       </Layout>
