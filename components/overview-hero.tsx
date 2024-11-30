@@ -27,17 +27,17 @@ export default function OverviewHero() {
         }}
       >
         <Text
-          variant='body.pretext'
+          variant="body.pretext"
           sx={{ color: 'accent.bold', marginBottom: 2 }}
         >
           A digital creative agency
         </Text>
-        <Heading as='h1' variant='display.h1' sx={{ marginBottom: 3 }}>
+        <Heading as="h1" variant="display.h1" sx={{ marginBottom: 3 }}>
           Transforming the ordinary into the&nbsp;extraordinary
         </Heading>
         <Text
-          as='p'
-          variant='body.summary'
+          as="p"
+          variant="body.summary"
           sx={{ color: 'text.secondary', maxWidth: '1000px' }}
         >
           We help tech startups and enterprises shine by creating soulful
@@ -55,8 +55,8 @@ export default function OverviewHero() {
           }}
         >
           <AvailabilityIndicator />
-          <Text variant='body.footnote' sx={{ color: 'accent.light' }}>
-            Limited availability. 1 slot left for November.
+          <Text variant="body.footnote" sx={{ color: 'accent.light' }}>
+            Limited availability. 2 slots left for the end of 2024.
           </Text>
         </Flex>
         <Flex sx={{ flexDirection: ['column', 'row'], gap: 3 }}>
