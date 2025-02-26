@@ -1,3 +1,6 @@
+/** @jsxImportSource theme-ui */
+//@ts-nocheck
+
 import { Flex, Button, Container } from 'krado-react';
 import Heading from './fixed-krado-components/Heading';
 import Text from './fixed-krado-components/Text';
@@ -6,6 +9,7 @@ import CalEmbed from './cal-embed';
 import Modal from './modal';
 import { useState } from 'react';
 import AvailabilityIndicator from './status-indicator';
+import Link from 'next/link';
 
 export default function OverviewHero() {
   const [isCalModalOpen, setIsCalModalOpen] = useState(false);
@@ -40,7 +44,8 @@ export default function OverviewHero() {
           variant="body.summary"
           sx={{ color: 'text.secondary', maxWidth: '1000px' }}
         >
-          We help brands shine by creating soulful animated visuals for marketing campaigns and events.
+          We help brands shine by creating soulful animated visuals for
+          marketing campaigns and events.
         </Text>
         <Flex
           sx={{
@@ -55,7 +60,14 @@ export default function OverviewHero() {
         >
           <AvailabilityIndicator />
           <Text variant="body.footnote" sx={{ color: 'accent.light' }}>
-            Limited availability. 2 slots left for Feb.
+            We&apos;re looking for an assistant!{' '}
+            <Link
+              href="/work-with-us/assistant"
+              sx={{ color: 'primary.regular' }}
+            >
+              Click here
+            </Link>{' '}
+            to learn more.
           </Text>
         </Flex>
         <Flex sx={{ flexDirection: ['column', 'row'], gap: 3 }}>
