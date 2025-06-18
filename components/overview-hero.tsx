@@ -60,14 +60,7 @@ export default function OverviewHero() {
         >
           <AvailabilityIndicator />
           <Text variant="body.footnote" sx={{ color: 'accent.light' }}>
-            We&apos;re looking for an assistant!{' '}
-            <Link
-              href="/work-with-us/assistant"
-              sx={{ color: 'primary.regular' }}
-            >
-              Click here
-            </Link>{' '}
-            to learn more.
+            Limited availability. Two slots available for July
           </Text>
         </Flex>
         <Flex sx={{ flexDirection: ['column', 'row'], gap: 3 }}>
