@@ -60,7 +60,7 @@ export default function OverviewHero() {
         >
           <AvailabilityIndicator />
           <Text variant="body.footnote" sx={{ color: 'accent.light' }}>
-            Limited availability. Two slots available for July
+            Limited availability. One slot available for August
           </Text>
         </Flex>
         <Flex sx={{ flexDirection: ['column', 'row'], gap: 3 }}>
