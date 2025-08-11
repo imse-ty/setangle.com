@@ -1,5 +1,4 @@
 {
 	"$schema": "https://openapi.vercel.sh/vercel.json",
-	"framework": "sveltekit",
-	"buildCommand": "vite build"
+	"framework": "sveltekit"
 }
