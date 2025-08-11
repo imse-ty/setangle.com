@@ -10,7 +10,7 @@
 
 <Header />
 <HomeHero />
-<LogoCarousel />
+<!-- <LogoCarousel /> -->
 <ProjectsSection />
 <AboutSection />
 <ContactSection />

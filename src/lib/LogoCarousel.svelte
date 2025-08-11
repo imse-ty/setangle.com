@@ -9,7 +9,7 @@
 
 <div>
 	<Chickfila />
-	<!-- <Ford /> -->
+	<Ford />
 	<Google />
 	<KaiserPermanente />
 	<Maxon />
