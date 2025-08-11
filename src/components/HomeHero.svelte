@@ -5,6 +5,6 @@
 <AngleLogo />
 <h1>ANGLE is a motion <span>and</span> experience agency</h1>
 <button>Play reel</button>
-<button>Book a call</button>
+<a href="https://cal.com/team/setangle/discuss"><button>Book a call</button></a>
 <div></div>
 <div>Atlanta, GA</div>
