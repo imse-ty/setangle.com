@@ -1,6 +1,7 @@
 <script>
 	import Header from '$lib/Header.svelte';
 	import LogoCarousel from '$lib/LogoCarousel.svelte';
+	import AboutSection from '../components/AboutSection.svelte';
 	import HomeHero from '../components/HomeHero.svelte';
 	import ProjectsSection from '../components/ProjectsSection.svelte';
 </script>
@@ -9,3 +10,4 @@
 <HomeHero />
 <LogoCarousel />
 <ProjectsSection />
+<AboutSection />
