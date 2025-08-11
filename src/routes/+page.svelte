@@ -1,4 +1,5 @@
 <script>
+	import ContactSection from '$lib/ContactSection.svelte';
 	import Header from '$lib/Header.svelte';
 	import LogoCarousel from '$lib/LogoCarousel.svelte';
 	import AboutSection from '../components/AboutSection.svelte';
@@ -11,3 +12,4 @@
 <LogoCarousel />
 <ProjectsSection />
 <AboutSection />
+<ContactSection />
