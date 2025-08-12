@@ -16,7 +16,7 @@
 		>
 		<a
 			class="btn cursor-pointer p-0 font-mono font-normal uppercase btn-ghost"
-			href="https://www.linkedin.com/company/82782594/admin/dashboard/"
+			href="https://www.linkedin.com/company/setangle"
 			target="_blank"
 			rel="noopener noreferrer"><button class="uppercase">LinkedIn</button></a
 		>
