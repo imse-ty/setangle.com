@@ -9,7 +9,7 @@
 </script>
 
 <div class="bg-set-black text-set-white">
-	<Header />
+	<!-- <Header /> -->
 	<HomeHero />
 	<LogoCarousel />
 
