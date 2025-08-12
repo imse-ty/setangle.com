@@ -5,7 +5,7 @@
 </script>
 
 <Container>
-	<div class="flex flex-col gap-16">
+	<div id="work" class="flex flex-col gap-16">
 		<h2 class="font-display text-6xl font-medium uppercase">
 			<span class="text-set-gray">Latest</span> projects
 		</h2>

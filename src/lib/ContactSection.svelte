@@ -3,7 +3,7 @@
 </script>
 
 <Container>
-	<div class="flex h-128 flex-col justify-between">
+	<div id="contact" class="flex h-128 flex-col justify-between">
 		<h2 class="font-display text-6xl font-medium uppercase">
 			<span class="text-set-gray">Lets</span> talk
 		</h2>

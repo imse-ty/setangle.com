@@ -1,5 +1,5 @@
 <script>
-	let { children } = $props();
+	let { children, href } = $props();
 </script>
 
-<li class="font-mono uppercase"><a href="#">{@render children()}</a></li>
+<li class="font-mono uppercase"><a {href}>{@render children()}</a></li>
