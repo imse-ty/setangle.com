@@ -2,4 +2,4 @@
 	let { children } = $props();
 </script>
 
-<li><a href="#">{@render children()}</a></li>
+<li class="font-mono uppercase"><a href="#">{@render children()}</a></li>
