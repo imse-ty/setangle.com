@@ -13,15 +13,10 @@
 				ANGLE is a motion <br /> <span class="text-set-gray">and</span> experience agency
 			</h1>
 			<div class="flex items-center gap-4">
-				<div class="flex gap-4">
-					<div class="flex gap-2"></div>
-					<button class="padding btn p-0 font-mono font-normal uppercase btn-ghost"
-						>Play reel</button
-					>
+				<div class="flex">
+					<button class="btn pl-0 font-mono font-normal uppercase btn-ghost">Play reel</button>
 					<a href="https://cal.com/team/setangle/discuss" target="_blank" rel="noopener noreferrer">
-						<button class="padding btn p-0 font-mono font-normal uppercase btn-ghost"
-							>Book a call</button
-						>
+						<button class="btn font-mono font-normal uppercase btn-ghost">Book a call</button>
 					</a>
 				</div>
 
