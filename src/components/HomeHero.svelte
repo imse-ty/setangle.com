@@ -15,15 +15,19 @@
 			<div class="flex items-center gap-4">
 				<div class="flex gap-4">
 					<div class="flex gap-2"></div>
-					<button class="padding btn p-0 font-mono uppercase btn-ghost">Play reel</button>
+					<button class="padding btn p-0 font-mono font-normal uppercase btn-ghost"
+						>Play reel</button
+					>
 					<a href="https://cal.com/team/setangle/discuss" target="_blank" rel="noopener noreferrer">
-						<button class="padding btn p-0 font-mono uppercase btn-ghost">Book a call</button>
+						<button class="padding btn p-0 font-mono font-normal uppercase btn-ghost"
+							>Book a call</button
+						>
 					</a>
 				</div>
 
 				<div class="h-px flex-1 bg-set-gray"></div>
 
-				<div class="font-mono">Atlanta,&nbsp;GA</div>
+				<div class="font-mono uppercase">Atlanta,&nbsp;GA</div>
 			</div>
 		</div>
 	</div>
