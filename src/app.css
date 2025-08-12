@@ -2,6 +2,14 @@
 @import 'tailwindcss';
 @plugin "daisyui";
 
+@plugin "daisyui/theme" {
+	name: 'lofi';
+	default: true;
+	--radius-selector: 0rem;
+	--radius-field: 0rem;
+	--radius-box: 0rem;
+}
+
 @theme {
 	--color-set-black: #111111;
 	--color-set-white: #d1d1d1;
