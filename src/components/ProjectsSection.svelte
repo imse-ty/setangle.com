@@ -9,7 +9,7 @@
 		<h2 class="font-display text-6xl font-medium uppercase">
 			<span class="text-set-gray">Latest</span> projects
 		</h2>
-		<div class="grid grid-cols-2">
+		<div class="grid-cols-2 lg:grid">
 			{#each data as d (d.id)}
 				<ProjectCard
 					title="Project title name"

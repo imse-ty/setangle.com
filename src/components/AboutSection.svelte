@@ -3,7 +3,7 @@
 </script>
 
 <Container>
-	<div class="flex gap-8">
+	<div class="flex flex-col gap-8 md:flex-row">
 		<h2 class="font-mono uppercase">About</h2>
 		<p class="text-4xl">
 			We craft bold motion design and creative development <span class="text-set-gray"

@@ -9,10 +9,10 @@
 		<Header />
 		<AngleLogo />
 		<div class="flex flex-col gap-8">
-			<h1 class="s font-display text-8xl font-medium tracking-tight xl:text-9xl">
+			<h1 class="s font-display text-5xl font-medium tracking-tight lg:text-8xl xl:text-9xl">
 				ANGLE is a motion <br /> <span class="text-set-gray">and</span> experience agency
 			</h1>
-			<div class="flex items-center gap-4">
+			<div class="flex flex-col gap-4 md:flex-row md:items-center">
 				<div class="flex">
 					<button class="btn pl-0 font-mono font-normal uppercase btn-ghost">Play reel</button>
 					<a href="https://cal.com/team/setangle/discuss" target="_blank" rel="noopener noreferrer">
