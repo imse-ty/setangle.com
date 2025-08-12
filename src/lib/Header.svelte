@@ -2,12 +2,12 @@
 	import NavItem from './NavItem.svelte';
 </script>
 
-<div>
-	<div>ANGLE</div>
-	<div></div>
-	<ul>
-		<NavItem>Work</NavItem>
-		<NavItem>About</NavItem>
-		<NavItem>Contact</NavItem>
+<div class="flex items-center gap-4 py-6">
+	<div class="font-display text-3xl font-bold">ANGLE</div>
+	<div class="h-px w-full bg-set-gray"></div>
+	<ul class="hidden gap-5 md:flex">
+		<NavItem href="#work">Work</NavItem>
+		<NavItem href="#about">About</NavItem>
+		<NavItem href="#contact">Contact</NavItem>
 	</ul>
 </div>

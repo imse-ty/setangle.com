@@ -8,10 +8,15 @@
 	import ProjectsSection from '../components/ProjectsSection.svelte';
 </script>
 
-<Header />
-<HomeHero />
-<LogoCarousel />
-<ProjectsSection />
-<AboutSection />
-<ContactSection />
-<Footer />
+<div class="flex flex-col gap-20 bg-set-black font-body text-set-white">
+	<!-- <Header /> -->
+	<HomeHero />
+	<LogoCarousel />
+
+	<main>
+		<ProjectsSection />
+	</main>
+	<AboutSection />
+	<ContactSection />
+	<Footer />
+</div>
