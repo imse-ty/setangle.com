@@ -8,7 +8,7 @@
 	import ProjectsSection from '../components/ProjectsSection.svelte';
 </script>
 
-<div class="bg-set-black font-body text-set-white">
+<div class="flex flex-col gap-20 bg-set-black font-body text-set-white">
 	<!-- <Header /> -->
 	<HomeHero />
 	<LogoCarousel />
