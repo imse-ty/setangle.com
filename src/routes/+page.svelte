@@ -6,6 +6,8 @@
 	import AboutSection from '../components/AboutSection.svelte';
 	import HomeHero from '../components/HomeHero.svelte';
 	import ProjectsSection from '../components/ProjectsSection.svelte';
+
+	export let data;
 </script>
 
 <div class="flex flex-col gap-20 bg-set-black font-body text-set-white">
@@ -14,7 +16,7 @@
 	<LogoCarousel />
 
 	<main>
-		<ProjectsSection />
+		<ProjectsSection projects={data} />
 	</main>
 	<AboutSection />
 	<ContactSection />
