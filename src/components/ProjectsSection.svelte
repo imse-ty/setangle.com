@@ -1,7 +1,9 @@
 <script>
 	import Container from '$lib/Container.svelte';
 	import ProjectCard from '$lib/ProjectCard.svelte';
-	let data = [{ id: 1 }, { id: 2 }, { id: 3 }, { id: 4 }, { id: 5 }, { id: 6 }];
+	import { urlFor } from '$lib/sanity';
+
+	let { projects } = $props();
 </script>
 
 <Container>
@@ -10,14 +12,13 @@
 			<span class="text-set-gray">Latest</span> projects
 		</h2>
 		<div class="grid-cols-2 lg:grid">
-			{#each data as d (d.id)}
+			{#each projects.items as project}
 				<ProjectCard
-					title="Project title name"
-					subtitle="We'll find the best visual way to export your story into a fine digital experience"
-					href="/work"
-					coverAlt="Cool project thumbnail"
-					coverSrc="luna-thumbnail.png"
-					{...d}
+					href={`/work/${project.slug}`}
+					title={project.title}
+					subtitle={project.subtitle}
+					coverAlt={project.cover?.alt || project.title}
+					coverSrc={urlFor(project.cover).width(600).url()}
 				/>
 			{/each}
 		</div>
