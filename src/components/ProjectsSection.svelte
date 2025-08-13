@@ -15,8 +15,8 @@
 					title="Project title name"
 					subtitle="We'll find the best visual way to export your story into a fine digital experience"
 					href="/work"
-					thumbnailAlt="Cool project thumbnail"
-					thumbnailSrc="luna-thumbnail.png"
+					coverAlt="Cool project thumbnail"
+					coverSrc="luna-thumbnail.png"
 					{...d}
 				/>
 			{/each}

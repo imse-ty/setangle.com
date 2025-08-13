@@ -1,5 +1,5 @@
 <script>
-	let { title, subtitle, href, thumbnailAlt, thumbnailSrc } = $props();
+	let { title, subtitle, href, coverAlt, coverSrc } = $props();
 </script>
 
 <a {href}>
@@ -9,10 +9,6 @@
 			<p class="text-set-gray">{subtitle}</p>
 		</div>
 		<div class="absolute top-0 left-0 z-10 h-full w-full bg-set-black opacity-80"></div>
-		<img
-			class="absolute top-0 left-0 h-full w-full object-cover"
-			alt={thumbnailAlt}
-			src={thumbnailSrc}
-		/>
+		<img class="absolute top-0 left-0 h-full w-full object-cover" alt={coverAlt} src={coverSrc} />
 	</div>
 </a>
