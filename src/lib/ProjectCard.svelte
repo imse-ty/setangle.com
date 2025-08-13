@@ -1,8 +1,8 @@
 <script>
-	let { title, subtitle } = $props();
+	let { title, subtitle, href } = $props();
 </script>
 
-<a href="/work">
+<a {href}>
 	<div class="flex h-128 border-1 border-set-gray p-8">
 		<div class="mt-auto">
 			<h3 class="text-3xl">{title}</h3>

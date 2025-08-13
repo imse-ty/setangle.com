@@ -14,6 +14,7 @@
 				<ProjectCard
 					title="Project title name"
 					subtitle="We'll find the best visual way to export your story into a fine digital experience"
+					href="/work"
 					{...d}
 				/>
 			{/each}
