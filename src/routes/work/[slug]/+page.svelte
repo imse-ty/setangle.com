@@ -15,7 +15,9 @@
 
 <div class="flex flex-col gap-20 bg-set-black font-body text-set-white">
 	<Container><Header /></Container>
-	<WorkVideo />
+	{#if doc.videoUrl}
+		<WorkVideo videoUrl={doc.videoUrl} />
+	{/if}
 	<WorkHero title={doc.title} summary={doc.subtitle} info={doc.info} stats={doc.stats} />
 	<ContactSection />
 	<Footer />

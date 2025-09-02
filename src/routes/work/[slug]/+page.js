@@ -7,7 +7,8 @@ const q = groq`*[_type=="project" && slug.current==$slug][0]{
   cover{asset->, alt},
   subtitle,
   info,
-  stats
+  stats,
+  videoUrl
 }`;
 
 export async function load({ params, setHeaders }) {
