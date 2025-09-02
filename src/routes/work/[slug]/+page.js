@@ -5,7 +5,9 @@ import { error } from '@sveltejs/kit';
 const q = groq`*[_type=="project" && slug.current==$slug][0]{
   _id, title, slug, publishedAt,
   cover{asset->, alt},
-  subtitle
+  subtitle,
+  info,
+  stats
 }`;
 
 export async function load({ params, setHeaders }) {
