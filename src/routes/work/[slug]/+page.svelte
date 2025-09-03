@@ -19,6 +19,13 @@
 		<WorkVideo videoUrl={doc.videoUrl} />
 	{/if}
 	<WorkHero title={doc.title} summary={doc.subtitle} info={doc.info} stats={doc.stats} />
+	{#if doc.body}
+		<Container>
+			<div class="prose !prose-invert">
+				<PortableText value={doc.body} components={{}} />
+			</div>
+		</Container>
+	{/if}
 	<ContactSection />
 	<Footer />
 </div>
