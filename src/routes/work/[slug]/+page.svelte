@@ -7,8 +7,17 @@
 	import WorkVideo from '../../../components/WorkVideo.svelte';
 	import Container from '$lib/Container.svelte';
 	import WorkHero from '../../../components/WorkHero.svelte';
+	import ProjectCallout from '$lib/ProjectCallout.svelte';
+
 	export let data;
 	const { doc } = data;
+
+	const sanityComponents = {
+		types: {
+			// block-level components
+			projectCallout: ProjectCallout
+		}
+	};
 </script>
 
 <svelte:head><title>{doc.title}</title></svelte:head>
@@ -21,8 +30,8 @@
 	<WorkHero title={doc.title} summary={doc.subtitle} info={doc.info} stats={doc.stats} />
 	{#if doc.body}
 		<Container>
-			<div class="prose !prose-invert">
-				<PortableText value={doc.body} components={{}} />
+			<div class="prose max-w-none !prose-invert">
+				<PortableText value={doc.body} components={sanityComponents} />
 			</div>
 		</Container>
 	{/if}
