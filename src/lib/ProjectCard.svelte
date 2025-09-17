@@ -9,6 +9,8 @@
 			<p class="text-set-gray">{subtitle}</p>
 		</div>
 		<div class="absolute top-0 left-0 z-10 h-full w-full bg-set-black opacity-80"></div>
-		<img class="absolute top-0 left-0 h-full w-full object-cover" alt={coverAlt} src={coverSrc} />
+		{#if coverSrc}
+			<img class="absolute top-0 left-0 h-full w-full object-cover" alt={coverAlt} src={coverSrc} />
+		{/if}
 	</div>
 </a>
