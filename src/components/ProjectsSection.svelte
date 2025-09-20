@@ -1,7 +1,7 @@
 <script>
 	import Container from '$lib/Container.svelte';
 	import ProjectCard from '$lib/ProjectCard.svelte';
-	import { urlFor } from '$lib/sanity';
+	import { urlFor } from '$lib/sanity/image';
 
 	let { projects } = $props();
 </script>
@@ -12,9 +12,9 @@
 			<span class="text-set-gray">Latest</span> projects
 		</h2>
 		<div class="grid-cols-2 lg:grid">
-			{#each projects.items as project}
+			{#each projects as project}
 				<ProjectCard
-					href={`/work/${project.slug}`}
+					href={`/work/${project.slug.current}`}
 					title={project.title}
 					subtitle={project.subtitle}
 					coverAlt={project.cover?.alt || project.title}

@@ -1,4 +1,5 @@
-<script>
+<script lang="ts">
+	import { useQuery } from '@sanity/svelte-loader';
 	import ContactSection from '$lib/ContactSection.svelte';
 	import Footer from '$lib/Footer.svelte';
 	import Header from '$lib/Header.svelte';
@@ -6,8 +7,12 @@
 	import AboutSection from '../components/AboutSection.svelte';
 	import HomeHero from '../components/HomeHero.svelte';
 	import ProjectsSection from '../components/ProjectsSection.svelte';
+	import type { PageData } from './$types';
 
-	export let data;
+	export let data: PageData;
+	const q = useQuery(data);
+
+	$: ({ data: projects } = $q);
 </script>
 
 <div class="flex flex-col gap-20 bg-set-black font-body text-set-white">
@@ -16,7 +21,7 @@
 	<LogoCarousel />
 
 	<main>
-		<ProjectsSection projects={data} />
+		<ProjectsSection {projects} />
 	</main>
 	<AboutSection />
 	<ContactSection />
