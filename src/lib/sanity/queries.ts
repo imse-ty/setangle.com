@@ -4,7 +4,7 @@ import groq from 'groq';
 
 export const projectQuery = groq`*[_type == "project" && slug.current == $slug][0]`;
 
-export const projectsQuery = groq`*[_type == "project" && defined(slug.current)] | order(_createdAt desc)`;
+export const projectsQuery = groq`*[_type == "project" && defined(slug.current)] | order(orderRank)`;
 
 export interface Project {
 	_type: 'project';
