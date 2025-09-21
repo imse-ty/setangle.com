@@ -12,12 +12,12 @@
 </svelte:head>
 
 {#if $isPreviewing}
-	<div class="sticky top-0 z-50 bg-set-purple py-1.5 text-set-white">
+	<div class="sticky top-0 z-50 bg-set-purple py-0.5 text-set-white">
 		<Container>
 			<div class="flex w-full items-center justify-between">
 				<span class="font-mono text-sm font-medium"> You are currently in preview mode </span>
 				<a href={`/preview/disable?redirect=${$page.url.pathname}`}>
-					<button class="btn cursor-pointer font-mono font-normal uppercase btn-outline btn-sm">
+					<button class="btn cursor-pointer font-mono font-normal uppercase btn-outline btn-xs">
 						Disable preview mode
 					</button>
 				</a>
