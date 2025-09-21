@@ -18,7 +18,9 @@
 					title={project.title}
 					subtitle={project.subtitle}
 					coverAlt={project.cover?.alt || project.title}
-					coverSrc={project.cover ? urlFor(project.cover).width(600).url() : undefined}
+					coverSrc={project.cover && project.cover.asset
+						? urlFor(project.cover).width(600).url()
+						: undefined}
 				/>
 			{/each}
 		</div>
