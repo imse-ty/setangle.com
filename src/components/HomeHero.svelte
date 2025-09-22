@@ -22,7 +22,7 @@
 			class="absolute inset-0 bg-set-black"
 			in:fade={{ duration: 300 }}
 			out:fade={{ duration: 300 }}
-			style="opacity:0.7"
+			style="opacity:0.99"
 		></div>
 	{:else}
 		<div
