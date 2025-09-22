@@ -24,7 +24,13 @@
 	// };
 </script>
 
-<svelte:head><title>{project.title}</title></svelte:head>
+<svelte:head
+	><title>{project.title} - Set Angle</title>
+
+	{#if project.subtitle}
+		<meta name="description" content={project.subtitle} />
+	{/if}
+</svelte:head>
 
 <div class="flex flex-col gap-20 bg-set-black font-body text-set-white">
 	<Container><Header /></Container>
