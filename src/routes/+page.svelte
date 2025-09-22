@@ -15,6 +15,15 @@
 	$: ({ data: projects } = $q);
 </script>
 
+<svelte:head>
+	<title>Set Angle</title>
+
+	<meta
+		name="description"
+		content="We blend animation, technology, and sound to transform ordinary stories into soulful brand experiences that inspire the culture we live in today."
+	/>
+</svelte:head>
+
 <div class="flex flex-col gap-20 bg-set-black font-body text-set-white">
 	<!-- <Header /> -->
 	<HomeHero />
