@@ -6,6 +6,7 @@
 	import YoutubeEmbed from './YoutubeEmbed.svelte';
 </script>
 
+<!-- Active YouTube video -->
 <div class="relative h-screen">
 	<div class="absolute top-0 left-0 z-10 flex h-full w-full flex-col p-10">
 		<button
@@ -15,11 +16,13 @@
 		<YoutubeEmbed url="https://youtu.be/JUP8EUPEpkw" />
 	</div>
 
+	<!-- Cover background video -->
 	<div class="absolute z-10 h-full w-full bg-set-black/98"></div>
 	<div class="absolute top-0 left-0 h-full w-full">
 		<CoverVideo src="2023-reel.webm" />
 	</div>
 
+	<!-- Hero content -->
 	<Container>
 		<div class="relative z-20 flex h-full flex-col justify-between">
 			<div class="absolute top-0 left-0 z-30 h-full w-full"></div>
