@@ -70,7 +70,7 @@ The website for Set Angle. Built with [SvelteKit](https://svelte.dev/), [Tailwin
 
 ---
 
-## Method 2 — Using Terminal Only
+## Method 2 — Using the command line only
 
 1. **Clone the repository**
    `git clone https://github.com/YOUR-ORG/setangle.com.git cd setangle.com`
