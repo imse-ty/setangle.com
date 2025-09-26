@@ -15,7 +15,7 @@
 
 		<!-- Outer container: max width, centered -->
 		<div
-			class="relative mx-auto mb-12 flex w-full flex-col gap-16 border border-set-gray lg:flex-row lg:gap-0"
+			class="relative mx-auto mb-12 flex w-full flex-col gap-16 rounded-md border border-set-gray lg:flex-row lg:gap-0"
 		>
 			<!-- Left column: uses min-w-0 for clean ellipsis and pr-12 on desktop -->
 			<div class="flex-1 p-12">

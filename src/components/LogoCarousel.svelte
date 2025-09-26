@@ -10,7 +10,7 @@
 
 <section>
 	<Container>
-		<div class="relative flex h-50 w-full items-center justify-between gap-8">
+		<div class="relative flex w-full items-center justify-between gap-8 py-32">
 			<Google />
 			<Ford />
 			<Maxon />

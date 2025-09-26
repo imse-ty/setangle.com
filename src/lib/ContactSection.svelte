@@ -4,7 +4,7 @@
 
 <section id="contact" class="h-screen">
 	<Container>
-		<div class="flex h-full flex-col justify-between py-32">
+		<div class="flex h-full flex-col justify-between py-64">
 			<h2 class="font-display text-9xl font-medium uppercase">
 				<span class="text-set-gray">Lets</span> talk
 			</h2>

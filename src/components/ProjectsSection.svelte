@@ -6,13 +6,13 @@
 	let { projects } = $props();
 </script>
 
-<section id="work" class="h-screen">
+<section id="work" class="min-h-screen">
 	<Container>
-		<div class="flex h-full flex-col gap-32">
+		<div class="flex h-full flex-col gap-16 py-64">
 			<h2 class="font-display text-9xl font-medium uppercase">
 				<span class="text-set-gray">Latest</span> projects
 			</h2>
-			<div class="grid-cols-2 lg:grid">
+			<div class="grid-cols-2 gap-2 lg:grid">
 				{#each projects as project}
 					<ProjectCard
 						href={`/work/${project.slug.current}`}

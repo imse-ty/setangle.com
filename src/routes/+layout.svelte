@@ -29,11 +29,11 @@
 {/if}
 
 <div class="realative bg-set-black font-body text-set-white">
-	<!-- <Header /> -->
-	<main class="flex flex-col gap-20">
+	<Header />
+	<main class="flex flex-col">
 		<slot />
 	</main>
-	<!-- <Footer /> -->
+	<Footer />
 </div>
 
 {#if $isPreviewing}
