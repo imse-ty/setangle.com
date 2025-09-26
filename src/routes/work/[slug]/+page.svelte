@@ -6,22 +6,23 @@
 	import Container from '$lib/Container.svelte';
 	import WorkHero from '../../../components/WorkHero.svelte';
 	import ProjectCallout from '$lib/ProjectCallout.svelte';
-
+	import { PortableText } from '@portabletext/svelte';
 	import { useQuery } from '@sanity/svelte-loader';
-	import { urlFor } from '$lib/sanity/image';
 	import type { PageData } from './$types';
+	import ProjectImage from '$lib/ProjectImage.svelte';
 
 	export let data: PageData;
 	const q = useQuery(data);
 
 	$: ({ data: project } = $q);
 
-	// const sanityComponents = {
-	// 	types: {
-	// 		// block-level components
-	// 		projectCallout: ProjectCallout
-	// 	}
-	// };
+	const sanityComponents = {
+		types: {
+			// block-level components
+			projectCallout: ProjectCallout,
+			image: ProjectImage
+		}
+	};
 </script>
 
 <svelte:head
@@ -43,13 +44,13 @@
 		info={project.info}
 		stats={project.stats}
 	/>
-	<!-- {#if project.body}
+	{#if project.body}
 		<Container>
 			<div class="prose max-w-none !prose-invert">
 				<PortableText value={project.body} components={sanityComponents} />
 			</div>
 		</Container>
-	{/if} -->
+	{/if}
 	<ContactSection />
 	<Footer />
 </div>
