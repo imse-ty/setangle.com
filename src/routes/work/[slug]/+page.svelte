@@ -10,6 +10,9 @@
 	import { useQuery } from '@sanity/svelte-loader';
 	import type { PageData } from './$types';
 	import ProjectImage from '$lib/ProjectImage.svelte';
+	import ProjectVideo from '$lib/ProjectVideo.svelte';
+	import VideoEmbed from '../../../components/VideoEmbed.svelte';
+	import VimeoEmbed from '../../../components/VimeoEmbed.svelte';
 
 	export let data: PageData;
 	const q = useQuery(data);
@@ -20,7 +23,8 @@
 		types: {
 			// block-level components
 			projectCallout: ProjectCallout,
-			image: ProjectImage
+			image: ProjectImage,
+			vimeo: ProjectVideo
 		}
 	};
 </script>
@@ -44,6 +48,7 @@
 		info={project.info}
 		stats={project.stats}
 	/>
+
 	{#if project.body}
 		<Container>
 			<div class="prose max-w-none !prose-invert">
