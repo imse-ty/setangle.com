@@ -2,8 +2,6 @@
 	import { urlFor } from './sanity/image';
 
 	let { portableText } = $props();
-
-	console.log(portableText);
 </script>
 
 <img
