@@ -37,8 +37,6 @@
 	{/if}
 </svelte:head>
 
-<Container><Header /></Container>
-
 <article>
 	<WorkHero
 		title={project.title}

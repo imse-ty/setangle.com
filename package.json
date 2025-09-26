@@ -16,6 +16,7 @@
 	"devDependencies": {
 		"@eslint/compat": "^1.2.5",
 		"@eslint/js": "^9.18.0",
+		"@iconify/svelte": "^5.0.2",
 		"@portabletext/svelte": "^3.0.0",
 		"@portabletext/types": "^2.0.13",
 		"@sanity/types": "^3.52.4",
@@ -48,6 +49,7 @@
 		"@tailwindcss/typography": "^0.5.16",
 		"get-video-id": "^4.1.7",
 		"groq": "^4.4.0",
-		"motion": "^12.23.18"
+		"motion": "^12.23.18",
+		"unplugin-icons": "^22.3.0"
 	}
 }

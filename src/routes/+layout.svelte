@@ -6,6 +6,7 @@
 	import LiveMode from '../components/LiveMode.svelte';
 	import Container from '$lib/Container.svelte';
 	import Footer from '$lib/Footer.svelte';
+	import Header from '$lib/Header.svelte';
 </script>
 
 <svelte:head>
@@ -27,7 +28,8 @@
 	</div>
 {/if}
 
-<div class="bg-set-black font-body text-set-white">
+<div class="realative bg-set-black font-body text-set-white">
+	<Header />
 	<main class="flex flex-col gap-20">
 		<slot />
 	</main>
