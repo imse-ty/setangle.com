@@ -7,7 +7,7 @@
 </script>
 
 <Container>
-	<div id="work" class="flex flex-col gap-16">
+	<section id="work" class="flex flex-col gap-16">
 		<h2 class="font-display text-6xl font-medium uppercase">
 			<span class="text-set-gray">Latest</span> projects
 		</h2>
@@ -24,5 +24,5 @@
 				/>
 			{/each}
 		</div>
-	</div>
+	</section>
 </Container>

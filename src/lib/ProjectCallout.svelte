@@ -2,20 +2,20 @@
 	let { portableText } = $props();
 </script>
 
-<section class="mx-auto flex w-full flex-col items-start gap-8 px-4 py-20 md:px-0 lg:flex-row">
+<div class="mx-auto flex w-full flex-col items-start gap-2 px-4 py-20 md:px-0 lg:flex-row lg:gap-8">
 	<!-- Left: Label aligned with paragraph top -->
-	<div class="min-w-[140px]">
-		<span class="text-s block font-mono tracking-widest text-set-white uppercase md:mt-[0.4em]">
-			{portableText.value.label}
-		</span>
-	</div>
+
+	<h2
+		class="!mt-1 block min-w-[140px] font-mono !text-xl font-normal tracking-widest text-set-white uppercase"
+	>
+		{portableText.value.label}
+	</h2>
 
 	<!-- Right: Big paragraph, clean line height, strong left alignment -->
-	<div class="flex-1">
-		<p
-			class="!my-0 font-body text-[2rem] leading-tight font-medium tracking-tight text-set-white md:text-[2.6rem] md:leading-[1.13]"
-		>
-			{portableText.value.text}
-		</p>
-	</div>
-</section>
+
+	<p
+		class="!my-0 flex-1 font-body text-[2rem] leading-tight tracking-tight text-set-white md:text-[2.6rem] md:leading-[1.13]"
+	>
+		{portableText.value.text}
+	</p>
+</div>
