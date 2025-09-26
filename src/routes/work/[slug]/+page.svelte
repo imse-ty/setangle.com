@@ -37,7 +37,7 @@
 	{/if}
 </svelte:head>
 
-<article>
+<article class="mt-32">
 	<WorkHero
 		title={project.title}
 		summary={project.subtitle}

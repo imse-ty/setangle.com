@@ -8,8 +8,8 @@
 
 <section id="work" class="h-screen">
 	<Container>
-		<div class="flex h-full flex-col gap-16">
-			<h2 class="font-display text-6xl font-medium uppercase">
+		<div class="flex h-full flex-col gap-32">
+			<h2 class="font-display text-9xl font-medium uppercase">
 				<span class="text-set-gray">Latest</span> projects
 			</h2>
 			<div class="grid-cols-2 lg:grid">
