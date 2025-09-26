@@ -11,7 +11,7 @@
 </script>
 
 {#if vimeoUrl}
-	<figure
+	<div
 		class="relative aspect-video overflow-hidden"
 		class:my-4={breakContainer}
 		class:lg\-mx-\[25\%\]={breakContainer}
@@ -25,5 +25,5 @@
 			class="absolute inset-0 h-full w-full"
 			allowfullscreen
 		></iframe>
-	</figure>
+	</div>
 {/if}

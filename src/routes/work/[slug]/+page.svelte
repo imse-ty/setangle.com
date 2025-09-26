@@ -37,16 +37,15 @@
 	{/if}
 </svelte:head>
 
-<div class="flex flex-col gap-20 bg-set-black font-body text-set-white">
-	<Container><Header /></Container>
-	{#if project.videoUrl}
-		<WorkVideo videoUrl={project.videoUrl} />
-	{/if}
+<Container><Header /></Container>
+
+<article>
 	<WorkHero
 		title={project.title}
 		summary={project.subtitle}
 		info={project.info}
 		stats={project.stats}
+		videoUrl={project.videoUrl}
 	/>
 
 	{#if project.body}
@@ -56,6 +55,6 @@
 			</div>
 		</Container>
 	{/if}
-	<ContactSection />
-	<Footer />
-</div>
+</article>
+
+<ContactSection />

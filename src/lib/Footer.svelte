@@ -3,8 +3,8 @@
 </script>
 
 <Container>
-	<div class="flex flex-col gap-4 py-6 md:flex-row md:items-center">
-		<div class="font-mono uppercase">Copyright © 2025 Set Angle. All rights reserved.</div>
+	<footer class="mt-20 flex flex-col gap-4 py-6 md:flex-row md:items-center">
+		<p class="font-mono uppercase">Copyright © 2025 Set Angle. All rights reserved.</p>
 		<div class="h-px flex-1 bg-set-gray"></div>
 		<div class="flex gap-4">
 			<a
@@ -22,5 +22,5 @@
 				rel="noopener noreferrer"><button class="uppercase">LinkedIn</button></a
 			>
 		</div>
-	</div>
+	</footer>
 </Container>

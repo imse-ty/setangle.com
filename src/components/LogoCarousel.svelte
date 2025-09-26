@@ -9,7 +9,7 @@
 </script>
 
 <Container>
-	<div class="relative flex h-24 w-full items-center justify-between gap-8">
+	<section class="relative flex h-24 w-full items-center justify-between gap-8">
 		<div
 			class="absolute top-0 left-0 h-full w-1/8 bg-gradient-to-r from-set-black to-transparent"
 		></div>
@@ -23,5 +23,5 @@
 		<Chickfila />
 		<Maxon />
 		<KaiserPermanente />
-	</div>
+	</section>
 </Container>

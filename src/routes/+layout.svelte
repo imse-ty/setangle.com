@@ -5,6 +5,7 @@
 	import { page } from '$app/stores';
 	import LiveMode from '../components/LiveMode.svelte';
 	import Container from '$lib/Container.svelte';
+	import Footer from '$lib/Footer.svelte';
 </script>
 
 <svelte:head>
@@ -26,7 +27,12 @@
 	</div>
 {/if}
 
-<slot />
+<div class="bg-set-black font-body text-set-white">
+	<main class="flex flex-col gap-20">
+		<slot />
+	</main>
+	<Footer />
+</div>
 
 {#if $isPreviewing}
 	<VisualEditing />
