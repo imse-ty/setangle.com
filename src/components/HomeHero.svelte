@@ -57,7 +57,7 @@
 			in:fade={{ duration: 300 }}
 			out:fade={{ duration: 300 }}
 		>
-			<div class="flex flex-col gap-8">
+			<div class="flex flex-col gap-16">
 				<h1 class="font-display text-5xl font-medium tracking-tight lg:text-8xl xl:text-9xl">
 					ANGLE is a motion <br />
 					<span class="text-set-gray">and</span> experience agency
@@ -81,7 +81,13 @@
 
 					<div class="h-px flex-1 bg-set-gray"></div>
 
-					<div class="font-mono uppercase">Atlanta,&nbsp;GA</div>
+					<div class="flex items-center gap-2 font-mono uppercase">
+						<Icon
+							icon="material-symbols:location-on-outline"
+							width="18"
+							height="18"
+						/>Atlanta,&nbsp;GA
+					</div>
 				</div>
 			</div>
 			<LogoCarousel />
