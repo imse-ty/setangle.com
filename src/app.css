@@ -6,6 +6,7 @@
 @plugin "daisyui/theme" {
 	name: 'lofi';
 	default: true;
+	prefersdark: true;
 	--radius-selector: 0rem;
 	--radius-field: 0rem;
 	--radius-box: 0rem;
