@@ -4,7 +4,7 @@
 @plugin "@tailwindcss/typography";
 
 @plugin "daisyui/theme" {
-	name: 'lofi';
+	name: 'light';
 	default: true;
 	prefersdark: true;
 	--radius-selector: 0rem;

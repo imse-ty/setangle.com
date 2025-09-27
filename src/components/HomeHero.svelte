@@ -65,12 +65,17 @@
 
 				<div class="flex flex-col gap-4 md:flex-row md:items-center">
 					<div class="flex gap-2">
-						<button class="btn font-mono font-normal uppercase" on:click={() => (playing = true)}>
-							<Icon icon="material-symbols:play-arrow-rounded" width="24" height="24" /> Play reel
+						<button
+							class="btn font-mono font-normal uppercase btn-primary"
+							on:click={() => (playing = true)}
+						>
+							<Icon icon="material-symbols:play-arrow-rounded" width="18" height="18" /> Play reel
 						</button>
 
 						<a href="#contact">
-							<button class="btn font-mono font-normal uppercase btn-outline">Contact us</button>
+							<button class="btn font-mono font-normal uppercase btn-outline">
+								<Icon icon="material-symbols:mail-outline" width="18" height="18" />Contact us</button
+							>
 						</a>
 					</div>
 
