@@ -3,15 +3,21 @@
 	import { onMount } from 'svelte';
 
 	let date = new Date();
-	$: hour = date.getHours();
-	$: min = date.getMinutes();
-	$: sec = date.getSeconds();
-	let dayOrNight = 'AM';
+	let hour, min, sec, dayOrNight;
+
+	function updateTime() {
+		const est = new Date(date.toLocaleString('en-US', { timeZone: 'America/New_York' }));
+		hour = est.getHours();
+		min = est.getMinutes();
+		sec = est.getSeconds();
+		dayOrNight = hour >= 12 ? 'PM' : 'AM';
+	}
 
 	onMount(() => {
+		updateTime();
 		const interval = setInterval(() => {
 			date = new Date();
-			dayOrNight = hour >= 12 ? 'PM' : 'AM';
+			updateTime();
 		}, 1000);
 	});
 </script>
