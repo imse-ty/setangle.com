@@ -22,3 +22,7 @@
 	--font-body: 'Inter', sans-serif;
 	--font-mono: 'IBM Plex Mono', monospace;
 }
+
+html.smoothscroll {
+	scroll-behavior: smooth;
+}
