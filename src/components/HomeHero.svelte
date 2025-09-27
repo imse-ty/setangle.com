@@ -7,6 +7,7 @@
 	import CoverVideo from './CoverVideo.svelte';
 	import YoutubeEmbed from './YoutubeEmbed.svelte';
 	import Icon from '@iconify/svelte';
+	import LogoCarousel from './LogoCarousel.svelte';
 
 	let playing = false;
 </script>
@@ -51,38 +52,34 @@
 
 	<!-- HERO -->
 	{#if !playing}
-		<div class="h-v relative z-20" in:fade={{ duration: 300 }} out:fade={{ duration: 300 }}>
-			<Container>
-				<div class="flex h-[80vh] flex-col justify-end gap-20">
-					<h1 class="font-display text-5xl font-medium tracking-tight lg:text-8xl xl:text-9xl">
-						ANGLE is a motion <br />
-						<span class="text-set-gray">and</span> experience agency
-					</h1>
+		<div
+			class="relative z-20 flex h-full flex-col justify-end gap-32 px-8 pb-32 md:px-16 xl:px-32.5"
+			in:fade={{ duration: 300 }}
+			out:fade={{ duration: 300 }}
+		>
+			<div class="flex flex-col gap-8">
+				<h1 class="font-display text-5xl font-medium tracking-tight lg:text-8xl xl:text-9xl">
+					ANGLE is a motion <br />
+					<span class="text-set-gray">and</span> experience agency
+				</h1>
 
-					<div class="flex flex-col gap-4 md:flex-row md:items-center">
-						<div class="flex gap-2">
-							<button
-								class="btn pl-0 font-mono font-normal uppercase btn-ghost"
-								on:click={() => (playing = true)}
-							>
-								Play reel
-							</button>
+				<div class="flex flex-col gap-4 md:flex-row md:items-center">
+					<div class="flex gap-2">
+						<button class="btn font-mono font-normal uppercase" on:click={() => (playing = true)}>
+							<Icon icon="material-symbols:play-arrow-rounded" width="24" height="24" /> Play reel
+						</button>
 
-							<a
-								href="https://cal.com/team/setangle/discuss"
-								target="_blank"
-								rel="noopener noreferrer"
-							>
-								<button class="btn font-mono font-normal uppercase btn-ghost">Book a call</button>
-							</a>
-						</div>
-
-						<div class="h-px flex-1 bg-set-gray"></div>
-
-						<div class="font-mono uppercase">Atlanta,&nbsp;GA</div>
+						<a href="#contact">
+							<button class="btn font-mono font-normal uppercase btn-outline">Contact us</button>
+						</a>
 					</div>
+
+					<div class="h-px flex-1 bg-set-gray"></div>
+
+					<div class="font-mono uppercase">Atlanta,&nbsp;GA</div>
 				</div>
-			</Container>
+			</div>
+			<LogoCarousel />
 		</div>
 	{/if}
 </div>

@@ -6,9 +6,9 @@
 	let { projects } = $props();
 </script>
 
-<section id="work" class="min-h-screen">
+<section id="work">
 	<Container>
-		<div class="flex h-full flex-col gap-16 py-64">
+		<div class="flex h-full flex-col gap-16 py-32">
 			<h2 class="font-display text-9xl font-medium uppercase">
 				<span class="text-set-gray">Latest</span> projects
 			</h2>

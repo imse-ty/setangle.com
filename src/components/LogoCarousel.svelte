@@ -9,14 +9,12 @@
 </script>
 
 <section>
-	<Container>
-		<div class="relative flex w-full items-center justify-between gap-8 py-32">
-			<Google />
-			<Ford />
-			<Maxon />
-			<Chickfila />
-			<KaiserPermanente />
-			<Vmware />
-		</div>
-	</Container>
+	<div class="relative flex w-full items-center justify-between gap-8 fill-neutral-200">
+		<Google />
+		<Ford />
+		<Maxon />
+		<Chickfila />
+		<KaiserPermanente />
+		<Vmware />
+	</div>
 </section>
