@@ -51,7 +51,7 @@
 	<main class="flex flex-col">
 		<slot />
 	</main>
-	<Footer />
+	<!-- <Footer /> -->
 </div>
 
 {#if $isPreviewing}

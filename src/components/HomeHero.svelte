@@ -1,96 +1,41 @@
 <script>
-	import { fade } from 'svelte/transition';
-
-	import AngleLogo from '$lib/AngleLogo.svelte';
-	import Container from '$lib/Container.svelte';
-	import Header from '$lib/Header.svelte';
-	import CoverVideo from './CoverVideo.svelte';
-	import YoutubeEmbed from './YoutubeEmbed.svelte';
 	import Icon from '@iconify/svelte';
 	import LogoCarousel from './LogoCarousel.svelte';
 
 	let playing = false;
 </script>
 
-<div class="relative h-screen overflow-hidden">
-	<!-- YOUTUBE OVERLAY -->
-	{#if playing}
-		<div class="absolute top-0 left-0 z-10 flex h-full w-full flex-col p-80">
-			<button
-				class="realtive btn z-10 ml-auto btn-square font-mono font-normal uppercase"
-				on:click={() => (playing = false)}
-				><Icon icon="material-symbols:close" width="18" height="18" /></button
-			>
-			<YoutubeEmbed url="https://youtu.be/JUP8EUPEpkw" />
-		</div>
-	{/if}
+<div class="relative h-[200vh]">
+	<!-- Hero -->
+	<div
+		class="absolute top-0 z-20 flex h-[50vh] w-full flex-col justify-end gap-8 bg-black/95 p-8 md:h-[70vh] md:p-16 xl:px-32.5"
+	>
+		<h1 class="font-display text-4xl font-bold uppercase md:text-8xl">
+			A motion
+			<span class="text-set-gray">and</span><br /> experience agency
+		</h1>
+	</div>
 
-	<!-- Background cover video -->
-	<div class="absolute inset-0 top-0">
-		<video autoplay loop muted playsinline poster="" class="m-h-full h-full w-full object-cover">
+	<!-- Reel -->
+	<div class="sticky top-0 z-10 h-screen overflow-hidden">
+		<!-- <div class="absolute bottom-0 z-30 hidden w-full p-8 md:block md:p-16 xl:px-32.5">
+			<LogoCarousel />
+		</div> -->
+
+		<div
+			class="absolute bottom-0 left-0 z-20 flex w-full items-center justify-between p-4 md:hidden"
+		>
+			<p class="font-mono">Reel</p>
+			<button class="btn btn-square btn-lg">
+				<Icon icon="material-symbols:play-arrow" width="24" />
+			</button>
+		</div>
+
+		<div class="absolute top-0 left-0 z-10 h-full w-full bg-black opacity-30"></div>
+
+		<video autoplay loop muted playsinline poster="" class="h-full w-full object-cover">
 			<source src="2023-reel.webm" type="video/webm" />
 			Your browser does not support the video tag.
 		</video>
 	</div>
-
-	<!-- Backdrop (same element for dimmer and solid) -->
-	{#if !playing}
-		<div
-			class="absolute inset-0 bg-set-black"
-			in:fade={{ duration: 300 }}
-			out:fade={{ duration: 300 }}
-			style="opacity:0.80"
-		></div>
-	{:else}
-		<div
-			class="absolute inset-0 bg-set-black"
-			in:fade={{ duration: 300 }}
-			out:fade={{ duration: 300 }}
-			style="opacity:1"
-		></div>
-	{/if}
-
-	<!-- HERO -->
-	{#if !playing}
-		<div
-			class="relative z-20 flex h-full flex-col justify-end gap-32 px-8 pb-32 md:px-16 xl:px-32.5"
-			in:fade={{ duration: 300 }}
-			out:fade={{ duration: 300 }}
-		>
-			<div class="flex flex-col gap-16">
-				<h1 class="font-display text-5xl font-medium tracking-tight lg:text-8xl xl:text-9xl">
-					ANGLE is a motion <br />
-					<span class="text-set-gray">and</span> experience agency
-				</h1>
-
-				<div class="flex flex-col gap-4 md:flex-row md:items-center">
-					<div class="flex gap-2">
-						<button
-							class="btn font-mono font-normal uppercase btn-primary"
-							on:click={() => (playing = true)}
-						>
-							<Icon icon="material-symbols:play-arrow-rounded" width="18" height="18" /> Play reel
-						</button>
-
-						<a href="#contact">
-							<button class="btn font-mono font-normal uppercase btn-outline">
-								<Icon icon="material-symbols:mail-outline" width="18" height="18" />Contact us</button
-							>
-						</a>
-					</div>
-
-					<div class="h-px flex-1 bg-set-gray"></div>
-
-					<div class="flex items-center gap-2 font-mono uppercase">
-						<Icon
-							icon="material-symbols:location-on-outline"
-							width="18"
-							height="18"
-						/>Atlanta,&nbsp;GA
-					</div>
-				</div>
-			</div>
-			<LogoCarousel />
-		</div>
-	{/if}
 </div>
