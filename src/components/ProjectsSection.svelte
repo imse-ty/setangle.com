@@ -6,23 +6,25 @@
 	let { projects } = $props();
 </script>
 
-<Container>
-	<section id="work" class="flex flex-col gap-16">
-		<h2 class="font-display text-6xl font-medium uppercase">
-			<span class="text-set-gray">Latest</span> projects
-		</h2>
-		<div class="grid-cols-2 lg:grid">
-			{#each projects as project}
-				<ProjectCard
-					href={`/work/${project.slug.current}`}
-					title={project.title}
-					subtitle={project.subtitle}
-					coverAlt={project.cover?.alt || project.title}
-					coverSrc={project.cover && project.cover.asset
-						? urlFor(project.cover).width(600).url()
-						: undefined}
-				/>
-			{/each}
+<section id="work">
+	<Container>
+		<div class="flex h-full flex-col gap-16 py-32">
+			<h2 class="font-display text-9xl font-medium uppercase">
+				<span class="text-set-gray">Latest</span> projects
+			</h2>
+			<div class="grid-cols-2 gap-2 lg:grid">
+				{#each projects as project}
+					<ProjectCard
+						href={`/work/${project.slug.current}`}
+						title={project.title}
+						subtitle={project.subtitle}
+						coverAlt={project.cover?.alt || project.title}
+						coverSrc={project.cover && project.cover.asset
+							? urlFor(project.cover).width(600).url()
+							: undefined}
+					/>
+				{/each}
+			</div>
 		</div>
-	</section>
-</Container>
+	</Container>
+</section>

@@ -2,13 +2,15 @@
 	import Container from '$lib/Container.svelte';
 </script>
 
-<Container>
-	<section id="about" class="flex flex-col gap-8 md:flex-row">
-		<h2 class="font-mono uppercase">About</h2>
-		<p class="text-4xl">
-			We craft bold motion design and creative development <span class="text-set-gray"
-				>that blends art and tech to help brands connect and inspire.</span
-			>
-		</p>
-	</section>
-</Container>
+<section id="about" class="flex h-screen bg-neutral-900">
+	<Container>
+		<div class="flex h-full flex-col justify-between gap-16 py-64">
+			<h2 class="font-display text-9xl font-medium uppercase">
+				About <span class="text-set-gray">us</span>
+			</h2>
+			<p class="text-5xl text-white">
+				We craft motion design and creative development to help brands connect and inspire.
+			</p>
+		</div>
+	</Container>
+</section>

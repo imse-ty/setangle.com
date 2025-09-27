@@ -12,7 +12,7 @@
 
 {#if vimeoUrl}
 	<div
-		class="relative aspect-video overflow-hidden"
+		class="relative aspect-video overflow-hidden rounded-md"
 		class:my-4={breakContainer}
 		class:lg\-mx-\[25\%\]={breakContainer}
 		class:xl\-mx-\[50\%\]={breakContainer}

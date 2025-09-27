@@ -1,4 +1,4 @@
-<script lang="ts">
+<script>
 	import '../app.css';
 	import favicon from '$lib/assets/favicon.svg';
 	import { isPreviewing, VisualEditing } from '@sanity/visual-editing/svelte';
@@ -6,6 +6,25 @@
 	import LiveMode from '../components/LiveMode.svelte';
 	import Container from '$lib/Container.svelte';
 	import Footer from '$lib/Footer.svelte';
+	import Header from '$lib/Header.svelte';
+	import { onMount } from 'svelte';
+	import { afterNavigate, beforeNavigate } from '$app/navigation';
+
+	let root;
+
+	onMount(() => {
+		root = document.getElementsByTagName('html')[0];
+
+		root?.classList.add('smoothscroll');
+	});
+
+	beforeNavigate(() => {
+		root?.classList.remove('smoothscroll');
+	});
+
+	afterNavigate(() => {
+		root?.classList.add('smoothscroll');
+	});
 </script>
 
 <svelte:head>
@@ -27,8 +46,9 @@
 	</div>
 {/if}
 
-<div class="bg-set-black font-body text-set-white">
-	<main class="flex flex-col gap-20">
+<div class="realative bg-set-black font-body text-set-white">
+	<Header />
+	<main class="flex flex-col">
 		<slot />
 	</main>
 	<Footer />

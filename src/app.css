@@ -4,8 +4,9 @@
 @plugin "@tailwindcss/typography";
 
 @plugin "daisyui/theme" {
-	name: 'lofi';
+	name: 'light';
 	default: true;
+	prefersdark: true;
 	--radius-selector: 0rem;
 	--radius-field: 0rem;
 	--radius-box: 0rem;
@@ -13,11 +14,15 @@
 
 @theme {
 	--color-set-black: #111111;
-	--color-set-white: #d1d1d1;
-	--color-set-gray: #717171;
+	--color-set-white: #ffffff;
+	--color-set-gray: #b7b7b7;
 	--color-set-purple: #8236fc;
 
 	--font-display: 'Big Shoulders', sans-serif;
 	--font-body: 'Inter', sans-serif;
 	--font-mono: 'IBM Plex Mono', monospace;
+}
+
+html.smoothscroll {
+	scroll-behavior: smooth;
 }

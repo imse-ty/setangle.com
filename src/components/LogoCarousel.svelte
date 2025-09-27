@@ -8,16 +8,13 @@
 	import Vmware from './logos/Vmware.svelte';
 </script>
 
-<Container>
-	<section class="relative flex h-24 w-full items-center justify-between gap-8">
-		<div class="absolute top-0 left-0 h-full w-1/8"></div>
-		<div class="absolute top-0 right-0 h-full w-1/8"></div>
-
+<section>
+	<div class="relative flex w-full items-center justify-between gap-8 fill-neutral-200">
 		<Google />
 		<Ford />
 		<Maxon />
 		<Chickfila />
 		<KaiserPermanente />
 		<Vmware />
-	</section>
-</Container>
+	</div>
+</section>
