@@ -27,7 +27,7 @@
 </script>
 
 <header
-	class="fixed top-0 z-50 w-full px-6 backdrop-blur-xs will-change-transform md:px-12 xl:px-24"
+	class="fixed top-0 z-50 w-full px-6 backdrop-blur-xs will-change-transform md:px-16 xl:px-32.5"
 	style="transform: translateY({$y}px); transition: transform 0.45s cubic-bezier(0.25, 1, 0.5, 1);"
 >
 	<div class="flex items-center justify-between py-4 md:py-6">
