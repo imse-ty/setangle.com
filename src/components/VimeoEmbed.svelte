@@ -6,7 +6,7 @@
 
 	$: vimeoId = url ? getVideoId(url)?.id : null;
 	$: vimeoUrl = vimeoId
-		? `https://player.vimeo.com/video/${vimeoId}?playsinline=0&transparent=0&loop=1&autoplay=${autoplay ? '1' : '0'}`
+		? `https://player.vimeo.com/video/${vimeoId}?playsinline=0&transparent=0&loop=1&muted=1&autoplay=${autoplay ? '1' : '0'}`
 		: null;
 </script>
 

@@ -9,10 +9,6 @@
 
 <Container>
 	<header>
-		{#if videoUrl}
-			<div class="mb-12"><VimeoEmbed url={videoUrl} /></div>
-		{/if}
-
 		<!-- Outer container: max width, centered -->
 		<div
 			class="relative mx-auto mb-12 flex w-full flex-col gap-16 rounded-md border border-set-gray lg:flex-row lg:gap-0"
@@ -48,5 +44,9 @@
 				{/if}
 			</div>
 		</div>
+
+		{#if videoUrl}
+			<div class="mb-12"><VimeoEmbed autoplay={true} url={videoUrl} /></div>
+		{/if}
 	</header>
 </Container>
