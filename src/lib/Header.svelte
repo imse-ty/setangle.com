@@ -35,6 +35,7 @@
 
 		<nav class="hidden md:block">
 			<ul class="flex items-center gap-6">
+				<NavItem href="/#reel">Reel</NavItem>
 				<NavItem href="/#work">Work</NavItem>
 				<NavItem href="/#about">About</NavItem>
 				<NavItem href="#contact">Contact</NavItem>
