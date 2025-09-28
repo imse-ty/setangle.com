@@ -54,7 +54,7 @@
 <section
 	class="flex h-[50vh] w-full flex-col justify-end gap-6 bg-black/95 p-6 md:h-[70vh] md:p-16 xl:px-32.5"
 >
-	<h1 class="font-display text-3xl font-bold uppercase md:text-8xl lg:text-9xl">
+	<h1 class="font-display text-5xl font-bold uppercase md:text-8xl lg:text-9xl">
 		A motion <span class="text-set-gray">and</span><br /> experience agency
 	</h1>
 </section>
