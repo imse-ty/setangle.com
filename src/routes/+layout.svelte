@@ -46,12 +46,12 @@
 	</div>
 {/if}
 
-<div class="realative bg-black font-body text-white">
+<div class="relative font-body text-white">
 	<Header />
-	<main class="flex flex-col">
+	<main class="relative z-10 flex min-h-screen flex-col bg-black">
 		<slot />
 	</main>
-	<!-- <Footer /> -->
+	<Footer />
 </div>
 
 {#if $isPreviewing}
