@@ -24,5 +24,5 @@
 
 <HomeHero />
 <ProjectsSection {projects} />
-<!-- <AboutSection /> -->
+<AboutSection />
 <!-- <ContactSection /> -->

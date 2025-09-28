@@ -6,7 +6,7 @@
 	let { projects } = $props();
 </script>
 
-<section id="work">
+<section id="work" class="snap-start">
 	<Container>
 		<div class="flex h-full flex-col gap-8 py-32">
 			<h2 class="font-display text-4xl font-medium uppercase md:text-6xl">
