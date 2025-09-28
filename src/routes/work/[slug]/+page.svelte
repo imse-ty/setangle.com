@@ -1,6 +1,6 @@
 <script lang="ts">
 	import Header from '$lib/Header.svelte';
-	import ContactSection from '$lib/ContactSection.svelte';
+	import ContactSection from '$lib/Footer.svelte';
 	import Footer from '$lib/Footer.svelte';
 	import WorkVideo from '../../../components/WorkVideo.svelte';
 	import Container from '$lib/Container.svelte';
@@ -37,7 +37,7 @@
 	{/if}
 </svelte:head>
 
-<article class="mt-32">
+<article class="py-32">
 	<WorkHero
 		title={project.title}
 		summary={project.subtitle}
@@ -54,5 +54,3 @@
 		</Container>
 	{/if}
 </article>
-
-<ContactSection />

@@ -46,9 +46,9 @@
 	</div>
 {/if}
 
-<div class="realative bg-set-black font-body text-set-white">
+<div class="relative font-body text-white">
 	<Header />
-	<main class="flex flex-col">
+	<main class="relative z-10 flex min-h-screen flex-col bg-black">
 		<slot />
 	</main>
 	<Footer />

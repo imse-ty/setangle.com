@@ -1,6 +1,6 @@
 <script lang="ts">
 	import { useQuery } from '@sanity/svelte-loader';
-	import ContactSection from '$lib/ContactSection.svelte';
+	import ContactSection from '$lib/Footer.svelte';
 	import LogoCarousel from '../components/LogoCarousel.svelte';
 	import AboutSection from '../components/AboutSection.svelte';
 	import HomeHero from '../components/HomeHero.svelte';
@@ -25,4 +25,3 @@
 <HomeHero />
 <ProjectsSection {projects} />
 <AboutSection />
-<ContactSection />

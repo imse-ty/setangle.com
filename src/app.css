@@ -3,13 +3,14 @@
 @plugin "daisyui";
 @plugin "@tailwindcss/typography";
 
+@utility container {
+	max-width: 90rem;
+}
+
 @plugin "daisyui/theme" {
-	name: 'light';
+	name: 'lofi';
 	default: true;
 	prefersdark: true;
-	--radius-selector: 0rem;
-	--radius-field: 0rem;
-	--radius-box: 0rem;
 }
 
 @theme {

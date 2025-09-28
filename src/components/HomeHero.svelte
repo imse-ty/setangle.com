@@ -1,96 +1,123 @@
 <script>
-	import { fade } from 'svelte/transition';
-
-	import AngleLogo from '$lib/AngleLogo.svelte';
-	import Container from '$lib/Container.svelte';
-	import Header from '$lib/Header.svelte';
-	import CoverVideo from './CoverVideo.svelte';
-	import YoutubeEmbed from './YoutubeEmbed.svelte';
+	import { onMount, onDestroy } from 'svelte';
 	import Icon from '@iconify/svelte';
-	import LogoCarousel from './LogoCarousel.svelte';
 
 	let playing = false;
+	let isCoarse = false;
+	let hovered = false;
+
+	const DESKTOP_ID = 'JUP8EUPEpkw';
+	const MOBILE_ID = 'gvuHj4YtgUw';
+
+	// reactive embed src + key
+	$: embedSrc = isCoarse
+		? `https://www.youtube.com/embed/${MOBILE_ID}?autoplay=1&controls=1&modestbranding=1&rel=0&playsinline=1&loop=1`
+		: `https://www.youtube.com/embed/${DESKTOP_ID}?playlist=${DESKTOP_ID}&autoplay=1&ontrols=1c&modestbranding=1&rel=0&playsinline=1&loop=1`;
+
+	function computePointer() {
+		const coarse = window.matchMedia('(any-pointer: coarse)').matches;
+		const fine = window.matchMedia('(any-pointer: fine)').matches;
+		isCoarse = coarse && !fine;
+	}
+
+	onMount(() => {
+		computePointer();
+
+		const mqCoarse = window.matchMedia('(any-pointer: coarse)');
+		const mqFine = window.matchMedia('(any-pointer: fine)');
+		const onChange = () => computePointer();
+
+		mqCoarse.addEventListener?.('change', onChange);
+		mqFine.addEventListener?.('change', onChange);
+
+		let t;
+		const onResize = () => {
+			clearTimeout(t);
+			t = setTimeout(computePointer, 150);
+		};
+		window.addEventListener('resize', onResize, { passive: true });
+
+		onDestroy(() => {
+			mqCoarse.removeEventListener?.('change', onChange);
+			mqFine.removeEventListener?.('change', onChange);
+			window.removeEventListener('resize', onResize);
+		});
+	});
+
+	function playReel() {
+		playing = true;
+		document.getElementById('reel')?.scrollIntoView({ behavior: 'smooth', block: 'start' });
+	}
 </script>
 
-<div class="relative h-screen overflow-hidden">
-	<!-- YOUTUBE OVERLAY -->
-	{#if playing}
-		<div class="absolute top-0 left-0 z-10 flex h-full w-full flex-col p-80">
-			<button
-				class="realtive btn z-10 ml-auto btn-square font-mono font-normal uppercase"
-				on:click={() => (playing = false)}
-				><Icon icon="material-symbols:close" width="18" height="18" /></button
-			>
-			<YoutubeEmbed url="https://youtu.be/JUP8EUPEpkw" />
-		</div>
-	{/if}
+<!-- Hero -->
+<section
+	class="flex h-[50vh] w-full flex-col justify-end gap-6 bg-black/95 p-6 md:h-[70vh] md:p-16 xl:px-32.5"
+>
+	<h1 class="font-display text-3xl font-bold uppercase md:text-8xl lg:text-9xl">
+		A motion <span class="text-set-gray">and</span><br /> experience agency
+	</h1>
+</section>
 
-	<!-- Background cover video -->
-	<div class="absolute inset-0 top-0">
-		<video autoplay loop muted playsinline poster="" class="m-h-full h-full w-full object-cover">
-			<source src="2023-reel.webm" type="video/webm" />
-			Your browser does not support the video tag.
-		</video>
-	</div>
-
-	<!-- Backdrop (same element for dimmer and solid) -->
+<!-- Reel -->
+<section id="reel" class="relative z-10 h-[50vh] overflow-hidden bg-black md:h-screen">
 	{#if !playing}
 		<div
-			class="absolute inset-0 bg-set-black"
-			in:fade={{ duration: 300 }}
-			out:fade={{ duration: 300 }}
-			style="opacity:0.80"
-		></div>
-	{:else}
-		<div
-			class="absolute inset-0 bg-set-black"
-			in:fade={{ duration: 300 }}
-			out:fade={{ duration: 300 }}
-			style="opacity:1"
-		></div>
-	{/if}
-
-	<!-- HERO -->
-	{#if !playing}
-		<div
-			class="relative z-20 flex h-full flex-col justify-end gap-32 px-8 pb-32 md:px-16 xl:px-32.5"
-			in:fade={{ duration: 300 }}
-			out:fade={{ duration: 300 }}
+			class="group relative h-full w-full select-none"
+			on:click={playReel}
+			on:mouseenter={() => (hovered = true)}
+			on:mouseleave={() => (hovered = false)}
 		>
-			<div class="flex flex-col gap-16">
-				<h1 class="font-display text-5xl font-medium tracking-tight lg:text-8xl xl:text-9xl">
-					ANGLE is a motion <br />
-					<span class="text-set-gray">and</span> experience agency
-				</h1>
-
-				<div class="flex flex-col gap-4 md:flex-row md:items-center">
-					<div class="flex gap-2">
-						<button
-							class="btn font-mono font-normal uppercase btn-primary"
-							on:click={() => (playing = true)}
-						>
-							<Icon icon="material-symbols:play-arrow-rounded" width="18" height="18" /> Play reel
-						</button>
-
-						<a href="#contact">
-							<button class="btn font-mono font-normal uppercase btn-outline">
-								<Icon icon="material-symbols:mail-outline" width="18" height="18" />Contact us</button
-							>
-						</a>
-					</div>
-
-					<div class="h-px flex-1 bg-set-gray"></div>
-
-					<div class="flex items-center gap-2 font-mono uppercase">
-						<Icon
-							icon="material-symbols:location-on-outline"
-							width="18"
-							height="18"
-						/>Atlanta,&nbsp;GA
-					</div>
+			{#if !isCoarse}
+				<!-- Desktop centered button -->
+				<div class="absolute top-1/2 left-1/2 z-30 -translate-x-1/2 -translate-y-1/2">
+					<button
+						type="button"
+						class="flex h-24 w-24 cursor-pointer items-center justify-center rounded-full border border-white/30 bg-white/20 text-white backdrop-blur-md transition hover:bg-white/30 active:scale-95"
+					>
+						<Icon icon="material-symbols:play-arrow" width="64" />
+					</button>
 				</div>
-			</div>
-			<LogoCarousel />
+			{/if}
+
+			{#if isCoarse}
+				<!-- Mobile bottom corners -->
+				<div class="absolute inset-x-0 bottom-0 z-30 flex items-end justify-between p-6">
+					<p class="font-mono text-sm tracking-wide text-white">Reel</p>
+					<button
+						type="button"
+						on:click|stopPropagation={playReel}
+						class="flex h-14 w-14 cursor-pointer items-center justify-center rounded-full border border-white/30 bg-white/20 text-white backdrop-blur-md transition hover:bg-white/30 active:scale-95 md:h-16 md:w-16"
+					>
+						<Icon icon="material-symbols:play-arrow" width="36" class="md:w-[44px]" />
+					</button>
+				</div>
+			{/if}
+
+			<!-- Hover darken -->
+			<div
+				class="pointer-events-none absolute inset-0 z-10 bg-black transition-opacity duration-300"
+				class:opacity-30={!hovered}
+				class:opacity-60={hovered}
+			></div>
+
+			<!-- BG video -->
+			<video autoplay loop muted playsinline class="h-full w-full cursor-pointer object-cover">
+				<source src="2023-reel.webm" type="video/webm" />
+			</video>
+		</div>
+	{:else}
+		<!-- Embed; swaps live on resize -->
+		<div class="absolute inset-0 h-full w-full">
+			{#key embedSrc}
+				<iframe
+					title="Reel"
+					src={embedSrc}
+					class="h-full w-full"
+					allow="autoplay; fullscreen"
+					allowfullscreen
+				></iframe>
+			{/key}
 		</div>
 	{/if}
-</div>
+</section>
