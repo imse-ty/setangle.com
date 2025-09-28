@@ -6,9 +6,9 @@
 	let { projects } = $props();
 </script>
 
-<section id="work" class="snap-start">
+<section id="work">
 	<Container>
-		<div class="flex h-full flex-col gap-8 py-32">
+		<div class="flex h-full flex-col gap-8 py-16 md:py-32">
 			<h2 class="font-display text-4xl font-medium uppercase md:text-6xl">
 				<span class="text-set-gray">Latest</span> projects
 			</h2>
