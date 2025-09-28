@@ -1,13 +1,47 @@
 <script>
-	import { onMount } from 'svelte';
+	import { onMount, onDestroy } from 'svelte';
 	import Icon from '@iconify/svelte';
 
 	let playing = false;
 	let isCoarse = false;
 	let hovered = false;
 
+	const DESKTOP_ID = 'JUP8EUPEpkw';
+	const MOBILE_ID = 'gvuHj4YtgUw';
+
+	// reactive embed src + key
+	$: embedSrc = isCoarse
+		? `https://www.youtube.com/embed/${MOBILE_ID}?autoplay=1&controls=1&modestbranding=1&rel=0&playsinline=1&loop=1`
+		: `https://www.youtube.com/embed/${DESKTOP_ID}?playlist=${DESKTOP_ID}&autoplay=1&ontrols=1c&modestbranding=1&rel=0&playsinline=1&loop=1`;
+
+	function computePointer() {
+		const coarse = window.matchMedia('(any-pointer: coarse)').matches;
+		const fine = window.matchMedia('(any-pointer: fine)').matches;
+		isCoarse = coarse && !fine;
+	}
+
 	onMount(() => {
-		isCoarse = window.matchMedia('(pointer: coarse)').matches;
+		computePointer();
+
+		const mqCoarse = window.matchMedia('(any-pointer: coarse)');
+		const mqFine = window.matchMedia('(any-pointer: fine)');
+		const onChange = () => computePointer();
+
+		mqCoarse.addEventListener?.('change', onChange);
+		mqFine.addEventListener?.('change', onChange);
+
+		let t;
+		const onResize = () => {
+			clearTimeout(t);
+			t = setTimeout(computePointer, 150);
+		};
+		window.addEventListener('resize', onResize, { passive: true });
+
+		onDestroy(() => {
+			mqCoarse.removeEventListener?.('change', onChange);
+			mqFine.removeEventListener?.('change', onChange);
+			window.removeEventListener('resize', onResize);
+		});
 	});
 
 	function playReel() {
@@ -34,8 +68,8 @@
 			on:mouseenter={() => (hovered = true)}
 			on:mouseleave={() => (hovered = false)}
 		>
-			<!-- Desktop: centered play button -->
 			{#if !isCoarse}
+				<!-- Desktop centered button -->
 				<div class="absolute top-1/2 left-1/2 z-30 -translate-x-1/2 -translate-y-1/2">
 					<button
 						type="button"
@@ -46,8 +80,8 @@
 				</div>
 			{/if}
 
-			<!-- Mobile bottom-corner UI -->
 			{#if isCoarse}
+				<!-- Mobile bottom corners -->
 				<div class="absolute inset-x-0 bottom-0 z-30 flex items-end justify-between p-6">
 					<p class="font-mono text-sm tracking-wide text-white">Reel</p>
 					<button
@@ -60,29 +94,30 @@
 				</div>
 			{/if}
 
-			<!-- Overlay darkens on hover -->
+			<!-- Hover darken -->
 			<div
 				class="pointer-events-none absolute inset-0 z-10 bg-black transition-opacity duration-300"
 				class:opacity-30={!hovered}
 				class:opacity-60={hovered}
 			></div>
 
-			<!-- Background video -->
+			<!-- BG video -->
 			<video autoplay loop muted playsinline class="h-full w-full cursor-pointer object-cover">
 				<source src="2023-reel.webm" type="video/webm" />
-				Your browser does not support the video tag.
 			</video>
 		</div>
 	{:else}
-		<!-- YouTube embed -->
+		<!-- Embed; swaps live on resize -->
 		<div class="absolute inset-0 h-full w-full">
-			<iframe
-				title="Reel"
-				src="https://www.youtube.com/embed/JUP8EUPEpkw?playlist=JUP8EUPEpkw&autoplay=1&controls=1&modestbranding=1&rel=0&playsinline=1&loop=1"
-				class="h-full w-full"
-				allow="autoplay; fullscreen"
-				allowfullscreen
-			></iframe>
+			{#key embedSrc}
+				<iframe
+					title="Reel"
+					src={embedSrc}
+					class="h-full w-full"
+					allow="autoplay; fullscreen"
+					allowfullscreen
+				></iframe>
+			{/key}
 		</div>
 	{/if}
 </section>
