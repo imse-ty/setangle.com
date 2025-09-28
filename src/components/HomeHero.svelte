@@ -112,7 +112,7 @@
 			<div class="absolute inset-0 h-full w-full">
 				<iframe
 					title="Reel"
-					src="https://www.youtube.com/embed/JUP8EUPEpkw?autoplay=1&controls=0&modestbranding=1&rel=0&playsinline=1"
+					src="https://www.youtube.com/embed/JUP8EUPEpkw?playlist=JUP8EUPEpkw&autoplay=1&controls=1&modestbranding=1&rel=0&playsinline=1&loop=1"
 					class="h-full w-full"
 					allow="autoplay; fullscreen"
 					allowfullscreen
