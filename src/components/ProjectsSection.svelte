@@ -8,11 +8,11 @@
 
 <section id="work">
 	<Container>
-		<div class="flex h-full flex-col gap-16 py-32">
-			<h2 class="font-display text-9xl font-medium uppercase">
+		<div class="flex h-full flex-col gap-8 py-32">
+			<h2 class="font-display text-4xl font-medium uppercase md:text-6xl">
 				<span class="text-set-gray">Latest</span> projects
 			</h2>
-			<div class="grid-cols-2 gap-2 lg:grid">
+			<div class="grid-col-1 grid gap-2 sm:grid-cols-2">
 				{#each projects as project}
 					<ProjectCard
 						href={`/work/${project.slug.current}`}

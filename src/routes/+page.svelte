@@ -23,6 +23,6 @@
 </svelte:head>
 
 <HomeHero />
-<!-- <ProjectsSection {projects} /> -->
+<ProjectsSection {projects} />
 <!-- <AboutSection /> -->
 <!-- <ContactSection /> -->

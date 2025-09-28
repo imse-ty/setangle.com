@@ -3,6 +3,10 @@
 @plugin "daisyui";
 @plugin "@tailwindcss/typography";
 
+@utility container {
+	max-width: 90rem;
+}
+
 @plugin "daisyui/theme" {
 	name: 'lofi';
 	default: true;

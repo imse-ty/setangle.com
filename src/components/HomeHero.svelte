@@ -10,7 +10,7 @@
 	<div
 		class="absolute top-0 z-20 flex h-[50vh] w-full flex-col justify-end gap-8 bg-black/95 p-8 md:h-[70vh] md:p-16 xl:px-32.5"
 	>
-		<h1 class="font-display text-4xl font-bold uppercase md:text-8xl">
+		<h1 class="font-display text-4xl font-bold uppercase md:text-8xl lg:text-9xl">
 			A motion
 			<span class="text-set-gray">and</span><br /> experience agency
 		</h1>
