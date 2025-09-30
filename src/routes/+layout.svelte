@@ -32,7 +32,7 @@
 </svelte:head>
 
 {#if $isPreviewing}
-	<div class="sticky top-0 z-50 bg-set-purple py-0.5 text-set-white">
+	<div class="sticky top-0 z-100 bg-set-purple py-0.5 text-set-white">
 		<Container>
 			<div class="flex w-full items-center justify-between">
 				<span class="font-mono text-sm"> You are currently in preview mode </span>
