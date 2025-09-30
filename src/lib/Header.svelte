@@ -24,7 +24,7 @@
 <svelte:window onscroll={onScroll} />
 
 <header
-	class="fixed top-0 z-50 w-full px-6 backdrop-blur-xs will-change-transform md:px-16 xl:px-32.5"
+	class="fixed top-0 z-50 w-full bg-neutral-900/75 px-6 will-change-transform md:px-16 xl:px-32.5"
 	style:transform={`translateY(${y.current}px)`}
 	style:transition="transform 0.45s cubic-bezier(0.25, 1, 0.5, 1)"
 >
