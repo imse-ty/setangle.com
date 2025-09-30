@@ -52,14 +52,16 @@
 <section bind:this={wrapper} class="relative h-[200vh] bg-neutral-950">
 	<div class="sticky top-0 h-screen">
 		<Container>
-			<div class="flex h-full flex-col justify-center gap-8">
-				<h2 class="font-mono text-neutral-400 uppercase">[About us]</h2>
+			<div class="flex h-full flex-col justify-center gap-16">
+				<h2 class="font-display text-4xl font-medium uppercase md:text-6xl">
+					<span class="text-set-gray">About</span> us
+				</h2>
 				<p class="flex flex-wrap gap-2 text-4xl leading-tight font-semibold md:text-6xl">
 					{#each words as w, i}
 						<span
 							class="transition-colors duration-300"
 							class:text-white={i < Math.ceil(progress * words.length)}
-							class:text-neutral-500={i >= Math.ceil(progress * words.length)}>{w}</span
+							class:text-neutral-800={i >= Math.ceil(progress * words.length)}>{w}</span
 						>
 					{/each}
 				</p>
