@@ -33,35 +33,39 @@
 					<span class="text-set-gray">Lets</span> talk
 				</h2>
 
-				<div class="grid grid-cols-1 gap-8 sm:grid-cols-3 sm:gap-16">
-					<ContactItem label="Email" href="mailto:greetings@setangle.com"
-						>greetings@setangle.com</ContactItem
-					>
-					<ContactItem label="Phone" href="tel:+17706095007">+1 (770) 609-5007</ContactItem>
-					<ContactItem label="Office" href="https://maps.app.goo.gl/Av6uMgwiCBgUkPyn8"
-						>104 Church St,<br />Decatur, GA 30030</ContactItem
-					>
-
-					<div class="flex gap-4">
-						<a
-							class="font-mono text-sm uppercase"
-							href="https://www.instagram.com/set_angle"
-							target="_blank"
-							rel="noopener noreferrer"
+				<div class="flex flex-col gap-8 sm:gap-16">
+					<div class="flex justify-between gap-8 sm:gap-16">
+						<ContactItem label="Email" href="mailto:greetings@setangle.com"
+							>greetings@setangle.com</ContactItem
 						>
-							<button class="uppercase">Instagram</button></a
-						>
-						<a
-							class="font-mono text-sm uppercase"
-							href="https://www.linkedin.com/company/setangle"
-							target="_blank"
-							rel="noopener noreferrer"><button class="uppercase">LinkedIn</button></a
+						<ContactItem label="Phone" href="tel:+17706095007">+1 (770) 609-5007</ContactItem>
+						<ContactItem label="Office" href="https://maps.app.goo.gl/Av6uMgwiCBgUkPyn8"
+							>104 Church St,<br />Decatur, GA 30030</ContactItem
 						>
 					</div>
 
-					<p class="font-mono text-sm uppercase sm:col-span-2 sm:col-start-2">
-						Copyright © 2025 Set Angle. All&nbsp;rights&nbsp;reserved.
-					</p>
+					<div class="flex justify-between gap-4">
+						<div class="flex gap-4">
+							<a
+								class="font-mono text-sm uppercase"
+								href="https://www.instagram.com/set_angle"
+								target="_blank"
+								rel="noopener noreferrer"
+							>
+								<button class="uppercase">Instagram</button></a
+							>
+							<a
+								class="font-mono text-sm uppercase"
+								href="https://www.linkedin.com/company/setangle"
+								target="_blank"
+								rel="noopener noreferrer"><button class="uppercase">LinkedIn</button></a
+							>
+						</div>
+
+						<p class="text-right font-mono text-sm uppercase sm:col-span-2 sm:col-start-2">
+							Copyright © 2025 Set Angle. All&nbsp;rights&nbsp;reserved.
+						</p>
+					</div>
 				</div>
 			</div>
 		</Container>
