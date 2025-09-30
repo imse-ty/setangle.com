@@ -51,3 +51,5 @@ html.smoothscroll {
 		}
 	}
 }
+
+@custom-variant aria-current (&[aria-current="true"]);

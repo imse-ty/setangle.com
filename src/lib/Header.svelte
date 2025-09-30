@@ -2,6 +2,7 @@
 	import { Tween } from 'svelte/motion';
 	import { cubicInOut } from 'svelte/easing';
 	import NavItem from './NavItem.svelte';
+	import { page } from '$app/state';
 
 	let open = $state(false);
 	let lastY = $state(0);
@@ -34,7 +35,10 @@
 		<nav class="hidden md:block">
 			<ul class="flex items-center gap-6">
 				<NavItem href="/#reel">Reel</NavItem>
-				<NavItem href="/#work">Work</NavItem>
+				<NavItem
+					isActive={page.url.pathname === '/work' || page.url.pathname.startsWith('/work')}
+					href="/#work">Work</NavItem
+				>
 				<NavItem href="/#about">About</NavItem>
 				<NavItem href="#contact">Contact</NavItem>
 			</ul>
