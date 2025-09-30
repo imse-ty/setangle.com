@@ -9,7 +9,9 @@
 
 <Container>
 	<header>
-		<h1 class="mb-8 font-display text-8xl leading-none font-bold uppercase 2xl:text-9xl">
+		<h1
+			class="mb-8 font-display text-5xl leading-none font-bold uppercase sm:text-8xl 2xl:text-9xl"
+		>
 			{title}
 		</h1>
 

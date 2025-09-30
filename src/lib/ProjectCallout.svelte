@@ -13,7 +13,7 @@
 
 	<!-- Right: Big paragraph, clean line height, strong left alignment -->
 
-	<p class="!my-0 flex-1 font-body text-4xl leading-tight text-set-white">
+	<p class="!my-0 flex-1 font-body text-xl leading-tight text-set-white md:text-4xl">
 		{portableText.value.text}
 	</p>
 </div>
