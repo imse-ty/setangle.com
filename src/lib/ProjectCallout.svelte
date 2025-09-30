@@ -6,16 +6,14 @@
 	<!-- Left: Label aligned with paragraph top -->
 
 	<h2
-		class="!mt-1 block min-w-[140px] font-mono !text-xl font-normal tracking-widest text-set-white uppercase"
+		class="!mt-1 block min-w-[140px] font-mono !text-xl font-bold tracking-widest text-set-gray uppercase"
 	>
 		{portableText.value.label}
 	</h2>
 
 	<!-- Right: Big paragraph, clean line height, strong left alignment -->
 
-	<p
-		class="!my-0 flex-1 font-body text-[2rem] leading-tight tracking-tight text-set-white md:text-[2.6rem] md:leading-[1.13]"
-	>
+	<p class="!my-0 flex-1 font-body text-4xl leading-tight text-set-white">
 		{portableText.value.text}
 	</p>
 </div>
