@@ -27,3 +27,27 @@
 html.smoothscroll {
 	scroll-behavior: smooth;
 }
+
+/* Added custom Tailwind animation utilities */
+@layer utilities {
+	.animate-scroll {
+		animation: scroll 40s linear infinite;
+	}
+
+	.pause {
+		animation-play-state: paused;
+	}
+
+	.min-w-screen {
+		min-width: 100vw;
+	}
+
+	@keyframes scroll {
+		0% {
+			transform: translateX(0);
+		}
+		100% {
+			transform: translateX(-50%);
+		}
+	}
+}
