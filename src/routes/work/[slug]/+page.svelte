@@ -40,7 +40,7 @@
 <article class="py-32">
 	<WorkHero
 		title={project.title}
-		summary={project.subtitle}
+		summary={project.summary}
 		info={project.info}
 		stats={project.stats}
 		videoUrl={project.videoUrl}

@@ -17,37 +17,41 @@
 			<div class="mb-12"><VimeoEmbed autoplay={true} url={videoUrl} /></div>
 		{/if}
 		<!-- Outer container: max width, centered -->
-		<div
-			class="relative mx-auto mb-12 flex w-full flex-col gap-16 rounded-md border border-set-gray lg:flex-row lg:gap-0"
-		>
-			<!-- Left column: uses min-w-0 for clean ellipsis and pr-12 on desktop -->
-			<div class="flex-1 p-12">
-				<h1 class="mb-8 font-display text-5xl leading-none font-bold uppercase">Key points</h1>
-				<p class="text-xl leading-snug text-set-gray">
-					{summary}
-				</p>
-			</div>
-
-			<!-- Right column: details and stats, starts after divider -->
+		{#if info || stats}
 			<div
-				class="relative flex flex-1 flex-col justify-between border-t-1 border-set-gray p-12 lg:border-t-0 lg:border-l-1"
+				class="relative mx-auto mb-12 flex w-full flex-col gap-16 rounded-md border border-set-gray lg:flex-row lg:gap-0"
 			>
-				{#if info && info.length}
-					<ul class="mb-6 space-y-2">
-						{#each info as { label, text }, i (i)}
-							<WorkHeroItem {label} {text} />
-						{/each}
-					</ul>
-				{/if}
-
-				{#if stats && stats.length > 0}
-					<div class="grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-3">
-						{#each stats as { prefix, stat, suffix }, i (i)}
-							<WorkHeroStat {prefix} {stat} {suffix} />
-						{/each}
+				{#if summary}
+					<!-- Left column: uses min-w-0 for clean ellipsis and pr-12 on desktop -->
+					<div class="flex-1 p-12">
+						<h1 class="mb-8 font-display text-5xl leading-none font-bold uppercase">Key points</h1>
+						<p class="text-xl leading-snug text-set-gray">
+							{summary}
+						</p>
 					</div>
 				{/if}
+				<!-- Right column: details and stats, starts after divider -->
+
+				<div
+					class={`relative flex flex-1 flex-col justify-between  border-set-gray p-12 ${summary && 'border-t-1 lg:border-t-0 lg:border-l-1'}`}
+				>
+					{#if info && info.length}
+						<ul class="mb-6 space-y-2">
+							{#each info as { label, text }, i (i)}
+								<WorkHeroItem {label} {text} />
+							{/each}
+						</ul>
+					{/if}
+
+					{#if stats && stats.length > 0}
+						<div class="grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-3">
+							{#each stats as { prefix, stat, suffix }, i (i)}
+								<WorkHeroStat {prefix} {stat} {suffix} />
+							{/each}
+						</div>
+					{/if}
+				</div>
 			</div>
-		</div>
+		{/if}
 	</header>
 </Container>
