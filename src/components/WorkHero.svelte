@@ -19,7 +19,8 @@
 			<div class="mb-12"><VimeoEmbed autoplay={true} url={videoUrl} /></div>
 		{/if}
 		<!-- Outer container: max width, centered -->
-		{#if info || stats}
+
+		{#if summary || info || stats}
 			<div
 				class="relative mx-auto mb-12 flex w-full flex-col gap-16 rounded-md border border-set-gray lg:flex-row lg:gap-0"
 			>
@@ -33,26 +34,27 @@
 					</div>
 				{/if}
 				<!-- Right column: details and stats, starts after divider -->
+				{#if info || stats}
+					<div
+						class={`relative flex flex-1 flex-col justify-between  border-set-gray p-12 ${summary && 'border-t-1 lg:border-t-0 lg:border-l-1'}`}
+					>
+						{#if info && info.length}
+							<ul class="mb-6 space-y-2">
+								{#each info as { label, text }, i (i)}
+									<WorkHeroItem {label} {text} />
+								{/each}
+							</ul>
+						{/if}
 
-				<div
-					class={`relative flex flex-1 flex-col justify-between  border-set-gray p-12 ${summary && 'border-t-1 lg:border-t-0 lg:border-l-1'}`}
-				>
-					{#if info && info.length}
-						<ul class="mb-6 space-y-2">
-							{#each info as { label, text }, i (i)}
-								<WorkHeroItem {label} {text} />
-							{/each}
-						</ul>
-					{/if}
-
-					{#if stats && stats.length > 0}
-						<div class="grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-3">
-							{#each stats as { prefix, stat, suffix }, i (i)}
-								<WorkHeroStat {prefix} {stat} {suffix} />
-							{/each}
-						</div>
-					{/if}
-				</div>
+						{#if stats && stats.length > 0}
+							<div class="grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-3">
+								{#each stats as { prefix, stat, suffix }, i (i)}
+									<WorkHeroStat {prefix} {stat} {suffix} />
+								{/each}
+							</div>
+						{/if}
+					</div>
+				{/if}
 			</div>
 		{/if}
 	</header>
