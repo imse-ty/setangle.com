@@ -9,15 +9,20 @@
 
 <Container>
 	<header>
+		<h1 class="mb-8 font-display text-8xl leading-none font-bold uppercase 2xl:text-9xl">
+			{title}
+		</h1>
+
+		{#if videoUrl}
+			<div class="mb-12"><VimeoEmbed autoplay={true} url={videoUrl} /></div>
+		{/if}
 		<!-- Outer container: max width, centered -->
 		<div
 			class="relative mx-auto mb-12 flex w-full flex-col gap-16 rounded-md border border-set-gray lg:flex-row lg:gap-0"
 		>
 			<!-- Left column: uses min-w-0 for clean ellipsis and pr-12 on desktop -->
 			<div class="flex-1 p-12">
-				<h1 class="mb-8 font-display text-7xl leading-none font-bold uppercase 2xl:text-9xl">
-					{title}
-				</h1>
+				<h1 class="mb-8 font-display text-5xl leading-none font-bold uppercase">Key points</h1>
 				<p class="text-xl leading-snug text-set-gray">
 					{summary}
 				</p>
@@ -44,9 +49,5 @@
 				{/if}
 			</div>
 		</div>
-
-		{#if videoUrl}
-			<div class="mb-12"><VimeoEmbed autoplay={true} url={videoUrl} /></div>
-		{/if}
 	</header>
 </Container>
