@@ -11,6 +11,7 @@ export interface Project {
 	_createdAt: string;
 	title?: string;
 	subtitle: string;
+	summary: string;
 	videoUrl: string;
 	info: Array<any>;
 	stats: Array<any>;

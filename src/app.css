@@ -4,7 +4,7 @@
 @plugin "@tailwindcss/typography";
 
 @utility container {
-	max-width: 90rem;
+	max-width: 120rem;
 }
 
 @plugin "daisyui/theme" {
