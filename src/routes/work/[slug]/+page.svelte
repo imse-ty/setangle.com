@@ -11,8 +11,7 @@
 	import type { PageData } from './$types';
 	import ProjectImage from '$lib/ProjectImage.svelte';
 	import ProjectVideo from '$lib/ProjectVideo.svelte';
-	import VideoEmbed from '../../../components/VideoEmbed.svelte';
-	import VimeoEmbed from '../../../components/VimeoEmbed.svelte';
+	import ProjectGallery from '$lib/ProjectGallery.svelte';
 
 	export let data: PageData;
 	const q = useQuery(data);
@@ -24,6 +23,7 @@
 			// block-level components
 			projectCallout: ProjectCallout,
 			image: ProjectImage,
+			projectGallery: ProjectGallery,
 			vimeo: ProjectVideo
 		}
 	};
