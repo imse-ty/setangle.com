@@ -24,11 +24,11 @@
 </script>
 
 <footer id="contact" class="relative">
-	<div class="h-[90vh] bg-neutral-900 sm:h-[70vh] xl:h-[40vh]"></div>
+	<div class="h-[80vh] bg-neutral-900 sm:h-128"></div>
 
-	<div id="contact" class="fixed bottom-0 h-[90vh] w-full bg-neutral-900 sm:h-[70vh] xl:h-[40vh]">
+	<div id="contact" class="fixed bottom-0 h-[80vh] w-full bg-neutral-900 sm:h-128">
 		<Container>
-			<div class="flex h-full flex-col justify-between pt-8 pb-16 md:pt-16">
+			<div class="flex h-full flex-col justify-between py-8 md:py-16">
 				<h2 class="font-display text-4xl font-medium uppercase md:text-6xl">
 					<span class="text-set-gray">Lets</span> talk
 				</h2>
