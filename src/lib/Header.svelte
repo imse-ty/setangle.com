@@ -18,7 +18,7 @@
 
 	function onScroll() {
 		const curr = window.scrollY;
-		show = curr < lastY || curr <= 0;
+		show = curr < lastY || curr <= 500;
 		lastY = curr;
 		y.set(show ? 0 : -120);
 	}
