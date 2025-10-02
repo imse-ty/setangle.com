@@ -5,27 +5,16 @@
 	import NavItem from './NavItem.svelte';
 	import { page } from '$app/state';
 	import MobileNavItem from './MobileNavItem.svelte';
+	import { isPreviewing } from '@sanity/visual-editing/svelte';
 
 	let open = $state(false);
-	let lastY = $state(0);
-	let show = $state(true);
-
-	const y = new Tween(0, { duration: 450, easing: cubicInOut });
 
 	$effect(() => {
 		document.documentElement.classList.toggle('overflow-hidden', open);
 	});
 
-	function onScroll() {
-		const curr = window.scrollY;
-		show = curr < lastY || curr <= 500;
-		lastY = curr;
-		y.set(show ? 0 : -120);
-	}
-
 	function toggleMenu() {
 		open = !open;
-		show = true;
 	}
 
 	function closeMenu() {
@@ -33,14 +22,20 @@
 	}
 </script>
 
-<svelte:window onscroll={onScroll} />
-
-<header
-	class="fixed top-0 z-50 w-full bg-neutral-900/75 px-6 will-change-transform md:px-16 xl:px-32.5"
-	style:transform={`translateY(${y.current}px)`}
-	style:transition="transform 0.45s cubic-bezier(0.25, 1, 0.5, 1)"
->
-	<div class="flex items-center justify-between py-4 md:py-6">
+<header class="sticky top-0 z-50 w-full bg-neutral-900/75 will-change-transform">
+	{#if isPreviewing}
+		<div class="bg-set-purple py-0.5 text-set-white">
+			<div class="flex w-full items-center justify-between px-6 md:px-16 xl:px-32.5">
+				<span class="font-mono text-sm"> You are currently in preview mode </span>
+				<a href={`/preview/disable?redirect=${page.url.pathname}`}>
+					<button class="btn cursor-pointer font-mono font-normal uppercase btn-outline btn-sm">
+						Disable preview mode
+					</button>
+				</a>
+			</div>
+		</div>
+	{/if}
+	<div class="flex items-center justify-between px-6 py-4 md:px-16 md:py-6 xl:px-32.5">
 		<a href="/" class="font-display text-2xl font-bold md:text-3xl">ANGLE</a>
 
 		<!-- Desktop Nav -->

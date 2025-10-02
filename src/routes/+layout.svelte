@@ -2,9 +2,7 @@
 	import '../app.css';
 	import favicon from '$lib/assets/favicon.svg';
 	import { isPreviewing, VisualEditing } from '@sanity/visual-editing/svelte';
-	import { page } from '$app/stores';
 	import LiveMode from '../components/LiveMode.svelte';
-	import Container from '$lib/Container.svelte';
 	import Footer from '$lib/Footer.svelte';
 	import Header from '$lib/Header.svelte';
 	import { onMount } from 'svelte';
@@ -31,22 +29,7 @@
 	<link rel="icon" href={favicon} />
 </svelte:head>
 
-{#if $isPreviewing}
-	<div class="sticky top-0 z-100 bg-set-purple py-0.5 text-set-white">
-		<Container>
-			<div class="flex w-full items-center justify-between">
-				<span class="font-mono text-sm"> You are currently in preview mode </span>
-				<a href={`/preview/disable?redirect=${$page.url.pathname}`}>
-					<button class="btn cursor-pointer font-mono font-normal uppercase btn-outline btn-xs">
-						Disable preview mode
-					</button>
-				</a>
-			</div>
-		</Container>
-	</div>
-{/if}
-
-<div class="relative font-body text-white">
+<div class="relative bg-black font-body text-white">
 	<Header />
 	<main class="relative z-10 flex min-h-screen flex-col bg-black">
 		<slot />
