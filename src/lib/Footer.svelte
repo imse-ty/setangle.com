@@ -34,7 +34,7 @@
 				</h2>
 
 				<div class="flex flex-col gap-8 sm:gap-16">
-					<div class="flex justify-between gap-8 sm:gap-16">
+					<div class="mb-4 flex flex-col justify-between gap-8 sm:mb-0 sm:flex-row sm:gap-16">
 						<ContactItem label="Email" href="mailto:greetings@setangle.com"
 							>greetings@setangle.com</ContactItem
 						>
@@ -44,7 +44,7 @@
 						>
 					</div>
 
-					<div class="flex justify-between gap-4">
+					<div class="flex flex-col justify-between gap-8 sm:flex-row sm:gap-4">
 						<div class="flex gap-4">
 							<a
 								class="font-mono text-sm uppercase"
@@ -62,7 +62,7 @@
 							>
 						</div>
 
-						<p class="text-right font-mono text-sm uppercase sm:col-span-2 sm:col-start-2">
+						<p class="font-mono text-sm uppercase sm:text-right">
 							Copyright © 2025 Set Angle. All&nbsp;rights&nbsp;reserved.
 						</p>
 					</div>
