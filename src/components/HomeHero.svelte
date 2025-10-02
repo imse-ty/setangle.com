@@ -66,7 +66,7 @@
 <!-- Reel -->
 <section
 	id="reel"
-	class="relative z-10 h-[50vh] overflow-hidden bg-black md:h-screen"
+	class="relative z-10 h-[50vh] overflow-hidden bg-black pb-8 md:h-screen md:pb-0"
 	on:mousemove={!isCoarse && !playing ? trackCursor : null}
 >
 	{#if !playing}
