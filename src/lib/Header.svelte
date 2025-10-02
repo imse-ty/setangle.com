@@ -22,9 +22,11 @@
 </script>
 
 <header class="sticky top-0 z-50 w-full bg-neutral-900/75 will-change-transform">
-	{#if true}
+	{#if $isPreviewing}
 		<div class="bg-set-purple py-0.5 text-set-white">
-			<div class="flex w-full items-center justify-between px-6 md:px-16 xl:px-32.5">
+			<div
+				class="flex w-full flex-col items-center justify-between gap-2 px-6 sm:flex-row sm:gap-0 md:px-16 xl:px-32.5"
+			>
 				<span class="font-mono text-sm"> You are currently in preview mode </span>
 				<div class="flex gap-4">
 					<a href="{studioUrl}/presentation" target="_blank" rel="noopener noreferrer">
