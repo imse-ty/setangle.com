@@ -39,26 +39,28 @@
 							>greetings@setangle.com</ContactItem
 						>
 						<ContactItem label="Phone" href="tel:+17706095007">+1 (770) 609-5007</ContactItem>
-						<ContactItem label="Office" href="https://maps.app.goo.gl/Av6uMgwiCBgUkPyn8"
-							>104 Church St,<br />Decatur, GA 30030</ContactItem
+						<ContactItem
+							label="Office"
+							href="https://maps.app.goo.gl/Av6uMgwiCBgUkPyn8"
+							isExternalLink>104 Church St,<br />Decatur, GA 30030</ContactItem
 						>
 					</div>
 
 					<div class="flex flex-col justify-between gap-8 sm:flex-row sm:gap-4">
 						<div class="flex gap-4">
 							<a
-								class="font-mono text-sm uppercase"
+								class="border-b-1 font-mono text-sm uppercase transition-colors duration-300 hover:text-set-gray"
 								href="https://www.instagram.com/set_angle"
 								target="_blank"
 								rel="noopener noreferrer"
 							>
-								<button class="uppercase">Instagram</button></a
+								Instagram</a
 							>
 							<a
-								class="font-mono text-sm uppercase"
+								class="b border-b-1 font-mono text-sm uppercase transition-colors duration-300 hover:text-set-gray"
 								href="https://www.linkedin.com/company/setangle"
 								target="_blank"
-								rel="noopener noreferrer"><button class="uppercase">LinkedIn</button></a
+								rel="noopener noreferrer">LinkedIn</a
 							>
 						</div>
 
