@@ -52,7 +52,7 @@
 <section id="about" bind:this={wrapper} class="relative h-[200vh] bg-neutral-950">
 	<div class="sticky top-0 h-screen">
 		<Container>
-			<div class="flex h-full flex-col justify-center gap-16">
+			<div class="flex h-full flex-col justify-center gap-8 sm:gap-16">
 				<h2 class="font-display text-4xl font-medium uppercase md:text-6xl">
 					<span class="text-set-gray">About</span> us
 				</h2>
