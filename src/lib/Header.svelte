@@ -21,7 +21,7 @@
 	}
 </script>
 
-<header class="sticky top-0 z-50 w-full bg-neutral-900/75 will-change-transform">
+<header class="fixed top-0 z-50 w-full bg-neutral-900/75 will-change-transform sm:sticky">
 	{#if $isPreviewing}
 		<div class="bg-set-purple py-0.5 text-set-white">
 			<div
