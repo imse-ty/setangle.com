@@ -26,7 +26,7 @@
 			>
 				{#if summary}
 					<!-- Left column: uses min-w-0 for clean ellipsis and pr-12 on desktop -->
-					<div class="flex-1 p-12">
+					<div class="flex-1 p-8 sm:p-12">
 						<h1 class="mb-8 font-display text-5xl leading-none font-bold uppercase">Key points</h1>
 						<p class="text-xl leading-snug text-set-gray">
 							{summary}
@@ -36,7 +36,7 @@
 				<!-- Right column: details and stats, starts after divider -->
 				{#if info || stats}
 					<div
-						class={`relative flex flex-1 flex-col justify-between  border-set-gray p-12 ${summary && 'border-t-1 lg:border-t-0 lg:border-l-1'}`}
+						class={`relative flex flex-1 flex-col justify-between  border-set-gray p-8 sm:p-12 ${summary && 'border-t-1 lg:border-t-0 lg:border-l-1'}`}
 					>
 						{#if info && info.length}
 							<ul class="mb-6 space-y-2">

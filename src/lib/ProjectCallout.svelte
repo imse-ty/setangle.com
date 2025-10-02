@@ -2,7 +2,7 @@
 	let { portableText } = $props();
 </script>
 
-<div class="mx-auto flex w-full flex-col items-start gap-2 px-4 py-20 md:px-0 lg:flex-row lg:gap-8">
+<div class="mx-auto flex w-full flex-col items-start gap-2 px-4 py-16 md:px-0 lg:flex-row lg:gap-8">
 	<!-- Left: Label aligned with paragraph top -->
 
 	<h2
