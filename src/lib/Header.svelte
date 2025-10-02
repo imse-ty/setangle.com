@@ -4,6 +4,7 @@
 	import { page } from '$app/state';
 	import MobileNavItem from './MobileNavItem.svelte';
 	import { isPreviewing } from '@sanity/visual-editing/svelte';
+	import { studioUrl } from './sanity/api';
 
 	let open = $state(false);
 
@@ -21,15 +22,22 @@
 </script>
 
 <header class="sticky top-0 z-50 w-full bg-neutral-900/75 will-change-transform">
-	{#if $isPreviewing}
+	{#if true}
 		<div class="bg-set-purple py-0.5 text-set-white">
 			<div class="flex w-full items-center justify-between px-6 md:px-16 xl:px-32.5">
 				<span class="font-mono text-sm"> You are currently in preview mode </span>
-				<a href={`/preview/disable?redirect=${page.url.pathname}`}>
-					<button class="btn cursor-pointer font-mono font-normal uppercase btn-outline btn-sm">
-						Disable preview mode
-					</button>
-				</a>
+				<div class="flex gap-4">
+					<a href="{studioUrl}/presentation" target="_blank" rel="noopener noreferrer">
+						<button class="btn cursor-pointer font-mono font-normal uppercase btn-sm">
+							Open CMS
+						</button>
+					</a>
+					<a href={`/preview/disable?redirect=${page.url.pathname}`}>
+						<button class="btn cursor-pointer font-mono font-normal uppercase btn-outline btn-sm">
+							Disable preview mode
+						</button>
+					</a>
+				</div>
 			</div>
 		</div>
 	{/if}
