@@ -112,8 +112,16 @@
 			></div>
 
 			<!-- Background video -->
-			<video autoplay loop muted playsinline class="h-full w-full cursor-pointer object-cover">
+			<video
+				autoplay
+				loop
+				muted
+				playsinline
+				poster="reel-thumbnail.png"
+				class="h-full w-full cursor-pointer object-cover"
+			>
 				<source src="2023-reel.webm" type="video/webm" />
+				Your browser does not support the video tag.
 			</video>
 		</div>
 	{:else}
