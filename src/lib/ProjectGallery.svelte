@@ -44,7 +44,7 @@
 {:else}
 	<div class="my-8 grid {columnClasses[columns as keyof typeof columnClasses]} gap-8">
 		{#each images as image}
-			<figure class="group bg-muted relative rounded-md">
+			<figure class="group bg-muted relative !my-0 rounded-md !py-0">
 				<img
 					src={urlFor(image.asset).width(800).height(600).fit('crop').url() ||
 						'/placeholder-image.png' ||
