@@ -6,7 +6,7 @@
 	<!-- Left: Label aligned with paragraph top -->
 
 	<h2
-		class="!mt-1 block min-w-[140px] font-mono !text-xl font-bold tracking-widest text-set-gray uppercase"
+		class="!mt-1 block min-w-[140px] font-mono !text-xl font-bold tracking-widest text-neutral-200 uppercase"
 	>
 		{portableText.value.label}
 	</h2>

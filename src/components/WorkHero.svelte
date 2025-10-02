@@ -28,7 +28,7 @@
 					<!-- Left column: uses min-w-0 for clean ellipsis and pr-12 on desktop -->
 					<div class="flex-1 p-8 sm:p-12">
 						<h1 class="mb-8 font-display text-5xl leading-none font-bold uppercase">Key points</h1>
-						<p class="text-xl leading-snug text-set-gray">
+						<p class="text-xl leading-snug text-neutral-200">
 							{summary}
 						</p>
 					</div>
