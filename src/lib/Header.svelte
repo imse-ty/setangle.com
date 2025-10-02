@@ -1,6 +1,4 @@
 <script>
-	import { Tween } from 'svelte/motion';
-	import { cubicInOut } from 'svelte/easing';
 	import { fade } from 'svelte/transition';
 	import NavItem from './NavItem.svelte';
 	import { page } from '$app/state';
@@ -23,7 +21,7 @@
 </script>
 
 <header class="sticky top-0 z-50 w-full bg-neutral-900/75 will-change-transform">
-	{#if isPreviewing}
+	{#if $isPreviewing}
 		<div class="bg-set-purple py-0.5 text-set-white">
 			<div class="flex w-full items-center justify-between px-6 md:px-16 xl:px-32.5">
 				<span class="font-mono text-sm"> You are currently in preview mode </span>
