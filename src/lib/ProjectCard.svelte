@@ -13,7 +13,7 @@
 		<div class="absolute top-0 left-0 z-10 h-full w-full"></div>
 
 		<div
-			class="absolute top-0 left-0 z-10 h-full w-full bg-set-black opacity-0 transition duration-300 hover:opacity-30"
+			class="absolute top-0 left-0 z-10 h-full w-full bg-linear-to-t from-set-black to-transparent opacity-80 transition duration-300 hover:opacity-100"
 		></div>
 
 		<img
