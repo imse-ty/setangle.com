@@ -1,0 +1,61 @@
+<script>
+	import Container from '$lib/Container.svelte';
+	import VimeoEmbed from './VimeoEmbed.svelte';
+	import WorkHeroItem from './WorkHeroItem.svelte';
+	import WorkHeroStat from './WorkHeroStat.svelte';
+
+	let { title, summary, info, stats, videoUrl } = $props();
+</script>
+
+<Container>
+	<header>
+		<h1
+			class="mb-8 font-display text-5xl leading-none font-bold uppercase sm:text-8xl 2xl:text-9xl"
+		>
+			{title}
+		</h1>
+
+		{#if videoUrl}
+			<div class="mb-12"><VimeoEmbed autoplay={true} url={videoUrl} /></div>
+		{/if}
+		<!-- Outer container: max width, centered -->
+
+		{#if summary || info || stats}
+			<div
+				class="relative mx-auto mb-12 flex w-full flex-col rounded-md border border-set-gray lg:flex-row"
+			>
+				{#if summary}
+					<!-- Left column: uses min-w-0 for clean ellipsis and pr-12 on desktop -->
+					<div class="flex-1 p-8 sm:p-12">
+						<h1 class="mb-8 font-display text-5xl leading-none font-bold uppercase">Key points</h1>
+						<p class="text-xl leading-snug text-neutral-200">
+							{summary}
+						</p>
+					</div>
+				{/if}
+				<!-- Right column: details and stats, starts after divider -->
+				{#if info || stats}
+					<div
+						class={`relative flex flex-1 flex-col justify-between  border-set-gray p-8 sm:p-12 ${summary && 'border-t-1 lg:border-t-0 lg:border-l-1'}`}
+					>
+						{#if info && info.length}
+							<ul class="mb-6 space-y-2">
+								{#each info as { label, text }, i (i)}
+									<WorkHeroItem {label} {text} />
+								{/each}
+							</ul>
+						{/if}
+
+						{#if stats && stats.length > 0}
+							<div class="grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-3">
+								{#each stats as { prefix, stat, suffix }, i (i)}
+									<WorkHeroStat {prefix} {stat} {suffix} />
+								{/each}
+							</div>
+						{/if}
+					</div>
+				{/if}
+			</div>
+		{/if}
+	</header>
+</Container>

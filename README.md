@@ -1,40 +1,106 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# setangle.com
 
-## Getting Started
+The website for Set Angle. Built with [SvelteKit](https://svelte.dev/), [Tailwind CSS](https://tailwindcss.com/), [daisyUI](https://daisyui.com/) and [Sanity](https://www.sanity.io/).
 
-First, run the development server:
+---
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+## Requirements
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+- Git
+- Node.js (LTS version)
+- npm (comes with Node)
+- VS Code (for the VS Code method)
 
-You can start editing the page by modifying `pages/index.tsx`. The page auto-updates as you edit the file.
+> ⚠️ Do **not** clone the project inside cloud-synced folders (Dropbox, iCloud, OneDrive, etc.).
+> The `node_modules` folder is large, and sync conflicts can break Git.
 
-[API routes](https://nextjs.org/docs/api-routes/introduction) can be accessed on [http://localhost:3000/api/hello](http://localhost:3000/api/hello). This endpoint can be edited in `pages/api/hello.ts`.
+---
 
-The `pages/api` directory is mapped to `/api/*`. Files in this directory are treated as [API routes](https://nextjs.org/docs/api-routes/introduction) instead of React pages.
+## Method 1 — Using VS Code
 
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
+1. **Login to GitHub**
+   - In VS Code, click your avatar in the bottom-left corner and sign in to GitHub.
 
-## Learn More
+2. **Clone the repository**
+   - Press `Ctrl + Shift + P` (`Cmd + Shift + P` on macOS)
+   - Type and select **Git: Clone**
+   - Choose **Clone from GitHub**
+   - Find the `setangle.com` repo
+   - Select a location on your computer (avoid cloud folders)
 
-To learn more about Next.js, take a look at the following resources:
+3. **Open the folder**
+   - When prompted, open the newly cloned folder in VS Code.
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+4. **Switch to the `v2` branch**
+   - Click the branch name in the bottom-left corner and select `v2`
+   - Or run this in the terminal:
+     ```bash
+     git checkout v2
+     ```
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
+5. **Install dependencies**
 
-## Deploy on Vercel
+   ```bash
+   npm install
+   ```
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+   > Must be in the `v2` branch when you do this
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+6. **Start the development server**
+   `npm run dev`
+   Then visit: [http://localhost:5173](http://localhost:5173)
+
+7. **Create a feature branch**
+   - Always create a new branch **from `v2`** for new features.
+   - Example branch name:
+     `v2-your-feature-name`
+   - In VS Code: use the branch menu → “Create new branch”
+   - Or:
+     `git checkout -b v2-your-feature-name`
+
+8. **Make and commit changes**
+   - Use the **Source Control** panel or Command Palette.
+   - Write commit messages as actions:
+     `Make BG pink`
+     not
+     `Made BG pink`
+9. **Push your branch**
+   - Push your branch to GitHub (not directly to `v2`)
+   - Then open a **Pull Request** from your branch → into `v2`
+
+---
+
+## Method 2 — Using the command line only
+
+1. **Clone the repository**
+   `git clone https://github.com/YOUR-ORG/setangle.com.git cd setangle.com`
+2. **Switch to the `v2` branch**
+   `git fetch --all git checkout v2`
+3. **Install dependencies**
+   `npm install`
+4. **Run the dev server**
+   `npm run dev`
+   Visit [http://localhost:5173](http://localhost:5173)
+5. **Create a feature branch**
+   `git checkout -b v2-your-feature-name`
+6. **Commit and push your changes**
+   `git add -A git commit -m "Make BG pink" git push -u origin v2-your-feature-name`
+   - Open a Pull Request to merge into `v2`.
+
+---
+
+## Branch Rules
+
+- **master** → live at [setangle.com](https://setangle.com)
+- **v2** → live at [v2.setangle.com](https://v2.setangle.com)
+
+> Treat `v2` like a protected branch.
+> **Never** push directly to `v2` or `master`.
+
+---
+
+## Update Your Local Copy
+
+When syncing with the latest updates:
+
+`git checkout v2 git pull origin v2 npm install  # only if package.json changed`

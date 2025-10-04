@@ -1,0 +1,56 @@
+@import url('https://fonts.googleapis.com/css2?family=Big+Shoulders:opsz,wght@10..72,100..900&family=IBM+Plex+Mono:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
+@import 'tailwindcss';
+@plugin "daisyui";
+@plugin "@tailwindcss/typography";
+
+@utility container {
+	max-width: 90rem;
+}
+
+@plugin "daisyui/theme" {
+	name: 'lofi';
+	default: true;
+	prefersdark: true;
+}
+
+@theme {
+	--color-set-black: #111111;
+	--color-set-white: #ffffff;
+	--color-set-gray: #b7b7b7;
+	--color-set-purple: #8236fc;
+
+	--font-display: 'Big Shoulders', sans-serif;
+	--font-body: 'Inter', sans-serif;
+	--font-mono: 'IBM Plex Mono', monospace;
+}
+
+html.smoothscroll {
+	scroll-behavior: smooth;
+	scroll-padding-top: 4rem;
+}
+
+/* Added custom Tailwind animation utilities */
+@layer utilities {
+	.animate-scroll {
+		animation: scroll 40s linear infinite;
+	}
+
+	.pause {
+		animation-play-state: paused;
+	}
+
+	.min-w-screen {
+		min-width: 100vw;
+	}
+
+	@keyframes scroll {
+		0% {
+			transform: translateX(0);
+		}
+		100% {
+			transform: translateX(-50%);
+		}
+	}
+}
+
+@custom-variant aria-current (&[aria-current="true"]);
