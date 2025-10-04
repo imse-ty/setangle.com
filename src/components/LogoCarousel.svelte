@@ -18,7 +18,7 @@
 		class="animate-scroll flex items-center justify-between gap-8 fill-set-gray md:gap-24"
 		style="animation-duration: {speed}s;"
 	>
-		{#each Array(2) as _}
+		{#each Array(4) as _}
 			{#each logos as Logo}
 				<div class="transition duration-500 hover:fill-set-white"><Logo /></div>
 			{/each}
@@ -40,7 +40,10 @@
 	/* Ensure logos maintain their size */
 	:global(.animate-scroll svg) {
 		height: 2.5rem;
-		width: auto;
+		width: 8rem; /* Fixed width instead of auto */
 		flex-shrink: 0;
+    object-fit: contain; /* Ensures logos scale proportionally within the fixed dimensions */
 	}
+
+
 </style>

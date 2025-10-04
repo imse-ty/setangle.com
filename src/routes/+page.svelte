@@ -23,6 +23,6 @@
 </svelte:head>
 
 <HomeHero />
-<!-- <LogoCarousel /> -->
+<LogoCarousel />
 <ProjectsSection {projects} />
 <AboutSection />
