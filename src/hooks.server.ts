@@ -1,13 +1,31 @@
+// hooks.server.ts
 import { createRequestHandler, setServerClient } from '@sanity/svelte-loader';
 import { serverClient } from '$lib/server/sanity/client';
+import { redirects } from '$lib/redirects';
 
-// Sets the client to be used by `loadQuery` when fetching data on the server.
-// The loader will handle setting the correct fetch parameters, including
-// perspective. This isn't a hook, but it's a good place to call this function
-// as this file is executed once per app initialization.
 setServerClient(serverClient);
 
-// This convenience function sets up preview mode endpoints and attaches useful
-// helpers to the `event.locals` Svelte object, such as a preconfigured
-// `loadQuery` function and `preview` state.
-export const handle = createRequestHandler();
+const baseHandle = createRequestHandler();
+
+/** @type {import('@sveltejs/kit').Handle} */
+export async function handle({ event, resolve }) {
+	// Force trailing slash
+	// if (!event.url.pathname.endsWith('/')) {
+	// 	event.url.pathname += '/';
+	// }
+
+	// Check for redirect
+	const match = redirects.find((r) => r.source === event.url.pathname);
+
+	if (match) {
+		return new Response(null, {
+			status: match.status ?? 302,
+			headers: {
+				location: match.destination
+			}
+		});
+	}
+
+	// Pass to @sanity/svelte-loader handler
+	return baseHandle({ event, resolve });
+}

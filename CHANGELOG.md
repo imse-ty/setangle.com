@@ -2,6 +2,10 @@
 
 ## [Unreleased]
 
+### Added
+
+- Ported redirects from setangle.com v1 using hooks and `redirect()`.
+
 ## [2.0.1] - 2025-10-04
 
 ### Changed
