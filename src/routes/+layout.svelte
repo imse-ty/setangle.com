@@ -27,6 +27,12 @@
 
 <svelte:head>
 	<link rel="icon" href={favicon} />
+
+	<script
+		defer
+		src="https://cloud.umami.is/script.js"
+		data-website-id="d640d7bc-05df-4e47-9c61-5f1816a2f9a7"
+	></script>
 </svelte:head>
 
 <div class="relative bg-black font-body text-white">
