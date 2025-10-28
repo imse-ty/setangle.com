@@ -7,12 +7,12 @@
 	let isCoarse = $state(false);
 	let hovered = $state(false);
 
-	const DESKTOP_ID = 'JUP8EUPEpkw';
-	const MOBILE_ID = 'gvuHj4YtgUw';
+	const DESKTOP_ID = '1131316978';
+	const MOBILE_ID = '1131316978';
 
 	let embedSrc = $derived.by(() => {
 		const id = isCoarse ? MOBILE_ID : DESKTOP_ID;
-		return `https://www.youtube.com/embed/${id}?playlist=${id}&autoplay=1&controls=1&modestbranding=1&rel=0&playsinline=1&loop=1`;
+		return `https://player.vimeo.com/video/${id}?playsinline=0&transparent=0&loop=1&autoplay=1`;
 	});
 
 	// Reactive spring for cursor movement
@@ -120,7 +120,7 @@
 				poster="reel-thumbnail.png"
 				class="h-full w-full cursor-pointer object-cover"
 			>
-				<source src="2023-reel.webm" type="video/webm" />
+				<source src="2025-reel-cover.webm" type="video/webm" />
 				Your browser does not support the video tag.
 			</video>
 		</div>
@@ -129,10 +129,11 @@
 		<div class="absolute inset-0 h-full w-full">
 			{#key embedSrc}
 				<iframe
-					title="Reel"
 					src={embedSrc}
+					title="Reel"
+					frameborder="0"
+					allow="autoplay; fullscreen; picture-in-picture"
 					class="h-full w-full"
-					allow="autoplay; fullscreen"
 					allowfullscreen
 				></iframe>
 			{/key}

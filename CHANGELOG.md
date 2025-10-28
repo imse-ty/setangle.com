@@ -6,6 +6,7 @@
 
 - Ported redirects from setangle.com v1 using hooks and `redirect()`.
 - Umami analytics tracking
+- New 2025 reel Vimeo link
 
 ## [2.0.1] - 2025-10-04
 
