@@ -54,7 +54,7 @@
 					isActive={page.url.pathname === '/work' || page.url.pathname.startsWith('/work')}
 					href="/#work">Work</NavItem
 				>
-				<NavItem href="/#about">About</NavItem>
+				<NavItem href="/#services">Services</NavItem>
 				<NavItem href="#contact">Contact</NavItem>
 			</ul>
 		</nav>
@@ -94,7 +94,7 @@
 					href="/#work"
 					onclick={closeMenu}>Work</MobileNavItem
 				>
-				<MobileNavItem href="/#about" onclick={closeMenu}>About</MobileNavItem>
+				<MobileNavItem href="/#services" onclick={closeMenu}>Services</MobileNavItem>
 				<MobileNavItem href="#contact" onclick={closeMenu}>Contact</MobileNavItem>
 			</ul>
 		</nav>

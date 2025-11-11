@@ -51,12 +51,12 @@
 	on:resize={() => mounted && computeBounds()}
 />
 
-<section id="about" bind:this={wrapper} class="relative h-[200vh] bg-neutral-950">
+<section id="services" bind:this={wrapper} class="relative h-[200vh] bg-neutral-950">
 	<div class="sticky top-0 h-screen">
 		<Container>
 			<div class="flex h-full flex-col justify-center gap-8 sm:gap-16">
 				<h2 class="font-display text-4xl font-medium uppercase md:text-6xl">
-					<span class="text-set-gray">About</span> us
+					<span class="text-set-gray">Our</span> Services
 				</h2>
 				<p class="flex flex-wrap gap-2 text-4xl leading-tight font-semibold">
 					{#each words as w, i}
@@ -69,7 +69,6 @@
 				</p>
 
 				<div class="mt-16 flex flex-col justify-between gap-8 sm:gap-8">
-					<h3 class="b-b font-mono text-lg text-neutral-400 uppercase">Services</h3>
 					<ul class="flex flex-col gap-8">
 						<ServiceItem>Event graphics</ServiceItem>
 						<ServiceItem>Brand videos</ServiceItem>
