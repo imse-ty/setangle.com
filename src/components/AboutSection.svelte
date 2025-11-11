@@ -2,6 +2,8 @@
 	import { onMount } from 'svelte';
 	import { browser } from '$app/environment';
 	import Container from '$lib/Container.svelte';
+	import ContactItem from '$lib/ContactItem.svelte';
+	import ServiceItem from './ServiceItem.svelte';
 
 	const words =
 		`We help brands shine by creating soulful animated visuals for marketing campaigns and events.`.split(
@@ -56,7 +58,7 @@
 				<h2 class="font-display text-4xl font-medium uppercase md:text-6xl">
 					<span class="text-set-gray">About</span> us
 				</h2>
-				<p class="flex flex-wrap gap-2 text-4xl leading-tight font-semibold md:text-6xl">
+				<p class="flex flex-wrap gap-2 text-4xl leading-tight font-semibold">
 					{#each words as w, i}
 						<span
 							class="transition-colors duration-300"
@@ -65,6 +67,19 @@
 						>
 					{/each}
 				</p>
+
+				<div class="mt-16 flex flex-col justify-between gap-8 sm:gap-8">
+					<h3 class="b-b font-mono text-lg text-neutral-400 uppercase">Services</h3>
+					<ul class="flex flex-col gap-8">
+						<ServiceItem>Event graphics</ServiceItem>
+						<ServiceItem>Brand videos</ServiceItem>
+						<ServiceItem>Broadcast graphics</ServiceItem>
+						<ServiceItem>Pitch decks</ServiceItem>
+						<ServiceItem>Explainer videos</ServiceItem>
+						<ServiceItem>3D visuals</ServiceItem>
+						<ServiceItem>Sizzle reels</ServiceItem>
+					</ul>
+				</div>
 			</div>
 		</Container>
 	</div>
