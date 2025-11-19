@@ -9,6 +9,10 @@
 - New 2025 reel Vimeo link
 - Services list
 
+### Removed
+
+- Services section scroll animation and sticky behavior
+
 ## [2.0.1] - 2025-10-04
 
 ### Changed

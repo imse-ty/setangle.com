@@ -51,35 +51,30 @@
 	on:resize={() => mounted && computeBounds()}
 />
 
-<section id="services" bind:this={wrapper} class="relative h-[200vh] bg-neutral-950">
-	<div class="sticky top-0 h-screen">
-		<Container>
-			<div class="flex h-full flex-col justify-center gap-8 sm:gap-16">
-				<h2 class="font-display text-4xl font-medium uppercase md:text-6xl">
-					<span class="text-set-gray">Our</span> Services
-				</h2>
-				<p class="flex flex-wrap gap-2 text-4xl leading-tight font-semibold">
-					{#each words as w, i}
-						<span
-							class="transition-colors duration-300"
-							class:text-white={i < Math.ceil(progress * words.length)}
-							class:text-neutral-800={i >= Math.ceil(progress * words.length)}>{w}</span
-						>
-					{/each}
-				</p>
+<section
+	id="services"
+	bind:this={wrapper}
+	class="relative min-h-screen bg-neutral-950 py-16 md:py-32"
+>
+	<Container>
+		<div class="flex h-full flex-col justify-center gap-8 sm:gap-16">
+			<h2 class="font-display text-4xl font-medium uppercase md:text-6xl">
+				<span class="text-set-gray">Our</span> Services
+			</h2>
+			<p class="flex flex-wrap gap-2 text-4xl leading-tight font-semibold">
+				We help brands shine by creating soulful animated visuals for marketing campaigns and
+				events.
+			</p>
 
-				<div class="mt-16 flex flex-col justify-between gap-8 sm:gap-8">
-					<ul class="flex flex-col gap-8">
-						<ServiceItem>Event graphics</ServiceItem>
-						<ServiceItem>Brand videos</ServiceItem>
-						<ServiceItem>Broadcast graphics</ServiceItem>
-						<ServiceItem>Pitch decks</ServiceItem>
-						<ServiceItem>Explainer videos</ServiceItem>
-						<ServiceItem>3D visuals</ServiceItem>
-						<ServiceItem>Sizzle reels</ServiceItem>
-					</ul>
-				</div>
-			</div>
-		</Container>
-	</div>
+			<ul class="mt-16 flex flex-col gap-8">
+				<ServiceItem>Event graphics</ServiceItem>
+				<ServiceItem>Brand videos</ServiceItem>
+				<ServiceItem>Broadcast graphics</ServiceItem>
+				<ServiceItem>Pitch decks</ServiceItem>
+				<ServiceItem>Explainer videos</ServiceItem>
+				<ServiceItem>3D visuals</ServiceItem>
+				<ServiceItem>Sizzle reels</ServiceItem>
+			</ul>
+		</div>
+	</Container>
 </section>
