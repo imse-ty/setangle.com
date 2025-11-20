@@ -54,27 +54,29 @@
 <section
 	id="services"
 	bind:this={wrapper}
-	class="relative min-h-screen bg-neutral-950 py-16 md:py-32"
+	class="relative flex min-h-screen justify-center bg-neutral-950 py-16 md:py-32"
 >
-	<Container>
-		<div class="flex h-full flex-col justify-center gap-8 sm:gap-16">
-			<h2 class="font-display text-4xl font-medium uppercase md:text-6xl">
-				<span class="text-set-gray">Our</span> Services
-			</h2>
-			<p class="flex flex-wrap gap-2 text-4xl leading-tight font-semibold">
-				We help brands shine by creating soulful animated visuals for marketing campaigns and
-				events.
-			</p>
+	<div class="my-auto">
+		<Container>
+			<div class="flex flex-col justify-center gap-8 sm:gap-16">
+				<h2 class="font-display text-4xl font-medium uppercase md:text-6xl">
+					<span class="text-set-gray">Our</span> Services
+				</h2>
+				<p class="flex flex-wrap gap-2 text-4xl leading-tight font-semibold">
+					We help brands shine by creating soulful animated visuals for marketing campaigns and
+					events.
+				</p>
 
-			<ul class="mt-16 flex flex-col gap-8">
-				<ServiceItem>Event graphics</ServiceItem>
-				<ServiceItem>Brand videos</ServiceItem>
-				<ServiceItem>Broadcast graphics</ServiceItem>
-				<ServiceItem>Pitch decks</ServiceItem>
-				<ServiceItem>Explainer videos</ServiceItem>
-				<ServiceItem>3D visuals</ServiceItem>
-				<ServiceItem>Sizzle reels</ServiceItem>
-			</ul>
-		</div>
-	</Container>
+				<ul class="mt-16 flex grid-cols-3 flex-col gap-8 lg:grid">
+					<ServiceItem>Event graphics</ServiceItem>
+					<ServiceItem>Brand videos</ServiceItem>
+					<ServiceItem>Broadcast graphics</ServiceItem>
+					<ServiceItem>Pitch decks</ServiceItem>
+					<ServiceItem>Explainer videos</ServiceItem>
+					<ServiceItem>3D visuals</ServiceItem>
+					<ServiceItem>Sizzle reels</ServiceItem>
+				</ul>
+			</div>
+		</Container>
+	</div>
 </section>
