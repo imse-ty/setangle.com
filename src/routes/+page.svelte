@@ -6,6 +6,7 @@
 	import HomeHero from '../components/HomeHero.svelte';
 	import ProjectsSection from '../components/ProjectsSection.svelte';
 	import type { PageData } from './$types';
+	import NewAboutSection from '../components/v3/NewAboutSection.svelte';
 
 	export let data: PageData;
 	const q = useQuery(data);
@@ -22,7 +23,8 @@
 	/>
 </svelte:head>
 
-<HomeHero />
+<!-- <HomeHero />
 <LogoCarousel />
 <ProjectsSection {projects} />
-<AboutSection />
+<AboutSection /> -->
+<NewAboutSection />

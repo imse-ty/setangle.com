@@ -36,7 +36,7 @@
 </svelte:head>
 
 <div class="relative bg-black font-body text-white">
-	<Header />
+	<!-- <Header /> -->
 	<main class="relative z-10 flex min-h-screen flex-col bg-black">
 		<slot />
 	</main>
