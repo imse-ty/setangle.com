@@ -4,6 +4,10 @@
 
 ### Added
 
+- Featured projects
+
+### Added
+
 - Ported redirects from setangle.com v1 using hooks and `redirect()`.
 - Umami analytics tracking
 - New 2025 reel Vimeo link
