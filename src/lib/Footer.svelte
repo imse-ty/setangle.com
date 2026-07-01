@@ -42,7 +42,7 @@
 						<ContactItem
 							label="Office"
 							href="https://maps.app.goo.gl/ZeJSzEodHtZppjoQA"
-							isExternalLink>190 Ottley Drive Suite B-1,<br />Atlanta, GA 30324</ContactItem
+							isExternalLink>190 Ottley Dr<br />Suite B-1<br />Atlanta, GA 30324</ContactItem
 						>
 					</div>
 
