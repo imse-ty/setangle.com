@@ -41,8 +41,8 @@
 						<ContactItem label="Phone" href="tel:+17706095007">+1 (770) 609-5007</ContactItem>
 						<ContactItem
 							label="Office"
-							href="https://maps.app.goo.gl/Av6uMgwiCBgUkPyn8"
-							isExternalLink>104 Church St,<br />Decatur, GA 30030</ContactItem
+							href="https://maps.app.goo.gl/ZeJSzEodHtZppjoQA"
+							isExternalLink>190 Ottley Drive Suite B-1,<br />Atlanta, GA 30324</ContactItem
 						>
 					</div>
 
