@@ -42,7 +42,7 @@
 						<ContactItem
 							label="Office"
 							href="https://maps.app.goo.gl/ZeJSzEodHtZppjoQA"
-							isExternalLink>190 Ottley Dr NE<br />Suite B-1<br />Atlanta, GA 30324</ContactItem
+							isExternalLink>190 Ottley Dr NE<br />Atlanta, GA 30324</ContactItem
 						>
 					</div>
 
@@ -65,7 +65,7 @@
 						</div>
 
 						<p class="font-mono text-sm uppercase sm:text-right">
-							Copyright © 2025 Set Angle. All&nbsp;rights&nbsp;reserved.
+							Copyright © 2026 Set Angle. All&nbsp;rights&nbsp;reserved.
 						</p>
 					</div>
 				</div>
