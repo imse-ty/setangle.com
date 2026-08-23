@@ -38,11 +38,11 @@
 						<ContactItem label="Email" href="mailto:greetings@setangle.com"
 							>greetings@setangle.com</ContactItem
 						>
-						<ContactItem label="Phone" href="tel:+17706095007">+1 (770) 609-5007</ContactItem>
+						<ContactItem label="Phone" href="tel:+17706095007">+1 ‪(943) 300-4585‬</ContactItem>
 						<ContactItem
 							label="Office"
 							href="https://maps.app.goo.gl/ZeJSzEodHtZppjoQA"
-							isExternalLink>190 Ottley Dr NE<br />Atlanta, GA 30324</ContactItem
+							isExternalLink>190 Ottley Dr NE STE B5<br />Atlanta, GA 30324</ContactItem
 						>
 					</div>
 
