@@ -42,7 +42,7 @@
 						<ContactItem
 							label="Office"
 							href="https://maps.app.goo.gl/AJuStwGY4WJFPUAGA"
-							isExternalLink>190 Ottley Dr NE STE B5<br />Atlanta, GA 30324</ContactItem
+							isExternalLink>190 Ottley Dr NE STE B5<br />Atlanta, GA 30324-4062</ContactItem
 						>
 					</div>
 
