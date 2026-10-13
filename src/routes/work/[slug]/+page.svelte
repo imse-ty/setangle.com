@@ -46,7 +46,7 @@
 		videoUrl={project.videoUrl}
 	/>
 	<!-- Hide project body for now -->
-	{#if false}
+	{#if project.body}
 		<Container>
 			<div class="prose max-w-none !prose-invert">
 				<PortableText value={project.body} components={sanityComponents} />
